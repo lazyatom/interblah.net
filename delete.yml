@@ -7,7 +7,7 @@ class Delete < Dynasnip
   def handle
     return login_required unless logged_in?
     name = app.request.params[:snip_to_delete]
-    snip_to_delete = Vanilla.snip(name)
+    snip_to_delete = app.soup[name]
     snip_to_delete.destroy if snip_to_delete
     "Snip #{name} has been deleted."
   end

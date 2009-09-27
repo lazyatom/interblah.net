@@ -1,7 +1,7 @@
 class ShowDynasnip < Dynasnip
   def handle(name = nil)
     name ||= app.request.params[:name]
-    snip = Vanilla.snip(name)
+    snip = app.soup[name]
     "<h1>#{name}</h1>
 <p>Usage: #{snip.usage || '(no details)'}</p>
 {code #{snip.render_as.downcase},#{name}}

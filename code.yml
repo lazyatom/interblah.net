@@ -1,7 +1,7 @@
 require 'syntax/convertors/html'
 class CodeHighlighter < Dynasnip
   def handle(language, snip_to_render, part_to_render='content')
-    snip = Vanilla.snip(snip_to_render)
+    snip = app.soup[snip_to_render]
     text = snip.__send__(part_to_render.to_sym)
     convertor = Syntax::Convertors::HTML.for_syntax(language)
     code = convertor.convert(text, false)
