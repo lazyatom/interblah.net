@@ -25,8 +25,8 @@ Any comments? ;)
 [railsbizconf]: http://interblah.net/rails-biz-conf
 [interblah.net]: http://interblah.net--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2009-01-16 14:48:47 +00:00
 :name: on-commenting
-:kind: blog
-:updated_at: 2009-01-16 14:48:47
+:created_at: 2009-01-16 14:36:02 +00:00
 :author: james
-:created_at: 2009-01-16 14:36:02
+:kind: blog

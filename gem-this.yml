@@ -24,8 +24,8 @@ It's called [gem-this](http://github.com/lazyatom/gem-this); fork at will.
 
 It's definitely not for everybody - I'm sure plenty of people get lots of mileage out of the existing tools and having a generated, standard structure for their gem code. I just don't find it very useful, personally.--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2009-04-06 12:26:20 +01:00
 :name: gem-this
-:kind: blog
-:updated_at: 2009-04-06 12:26:20
+:created_at: 2009-04-06 12:14:18 +01:00
 :author: james
-:created_at: 2009-04-06 12:14:18
+:kind: blog

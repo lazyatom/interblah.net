@@ -1,14 +1,15 @@
 Thanks Carl,
 
 I've tweaked the comment mechanism to store some more information about the response from Defensio - hopefully that should illuminate what's going on.--- # Soup attributes
-:user_ip: 127.0.0.1
-:spam: f
-:defensio_status: success
-:website: http://interblah.net
-:name: defensio-to-the-rescue-comment-3
-:commenting_on: defensio-to-the-rescue
-:spamminess: "0.99"
-:author: James Adam
-:email: james@lazyatom.com
-:created_at: 2008-08-28 15:09:51
 :defensio_signature: 685527645avcpjmwjfsz3e
+:commenting_on: defensio-to-the-rescue
+:website: http://interblah.net
+:user_ip: 127.0.0.1
+:updated_at: 
+:email: james@lazyatom.com
+:name: defensio-to-the-rescue-comment-3
+:created_at: 2008-08-28 15:09:51 +01:00
+:spam: f
+:author: James Adam
+:defensio_status: success
+:spamminess: "0.99"

@@ -4,7 +4,7 @@ A dynasnip, as they were in the original {link_to vanilla} implementation, is a 
 
 Read more about the concept on the {link_to vanilla-rb} page.--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2008-07-03 22:20:45 +01:00
 :name: dynasnip
-:updated_at: 2008-07-03 22:20:45
+:created_at: 2008-07-03 22:19:30 +01:00
 :author: james
-:created_at: 2008-07-03 22:19:30

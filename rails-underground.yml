@@ -85,8 +85,8 @@ If you don't, fork Ruby Manor. I think the world _might_ be better for it.
 [our videos]: http://rubymanor.org/videos/
 [the bar tab]: http://flickr.com/photos/h-lame/3053086178/--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2009-02-25 16:01:51 +00:00
 :name: rails-underground
-:kind: blog
-:updated_at: 2009-02-25 16:01:51
+:created_at: 2009-02-25 15:28:25 +00:00
 :author: james
-:created_at: 2009-02-25 15:28:25
+:kind: blog

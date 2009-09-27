@@ -20,8 +20,8 @@ Also please note that you'll need API access turned on; for more details see the
 [api]: http://www.freeagentcentral.com/central/changes-to-api-access
 [issues]: http://github.com/lazyatom/freeagent-widget/issues--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2009-09-08 09:41:58 +01:00
 :name: freeagent-widget-update
-:kind: blog
-:updated_at: 2009-09-08 09:41:58
+:created_at: 2009-09-07 21:28:29 +01:00
 :author: james
-:created_at: 2009-09-07 21:28:29
+:kind: blog

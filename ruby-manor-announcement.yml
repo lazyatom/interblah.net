@@ -19,8 +19,8 @@ So we have a few ideas about how to do it differently. Head over to [the ruby ma
 [1]: http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/309843
 [2]: http://rubymanor.org--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2008-08-01 16:33:38 +01:00
 :name: ruby-manor-announcement
-:kind: blog
-:updated_at: 2008-08-01 16:33:38
+:created_at: 2008-08-01 15:38:33 +01:00
 :author: james
-:created_at: 2008-08-01 15:38:33
+:kind: blog

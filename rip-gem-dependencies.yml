@@ -150,6 +150,10 @@ Anyway, please do kick the tires around, join the [mailing list][] and contribut
 [cheap-branching]: http://whygitisbetterthanx.com/#cheap-local-branching
 [mailing list]: groups.google.com/group/rip-rb
 [file-conflicts]: http://github.com/defunkt/rip/issues/closed#issue/58--- # Soup attributes
+:render_as: Markdown
+:updated_at: 2009-08-20 09:20:54 +01:00
+:name: rip-gem-dependencies
+:created_at: 2009-08-13 14:51:18 +01:00
 :"installing-rails": "\xE2\x9E\x9C  $ rip install rails\r\n\
   Searching gems.github.com for rails...\r\n\
   ERROR:  Could not find rails in any repository\r\n\
@@ -184,11 +188,6 @@ Anyway, please do kick the tires around, join the [mailing list][] and contribut
   Successfully installed activeresource (2.3.3)\r\n\
   Successfully installed rails (2.3.3)\r\n\
   \xE2\x9E\x9C  $ "
-:render_as: Markdown
-:name: rip-gem-dependencies
-:kind: blog
-:updated_at: 2009-08-20 09:20:54
-:author: james
 :"installing-monk-2": "\xE2\x9E\x9C  $ rip install monk\r\n\
   Successfully installed thor (0.11.5)\r\n\
   Some files from wycats-thor (0.11.5) conflict with those already installed by thor:\r\n\
@@ -221,7 +220,7 @@ Anyway, please do kick the tires around, join the [mailing list][] and contribut
   \tbin/thor\r\n\
   rip: installation failed\r\n\
   \xE2\x9E\x9C  $"
-:created_at: 2009-08-13 14:51:18
+:author: james
 :"installing-monk": "\xE2\x9E\x9C  $ rip install monk\r\n\
   Searching gems.github.com for monk...\r\n\
   ERROR:  Could not find monk in any repository\r\n\
@@ -238,3 +237,4 @@ Anyway, please do kick the tires around, join the [mailing list][] and contribut
   Successfully installed dependencies (0.0.6)\r\n\
   Successfully installed monk (0.0.5)\r\n\
   \xE2\x9E\x9C  $ "
+:kind: blog

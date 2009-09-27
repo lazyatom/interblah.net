@@ -11,6 +11,6 @@ class LighthouseTicket
   self
 end--- # Soup attributes
 :render_as: Ruby
+:updated_at: 2008-06-01 11:59:15 +01:00
 :name: lighthouse_ticket
-:updated_at: 2008-06-01 11:59:15
-:created_at: 2008-06-01 11:57:59
+:created_at: 2008-06-01 11:57:59 +01:00

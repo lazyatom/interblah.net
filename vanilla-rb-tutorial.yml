@@ -70,7 +70,7 @@ Note that the `handle` method can take one (optional) argument. Lets try includi
 Anyway - that should be enough to get you started.
 --- # Soup attributes
 :render_as: Markdown
+:updated_at: 2008-06-02 00:16:57 +01:00
 :name: vanilla-rb-tutorial
-:updated_at: 2008-06-02 00:16:57
+:created_at: 2008-06-01 23:19:48 +01:00
 :author: james
-:created_at: 2008-06-01 23:19:48

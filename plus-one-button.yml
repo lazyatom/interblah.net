@@ -15,7 +15,7 @@ class PlusOneButton < Dynasnip
   self
 end--- # Soup attributes
 :render_as: Ruby
+:updated_at: 2009-07-16 15:40:57 +01:00
 :name: plus-one-button
-:updated_at: 2009-07-16 15:40:57
+:created_at: 2009-07-16 15:34:45 +01:00
 :author: james
-:created_at: 2009-07-16 15:34:45

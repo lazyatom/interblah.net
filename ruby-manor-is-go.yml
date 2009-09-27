@@ -15,8 +15,8 @@ We've just make the [tickets available][1] for {l ruby-manor}, and folks are alr
 
 [1]: http://rubymanor.eventwax.com/ruby-manor-2008--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2008-10-02 14:52:26 +01:00
 :name: ruby-manor-is-go
-:kind: blog
-:updated_at: 2008-10-02 14:52:26
+:created_at: 2008-10-02 10:48:53 +01:00
 :author: james
-:created_at: 2008-10-02 10:48:53
+:kind: blog

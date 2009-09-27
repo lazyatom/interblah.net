@@ -44,8 +44,8 @@ Epilogue
 [9]: http://www.techbelly.com/2008/06/24/mashed08-team-bob/
 [10]: http://mashedlit.blogspot.com/2008/06/subterranean-homesick-news.html--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2008-07-17 15:13:34 +01:00
 :name: mashed-2008
-:kind: blog
-:updated_at: 2008-07-17 15:13:34
+:created_at: 2008-06-22 14:37:57 +01:00
 :author: james
-:created_at: 2008-06-22 14:37:57
+:kind: blog

@@ -1,4 +1,8 @@
 ShowContentInPreTag--- # Soup attributes
+:render_as: Ruby
+:updated_at: 
+:name: pre
+:created_at: 
 :usage: |-
   Wraps the contents of the given snip in &lt;pre&gt; tags, e.g.
   
@@ -7,5 +11,3 @@ ShowContentInPreTag--- # Soup attributes
       You can specify a part to render in pre tags, should you wish:
   
         &#123;pre my_snip,specific_part&#125;
-:render_as: Ruby
-:name: pre

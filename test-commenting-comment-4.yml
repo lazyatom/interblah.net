@@ -1,14 +1,15 @@
 So here's another test comment (yes, yet another).
 
 I think the IP might be being set wrongly.--- # Soup attributes
-:user_ip: 86.1.109.154
-:spam: f
-:website: http://www.reevoo.com
-:name: test-commenting-comment-4
-:defensio_message: ""
-:commenting_on: test-commenting
-:spamminess: "0"
-:author: James
-:email: jamesadam@reevoo.com
-:created_at: 2008-08-28 14:53:27
 :defensio_signature: 9b285d2fd9jyckkvzogfss
+:commenting_on: test-commenting
+:website: http://www.reevoo.com
+:user_ip: 86.1.109.154
+:updated_at: 
+:email: jamesadam@reevoo.com
+:defensio_message: ""
+:name: test-commenting-comment-4
+:created_at: 2008-08-28 14:53:27 +01:00
+:spam: f
+:author: James
+:spamminess: "0"

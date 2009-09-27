@@ -1,7 +1,7 @@
 # an alias for link_to, that's shorter to type.
 LinkTo--- # Soup attributes
 :render_as: Ruby
+:updated_at: 2008-07-04 08:37:22 +01:00
 :name: l
-:updated_at: 2008-07-04 08:37:22
+:created_at: 2008-07-04 08:37:22 +01:00
 :author: james
-:created_at: 2008-07-04 08:37:22

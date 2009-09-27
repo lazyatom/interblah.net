@@ -1,4 +1,6 @@
 Login--- # Soup attributes
 :render_as: Ruby
 :template: "    <form action='/login' method='post'>\n    <label>Name: <input type=\"text\" name=\"name\"></input></label>\n    <label>Password: <input type=\"password\" name=\"password\"></input></label>\n    <button>login</button>\n    </form>\n"
+:updated_at: 
 :name: login
+:created_at: 

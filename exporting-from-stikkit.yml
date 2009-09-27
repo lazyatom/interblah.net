@@ -19,10 +19,6 @@ I'm hoping to import it into {l vanilla-rb} (the application that powers this he
 [rael]: http://raelity.org
 [sandy]: http://iwantsandy.com
 --- # Soup attributes
-:render_as: Markdown
-:name: exporting-from-stikkit
-:kind: blog
-:updated_at: 2008-12-04 21:48:58
 :"export-rb": |-
   require 'net/http'
   require 'rubygems'
@@ -49,5 +45,9 @@ I'm hoping to import it into {l vanilla-rb} (the application that powers this he
   
   File.open('stikkits.yml', 'w') { |f| f.write stikkits.to_yaml }
   puts "Saved stikkits: " + stikkits.map { |s| s['name'] }.join(', ') }
+:render_as: Markdown
+:updated_at: 2008-12-04 21:48:58 +00:00
+:name: exporting-from-stikkit
+:created_at: 2008-12-04 21:42:36 +00:00
 :author: james
-:created_at: 2008-12-04 21:42:36
+:kind: blog

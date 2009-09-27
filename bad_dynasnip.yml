@@ -6,4 +6,6 @@ class BadDynasnip
 end
 BadDynasnip--- # Soup attributes
 :render_as: Ruby
+:updated_at: 
 :name: bad_dynasnip
+:created_at: 

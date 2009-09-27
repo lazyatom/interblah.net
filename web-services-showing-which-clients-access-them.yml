@@ -15,8 +15,8 @@ I think it sounds like a fine idea, and the primary example that springs to mind
 [1]: http://chrisroos.co.uk/blog/2009-02-09-idea-web-services-could-publish-stats-about-the-clients-that-connect-to-them
 [twitter]: http://twitter.com--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2009-02-11 10:22:49 +00:00
 :name: web-services-showing-which-clients-access-them
-:kind: blog
-:updated_at: 2009-02-11 10:22:49
+:created_at: 2009-02-11 09:59:08 +00:00
 :author: james
-:created_at: 2009-02-11 09:59:08
+:kind: blog

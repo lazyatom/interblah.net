@@ -8,6 +8,6 @@ Yesterday, I did another terrible thing.
 At the presentation I gave yesterday at AJAXWorld in Santa Clara about Rails Plugins, I introduced possibly the [most revolutionary plugin ever developed](http://svn.lazyatom.com/public/plugins/acts_as_hasselhoff/). <I>More information coming soon.</i>
 --- # Soup attributes
 :render_as: Markdown
+:updated_at: 2009-04-17 14:46:44 +01:00
 :name: ajaxworld-presentation
-:updated_at: 2009-04-17 14:46:44
-:created_at: 2006-10-04 18:24:00
+:created_at: 2006-10-04 18:24:00 +01:00

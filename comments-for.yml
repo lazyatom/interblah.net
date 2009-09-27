@@ -21,12 +21,12 @@ class CommentsFor < Dynasnip
 
   self
 end--- # Soup attributes
-:usage: (Some description about how to use the comments-for dyna goes here)
 :render_as: Ruby
+:updated_at: 2008-06-03 13:07:43 +01:00
 :name: comments-for
-:updated_at: 2008-06-03 13:07:43
+:created_at: 2008-06-02 14:28:53 +01:00
+:usage: (Some description about how to use the comments-for dyna goes here)
 :author: james
-:created_at: 2008-06-02 14:28:53
 :comments_form: |-
   <form action="/comments-for?snip=SNIP_NAME" method="POST">
     <textarea name="comment"></textarea>

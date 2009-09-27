@@ -23,6 +23,11 @@ It seems much more like programming - here's an entry, now get the content, and 
 I should add that my prefered solution is actually `API 2`, where 'sanitized' is a method on some object whose responsibility is to present an entry. But I do have a soft-spot for extending returned values to add behaviour.
 
 [1]:http://www.pauldix.net/2009/02/using-a-proxy-object-to-design-an-api.html--- # Soup attributes
+:render_as: Markdown
+:updated_at: 2009-02-15 13:13:11 +00:00
+:name: re-paul-dix-proxy-object
+:created_at: 2009-02-14 11:15:17 +00:00
+:author: james
 :example: |-
   module Sanitize
     def sanitize
@@ -36,8 +41,3 @@ I should add that my prefered solution is actually `API 2`, where 'sanitized' is
     end
     # ditto for title, author, etc
   end
-:render_as: Markdown
-:name: re-paul-dix-proxy-object
-:updated_at: 2009-02-15 13:13:11
-:author: james
-:created_at: 2009-02-14 11:15:17

@@ -38,6 +38,7 @@ And some sweet syntax highlighting!
 {code ruby,active-record-ideas,idea-1}
 --- # Soup attributes
 :render_as: Markdown
-:some_attribute: attribute content
+:updated_at: 2008-08-19 11:40:48 +01:00
 :name: test
-:updated_at: 2008-08-19 11:40:48
+:created_at: 
+:some_attribute: attribute content

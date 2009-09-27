@@ -26,7 +26,7 @@ For those who are curious (I doubt it's just me), here is [the list of patches](
 
 As someone who's played around with building various Ruby extensions on a Mac for some time, it's going to be interesting looking at how they've changed the build process so that it best integrates with the other system libraries and frameworks. There's also the [XCode template project for a new Ruby Dynamic Library](http://www.opensource.apple.com/darwinsource/10.5/ruby-67/extras/xcode_template/Dynamic%20Library/Ruby%20Extension/). You can even look at the apple-default IRB configuration [here](http://www.opensource.apple.com/darwinsource/10.5/ruby-67/extras/irbrc). Nice.--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2008-06-01 13:36:40 +01:00
 :name: ruby-and-leopard
+:created_at: 2007-11-01 10:24:00 +00:00
 :kind: blog
-:updated_at: 2008-06-01 13:36:40
-:created_at: 2007-11-01 10:24:00

@@ -2,7 +2,7 @@ A content management system written in Ruby on Rails, by John Long.
 
 [http://www.radiantcms.org](http://www.radiantcms.org)--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2008-07-17 17:32:38 +01:00
 :name: radiant-cms
-:updated_at: 2008-07-17 17:32:38
+:created_at: 2008-07-17 17:32:38 +01:00
 :author: james
-:created_at: 2008-07-17 17:32:38

@@ -1,12 +1,13 @@
 So I've added some more parameters to the spam checking. Lets see if they get added to the snip.--- # Soup attributes
-:user_ip: 127.0.0.1
-:spam: f
-:website: http://interblah.net
-:name: test-commenting-comment-3
-:defensio_message: ""
-:commenting_on: test-commenting
-:spamminess: ""
-:author: James Adam
-:email: james@lazyatom.com
-:created_at: 2008-08-28 14:43:24
 :defensio_signature: 422de8149ffgbfmlixxyco
+:commenting_on: test-commenting
+:website: http://interblah.net
+:user_ip: 127.0.0.1
+:updated_at: 
+:email: james@lazyatom.com
+:defensio_message: ""
+:name: test-commenting-comment-3
+:created_at: 2008-08-28 14:43:24 +01:00
+:spam: f
+:author: James Adam
+:spamminess: ""

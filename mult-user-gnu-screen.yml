@@ -68,7 +68,7 @@ caption splitonly "%{.c} %n%f %t"
 # Show a list of window titles at the bottom of the screen
 hardstatus alwayslastline "%{= r}%H %{g}%c %{-}%{-}%{=r}%?%-Lw%?%{.bW}%n*%f %t%?(%u)%?%{-}%?%+Lw%?%{=}"--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2008-12-04 22:10:31 +00:00
 :name: mult-user-gnu-screen
-:updated_at: 2008-12-04 22:10:31
+:created_at: 2008-12-04 22:10:31 +00:00
 :author: james
-:created_at: 2008-12-04 22:10:31

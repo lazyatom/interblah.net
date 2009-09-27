@@ -11,8 +11,8 @@ I've also added the link to the template, but this in turn raises some interesti
 
 {comments wham-bam-thank-you-spam}--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2008-07-17 17:37:10 +01:00
 :name: wham-bam-thank-you-spam
-:kind: blog
-:updated_at: 2008-07-17 17:37:10
+:created_at: 2008-07-02 21:48:36 +01:00
 :author: james
-:created_at: 2008-07-02 21:48:36
+:kind: blog

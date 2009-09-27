@@ -9,8 +9,8 @@ My colleague {l luke-redpath} has just pushed our new {l reevoo-labs} site live:
 
 I'm looking forward to posting there about some of the issues we're grappling with at {l reevoo}: how to test well, how testing affects refactoring, and trying to innovate on the web whilst still remaining commercially viable. <a href="http://labs.reevoo.com">Check it out.</a>--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2008-07-04 09:39:45 +01:00
 :name: reevoo-labs
-:kind: blog
-:updated_at: 2008-07-04 09:39:45
+:created_at: 2008-07-04 09:32:26 +01:00
 :author: james
-:created_at: 2008-07-04 09:32:26
+:kind: blog

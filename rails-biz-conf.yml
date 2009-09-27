@@ -28,8 +28,8 @@ This isn't a rant against Obie's idea - __the conference sounds like a great ide
 [4]: http://www.nickcrossland.co.uk/blog/2008/mashed
 [5]: http://gofreerange.com--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2009-01-16 14:20:42 +00:00
 :name: rails-biz-conf
-:kind: blog
-:updated_at: 2009-01-16 14:20:42
+:created_at: 2009-01-16 13:00:33 +00:00
 :author: james
-:created_at: 2009-01-16 13:00:33
+:kind: blog

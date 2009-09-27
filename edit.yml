@@ -2,4 +2,6 @@ EditSnip--- # Soup attributes
 :render_as: Ruby
 :template: "\n    <form action=\"<%= url_to 'edit' %>\" method=\"post\">\n    <dl class=\"attributes\">\n      <% @snip_to_edit.attributes.each do |name, value| %>\n      <dt><%= name %></dt>\n      <% num_rows = value.split(\"\n\
   \").length + 1 %>\n      <dd><textarea name=\"<%= name %>\" class=\"<%= name %>\" rows=\"<%= num_rows %>\"><%=h value %></textarea></dd>\n      <% end %>\n      <dt><input class=\"attribute_name\" type=\"text\"></input></dt>\n      <dd><textarea></textarea></dd>\n    </dl>\n    <a href=\"#\" id=\"add\">Add</a>\n    <button name='save_button'>Save</button>\n    </form>\n  "
+:updated_at: 
 :name: edit
+:created_at: 

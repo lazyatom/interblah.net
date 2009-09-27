@@ -1,4 +1,8 @@
 ShowRawContent--- # Soup attributes
+:render_as: Ruby
+:updated_at: 
+:name: raw
+:created_at: 
 :usage: |-
   Displays the raw contents of a snip in &lt;pre&gt; tags, e.g.
   
@@ -7,5 +11,3 @@ ShowRawContent--- # Soup attributes
       You can specify a part to show, should you wish:
   
         &#123;raw my_snip,specific_part&#125;
-:render_as: Ruby
-:name: raw

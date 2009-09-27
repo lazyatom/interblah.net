@@ -6,8 +6,8 @@ Just a quick note - some of the videos for [Ruby Manor][1] are [now available][2
 [1]: http://rubymanor.org
 [2]: http://rubymanor.org/videos--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2009-01-16 12:49:15 +00:00
 :name: ruby-manor-videos
-:kind: blog
-:updated_at: 2009-01-16 12:49:15
+:created_at: 2009-01-16 12:48:52 +00:00
 :author: james
-:created_at: 2009-01-16 12:48:52
+:kind: blog

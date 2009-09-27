@@ -20,7 +20,7 @@ Upgrading
 
 This is the big unknown. Users may change the contents of 'system' snips (like 'system', or dynasnips). Ideally, we'd want to flag when some upgrades might interfere with custom changes. How does smalltalk do it? In many ways, the snip store is like a persistent object store...--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2008-07-17 17:30:39 +01:00
 :name: deploying-vanilla-rb
-:updated_at: 2008-07-17 17:30:39
+:created_at: 2008-07-17 17:30:39 +01:00
 :author: james
-:created_at: 2008-07-17 17:30:39

@@ -74,6 +74,9 @@ Here's the code from the {l code} dynasnip, highlighting itself, like an eternal
 
 [1]: http://interblah.net/comments-are-alive--- # Soup attributes
 :render_as: Markdown
+:updated_at: 2008-07-17 17:33:23 +01:00
+:name: syntax-highlighting-demo
+:created_at: 2008-07-17 15:47:35 +01:00
 :code_sample_one: |-
   class Ruby
     def coloured(with='syntax')
@@ -82,7 +85,7 @@ Here's the code from the {l code} dynasnip, highlighting itself, like an eternal
       end
     end
   end
-:name: syntax-highlighting-demo
+:author: james
 :radiant_syntax: |-
   <r:code lang="ruby">
   class Blah
@@ -90,13 +93,10 @@ Here's the code from the {l code} dynasnip, highlighting itself, like an eternal
     end
   end
   </r:code>
-:kind: blog
-:updated_at: 2008-07-17 17:33:23
 :rubycodesample: |-
   class Test
     def initialize(name=nil)
       puts "Hello, World"
     end
   end
-:author: james
-:created_at: 2008-07-17 15:47:35
+:kind: blog

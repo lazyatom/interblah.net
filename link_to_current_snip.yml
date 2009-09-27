@@ -1,6 +1,8 @@
 LinkToCurrentSnip--- # Soup attributes
+:render_as: Ruby
+:updated_at: 
+:name: link_to_current_snip
+:created_at: 
 :usage: |-
   Renders a link to the current snip, or the snip currently being edited 
       (if we're currently editing)
-:render_as: Ruby
-:name: link_to_current_snip
