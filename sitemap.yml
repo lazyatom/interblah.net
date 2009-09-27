@@ -1,8 +1,8 @@
 class Sitemap < Dynasnip
   attribute :domain, "interblah.net"
   def handle
-    urls = Soup.tuple_class.find_all_by_name('name').map { |tuple| 
-      "<url><loc>http://#{domain}#{Vanilla::Routes.url_to tuple.value}</loc></url>"
+    urls = app.soup.all_snips_.map { |snip| 
+      "<url><loc>http://#{domain}#{url_to snip.name}</loc></url>"
     }
     xml =<<-EOX
 <?xml version="1.0" encoding="UTF-8"?>

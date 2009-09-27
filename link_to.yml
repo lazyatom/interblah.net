@@ -1,10 +1,5 @@
-class LinkTo < Dynasnip
-  def handle(snip_name)
-    Vanilla.snip_exists?(snip_name) ? Vanilla::Routes.link_to(snip_name) : Vanilla::Routes.new_link(snip_name)
-  end
-
-  self
-end--- # Soup attributes
+LinkTo
+--- # Soup attributes
 :usage: |-
   The link_to dyna lets you create links between snips: 
   

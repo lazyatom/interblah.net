@@ -10,7 +10,7 @@ class CommentsFor < Dynasnip
         "<li>" + app.render(comment) + "</li>" 
       end.join + "</ol>"
     else
-     %{<a href="#{Vanilla::Routes.url_to(snip_name)}">#{comments.length} comments for #{snip_name}</a>}
+     %{<a href="#{url_to(snip_name)}">#{comments.length} comments for #{snip_name}</a>}
     end
     return comments_html #+ comments_form.gsub('SNIP_NAME', snip_name)
   end

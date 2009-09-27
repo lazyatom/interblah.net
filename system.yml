@@ -90,10 +90,10 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
       </div>
       <div id="controls">
         <strong><a href="/">home</a></strong>, 
-        <strong><%= Vanilla::Routes.link_to 'index' %></strong>,
-        <%= Vanilla::Routes.new_link %> ::
+        <strong><%= link_to 'index' %></strong>,
+        <%= new_link %> ::
         <strong>{link_to_current_snip}</strong> &rarr; 
-        <%= Vanilla::Routes.edit_link("{current_snip name}", "Edit") %> | 
+        <%= edit_link("{current_snip name}", "Edit") %> | 
         <a href="/delete?snip_to_delete={current_snip name}" onclick="javascript:if(confirm('Are you REALLY sure?')) { return true; } else { return false; };">Delete</a>
       </div>
       {current_snip}
