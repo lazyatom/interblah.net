@@ -1,0 +1,25 @@
+Wake Remote Machine Automator Action
+=========================
+
+I've whipped up a nice [Automator][] action for waking a remote machine, which works great with the new '[wake over wireless lan][wowl]' feature in Snow Leopard. 
+
+While you need an Airport-type router to get the most of the feature, there's nothing stopping you sending the magical 'wake up' signal from any other computer.
+
+Here's a screenshot of how you might want to try and use it in a workflow:
+
+![One possible workflow](http://interblah.net/assets/wake_machine_workflow.png)
+
+[Download the Wake Machine action here][download], and the source is [on github][source]. 
+
+It may only work if you are on the same network, depending on how you are set up, but regardless, it's great to be able to wake up my Mac mini from my laptop, automatically, and whenever I want.
+
+[Automator]: http://www.apple.com/macosx/what-is-macosx/apps-and-utilities.html#automator
+[wowl]: http://www.macworld.com/article/142468/2009/08/wake_on_demand.html
+[download]: http://public.lazyatom.com/WakeMachine.action.zip
+[source]: http://github.com/lazyatom/wake-machine--- # Soup attributes
+:render_as: Markdown
+:name: wake-remote-machine-automator-action
+:kind: blog
+:updated_at: 2009-09-10 15:56:07
+:author: james
+:created_at: 2009-09-10 14:57:03

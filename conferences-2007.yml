@@ -1,0 +1,28 @@
+Conferences 2007
+===========
+
+So, after gorging myself on Rails conferences last year ([all](http://canadaonrails.com/speakers/show/6) [four](http://2006.railsconf.org/) [of](http://europe.railsconf.org/) [them](http://interblah.net/2006/10/4/ajaxworld-presentation)), I've been asked to speak at a couple more this year.
+
+I'll be the early morning warm-up act on Friday as part of the "[What Makes Ruby Roll](http://qcon.infoq.com/qcon/tracks/show_track.jsp?trackOID=31)" track at [QCon](http://qcon.infoq.com/qcon/speakers/show_speaker.jsp?oid=153), which is taking place in London in March this year. This will be an interesting conference, mainly because I suspect that most of the people who stumble into my session won't really know much about Rails or plugins, much like it was at AjaxWorld, and so you have to find a way to talk about something fairly focussed but remain accessible. Probably by doing something like using pictures of [The Hoff](http://interblah.net/2006/10/4/ajaxworld-presentation).
+
+Secondly, I've been invited to speak at [RailsConf 2007](http://conferences.oreillynet.com/cs/rails2007/view/e_spkr/3223) in Portland - again about plugins. Yes, I am a one-trick pony. Hopefully I can make some kind of pact with the dark forces that control our department expenses so I actually *can* get over to Portland without having to sell a vital organ.
+
+So the question is this, people of Earth - anything you'd particularly like to know about developing plugins? Leave any thoughts you have in the comments, where I will no doubt ignore them and produce a new presentation centered around pictures of The A-Team, or something. Acts As Hannibal. Acts As Face.
+
+Hold up a second. That's genius. Screw Rails, I'm writing my own web framework based on the characters of the A-Team:
+
+<img class="right" src="http://interblah.net/assets/2007/2/3/Ateam.jpg">
+
+* Hannibal - the *controller* layer. The glue that binds the team into a cohesive unit and coordinates everything. He loves it when a plan comes together.
+* B.A. Baracas - the *model* layer. The heavy lifter. <tt>class TractorTank < BA::Base; include Flamethrower; end</tt>.
+* Faceman - the *presentation* layer. He's smooth. The ladies *love* Face; he's sleek, he's charming, and he never, *ever* requires a page refresh to load up new data. If you cut him, sweet Web 2.0 syrup weeps out.
+* "Howling Mad" Murdoch - the.... umm.... the *magic*. That special something that gives your app spice and unpredicatability, that keeps it interesting. Oh, hangon - I am [reliably informed](http://en.wikipedia.org/wiki/The_a-team) that Murdoch was "the best damn chopper pilot in Vietnam. So obviously in a web framework he's going to be the [best-practice application server](http://mongrel.rubyforge.org/), helpin' your datas fly out over the internet safely.
+
+> "Ten years ago, a crack commando unit of framework components was sent to prison by a military court for a segmentation fault they didn't commit. These gems promptly escaped from a maximum security stockade to the Ruby underground. Today, still wanted by the Rails Core, they survive as soldiers of fortune 2.0. If you have a problem, if no other development framework can help, and if you can find them, maybe you code with... The A-Team."
+
+*Are you with me, people???!?*
+--- # Soup attributes
+:render_as: Markdown
+:name: conferences-2007
+:updated_at: 2008-06-01 14:38:46
+:created_at: 2007-02-03 01:50:00

@@ -1,0 +1,16 @@
+class LighthouseTicket
+
+  def handle(account, project, ticket_number)
+    project_id = case project
+    when 'vanilla'
+      11797
+    end
+    %{<a href="http://#{account}.lighthouseapp.com/projects/#{project_id}-#{project}/tickets/#{ticket_number}">Ticket #{ticket_number}</a>}
+  end
+
+  self
+end--- # Soup attributes
+:render_as: Ruby
+:name: lighthouse_ticket
+:updated_at: 2008-06-01 11:59:15
+:created_at: 2008-06-01 11:57:59

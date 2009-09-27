@@ -1,0 +1,18 @@
+Vanilla
+=======
+
+A long time ago (like... 2002 or something; the *iron age* of the internet) I powered my blawg (then at [lazyatom.com][1] using an application called [Vanilla][2], developed by [Christian Langreiter][5]. To see what it was like, here's a cringeworthy [flashback][3] to my site back then; or, better still, look at [Murray Steele's site][6] which runs on Vanilla at the moment. As does [Christian's][5], naturally.
+
+Vanilla is written in [Rebol][4].
+
+[1]: http://www.lazyatom.com
+[2]: http://www.vanillasite.at
+[3]: http://web.archive.org/web/20021011201553/http://www.lazyatom.com/exec/vanilla.r
+[4]: http://www.rebol.com
+[5]: http://www.langreiter.com
+[6]: http://www.h-lame.com/
+--- # Soup attributes
+:render_as: Markdown
+:name: vanilla
+:updated_at: 2008-07-17 17:07:37
+:created_at: 2008-06-01 13:45:24

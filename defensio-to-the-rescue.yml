@@ -1,0 +1,16 @@
+Defensio to the rescue
+======================
+
+When I come back to interblah.net, I normally have a quick look at the {l index} page to see if any new comments are awaiting my attention. And recently that's revealed a few interesting comments (thanks!), and hundreds of spam comments.
+
+I deliberately didn't do anything clever to combat spam, but I got a bit sick of it today, so I've started sending comments to {l Defensio} to stem the flow. The implementation was very simple (see github for details), and hopefully that'll stem the flow of links to naughty filth on my site.
+
+Except for the links that *I* add, of course.
+
+{comments defensio-to-the-rescue}--- # Soup attributes
+:render_as: Markdown
+:name: defensio-to-the-rescue
+:kind: blog
+:updated_at: 2008-08-14 21:34:21
+:author: james
+:created_at: 2008-08-14 21:34:01

@@ -1,0 +1,22 @@
+Gem This, now a Gem Command
+====================
+
+With the latest release of my vanity gem creation tool, I've made it a tiny bit simpler to turn an existing project into a gem, by valthropomorphosizing {l gem-this} into a gem command. BEHOLD:
+
+{code shell,gem-this-0-2-1,command}
+
+Note the lack of hyphen! That's right, it's as if {l gem-this} was built directly into rubygems itself. Take that!
+
+To find out more about {l gem-this}, click on the links.--- # Soup attributes
+:command: |-
+  $ mkdir my_lib
+  $ cd my_lib
+  $ mate sweet_codez.rb
+  # .... hack away
+  $ gem this
+:render_as: Markdown
+:name: gem-this-0-2-1
+:kind: blog
+:updated_at: 2009-08-13 15:38:14
+:author: james
+:created_at: 2009-07-23 12:59:47

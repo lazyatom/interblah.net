@@ -1,0 +1,99 @@
+Accessing RDoc fast using Quicksilver
+========================
+
+Inspired by [this][drnic], but prefering [Quicksilver][] to [LaunchBar][], I hacked up a neat little way to browse the excellent [RailsApi][] docs using a Quicksilver trigger. It's pretty simple to setup, and most of the credit goes to the [original post][drnic] and [this trigger tutorial][triggers]. Here's how to do it:
+
+As a bonus, you can also <a href="#action">install this as an action</a>.
+
+Download the docs
+-----
+
+Download the appropriate RDoc zip from [RailsApi][]. Here's what the interface looks like:
+
+![Selecting the rdoc to include in the downloaded RailsApi bundle](/assets/rdoc_quicksilver/railsapi.png)
+
+I chose basically everything, and I've unzip mine into `~/Sites/rdoc`.
+
+
+Create a virtual host
+----
+
+Next, we need some way of accessing the documentation. You can, of course, just double click the `index.html` file in the unzipped directory, but some of the later steps don't seem to like `file://` urls, so I've set up a really simple apache virtual host, using a tool I stole from [Chris Roos][] called [hostess][].
+
+    sudo gem install hostess
+    sudo hostess create rdoc.local /Users/james/Sites/rdoc
+    chmod -R a+r /Users/james/Sites/rdoc
+
+This will create a new virtual host for our RDoc, so we can access it using http://rdoc.local. Note that you must ensure that Apache can actually serve those files by making them readable by everyone.
+
+It's worth visiting the new virtual host now (http://rdoc.local) to make sure that it's all working.
+
+
+Add the Quicksilver trigger
+----
+
+Following the instructions [here][triggers], it's pretty simple to setup a custom keystroke trigger. First, copy this url:
+
+    http://rdoc.local/?q=***
+
+Then open Quicksilver preferences (activate Quicksilver via whatever trigger you've set up, then type cmd+,), and choose the triggers tab
+
+![The Quicksilver triggers interface](/assets/rdoc_quicksilver/triggers.png)
+
+Click on the + at the bottom to add a new hotkey
+
+![Adding a hotkey](/assets/rdoc_quicksilver/hotkey.png)
+
+Double click on the new entry, and you'll see this window drop down:
+
+![Setting the trigger](/assets/rdoc_quicksilver/new_trigger.png)
+
+Now, _paste_ in the url from above. You should see it populate the fields of the new trigger panel (though yours probably won't say 'ruby method' at the bottom, it's important that there is some text in there):
+
+![Pasting in the trigger url](/assets/rdoc_quicksilver/paste_in.png)
+
+Finally, you'll want to set a hotkey for the trigger. I've chosen cmd+alt+ctrl+R, but you can choose whatever you like. Double click on your trigger under the 'Trigger' column, and you'll see this panel:
+
+![Setting the hotkey](/assets/rdoc_quicksilver/key.png)
+
+Click on the 'edit' button, and then press all the keys for your trigger keystroke.
+
+Now you're good to go. Hit your trigger, then type the method name (or partial match), and hit enter.
+
+![Using the trigger](/assets/rdoc_quicksilver/quicksilver.png)
+
+Boom - your local Ruby documentation will be opened, with the search performed.
+
+
+<a name="action">
+
+Installing as a Quicksilver action
+-------
+
+Another way of doing is is using Quicksilver actions. This lets you type some text, then hit tab and type 'rdoc', and then hit enter to perform your search. As you can see, the flow is flipped around a bit, but some people might prefer it this way. Open Script Editor, and paste in this script:
+
+    using terms from application "Quicksilver"
+    	on process text query
+    		set rdoc_url to "http://rdoc.local/?q=" & query
+    		tell application "Finder"
+    			open location rdoc_url
+    		end tell
+    	end process text
+    end using terms from
+
+Save this script as 'RDoc' in `~/Library/Application Support/Quicksilver/Actions`, and restart Quicksilver. Double Boom.
+
+
+[drnic]: http://mocra.com/2009/04/24/accessing-rails-documentation-fast/
+[LaunchBar]: http://www.obdev.at/products/launchbar/index.html
+[Quicksilver]: http://docs.blacktree.com/quicksilver/what_is_quicksilver
+[RailsApi]: http://railsapi.com/
+[triggers]: http://coelomic.wordpress.com/2006/01/02/quicksilver-tips/
+[Chris Roos]: http://chrisroos.co.uk
+[hostess]: http://github.com/lazyatom/hostess--- # Soup attributes
+:render_as: Markdown
+:name: accessing-rdoc-fast-using-quicksilver
+:kind: blog
+:updated_at: 2009-06-15 11:32:50
+:author: james
+:created_at: 2009-06-10 10:32:38

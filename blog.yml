@@ -1,0 +1,6 @@
+Here are the 10 latest blog entries. Enjoy!
+
+{kind blog}--- # Soup attributes
+:render_as: Markdown
+:name: blog
+:updated_at: 2008-06-02 00:26:00

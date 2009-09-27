@@ -1,0 +1,26 @@
+Ruby Manor
+==========
+
+<img style="float: right;" src="/assets/ruby-manor.png" width="240px" height="200px" />
+
+I just posted an [initial anouncement][1] for {l ruby-manor} to the ruby/rails/lrug mailing lists.
+
+It's an idea we've been kicking around since a beery campfire talk after RailsConf in Portland - would it be possible to put ona  Ruby conference-ish thing, but subtract all of the unfortunately common <strike>bullshit</strike> problems that conferences I've been to share:
+
+ 1. the outlandish expense
+ 2. the poor relevancy of most of the talks
+ 3. the roulette you play when incurring 1. without knowing the state of 2. 
+
+So we have a few ideas about how to do it differently. Head over to [the ruby manor site][2] to let us know if you're interested.
+
+{comments ruby-manor}
+
+
+[1]: http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/309843
+[2]: http://rubymanor.org--- # Soup attributes
+:render_as: Markdown
+:name: ruby-manor-announcement
+:kind: blog
+:updated_at: 2008-08-01 16:33:38
+:author: james
+:created_at: 2008-08-01 15:38:33

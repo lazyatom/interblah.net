@@ -1,0 +1,20 @@
+require 'vanilla/dynasnip'
+require 'vanilla/dynasnips/login'
+
+class Delete < Dynasnip
+  include Login::Helper
+
+  def handle
+    return login_required unless logged_in?
+    name = app.request.params[:snip_to_delete]
+    snip_to_delete = Vanilla.snip(name)
+    snip_to_delete.destroy if snip_to_delete
+    "Snip #{name} has been deleted."
+  end
+  self
+end--- # Soup attributes
+:render_as: Ruby
+:name: delete
+:updated_at: 2008-07-02 21:44:49
+:author: james
+:created_at: 2008-07-02 21:41:57

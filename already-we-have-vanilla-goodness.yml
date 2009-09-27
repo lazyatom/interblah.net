@@ -1,0 +1,17 @@
+h1. Already, We Have Vanilla Goodness
+
+After some furious bugfixing (thanks to the strictness of Firefox 3 for chastising me!), things are running quite smoothly here. I've written the starts of a conceptual {link_to vanilla-rb-tutorial}, please do check that out.
+
+I also limited the number of blog posts[1] that appear on the home page to 3, and added a link to the full blog that shows the most recent 10. Making this change with vanilla was utterly trivial - the {link_to start} snip originally included the {link_to blog} snip directly, but rather than do that, I can just use the underlying @kind@ dynasnip to grab the 3 most recent @blog@ snips and display them in place.
+
+I really love how flexible vanilla makes the content it stores. I'm looking forward to playing around more!
+
+fn1. Oh, and just because I can, this blog post was written using textile, whereas the others use Markdown. All on the same page, naturally. Add @.raw@ to the url for this post to see!
+
+{comments already-we-have-vanilla-goodness}--- # Soup attributes
+:render_as: Textile
+:name: already-we-have-vanilla-goodness
+:kind: blog
+:updated_at: 2008-06-03 22:36:45
+:author: james
+:created_at: 2008-06-02 00:39:27

@@ -1,0 +1,6 @@
+Notes--- # Soup attributes
+:render_as: Ruby
+:name: notes
+:main_template: <dl>[notes]</dl>
+:note_template: <dt>[link]</dt><dd>[note]</dd>
+:next_note_id: "1"

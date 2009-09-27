@@ -1,0 +1,10 @@
+class Included
+  def from_another_snip
+    return "syntax highlighted!"
+  end
+end--- # Soup attributes
+:render_as: ""
+:name: test-code-highlighting
+:updated_at: 2008-07-17 16:16:18
+:author: james
+:created_at: 2008-07-17 16:16:18

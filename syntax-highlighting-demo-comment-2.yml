@@ -1,0 +1,20 @@
+how about making snips get a body like radiant example?
+{code ruby}
+class Test
+  def initialize(name=nil)
+    puts "Hello, World"
+  end
+end
+{/code}--- # Soup attributes
+:user_ip: 88.229.30.62
+:spam: 
+:defensio_status: fail
+:website: ""
+:name: syntax-highlighting-demo-comment-2
+:defensio_message: "The following fields are missing but required: comment-author"
+:commenting_on: syntax-highlighting-demo
+:spamminess: 
+:author: ""
+:email: ""
+:created_at: 2008-09-19 03:17:28
+:defensio_signature: 

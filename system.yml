@@ -1,0 +1,270 @@
+You're in the system snip now. You probably want to {edit_link system,edit} it though.--- # Soup attributes
+:syntax_styles: |-
+  pre.code {
+  background-color:#0D151E;
+  color:#FFFFFF;
+  font-size:1.1em;
+  margin:4px 0px;
+  overflow:auto;
+  padding:10px;
+  }
+  pre.code.ruby .normal {
+  }
+  pre.code.ruby .comment {
+  color:#428BDD;
+  font-style:italic;
+  }
+  pre.code.ruby .keyword {
+  color:#F8BB00;
+  }
+  pre.code.ruby .method {
+  color:#007777;
+  }
+  pre.code.ruby .class {
+  color:#FFFFFF;
+  }
+  pre.code.ruby .module {
+  color:#005500;
+  }
+  pre.code.ruby .punct {
+  color:#FFFFFF;
+  }
+  pre.code.ruby .symbol {
+  color:#B53B3C;
+  }
+  pre.code.ruby .string {
+  color:#1DC116;
+  }
+  pre.code.ruby .char {
+  color:#FF0077;
+  }
+  pre.code.ruby .ident {
+  color:#FFFFFF;
+  }
+  pre.code.ruby .constant {
+  color:#8AA6C1;
+  }
+  pre.code.ruby .regex {
+  color:#CA4344;
+  }
+  pre.code.ruby .number {
+  color:#EDDD3D;
+  }
+  pre.code.ruby .attribute {
+  color:#55BBBB;
+  }
+  pre.code.ruby .global {
+  color:#77FFBB;
+  }
+  pre.code.ruby .expr {
+  color:#222277;
+  }
+  pre.code.ruby .escape {
+  color:#1C6A21;
+  }
+:four_oh_four: |
+  <h1>DANG IT!</h1>
+  <p>That is too bad. DANG that smarts bad. I couldn't load your request. Was it malformed?</p>
+  <p>Maybe you should go <a href="/">home</a>.</p>
+
+:name: system
+:updated_at: 2009-08-20 10:39:16
+:main_template: |
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html lang="en">
+  <head>
+    <meta name="verify-v1" content="MVZrdn6KVndrZX3SHFWGjvBJS2ADgRkzlMqWI1cYJgw=" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="description" content="A blog by James Adam, of lazyatom.com fame." />
+    <title>interblah.net - {current_snip name}</title>
+    <script type="text/javascript" src="/public/javascripts/jquery-1.2.6.js"></script>
+    <script type="text/javascript" src="/public/javascripts/vanilla.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen"  href="/system/css.css" />
+    <link rel="stylesheet" type="text/css" media="screen"  href="/system/syntax_styles.css" />
+    <link href="/feed.xml" rel="alternate" title="interblah.net - blog" type="application/atom+xml" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="header">
+        <h2><a href="/">interblah.net</a> &raquo; conflagration over configuration</h2>
+      </div>
+      <div id="controls">
+        <strong><a href="/">home</a></strong>, 
+        <strong><%= Vanilla::Routes.link_to 'index' %></strong>,
+        <%= Vanilla::Routes.new_link %> ::
+        <strong>{link_to_current_snip}</strong> &rarr; 
+        <%= Vanilla::Routes.edit_link("{current_snip name}", "Edit") %> | 
+        <a href="/delete?snip_to_delete={current_snip name}" onclick="javascript:if(confirm('Are you REALLY sure?')) { return true; } else { return false; };">Delete</a>
+      </div>
+      {current_snip}
+      <div id="footer">
+        <a href="/on-commenting">Comment Policy</a>
+      </div>
+    </div>
+  
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  var pageTracker = _gat._getTracker("UA-573082-1");
+  pageTracker._initData();
+  pageTracker._trackPageview();
+  </script>
+  
+  </body>
+  </html>
+
+:css: |-
+  body {
+    font-family: Helvetica;
+    background-color: #666;
+    margin: 0;
+    padding: 0;
+  }
+  
+  div#header h2 {
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    font-weight: normal;
+  }
+  
+  div#content {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 1em;
+    overflow: auto;
+  }
+  
+  div#controls {
+  font-size: 80%;
+  background: url(/assets/hatch.png) repeat;
+  padding: 0.5em;
+  text-align: right;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ddd;
+  }
+  
+  div#content h6 {
+    margin: 1em 0;
+  }
+  
+  textarea {
+    width: 100%;
+  }
+  
+  textarea.content {
+    min-height: 10em;
+  }
+  
+  blockquote {
+    font-family: Georgia;
+    background-color: #eee;
+    border: 2px solid #d9d9d9;
+    font-size:90%;
+    padding: 1em;
+  }
+  
+  pre {
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    padding: 1em;
+  }
+  
+  a.new {
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: #999;
+    padding: 0.2em;
+  }
+  
+  a.new:hover {
+    text-decoration: underline;
+  }
+  
+  #blog {
+    width: 590px;
+    margin-right: 30px;
+    float: left;
+  }
+  
+  #sidebar {
+    width: 180px;
+    float: left;
+    font-size: 80%;
+    padding-top: 1em;
+  }
+  
+  #sidebar h2, 
+  #sidebar h3 {
+    margin-bottom: 0;
+  }
+  
+  #sidebar ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .snip.blog {
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    position: relative;
+  }
+  
+  .snip.blog .details {
+    font-size: 80%;
+    color: #999;
+    padding-bottom: 0.5em;
+  }
+  
+  .snip.blog .details a {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #ccc;
+    font-size: 400%;
+    text-decoration: none;
+  }
+  
+  .snip.blog .details a:hover {
+    color: #999;
+  }
+  
+  .snip.blog .details p {
+    margin: 0;
+  }
+  
+  .snip.blog .content h1 {
+    margin-top: 0;
+  }
+  
+  form.comments { 
+    position: relative;
+  }
+  form.comments label {
+    display: block;
+    width: 30%;
+    position: relative;
+    height: 1.5em;
+  }
+  form.comments input { 
+    position: absolute;
+    right: 1em;
+  }
+  form.comments textarea {
+    float:right;
+    height:6em;
+    position:absolute;
+    right:0pt;
+    top:0pt;
+    width:70%;
+  }
+  form.comments button { }
+  form.comments label.human { 
+    margin-top: 2em;
+    width: 50%;
+  }

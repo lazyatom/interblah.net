@@ -1,0 +1,48 @@
+FreeAgent Widget for Mac Dashboard
+===========
+
+[Going freelance][lazyatom] has introduced me to a whole bunch of new chores and challenges, two of which are
+
+  * figuring out how to deal with the legal and financial side of being a company, and
+  * keeping track of how I spend my time.
+
+Thankfully, there's a tool which seems to hit the spot in terms of power and simplicity - [FreeAgent][freeagent]. It seems to strike a great balance between gather all the information about expenses, payroll, taxes, invoices, timesheets and bills, whilst not requiring me to study accountancy to make progress.
+
+Anyway, on my latest project (working with [New Leaders][newleaders] via [Free Range][freerange]), I'm tracking my time in a relatively detailed way, and I thought it would be good to make use of the [timesheet functionality][timesheets] that I'm already paying for. But, it's a pain to go to the website every time I need to track a task. So:
+
+[![FreeAgent Timesheets Widget][widgetimage]][github]
+
+[Download FreeAgent Widget 1.3 here][download]. This is a Mac Dashboard widget, and so only works on Mac OS X.
+
+It's fairly simple, functionally, but covers everything I need. Once you fill in your [FreeAgent][freeagent] details, it will load your projects, and choosing a project will load the available tasks for that project. Hit the big middle button to start/pause timing, and then clicking "Post" will post that time to your account. I've added a few neat little tricks - try double-clicking the time and typing "1h30", for example.
+
+It's not hugely sophisticated - you can't manage your existing timesheets, or add a timesheet for another day - but clicking the 'timeslips' text will take you straight to your timesheets on the site should you need that.
+
+I hope it's useful for some people, and of course, since it's [on GitHub][github] you're free to fork and improve it. I'm also keen to try the new [github issues][issues] feature if you're having any problems.
+
+<a name="updates"></a>
+Updates
+----
+
+  * v1.3 - now stores any unposted time between restarts
+  * v1.2 - now lets you add a comment to your timeslip, to help keep track of the specifics of what you're working on
+  * v1.1.1 - now only shows 'Active' projects. Great suggestion, folks. [Keep 'em coming!][issues]
+  * Thanks for the [mention on the FreeAgent blog][blogentry] :)
+
+
+[lazyatom]: http://lazyatom.com
+[freeagent]: http://www.freeagentcentral.com?referrer=31h0wcs9
+[newleaders]: http://newleaders.com
+[freerange]: http://gofreerange.com
+[timesheets]: http://www.freeagentcentral.com/tour/time-tracking?referrer=31h0wcs9
+[widgetimage]: http://interblah.net/assets/freeagent-widget-1.2.png
+[github]: http://github.com/lazyatom/freeagent-widget
+[issues]: http://github.com/lazyatom/freeagent-widget/issues
+[download]: http://public.lazyatom.com/FreeAgent-1.3.1.zip
+[blogentry]: http://freeagentcentral.com/central/free-time-tracking-widget--- # Soup attributes
+:render_as: Markdown
+:name: freeagent-widget
+:kind: blog
+:updated_at: 2009-09-08 09:42:17
+:author: james
+:created_at: 2009-04-22 08:33:04
