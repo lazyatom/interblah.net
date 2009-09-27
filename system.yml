@@ -23,7 +23,7 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
         <strong><%= link_to 'index' %></strong>,
         <%= new_link %> ::
         <strong>{link_to_current_snip}</strong> &rarr; 
-        <%= edit_link("{current_snip name}", "Edit") %> | 
+        {edit_link} | 
         <a href="/delete?snip_to_delete={current_snip name}" onclick="javascript:if(confirm('Are you REALLY sure?')) { return true; } else { return false; };">Delete</a>
       </div>
       {current_snip}
