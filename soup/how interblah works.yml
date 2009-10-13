@@ -62,10 +62,18 @@ Summary
 [soup-gem]: http://rubyforge.org/projects/soup
 
 --- # Soup attributes
-:created_at: 2009-10-13 13:45:00 +0100
-:updated_at: 2009-10-13 13:51:00 +0100
+:"config-yml": |-
+  ---
+  :soup: soup
+  :secret: 89asdf897as897sa9087as097gd907sad0f97as90ag6asdf09a6s # not my real secret
+  :credentials:
+    james: a98070aw78w09w7098a6f0a986a09870 # not my real credentials
+  :filename: config.yml
 :render_as: Markdown
-:virtual-server-conf: |+
+:created_at: 2009-10-13 13:45:00 +01:00
+:name: how interblah works
+:updated_at: 2009-10-13 13:51:00 +01:00
+:"virtual-server-conf": |
   DocumentRoot /var/www/apps/interblah.net/public
   <Directory "/var/www/apps/interblah.net/public">
   allow from all
@@ -77,10 +85,4 @@ Summary
   RedirectMatch 301 ^/2006/\d+/\d+/(.+) "/$1"
   RedirectMatch 301 ^/2007/\d+/\d+/(.+) "/$1"
   RedirectMatch 301 ^/2008/\d+/\d+/(.+) "/$1"
-:config-yml: |+
-  ---
-  :soup: soup
-  :secret: 89asdf897as897sa9087as097gd907sad0f97as90ag6asdf09a6s # not my real secret
-  :credentials:
-    james: a98070aw78w09w7098a6f0a986a09870 # not my real credentials
-  :filename: config.yml
+
