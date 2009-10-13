@@ -26,7 +26,7 @@ The most important of these is the {l soup} gem. When the appliation starts, the
 
 {code yaml,"how interblah works",config-yml}
 
-This file isn't present in the [interblah.net site on github][interblah-source] because it contains some sensitive information, like the real cookie secret, and an MD5 hash of my password. However, if your repository is private, you can happily include this file.
+This file isn't present in the [interblah.net site on github][interblah source] because it contains some sensitive information, like the real cookie secret, and an MD5 hash of my password. However, if your repository is private, you can happily include this file.
 
 The `config.ru` pushs a local `lib` path at the start of the `$LOAD_PATH`, which is intended for dumping site-specific code, although I haven't used this yet. The `public` directory is also a part of the site, for custom images and CSS and whatnot. Finally, the `tmp` directory needs to be there for Passenger to work. You'll see in the [interblah source][] that the `lib` and `tmp` directories are missing; this is just because git won't store empty directories.
 
@@ -62,6 +62,8 @@ Summary
 [soup-gem]: http://rubyforge.org/projects/soup
 
 --- # Soup attributes
+:created_at: 2009-10-13 13:45:00 +0100
+:updated_at: 2009-10-13 13:51:00 +0100
 :render_as: Markdown
 :virtual-server-conf: |+
   DocumentRoot /var/www/apps/interblah.net/public
