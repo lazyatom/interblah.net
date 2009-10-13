@@ -1,0 +1,84 @@
+How Interblah Works
+===================
+
+[Murray][] asked for an overview of how this site is put together, and here I am obliging.
+
+From the server perspective, this site runs on a VPS, under Apache and Passenger. [interblah.net][] is an Apache virtual server; here's the config:
+
+{code apache,"how interblah works",virtual-server-conf}
+
+The Alias directive is something I'll probably lose, now that `public` is a proper directory in a {l vanilla} application, but exists to support URLs from older incarnations of the site; likewise for the Redirects, which handle old Mephisto URLs.
+
+Passenger is configured to use [Ruby Enterprise Edition][REE], since I have a bunch of other sites on the VPS and want to conserve memory.
+
+The contents of `/var/www/apps/interblah.net` are available on [github][interblah source]; this is the site directory that Passenger runs.
+
+Here you can see the `config.ru` that boots the application; this `require`s vanilla, which is the [vanilla 0.9.10 gem][gem]. Previous incarnations of my site ran directly off the [vanilla source][vanilla], which was useful for tweaking the system, but made it much more complex to deploy. By making the {l vanilla} code external, the site contents itself can be packaged into source control and deployed directly.
+
+The {l vanilla} gem depends on a few other gems, all of which will be installed automatically when installing the vanilla gem:
+
+* [soup 0.9.9][soup-gem]
+* Redcloth & Bluecloth (although I want to start using some of the faster markdown processors)
+* Treetop (I'm dynamically loading the snip reference parser, although technically that's not required)
+* ratom (used to generate the site feed in the `kind` dynasnip, and required libxml itself)
+
+The most important of these is the {l soup} gem. When the appliation starts, the application instantiates a 'soup', based on a subdirectory of the site code ([here is interblah's](http://github.com/lazyatom/interblah.net/tree/master/soup/)). That directory is defined by default in the site's config.yml:
+
+{code yaml,"how interblah works",config-yml}
+
+This file isn't present in the [interblah.net site on github][interblah-source] because it contains some sensitive information, like the real cookie secret, and an MD5 hash of my password. However, if your repository is private, you can happily include this file.
+
+The `config.ru` pushs a local `lib` path at the start of the `$LOAD_PATH`, which is intended for dumping site-specific code, although I haven't used this yet. The `public` directory is also a part of the site, for custom images and CSS and whatnot. Finally, the `tmp` directory needs to be there for Passenger to work. You'll see in the [interblah source][] that the `lib` and `tmp` directories are missing; this is just because git won't store empty directories.
+
+I have a few other gems installed for various dynasnips that I've written specifically for [interblah.net][]
+
+* syntax (used by the [code](http://github.com/lazyatom/interblah.net/blob/master/soup/code.yml) dynasnips)
+* defensio (was used by the comments dynasnips, until I instigated by policy {l on-commenting})
+
+Hmm - this is a bit rambly, so here is...
+
+Summary
+-------
+
+* Apache with Passenger & REE
+* Vanilla 0.9.10 installed as a system gem
+  * dependencies include Soup 0.9.9
+* Site exists as a [git repository][interblah source]
+  * I now edit locally, using `rackup` to preview the site on my machine
+  * I typically edit using a text editor, although you can use the web interface locally
+  * I commit and push up to [github][interblah source]
+* To deploy, I just check out this repository on the server
+  * I have a local and server-based [config.yml](http://github.com/lazyatom/vanilla-rb/blob/master/config.example.yml)
+  * I have a post-update hook on github that triggers a [git pull](http://interblah.net/update-soup.raw)
+  * It shouldn't be too hard to deploy using capistrano/thor
+
+
+[Murray]: http://h-lame.com
+[interblah.net]: http://interblah.net
+[REE]: http://phusion.nl
+[interblah source]: http://github.com/lazyatom/interblah.net
+[gem]: http://rubyforge.org/projects/vanilla
+[vanilla]: http://github.com/lazyatom/vanilla-rb.git
+[soup-gem]: http://rubyforge.org/projects/soup
+
+--- # Soup attributes
+:render_as: Markdown
+:virtual-server-conf: |+
+  DocumentRoot /var/www/apps/interblah.net/public
+  <Directory "/var/www/apps/interblah.net/public">
+  allow from all
+  Options +Indexes
+  </Directory>
+  ServerName interblah.net
+  ServerAlias www.interblah.net
+  Alias /assets "/var/www/apps/interblah.net/assets"
+  RedirectMatch 301 ^/2006/\d+/\d+/(.+) "/$1"
+  RedirectMatch 301 ^/2007/\d+/\d+/(.+) "/$1"
+  RedirectMatch 301 ^/2008/\d+/\d+/(.+) "/$1"
+:config-yml: |+
+  ---
+  :soup: soup
+  :secret: 89asdf897as897sa9087as097gd907sad0f97as90ag6asdf09a6s # not my real secret
+  :credentials:
+    james: a98070aw78w09w7098a6f0a986a09870 # not my real credentials
+  :filename: config.yml
