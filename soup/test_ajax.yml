@@ -1,0 +1,12 @@
+require 'ajax_dynasnip'
+
+class TestAjax < AjaxDynasnip
+  def handle(*args)
+    "Hello!"
+  end
+  self
+end
+
+--- # Soup attributes
+:name: test_ajax
+:render_as: Ruby
