@@ -1,5 +1,7 @@
 Lets see if this appears on my site.
 --- # Soup attributes
-:name: test-git-push
+:created_at: 2009-10-16 15:27:53.582874 +01:00
+:updated_at: 2009-10-16 15:27:53.582874 +01:00
 :author: james
 :render_as: Markdown
+:name: test-git-push

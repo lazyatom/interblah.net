@@ -5,7 +5,7 @@ class BadDynasnip
   end
 end
 BadDynasnip--- # Soup attributes
+:created_at: 2009-10-16 15:27:53.547508 +01:00
+:updated_at: 2009-10-16 15:27:53.547508 +01:00
 :render_as: Ruby
-:updated_at: 
 :name: bad_dynasnip
-:created_at: 

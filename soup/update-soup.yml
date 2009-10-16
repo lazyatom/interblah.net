@@ -5,8 +5,8 @@ class UpdateSoup < Dynasnip
   self
 end
 --- # Soup attributes
+:created_at: 2009-09-27 22:34:45 +01:00
+:updated_at: 2009-09-27 22:35:03.144353 +01:00
 :author: james
 :render_as: Ruby
 :name: update-soup
-:created_at: Sun Sep 27 21:34:45 +0000 2009
-:updated_at: 2009-09-27 21:35:03.144353 +00:00

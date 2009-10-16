@@ -14,7 +14,7 @@
   <!-- this includes the rendered content of the sidebar -->
   {sidebar}
 </div>--- # Soup attributes
-:render_as: ""
+:created_at: 2009-10-16 15:27:53.578686 +01:00
 :updated_at: 2009-05-07 01:59:17 +01:00
+:render_as: ""
 :name: start
-:created_at: 

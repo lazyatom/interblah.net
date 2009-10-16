@@ -3,10 +3,10 @@ James,
 Make sure we return a "success" response when you try to audit a comment.  Maybe you're not sending the parameters in the right format.  If problems persist, send us an email and we'll take a look.
 
 cheers!--- # Soup attributes
-:commenting_on: defensio-to-the-rescue
-:website: http://defensio.com
-:updated_at: 
 :email: carl@carlmercier.com
-:name: defensio-to-the-rescue-comment-2
 :created_at: 2008-08-24 15:25:25 +01:00
+:updated_at: 2008-08-24 15:25:25 +01:00
 :author: Carl Mercier
+:commenting_on: defensio-to-the-rescue
+:name: defensio-to-the-rescue-comment-2
+:website: http://defensio.com

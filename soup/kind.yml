@@ -1,8 +1,8 @@
 Kind--- # Soup attributes
-:render_as: Ruby
+:created_at: 2009-10-16 15:27:53.557837 +01:00
 :domain: interblah.net
-:updated_at: 2008-06-02 16:56:14 +01:00
-:name: kind
-:created_at: 
-:feed_title: interblah.net - blog
 :snip_template: "    <div class=\"snip SNIP_KIND\">\r\n      <div class=\"details\">\r\n        <a href=\"/SNIP_NAME\">#</a>\r\n        <p class=\"created_at\">CREATED_AT</p>\r\n      </div>\r\n      <div class=\"content\">\r\n        SNIP_CONTENT\r\n      </div>\r\n    </div>\r\n  "
+:feed_title: interblah.net - blog
+:updated_at: 2008-06-02 16:56:14 +01:00
+:render_as: Ruby
+:name: kind

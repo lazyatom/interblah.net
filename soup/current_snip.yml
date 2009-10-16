@@ -1,8 +1,4 @@
 CurrentSnip--- # Soup attributes
-:render_as: Ruby
-:updated_at: 
-:name: current_snip
-:created_at: 
 :usage: |-
   The current_snip dyna normally returns the result of rendering the snip named by the 
       'snip' value in the parameters. This way, it can be used in templates to place the currently
@@ -13,3 +9,7 @@ CurrentSnip--- # Soup attributes
         &#123;current_snip name&#125;
   
       will output the name of the current snip, or the name of the snip currently being edited.
+:created_at: 2009-10-16 15:27:53.553997 +01:00
+:updated_at: 2009-10-16 15:27:53.553997 +01:00
+:render_as: Ruby
+:name: current_snip

@@ -8,5 +8,7 @@ class TestAjax < AjaxDynasnip
 end
 
 --- # Soup attributes
-:name: test_ajax
+:created_at: 2009-10-16 15:27:53.586102 +01:00
+:updated_at: 2009-10-16 15:27:53.586102 +01:00
 :render_as: Ruby
+:name: test_ajax
