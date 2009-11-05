@@ -26,6 +26,7 @@ Unless there's a great reason to add something to *every* object in a running pr
 --- # Soup attributes
 :name: Zuul and Code Etiquette
 :render_as: Markdown
+:kind: blog
 :zuul: |
   Class.class_eval do
     include Zuul::ValidRoles::ClassMethods
