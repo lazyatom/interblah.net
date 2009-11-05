@@ -1,0 +1,50 @@
+Zuul and Code Etiquette
+=======================
+
+[Obie][] and [a few others][twitter] tweeted about [Zuul][] earlier today - a plugin for adding 'role-based authentication' to Rails. I had a quick look at the code to see it's particular take on this common problem, but was struct by an unfortunate aspect of [it's current implementation][current].
+
+When you requre `zuul.rb`, the following code is run:
+
+{code ruby,zuul and code etiquette,zuul}
+
+Why is it adding this behaviour to `Class`, instead of `ActiveRecord::Base`? The code to do the latter is even [commented out above][comment]!
+
+By doing this, now every object now gains a `valid_roles` method, but this method calls `ActiveRecord` methods internally, so it's not actually possible to call it on a 'normal' Ruby object without matching `ActiveRecord`'s API:
+
+{code ruby,zuul and code etiquette,valid_roles}
+
+In my opinion, this is pretty rude. If you were to ask any instance if it responds to `valid_roles` now, they will always say 'yes!' enthusiastically, leaving your code completely obliviously to the fact that calling that method will blow up completely.
+
+Unless there's a great reason to add something to *every* object in a running process, we should try to restrict the scope of our behavioural changes as much as possible. In the case of [Zuul][], `valid_roles` only belongs on `ActiveRecord` user classes.
+
+[Obie]: http://obiefernandez.com
+[Zuul]: http://wgibbs.github.com/2009/11/04/zuul.html
+[current]: http://github.com/wgibbs/zuul/tree/2619fcc2eed3334f88c3d7d96ddf81567bfa7900
+[twitter]: http://search.twitter.com/search?q=zuul+gem
+[comment]: http://github.com/wgibbs/zuul/blob/2619fcc2eed3334f88c3d7d96ddf81567bfa7900/lib/zuul.rb#L4
+
+--- # Soup attributes
+:name: Zuul and Code Etiquette
+:render_as: Markdown
+:zuul: |
+  Class.class_eval do
+    include Zuul::ValidRoles::ClassMethods
+  end
+:valid_roles: |
+  module Zuul
+    module ValidRoles
+      # ...
+      module ClassMethods
+        def valid_roles(*roles)
+          attr_protected :role
+          write_inheritable_attribute(:roles, roles)
+          include InstanceMethods
+        end
+      end
+      # ...
+    end
+  end
+:example: |
+  class Monkey
+    valid_roles :admin
+  end
