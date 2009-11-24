@@ -1,15 +1,6 @@
-require 'syntax/convertors/html'
-class CodeHighlighter < Dynasnip
-  def handle(language, snip_to_render, part_to_render='content')
-    snip = app.soup[snip_to_render]
-    text = snip.__send__(part_to_render.to_sym)
-    convertor = Syntax::Convertors::HTML.for_syntax(language)
-    code = convertor.convert(text, false)
-    %(<pre class="code ) + language + %("><code>) + code + %(</code></pre>)
-  end
-
-  self
-end--- # Soup attributes
+require 'code_highlighter'
+CodeHighlighter
+--- # Soup attributes
 :render_as: Ruby
 :updated_at: 2008-07-17 16:31:41 +01:00
 :name: code

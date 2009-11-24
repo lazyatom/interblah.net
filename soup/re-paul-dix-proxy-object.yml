@@ -18,7 +18,7 @@ If Paul really wants his API, a better approach is to mix some `sanitize` behavi
 
 It seems much more like programming - here's an entry, now get the content, and now ask that to return a sanitized version of itself.
 
-{code ruby,re-paul-dix-proxy-object,example}
+{code ruby,example}
 
 I should add that my prefered solution is actually `API 2`, where 'sanitized' is a method on some object whose responsibility is to present an entry. But I do have a soft-spot for extending returned values to add behaviour.
 

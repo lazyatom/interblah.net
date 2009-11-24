@@ -3,7 +3,7 @@ Syntax Highlighting
 
 Working through some of the outstanding issues for {l vanilla-rb}, I've implemented some simple syntax highlighting ({lighthouse_ticket lazyatom,vanilla,16}):
 
-{code ruby,syntax-highlighting-demo,code\_sample\_one}
+{code ruby,code\_sample\_one}
 
 It's pretty simple behind the scenes, although there are a few conceptual choices which I may revisit. Here's the scoop.
 
@@ -13,7 +13,7 @@ Blocks of content
 
 I recently fixed code syntax highlighting on the {l rails-engines} site, which is built using the reasonably-excellent {l radiant-cms} system. In Radiant, you markup blocks of content, typically like this:
 
-{code html,syntax-highlighting-demo,radiant_syntax}
+{code html,radiant_syntax}
 
 Radiant lets you define *tags* that wrap around content within the page, making this pretty simple.
 
@@ -25,21 +25,21 @@ The Vanilla Way
 
 Since the building block is the snip, the natural thing to do is to move the code snippet into its own snip, and include that via a {l code} dynasnip (see below for the self-syntax-highlighted source!). And so this call 
 
-&#123;code ruby,test-code-highlighting&#125;
+&#123;code ruby&#125;
 
 works nicely for us. After the call to the {l code} dynasnip, the first parameter is the language, and the second is the snip name to include:
 
-{code ruby,test-code-highlighting}
+{code ruby}
 
 ... but it's a pain to have to move every code sample out into its own snip (although that's certainly useful for larger chunks of code.
 
 The solution to this, is to allow rendering of individual *parts* of snips via syntax highlighting. By adding the snip part to the parameter list
 
-&#123;code ruby,syntax-highlighting-demo,rubycodesample&#125;
+&#123;code ruby,rubycodesample&#125;
 
 we get
 
-{code ruby,syntax-highlighting-demo,rubycodesample}
+{code ruby,rubycodesample}
 
 The code dynasnip is rendering the <a href="/syntax-highlighting-demo/rubycodesample.raw">rubycodesample</a> part of this very blog post!
 
@@ -68,7 +68,7 @@ Super Bonus Appendix
 
 Here's the code from the {l code} dynasnip, highlighting itself, like an eternal self-consuming snake. Don't say I didn't warn you!
 
-{code ruby,code}
+{code ruby}
 
 {comments syntax-highlighting-demo}
 

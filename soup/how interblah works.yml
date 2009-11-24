@@ -5,7 +5,7 @@ How Interblah Works
 
 From the server perspective, this site runs on a VPS, under Apache and Passenger. [interblah.net][] is an Apache virtual server; here's the config:
 
-{code apache,"how interblah works",virtual-server-conf}
+{code apache,virtual-server-conf}
 
 The Alias directive is something I'll probably lose, now that `public` is a proper directory in a {l vanilla} application, but exists to support URLs from older incarnations of the site; likewise for the Redirects, which handle old Mephisto URLs.
 
@@ -24,7 +24,7 @@ The {l vanilla} gem depends on a few other gems, all of which will be installed 
 
 The most important of these is the {l soup} gem. When the appliation starts, the application instantiates a 'soup', based on a subdirectory of the site code ([here is interblah's](http://github.com/lazyatom/interblah.net/tree/master/soup/)). That directory is defined by default in the site's config.yml:
 
-{code yaml,"how interblah works",config-yml}
+{code yaml,config-yml}
 
 This file isn't present in the [interblah.net site on github][interblah source] because it contains some sensitive information, like the real cookie secret, and an MD5 hash of my password. However, if your repository is private, you can happily include this file.
 

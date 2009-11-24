@@ -37,10 +37,17 @@ And an error when running? {bad_dynasnip}
 
 And some sweet syntax highlighting!
 
-{code ruby,active-record-ideas,idea-1}
+{code ruby,code-sample}
 --- # Soup attributes
 :created_at: 2009-10-16 15:27:53.583636 +01:00
 :some_attribute: attribute content
 :updated_at: 2008-08-19 11:40:48 +01:00
 :render_as: Markdown
 :name: test
+:code-sample: |
+  class Hello
+    def to_s
+      "... world!"
+    end
+  end
+

@@ -49,7 +49,7 @@ It wasn't quite as easy as I hoped - it took me a bit of head-scratching to real
 
 Here's [my fork of rip][my-fork] installing Rails:
 
-{code shell,rip-gem-dependencies,installing-rails}
+{code shell,installing-rails}
 
 
 Next steps
@@ -63,7 +63,7 @@ Now, to finally start playing with [monk][]...
 
 (oh, btw, here's rip installing monk; I don't know why the dependencies gem needs wycats-thor...)
 
-{code shell,rip-gem-dependencies,installing-monk}
+{code shell,installing-monk}
 
 
 Another update, a few days later
@@ -131,7 +131,7 @@ One of the selling points of [rip][] is that dependency issues are resolved when
 
 However, this means that my `monkrb` example doesn't work anymore, because of the `wycats-thor` dependency:
 
-{code shell,rip-gem-dependencies,installing-monk-2}
+{code shell,installing-monk-2}
 
 The solution here isn't really clear. I think that the `dependencies` gem shouldn't really depend on a user-specific version of `thor`, and there's some kind of irony there. One way to proceed might be to add a new flag to `rip install`, something like `rip install --no-dependencies` which only installs the package in question and ignores its dependencies.
 
