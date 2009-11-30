@@ -26,8 +26,5 @@ I owe [Why][] a beer. No, many beers.
 :created_at: 2009-08-21 15:20:20 +01:00
 :author: james
 :beers: 10000.times { me.buy_beer_for(Why) }
-:example: |
-  10.times do |i|
-    puts i
-  end
+:example: 10.times { |i| puts i }
 :kind: blog
