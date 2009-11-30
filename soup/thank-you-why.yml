@@ -5,7 +5,9 @@ Gratitude
 
 My only actual connection with [Why][] was through this slide, from my Canada on Rails presentation many years ago. I had emailed him to ask permission to use the Foxes, and he naturally obliged.
 
-I got to meet [Why][] briefly in Chicago, where I said thanks in person for letting me use the image, and that his (poignant) guide to Ruby had been the [red pill][] that got me hooked on Ruby. I can remember reading it, whilst learning to use Ruby in my PhD research, and allowing his contagious enthusiasm soak my mind, often spilling over, on which occasions I'd be compelled to email my friends to rave about how *sweet* being able to write code like `10.times { |i| puts i }` was.
+I got to meet [Why][] briefly in Chicago, where I said thanks in person for letting me use the image, and that his (poignant) guide to Ruby had been the [red pill][] that got me hooked on Ruby. I can remember reading it, whilst learning to use Ruby in my PhD research, and allowing his contagious enthusiasm soak my mind, often spilling over, on which occasions I'd be compelled to email my friends to rave about how *sweet* being able to write code like
+
+{code ruby,example}
 
 Ruby is much bigger now, of course, than then. We can pay the bills with it, and quite seriously talk about 'productivity gains' and 'test first' and so on. But it's easy to forget that simpler time, when really everything was on [ruby-talk][], and people were really just exploring the delights, the quirks, and the elegance of this great language that we'd all stumbled across in the wilds of `comp.lang`. 
 
@@ -24,4 +26,8 @@ I owe [Why][] a beer. No, many beers.
 :created_at: 2009-08-21 15:20:20 +01:00
 :author: james
 :beers: 10000.times { me.buy_beer_for(Why) }
+:example: |
+  10.times do |i|
+    puts i
+  end
 :kind: blog
