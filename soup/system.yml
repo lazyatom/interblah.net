@@ -167,6 +167,8 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
     <link rel="stylesheet" type="text/css" media="screen"  href="/system/css.css" />
     <link rel="stylesheet" type="text/css" media="screen"  href="/system/syntax_styles.css" />
     <link href="/feed.xml" rel="alternate" title="interblah.net - blog" type="application/atom+xml" />
+    <script type="text/javascript" src="http://use.typekit.com/bio7rkl.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
     <div id="content">
