@@ -13,7 +13,7 @@ I finished my PhD not knowing if I'd be able to get a job using Ruby, but knowin
 
 I owe [Why][] a beer. No, many beers.
 
-{code ruby,thank-you-why,beers}
+{code ruby,beers}
 
 [ruby-talk]: http://blade.nagaokaut.ac.jp/ruby/ruby-talk/index.shtml
 [Why]: http://en.wikipedia.org/wiki/Why_the_lucky_stiff
