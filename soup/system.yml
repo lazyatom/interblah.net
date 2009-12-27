@@ -50,7 +50,6 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
   
   h1, h2 {
     color: #fff;
-    xborder-top: 0.33em solid #666;
     padding: 0 32px;
   }
   
