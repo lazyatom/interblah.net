@@ -3,7 +3,7 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
   body {
     background-color: #999;
     margin: 0;
-    padding: 2em 0 1em 0;
+    padding: 2em 0 0 0;
     font-size: 14px;
     width: 68em;
     background-color: #e4e4e4;
@@ -127,6 +127,22 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
   .blog .details {
     background-color: #999;
     display: none;
+  }
+  
+  blockquote {
+    background-color: #f4f4f4;
+    border: 2px solid #d9d9d9;
+    font-size: 115%;
+  }
+  
+  #content blockquote p {
+    margin: 1em;
+  }
+
+  pre {
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    padding: 1em;
   }
   
   form.comments { 
