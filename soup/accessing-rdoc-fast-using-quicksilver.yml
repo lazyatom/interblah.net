@@ -20,9 +20,11 @@ Create a virtual host
 
 Next, we need some way of accessing the documentation. You can, of course, just double click the `index.html` file in the unzipped directory, but some of the later steps don't seem to like `file://` urls, so I've set up a really simple apache virtual host, using a tool I stole from [Chris Roos][] called [hostess][].
 
+
     sudo gem install hostess
     sudo hostess create rdoc.local /Users/james/Sites/rdoc
     chmod -R a+r /Users/james/Sites/rdoc
+
 
 This will create a new virtual host for our RDoc, so we can access it using http://rdoc.local. Note that you must ensure that Apache can actually serve those files by making them readable by everyone.
 
@@ -65,20 +67,17 @@ Now you're good to go. Hit your trigger, then type the method name (or partial m
 Boom - your local Ruby documentation will be opened, with the search performed.
 
 
-<a name="action">
-
-Installing as a Quicksilver action
--------
+<h2 id="action">Installing as a Quicksilver action</h2>
 
 Another way of doing is is using Quicksilver actions. This lets you type some text, then hit tab and type 'rdoc', and then hit enter to perform your search. As you can see, the flow is flipped around a bit, but some people might prefer it this way. Open Script Editor, and paste in this script:
 
     using terms from application "Quicksilver"
-    	on process text query
-    		set rdoc_url to "http://rdoc.local/?q=" & query
-    		tell application "Finder"
-    			open location rdoc_url
-    		end tell
-    	end process text
+      on process text query
+        set rdoc_url to "http://rdoc.local/?q=" & query
+          tell application "Finder"
+          open location rdoc_url
+        end tell
+      end process text
     end using terms from
 
 Save this script as 'RDoc' in `~/Library/Application Support/Quicksilver/Actions`, and restart Quicksilver. Double Boom.
