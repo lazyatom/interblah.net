@@ -64,12 +64,15 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
   }
   
   p {
-    line-height: 1.3em;
     text-shadow: #f3f3f3 1px 1px 1px;
   }
   
   ul, ol {
     padding-left: 2em;
+  }
+  
+  p, li {
+    line-height: 1.3em;
   }
 
   li {
