@@ -65,6 +65,7 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
   
   p {
     line-height: 1.3em;
+    text-shadow: #f3f3f3 1px 1px 1px;
   }
   
   ul, ol {
@@ -89,6 +90,7 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
   #content h2 {
     padding-top: 0.2em;
     padding-bottom: 0.1em;
+    text-shadow: #555 1px 1px 1px;
   }
   
   #content > p:first {
