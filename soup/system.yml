@@ -1,157 +1,131 @@
 You're in the system snip now. You probably want to {edit_link system,edit} it though.--- # Soup attributes
 :css: |-
   body {
-    font-family: Helvetica;
-    background-color: #666;
+    background-color: #999;
     margin: 0;
-    padding: 0;
+    padding: 1em 0;
+    font-size: 14px;
+    width: 68em;
+    background-color: #e4e4e4;
   }
   
-  div#header h2 {
-    margin-top: 0;
-    margin-bottom: 0.3em;
-    font-weight: normal;
+  #header {
+    float: right;
   }
   
-  div#content {
-    width: 800px;
-    margin: 0 auto;
+  #content {
+    width: 48em;
+  }
+  
+  #header {
+    width: 18em;
+  }
+  
+  a {
     background-color: #fff;
-    padding: 1em;
-    overflow: auto;
-  }
-  
-  div#controls {
-  font-size: 80%;
-  background: url(/assets/hatch.png) repeat;
-  padding: 0.5em;
-  text-align: right;
-  margin-bottom: 1em;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ddd;
-  }
-  
-  div#content h6 {
-    margin: 1em 0;
-  }
-  
-  textarea {
-    width: 100%;
-  }
-  
-  textarea.content {
-    min-height: 10em;
-  }
-  
-  blockquote {
-    font-family: Georgia;
-    background-color: #eee;
-    border: 2px solid #d9d9d9;
-    font-size:90%;
-    padding: 1em;
-  }
-  
-  pre {
-    background-color: #f6f6f6;
-    border: 1px solid #ccc;
-    padding: 1em;
-  }
-  
-  a.new {
-    background-color: #f0f0f0;
+    color: #000;
+    font-weight: bold;
     text-decoration: none;
-    color: #999;
     padding: 0.2em;
   }
   
-  a.new:hover {
-    text-decoration: underline;
+  a:hover {
+    color: #666;
   }
   
-  #blog {
-    width: 590px;
-    margin-right: 30px;
-    float: left;
-  }
-  
-  #sidebar {
-    width: 180px;
-    float: left;
-    font-size: 80%;
-    padding-top: 1em;
-  }
-  
-  #sidebar h2, 
-  #sidebar h3 {
-    margin-bottom: 0;
-  }
-  
-  #sidebar ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .snip.blog {
-    border-bottom: 2px dashed #ccc;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
-    position: relative;
-  }
-  
-  .snip.blog .details {
-    font-size: 80%;
-    color: #999;
-    padding-bottom: 0.5em;
-  }
-  
-  .snip.blog .details a {
-    display: block;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    color: #ccc;
-    font-size: 400%;
-    text-decoration: none;
-  }
-  
-  .snip.blog .details a:hover {
-    color: #999;
-  }
-  
-  .snip.blog .details p {
+  div#header {
     margin: 0;
   }
   
-  .snip.blog .content h1 {
-    margin-top: 0;
+  div#header h2 {
+    font-size: 200%;
+    margin: 0;
   }
   
-  form.comments { 
-    position: relative;
+  div#header h2 a {
+    background-color: inherit;
+    color: inherit;
+    text-decoration: none;
   }
-  form.comments label {
-    display: block;
-    width: 30%;
-    position: relative;
-    height: 1.5em;
+  
+  h1, h2 {
+    color: #fff;
+    xborder-top: 0.33em solid #666;
+    padding: 0 32px;
   }
-  form.comments input { 
-    position: absolute;
-    right: 1em;
+  
+  h1 {
+    margin-top: 0;
+    background-color: #222;
   }
-  form.comments textarea {
-    float:right;
-    height:6em;
-    position:absolute;
-    right:0pt;
-    top:0pt;
-    width:70%;
+  
+  h2 {
+    background-color: #888;
   }
-  form.comments button { }
-  form.comments label.human { 
-    margin-top: 2em;
-    width: 50%;
+  
+  p {
+    line-height: 1.2em;
   }
+  
+  ul, ol {
+    padding-left: 2em;
+  }
+
+  li {
+    padding: 0.2em 0;
+  }
+  
+  img {
+    border: 0.5em solid #bbb;
+    padding: 0.5em;
+    background-color: #fff
+  }
+  
+  #content p, #content pre, #content h3, #content h4, #content ul, #content ol {
+    margin-left: 32px;
+    margin-right: 2em;
+  }
+  
+  #content h2 {
+    padding-top: 0.2em;
+    padding-bottom: 0.1em;
+  }
+  
+  #content > p:first {
+    font-size: 200%;
+  }
+  
+  #sidebar ul {
+    padding-left: 0;
+    list-style: none;
+    overflow: auto;
+    margin-bottom: 1em;
+  }
+  
+  #sidebar ul li {
+    margin: 0.3em;
+    float: left
+  }
+  
+  #sidebar h2 {
+    clear: both;
+  }
+
+  #blog h1, 
+  #content > h1 {
+    font-size: 400%;
+    margin-bottom: 0.33em;
+  }
+  
+  #blog .blog {
+    margin: 0 0 5em 0;
+  }
+  
+  .blog .details {
+    background-color: #999;
+    display: none;
+  }
+  
 :created_at: 2009-10-16 15:27:53.579529 +01:00
 :main_template: |
   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -164,23 +138,19 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
     <script type="text/javascript" src="/public/javascripts/jquery.js"></script>
     <script type="text/javascript" src="/public/javascripts/jquery.autogrow-textarea.js"></script>
     <script type="text/javascript" src="/public/javascripts/vanilla.js"></script>
+    <script type="text/javascript" src="http://use.typekit.com/bio7rkl.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" type="text/css" media="screen"  href="/system/css.css" />
     <link rel="stylesheet" type="text/css" media="screen"  href="/system/syntax_styles.css" />
     <link href="/feed.xml" rel="alternate" title="interblah.net - blog" type="application/atom+xml" />
   </head>
   <body>
-    <div id="content">
+    <div id="container">
       <div id="header">
-        <h2><a href="/">interblah.net</a> &raquo; conflagration over configuration</h2>
+        {header}
       </div>
-      <div id="controls">
-        <strong><a href="/">home</a></strong>, 
-        <strong><%= link_to 'index' %></strong>,
-        <strong>{link_to_current_snip}</strong>
-      </div>
-      {current_snip}
-      <div id="footer">
-        <a href="/on-commenting">Comment Policy</a>
+      <div id="content">
+        {current_snip}
       </div>
     </div>
   

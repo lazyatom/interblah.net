@@ -1,6 +1,8 @@
 Here are the 10 latest blog entries. Enjoy!
-
-{kind blog}--- # Soup attributes
+<div id="blog">
+{kind blog}
+</div>
+--- # Soup attributes
 :created_at: 2009-10-16 15:27:53.551903 +01:00
 :updated_at: 2008-06-02 00:26:00 +01:00
 :render_as: Markdown
