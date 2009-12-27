@@ -64,7 +64,7 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
   }
   
   p {
-    line-height: 1.2em;
+    line-height: 1.3em;
   }
   
   ul, ol {
