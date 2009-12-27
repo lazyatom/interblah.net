@@ -14,7 +14,7 @@ Using Backchat
 
 For trac, you just need to edit the changeset.cs template, and add something like the following snippet wherever in the page you want the comments to appear:
 
-  <filter:code lang="html">&lt;script type="text/javascript" src="http://your-backchat-server/&lt;?cs var:changeset.new_rev ?&gt;.js"&gt;&lt;/script&gt;</filter>
+{code javascript,trac-snip}
 
 This will embed a form in the page for entering comments keyed against that changeset. Add "?css=true" to the end of the URL if you want to include my feeble attempts at prettification.
 
@@ -31,3 +31,4 @@ Anyway - let me know what you think about it - either here, or on the [github pr
 :name: backchat
 :created_at: 2008-05-03 15:20:00 +01:00
 :kind: blog
+:trac-snip: <script type="text/javascript" src="http://your-backchat-server/<?cs var:changeset.new_rev ?>.js"></script>
