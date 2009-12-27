@@ -44,7 +44,7 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
   }
   
   div#header h2 a {
-    background-color: inherit;
+    background-color: #555;
     color: inherit;
     text-decoration: none;
   }
