@@ -181,6 +181,14 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
     width: 50%;
   }
   
+  form.search {
+    margin-left: 48px;
+  }
+  
+  .search_result .match {
+    background-color: #8fe;
+  }
+  
 :created_at: 2009-10-16 15:27:53.579529 +01:00
 :main_template: |
   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
