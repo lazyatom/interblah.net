@@ -37,8 +37,9 @@ class Search < Dynasnip
           grouped_matches[snip] ||= []
           grouped_matches[snip] << context
         end
-        "<ol>" + grouped_matches.map do |snip, contexts|
-          contexts.map! do |context|
+        snips = grouped_matches.keys.sort_by { |s| grouped_matches[s].length }.reverse
+        "<ol>" + snips.map do |snip|
+          contexts = grouped_matches[snip].map! do |context|
             start = context.index(term)
             context.gsub("{", "&#123;").gsub("}", "&#125;").
               insert(start + term.length, "</span>").
