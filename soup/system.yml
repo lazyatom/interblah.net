@@ -186,7 +186,7 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
   }
   
   .search_result .match {
-    background-color: #8fe;
+    background-color: #fff;
   }
   
 :created_at: 2009-10-16 15:27:53.579529 +01:00
