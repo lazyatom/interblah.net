@@ -24,7 +24,7 @@ class Search < Dynasnip
   def search
     term = app.request.params[:q]
     if term =~ /[^\w\s\-_\.]/
-      "Please only use characters, spaces, hyphens, underscores and periods in your search term"
+      "<p>Please only use characters, spaces, hyphens, underscores and periods in your search term</p>"
     else
       matches = `fgrep "#{term}" #{app.config[:soup]}/*.yml`.split("\n")
       "<h2>Search results</h2>" + search_form + if matches.any?
