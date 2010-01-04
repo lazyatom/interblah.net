@@ -198,9 +198,9 @@ You're in the system snip now. You probably want to {edit_link system,edit} it t
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="description" content="A blog by James Adam, of lazyatom.com fame." />
     <title>interblah.net - {current_snip name}</title>
-    <script type="text/javascript" src="/public/javascripts/jquery.js"></script>
-    <script type="text/javascript" src="/public/javascripts/jquery.autogrow-textarea.js"></script>
-    <script type="text/javascript" src="/public/javascripts/vanilla.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.autogrow-textarea.js"></script>
+    <script type="text/javascript" src="/javascripts/vanilla.js"></script>
     <script type="text/javascript" src="http://use.typekit.com/bio7rkl.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" type="text/css" media="screen"  href="/system/css.css" />
