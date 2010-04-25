@@ -7,7 +7,7 @@ Despite the intention, it's lucky that I didn't *officially* sign up for [projec
 #Blue
 --------
 
-This week I've been working almost exclusively on [#blue][], which is a project {l FreeRange} is working on for [O2][]. The project exists for a number of reasons, but you can think of it as a 'reimagining' of their [Bluebook][] service for the current web, using modern technologies and 'agile' development techniques. There's been some mild frustration as we've tried to integrate one of the final pieces of the account confirmation process, so unfortunately we still can't send out proper invites yet.
+This week I've been working almost exclusively on [#blue][], which is an application {l FreeRange} is building on for [O2][]. It exists for a number of reasons, but you can think of it as a 'reimagining' of their [Bluebook][] service, using modern technologies and 'agile' development techniques. There's been some mild frustration as we've tried to integrate one of the final pieces of the account confirmation process, so unfortunately we still can't send out proper beta invites yet.
 
 
 Tripping over a Milestone
