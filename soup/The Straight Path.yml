@@ -76,11 +76,11 @@ Epilogue (and the real point)
 
 There's no way to be disciplined if you can't describe what you should be doing. You can't practice a martial art if you haven't been taught the basics, and then worked to refine it under supervision. You can't stick to a diet if you don't have a clear understanding of what the rules of that diet are. You aren't doing yoga if you're just standing on one leg for a few minutes every day.
 
-And you can't claim to "be doing agile software development" if you don't have a clear definition of what that means, and are willing to stick to that definition regardless of what the client wants, thinks or says.
+And you can't claim to "be doing agile software development" if you don't have a clear definition of what that means, and are willing to stick to that definition regardless of what the client wants, thinks or says. It doesn't just mean "I don't agree to fixed scopes or fixed price contracts", and then everything else is improvised. There's no technique in that.
 
-It doesn't just mean "I don't agree to fixed scopes or fixed price contracts", and then everything else is improvised. There's no technique in that. That's probably why [a lot of people][agile-bad-1] [don't like][agile-bad-2] [the term _agile_ anymore][agile-bad-3]. That's why some people prefer talking about [XP][], which describes a set of practices instead.
+That's probably why [a lot of people][agile-bad-1] [don't like][agile-bad-2] [the term _agile_ anymore][agile-bad-3]. It's also probably why some people prefer talking about [XP][], which describes a concrete set of practices, rather than hand-waving statements of intent that are open to wide-ranging (and often ultimately meaningless) interpretations and executions.
 
-But regardless, if you're going to claim to work in an _agile way_, that means having principles and sticking to them except in the most extreme circumstances (and probably sticking to them then, too). [Being pragmatic is often just an excuse for doing what seems easy at the time][pragmatic].
+But regardless of whatever interpretation you choose: if you're going to claim to work in an _agile way_, that means having principles and sticking to them except in the most extreme circumstances (and probably sticking to them then, too). [Being pragmatic is too often just an excuse for doing what seems easy at the time][pragmatic].
 
 
 [pragmatic]: http://programmingtour.blogspot.com/2009/10/on-term-pragmatic.html
