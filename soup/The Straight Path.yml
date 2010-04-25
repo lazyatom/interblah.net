@@ -80,6 +80,9 @@ And you can't claim to "be doing agile software development" if you don't have a
 
 It doesn't just mean "I don't agree to fixed scopes or fixed price contracts", and then everything else is improvised. There's no technique in that. That's probably why [a lot of people][agile-bad-1] [don't like][agile-bad-2] [the term _agile_ anymore][agile-bad-3]. That's why some people prefer talking about [XP][], which describes a set of practices instead.
 
+But regardless, if you're going to claim to work in an _agile way_, that means having principles and sticking to them except in the most extreme circumstances (and probably sticking to them then, too). [Being pragmatic is often just an excuse for doing what seems easy at the time][pragmatic].
+
+
 [pragmatic]: http://programmingtour.blogspot.com/2009/10/on-term-pragmatic.html
 [agile-bad-1]: http://www.slideshare.net/dkandalov/why-agile-sucks-and-you-should-hate-it
 [agile-bad-2]: http://agilesoftwaredevelopment.com/blog/janusz-gorycki/agile-dead
