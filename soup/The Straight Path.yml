@@ -27,7 +27,7 @@ And don't forget that this is reality, and you don't live like a monk. You have 
 
 So any kind of *absolutism* about following your diet isn't useful - worse, it's counter productive, alienating yourself from your friends and fellow party goers with this talk of a diet that they don't understand or care about.
 
-No, better to go for Option 2.
+No, better to go for Option 2. Right? __Wrong.__
 
 
 The straight path
@@ -42,16 +42,53 @@ You have two choices:
   1. Get onto that path as soon as you can, and then ardently stay on the path, each step in the same direction
   2. Try to keep an eye on the path, but still move forwards through the swamp, trying to slowly get closer to it.
 
-My thesis is that the only sensible choice is Option 1.
+__My thesis is that the only sensible choice is Option 1.__
 
-Option 2 is harder; each step brings a choice - expend effort trying to move closer to the ideal, or be [pragmatic][] and scramble foward a little bit, hopefully not moving too much further away from the path.
+Option 2 is far harder. Each step brings a choice - expend effort trying to move closer to the ideal, or be [pragmatic][] and scramble forward a little bit, hopefully not moving too much further away from the path. Each one of those choices takes time, and energy. And each one is an opportunity to be diverted in the wrong direction.
 
+Option 1, the "Straight Path", means getting up onto the path from where you current are as fast as you can. From that point, the direction of each step is clear, leaving more time to focus on other aspects of your journey.
+
+
+Diversions
+-----------
+
+Even when you're on the straight path, it's obvious that there are times you'll need to leave it. Going back to the diet analogy, whenever you go out to a party, or a restaurant, you're obviously going to have to compromise in order to have a successful evening.
+
+If you're on the straight path, you are always aware of the relative cost of these exceptions. In some cases they are justifiable, and in others they are not, but you can always measure their impact because you have a baseline - essentially, the amount of effort it's going to take you to get back on the path.
+
+If you're making each choice as it comes, improvising or trying to judge every situation on its own merits, then it's almost impossible to really evaluate the longer-term impact they will have.
+
+
+What I'm saying
+--------
+
+It's more valuable to pick an approach, a technique or a methodology that you __have confidence in__ and then __follow it devotedly__, almost robotically, than to never pick one in the name of 'being pragmatic'. 
+
+That what agile and TDD have in common with martial arts, dieting, exercise, yoga, and all manner of pursuits. It's about __discipline__. 
+
+It's about saying "this is how I do things, __because I know that this works__".
+
+And it's about always being aware of the costs, the debt, of deviating from that approach, technique or methodology; judging when we must make sacrifices to survive, and when it is better to preserve our behaviour instead.
+
+
+Epilogue (and the real point)
+----
+
+There's now way to be disciplined if you don't actually know what you are doing. You can't practice a martial art if you haven't been taught the basics, and then worked to refine it under supervision. You can't stick to a diet if you don't have a clear understanding of what the rules of that diet are. You aren't doing yoga if you're just standing on one leg for a few minutes every day.
+
+And you can't claim to "be doing agile software development" if you don't have a clear definition of what that means, and are willing to stick to that definition regardless of what the client wants, thinks or says.
+
+It doesn't just mean "I don't agree to fixed scopes or fixed price contracts", and then everything else is improvised. There's no technique in that. That's probably why [a lot of people][agile-bad-1] [don't like][agile-bad-2] [the term _agile_ anymore][agile-bad-3]. That's why some people prefer talking about [XP][], which describes a set of practices instead.
 
 [pragmatic]: http://programmingtour.blogspot.com/2009/10/on-term-pragmatic.html
+[agile-bad-1]: http://www.slideshare.net/dkandalov/why-agile-sucks-and-you-should-hate-it
+[agile-bad-2]: http://agilesoftwaredevelopment.com/blog/janusz-gorycki/agile-dead
+[agile-bad-3]: http://jamesshore.com/Blog/The-Decline-and-Fall-of-Agile.html
+[XP]: http://www.objectmentor.com/omSolutions/agile_xp_differences.html
 
 --- # Soup attributes
 :render_as: Markdown
-:updated_at: 2009-09-25 17:02:10 +01:00
+:updated_at: 2010-04-25 19:02:10 +01:00
 :name: The Straight Path
 :created_at: 2009-09-25 17:02:10 +01:00
 :author: james
