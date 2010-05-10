@@ -1,0 +1,48 @@
+Weeknotes - 1667
+================
+
+I skipped a week, but in my defence it was the week of *the devil* - week 1666. Here we are safely on the other side, and while the government might be in chaos, the waters are calm here at interblah mansion.
+
+#Blue & Warblecamp
+--------
+
+We've wrapped up the initial phase of development on [hashblue][], and are taking a little pause for breath before we pick up for phase two. One of the really nice things to come out of this work is the API, which we were able to provide at last weekend's [warblecamp][]. There were a couple of great hacks build using it, but I'm still hankering for a menu-bar notifier. If time allows I might use that as an excuse to get up to speed with Mac OS X development using [macruby][].
+
+I got my first actual grope of an [iPad][] at Warblecamp. It's definitely a desirable device, but I'm not sure I want to add yet another gadget to my menagerie quite yet. I can't overstate how grubby the screen looks when it's turn off and all of the fingerprints are revealed, but once the backlight is on, you don't see them at all.
+
+Chromaroma
+-----
+
+I'm also pleased to say that we're going to pick up development on [Chromaroma][] again in May. I'm excited to start getting other members of [FreeRange][] involved, which should be much easier in the future (see below).
+
+I've personally enjoyed working on this project, not just because it's quite different from typical client work, and nor because [Mudlark][] are great clients to have, but because it's a fun development problem, even in the abstract. Plus, who wouldn't enjoy building a game?
+
+
+FreeRange internals
+-----
+
+After more than eight hours of internal discussion, both between myself and my co-founder, and with the rest of [FreeRange][], it's likely that we're going to be shaking things up a little internally. While some of the original goals of [FreeRange][] were doubtlessly laudable - lots of flexibility, very low commitment internally - the last six to twelve months have left several of us wondering about whether or not this flexibility was actually delivering freedom, or just an illusion of freedom. 
+
+As my colleague [Jason put it][jase]:
+
+> I've realised that my original idea of allowing ideas to evolve, and prefer an organic approach is actually aversion and delusion of what I perceived to be freedom.
+> I now know that discipline and defined action, which followed through daily is the best way I have found to cultivate freedom and happiness.
+
+By trying to build in lots of flexibility, our organisation may have become a bit too loose. We haven't completely figured out our new form, but it's certainly that we're tightening up, and I'm excited about the momentum that should bring.
+
+Onwards and upwards. See you back here for week 1668. I promise I won't forget.
+
+[hashblue]: https://hashblue.com
+[warblecamp]: http://warblecamp.org
+[macruby]: http://www.macruby.org
+[FreeRange]: http://gofreerange.com
+[jase]: http://jasoncale.com/articles/7-building-a-company-starting-with-our-personal-goals
+[Chromaroma]: http://www.chromaroma.com
+[Mudlark]: http://wearemudlark.com
+[iPad]: http://www.apple.com/ipad
+
+--- # Soup attributes
+:render_as: Markdown
+:created_at: 2010-05-09 16:30:00 +01:00
+:author: james
+:kind: blog
