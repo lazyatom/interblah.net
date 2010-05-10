@@ -24,6 +24,7 @@ I hope it's useful for some people, and of course, since it's [on GitHub][github
 Updates
 ----
 
+  * v1.3.2 - fixes an issue caused by posting times in the wrong format
   * v1.3 - now stores any unposted time between restarts
   * v1.2 - now lets you add a comment to your timeslip, to help keep track of the specifics of what you're working on
   * v1.1.1 - now only shows 'Active' projects. Great suggestion, folks. [Keep 'em coming!][issues]
@@ -38,7 +39,7 @@ Updates
 [widgetimage]: http://interblah.net/assets/freeagent-widget-1.2.png
 [github]: http://github.com/lazyatom/freeagent-widget
 [issues]: http://github.com/lazyatom/freeagent-widget/issues
-[download]: http://public.lazyatom.com/FreeAgent-1.3.1.zip
+[download]: http://public.lazyatom.com/FreeAgent-1.3.2.zip
 [blogentry]: http://freeagentcentral.com/central/free-time-tracking-widget--- # Soup attributes
 :render_as: Markdown
 :updated_at: 2009-09-08 09:42:17 +01:00
