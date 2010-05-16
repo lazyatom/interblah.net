@@ -1,0 +1,59 @@
+Weeknotes - 1668
+================
+
+See, I told you I wouldn't forget.
+
+This week has been a bit of a breather; a chance to clear the decks and take care of any loose ends, before {fr} ramps up again it it's more streamlined form. As was mentioned when looking at some space in the same building as [RIG][] and [BERG][]: 
+
+> If we're an [F-14][], then this is the point when we are [sweeping our wings back][f14-wings].
+
+Also, I'm happy to see that I'm beating [RIG][] in terms of [weeknote consistency](http://www.reallyinterestinggroup.com/blog/), despite the 1666 hiccup. [Bazinga](http://instantbazinga.com/).
+
+Office space
+--------
+
+One outcome of [the conversations I mentioned last week](/weeknotes-1667) is that we ({fr}) are going to place more of an emphasis on co-location than we have up to now. We've started looking for an office. In the interim we'll still be using each other's flats, but this week we spent a couple of days poking into various spaces around London.
+
+We looked at a variety of different types of office, from serviced office complexes to bare ex-warehouse space. It's not easy finding the best tradeoff between a space that we can make our own, whilst not requiring huge security deposits and becoming tied into long agreements with utilities and so on. 
+
+It's possible that we discover an office isn't important, or that it becomes unnecessary after some time, and it would be a pain to have to service that overhead for any longer than necessary. Equally, it's possible that we might discover it's absolutely essential, and further that we might want a space that we can properly make our own. At that point, we'll be in a better position to jump through all hoops that come with office tenancy, but not yet.
+
+We have found somewhere which fits our current requirements very well, but nothing is confirmed yet so I'll keep schtum about it for the moment.
+
+
+FreeRange internals
+---------
+
+We're on track to start our new phase of {fr} on Monday. I keep wanted to call it *FreeRange 2.0* or something like that, but have always managed to resist. Except just then. Dammit.
+
+We suffered the effects of ambiguity again towards the end of the week, culminating in a somewhat tortuous conversation with the couple of members of {fr} who aren't signing up as part of the fully-engaged team. 
+
+I won't go into too much detail here; I shouldn't be surprised about these things any more, but it just goes to show that it's quite possible (even *likely*) for people to leave the same conversation with quite different understandings of what the outcomes are. 
+
+Even more than that, I'm surprised that it's so common to sit back and wait to be prompted for a reaction, rather than think through consequences and then explicitly state a position and what you plan to do. This is obviously just my perspective, but it goes to show that it's important everyone is on the same page if you're going to be effective at making decisions as a group.
+
+I'm hoping our accountants will demonstrate that they are worth the money they cost by helping us out with some awkward  questions around missing transactions and VAT filings. What fun it is to service the accounting requirements of a limited company.
+
+
+Hashblue
+--------
+
+We met with O2 to discuss {l hashblue} at the start of the week, and are ready to pick up development again. Hashblue has been an interesting project because we're trying to help demonstrate that an agile style of development can be more successful than the more monolithic approaches normally used by large organisations. A significant part of this is engaging the users of the software as we build, rather than only at the very start or the very end of the project.
+
+As we approach the end of the initial budget, our focus is definitely going to be [the issues brought up by the community][hashblue-gs] who are using the software, along with any novel features which can be used to get insight about what O2's customers really want.
+
+
+That's probably all for this week. I realise a lot of this is {fr}-focussed, and I'm not sure if that's a good thing or not. Perhaps week 1669 will be different!
+
+
+[F-14]: http://en.wikipedia.org/wiki/F-14_Tomcat
+[f14-wings]: http://www.tamiya.com/english/products/60313f14a/index.htm
+[hashblue-gs]: http://getsatisfaction.com/hashblue
+[RIG]: http://www.reallyinterestinggroup.com/
+[BERG]: http://berglondon.com/
+
+--- # Soup attributes
+:render_as: Markdown
+:created_at: 2010-05-16 11:44:00 +01:00
+:author: james
+:kind: blog
