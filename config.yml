@@ -1,0 +1,14 @@
+---
+:soups:
+- soup
+- soup/blog
+- soup/dynasnips
+- soup/site
+- soup/wiki
+- soup/tutorial
+- soup/system
+- soup/system/dynasnips
+:secret: 78e6ed39e6a2f2935e85741a02b4b23a17844e40496efde64bd956e87da825a77556d57c981b0febc5b90cbd432a237337de6da102d59431d80a03cea3c3c979
+:credentials:
+  james: 3ccbd5efc46f261b2ba969c865a65752
+:filename: config.yml

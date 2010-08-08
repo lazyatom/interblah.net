@@ -1,0 +1,50 @@
+TDD and the implementation it might drive
+===========================
+
+Speaking with [Luke][], I just had a thought about Test Driven Development: 
+
+_it pushes implementation to parts of the application where developers are most proficient at testing_.
+
+Our concrete example here is a signup process, which has a number of steps that might be presented in a different order (a 'track') depending on what's more relevant to the visitor signing up.
+
+The simplest implementation
+----------------------
+
+I feel like the simplest way to implement this is have a single, large form posting updates to the account, and present them in different orders accordingly. Certainly there could be some validation issues as the record is populated over a number of different updates, but I think in our case, that is fine.
+
+I'll state right now that I've no evidence that this would be the actual simplest implementation; that's just my hunch, and I could be wrong.
+
+Running away from the view
+----------------------
+
+However, this pushes most of the logic around the presentation of the different signup 'tracks' into Javascript, and away from our beloved Ruby and [shoulda][]. 
+
+I can't speak for Luke, but Javascript testing is something I don't have a wealth of experience in. Worse still, we would probably want to include integration tests, pushing us towards [Selenium][] or another browser-driving mechanism. I've not had enough positive experience writing Selenium tests to want to add them to our codebase without hesitating.
+
+And so we're torn. We want to write tests, but we want to write tests that we know are good. And we've got the most experience, and the most comfort, writing tests in Ruby using test/unit and shoulda. 
+
+A local minimum
+-------------
+
+Here's the crux: if we're driving the implementation by writing tests, and we are only really comfortable writing tests using shoulda, this will ultimately drive us away from a Javascript-centric solution, towards modelling signups explicitly through the controller and model. 
+
+So while we might end up with a pretty simple implementation that satisfies our sets, this might be a _local minimum_ complexity.
+
+I think the lesson here is that we need to become competent (and indeed fluent) in several different testing mechanisms if we're going to be able to effectively arrive at simple implementations. 
+
+_If you only have a hammer, everything looks like a nail_.
+
+Time to start learning some new testing techniques, I think.
+
+{l leave-a-comment}
+
+[Luke]: http://lukeredpath.co.uk
+[shoulda]: http://www.thoughtbot.com/projects/shoulda/
+[Selenium]: http://seleniumhq.org/
+
+:kind: blog
+:render_as: Markdown
+:created_at: 2009-02-27 12:18:06 +00:00
+:updated_at: 2009-02-27 17:01:45 +00:00
+:author: james
+:name: tdd-and-the-implementations-it-might-drive

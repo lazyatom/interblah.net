@@ -1,0 +1,75 @@
+Multi-User Gnu Screen
+=====================
+
+Setup
+-----
+
+    # On the machine which will run screen
+    sudo chmod u+s /usr/bin/screen
+
+
+If logging in as different users (e.g. chrisroos and jamesmead)
+------
+
+    # The 'server'
+    screen -S <session_name>
+
+    # No need for next 2 commands if using sample ~/.screenrc file below
+    ctrl-A :multiuser on
+    ctrl-A :acladd <client_username>
+
+    # The 'client'
+    screen -x <server_username>/<session_name>
+
+
+If logging in as the same user (e.g. both developmentserver)
+-------
+
+    # The 'server'
+    screen -S <session_name>
+
+    # The 'client'
+    screen -x <session_name>
+
+
+Here's a sample ~/.screenrc file
+--------
+
+    shell -/bin/bash # load your .profile properly
+    multiuser on     # allow other users to connect
+    acladd chrisroos,jamesmead,lukeredpath,bensales,paulbattley,louisgarman,joelgluth,jamesadam,tomlea,craigsmith
+
+    # Set encoding to UTF-8 to match the terminal
+    defutf8 on
+
+    # Skip the pointless startup message
+    startup_message off
+
+    # Call shells 'shell' in the bar at the bottom
+    shelltitle "shell"
+
+    # Don't say 'Wuff Wuff' every time the process beeps
+    bell_msg ""
+
+    # Change default scrollback value for new windows
+    defscrollback 10000  # default: 100
+
+    # F5/F6 to resize the current split region
+    bindkey -k k5 resize -1
+    bindkey -k k6 resize +1
+
+    # F7/F8 to move between screens
+    bindkey -k k7 prev
+    bindkey -k k8 next
+
+    # When split, show what each region is
+    caption splitonly "%{.c} %n%f %t"
+
+    # Show a list of window titles at the bottom of the screen
+    hardstatus alwayslastline "%{= r}%H %{g}%c %{-}%{-}%{=r}%?%-Lw%?%{.bW}%n*%f %t%?(%u)%?%{-}%?%+Lw%?%{=}"
+
+:render_as: Markdown
+:created_at: 2008-12-04 22:10:31 +00:00
+:updated_at: 2008-12-04 22:14:08 +00:00
+:author: james
+:name: multi-user-gnu-screen

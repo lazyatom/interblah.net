@@ -1,0 +1,35 @@
+Backchat
+======
+
+Much as I love [github](http://github.com/lazyatom), it's unlikely that we're going to switch to git at [Reevoo](http://www.reevoo.com) in the near future. We use subversion and trac to manage our development - a typical combination, I've no doubt.
+
+One thing we miss - that github really does well - is the ability to comment on changesets. You can see an example from the engines plugin [here](http://github.com/lazyatom/engines/commit/f7656144b71685c06cfc04dbf41825358646b466). It's really useful to be able to discuss a change in the application directly next to the representation of that change.
+
+Alas, trac doesn't have this feature (or at least it's not installed or activated as default, and I couldn't find anything on [trac hacks](http://trac-hacks.org/browser)). So in 30 minutes on a Thursday afternoon, I threw together a simple solution that I thought might be useful for other people (and other projects). 
+
+One file, one hundred lines (and no [trickery](http://code.whytheluckystiff.net/camping/browser/trunk/lib/camping.rb) to make the file smaller either!), one super-simple app: [backchat](http://github.com/lazyatom/backchat).
+
+Using Backchat
+-------------
+
+For trac, you just need to edit the changeset.cs template, and add something like the following snippet wherever in the page you want the comments to appear:
+
+{code javascript,trac-snip}
+
+This will embed a form in the page for entering comments keyed against that changeset. Add "?css=true" to the end of the URL if you want to include my feeble attempts at prettification.
+
+I suppose in theory you could use backchat to comment against any site, so long as you can extract a valid 'reference' parameter for the current page. Perhaps the reference could just be the URL, and a bookmarklet could insert the form and comments into the page? 
+
+This sounds familiar...
+------------------
+
+Yup - it's all very much like [_why's Hoodwink'd](http://redhanded.hobix.com/-h/hoodwinkDDayOneForcingTheHostToAttendTheParty.html). The big difference is that you own the comments, so nobody can eaves-drop unless they have access to the backchat server; this is what makes it appropriate for commenting on sensitive things like [Reevoo](http://www.reevoo.com)'s codebase. Retrospectively, I realise that I could've just used the [hoodwink'd codebase](http://code.whytheluckystiff.net/hoodwinkd/browser), but then that wouldn't have been as fun.
+
+Anyway - let me know what you think about it - either here, or on the [github project page](http://github.com/lazyatom/backchat). Cheers!
+
+:kind: blog
+:render_as: Markdown
+:created_at: 2008-05-03 15:20:00 +01:00
+:"trac-snip": <script type="text/javascript" src="http://your-backchat-server/<?cs var:changeset.new_rev ?>.js"></script>
+:updated_at: 2008-05-08 20:31:15 +01:00
+:name: backchat

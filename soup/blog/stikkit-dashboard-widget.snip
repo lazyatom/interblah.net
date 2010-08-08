@@ -1,0 +1,52 @@
+Stikkit Dashboard Widget
+===============
+
+<strike>(Just want the download?  [Download the Stikkit Widget 0.8 Zip archive here](http://www.lazyatom.com/software/Stikkit.zip).)</strike> <strike>The widget needs a bit of repair to correct a silly mistake of mine - check back later today!</strike> Download the *FIXED* [Stikkit Widget 0.8.1 Zip archive](http://www.lazyatom.com/software/Stikkit.zip).
+
+<img src="http://interblah.net/assets/2007/4/3/Picture_2.png">
+
+But then it struck me - they really *are* little yellow notes. I don't need to structure the information that I'm putting in there. Stikkit is really clever about extracting information about events and todos, but if you really want to maintain a calendar then you are _probably_ better of with a dedicated service.
+
+Stikkit - My Smart, Short-Term Online Memory
+-----------------------------------
+
+Instead of using Stikkit as my online information repository, I've found that I used Stikkit as a kind of *online-short-term memory*. 
+
+If I think of something that I want to remember, but don't really have the time to file properly, I throw it in Stikkit. A phone number, a snippet of code, a quick todo list that I want to have around for the next few days... basically anything that I stumble across and I want to get out of my head; I don't really care how as long as I can get it later, when I'm better positioned to file the information properly.
+
+So, how to get the information into Stikkit quickly? Well, there are a number of options. Stikkit is, of course, [web based](http://www.stikkit.com/), and they have even provided a [bookmarklet](http://www.stikkit.com/account/toolbox) (you need to be signed in to see it), and both these interfaces are certainly convenient, but they don't quite fit for me. I wanted something a bit closer to the actual _small yellow notes_ that Stikkit models. And lo, after a couple of days hacking, we have what you see above.
+
+
+Just Give Me The Frickin' Widget
+---------------------------
+
+OK, here you go: [Download the Stikkit Widget 0.8 Zip archive](http://www.lazyatom.com/software/Stikkit.zip). You can send any feedback to me here, but bear in mind there's no support, and I'm certainly no Javascript expert so it's likely to be a bit buggy.
+
+You'll need to [sign up](http://stikkit.com/signup) at Stikkit.com, and then find your [Stikkit API Key](http://stikkit.com/settings), and then enter that key on the flip-side of the widget:
+
+<img src="http://interblah.net/assets/2007/4/3/widget_back.png">
+
+After that, your most recent Stikkits should appear in the select list, and you can filter by name using the search box. Go ahead and make changes to your Stikkits; any time you want to sync your changes back to the server, hit the "sync" button and your changes will be sent back to Stikkit HQ.
+
+If you want to create a new Stikkit, click the small icon between the select list and the search box, and type away.
+
+A few notes:
+
+* You can make changes to any number of your Stikkits and sync only once - all the changed Stikkits should be updated online.
+* You can create any number of new Stikkits, and then sync them all at the same time - you don't need to save each one as you create them. Bear in mind, however, that each Stikkit takes its 'name' from the first line of its contents, so you may need to track the Stikkit down again once it has been saved and re-loaded.
+* The widget tries to sync with Stikkit's servers every time you show the Dashboard, so that you always have the most up-to-date information. I've found that I prefer this behaviour, but if you really don't like it, it's simple to comment out the line in the show() function (think of it as another excuse to get to know Dashcode!). At some point I'll probably add a preference to toggle this.
+
+
+A Little Bit About How It Was Built
+----------------------------
+
+The widget was built exclusively using Apple's [Dashcode](http://developer.apple.com/tools/dashcode/), and if you haven't used it yet, let me be the first to tell you that it is *great* fun. Once I realised that it really *is* just HTML, CSS and Javascript, the world is your oyster.
+
+If I get the chance, I'm going to play with Dashboard a bit more, and hopefully post a bit more here about my experiences. Please do check it out.
+
+
+:kind: blog
+:render_as: Markdown
+:created_at: 2007-04-03 21:42:36 +01:00
+:updated_at: 2008-06-01 14:27:09 +01:00
+:name: stikkit-dashboard-widget

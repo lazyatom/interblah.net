@@ -1,0 +1,14 @@
+class RandomLineFrom < Dynasnip
+  def handle(snip_name)
+    snip = app.soup[snip_name]
+    lines = snip.content.split("\n")
+    lines[rand(lines.length)]
+  end
+  self
+end
+
+:render_as: Ruby
+:created_at: 2008-06-02 00:20:08 +01:00
+:updated_at: 2008-06-02 00:22:40 +01:00
+:author: james
+:name: random-line-from

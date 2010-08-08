@@ -1,0 +1,44 @@
+Too Clever
+==========
+
+Paul Dix [wrote a blog post][1] about trying to design an API. Plz go read it, then come back here :)
+
+While
+
+    entry.sanitized.content
+
+reads more like spoken language, I don't think it's right. What would I do with the result of `entry.sanitized` itself? It's not a meaningful method call without the additional `content` call. Either of these seems more like Ruby, or indeed more like code instead of making things more 'human':
+
+    entry.sanitized_content  # API 1
+    santized(entry.content)  # API 2
+
+If Paul really wants his API, a better approach is to mix some `sanitize` behaviour into all of the string content that an entry might have. Why should the entry care about sanitizing? Cleaning up strings isn't the job of that object. Instead, the string itself should be responsible for returning a cleaner version of itself:
+
+    entry.content.sanitized  # API 3
+
+It seems much more like programming - here's an entry, now get the content, and now ask that to return a sanitized version of itself.
+
+{code ruby,example}
+
+I should add that my prefered solution is actually `API 2`, where 'sanitized' is a method on some object whose responsibility is to present an entry. But I do have a soft-spot for extending returned values to add behaviour.
+
+[1]:http://www.pauldix.net/2009/02/using-a-proxy-object-to-design-an-api.html
+
+:example: |-
+  module Sanitize
+    def sanitize
+      Dryopteris.sanitize(self)
+    end
+  end
+  
+  class Entry
+    def content
+      @content.extend(Sanitize)
+    end
+    # ditto for title, author, etc
+  end
+:render_as: Markdown
+:created_at: 2009-02-14 11:15:17 +00:00
+:updated_at: 2009-02-15 13:13:11 +00:00
+:author: james
+:name: re-paul-dix-proxy-object

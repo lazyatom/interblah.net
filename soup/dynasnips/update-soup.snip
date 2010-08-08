@@ -1,0 +1,13 @@
+class UpdateSoup < Dynasnip
+  def handle(*args)
+    `cd #{app.config[:soup]}; git pull`
+  end
+  self
+end
+
+
+:render_as: Ruby
+:created_at: 2009-09-27 22:34:45 +01:00
+:updated_at: 2009-09-27 22:35:03.144353 +01:00
+:author: james
+:name: update-soup

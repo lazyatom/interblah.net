@@ -1,0 +1,33 @@
+Ruby and Leopard
+================
+
+Hurrah! Hurrah! [Leopard](http://www.apple.com/macosx/) is here! Sing Hosanna!
+
+... well. Not quite. I've installed leopard and it's *quite* nice, although [some aspects are going to take some getting used to](http://www.tuaw.com/2007/06/17/leopards-new-menubar-is-hideous/). In a nutshell, it feels like there's a lot of eye candy, but I'm [reassured that it's an improved platform](http://mattgemmell.com/2007/10/28/get-rid-of-your-code-with-leopard) underneath all the transparency and animation.
+
+But, I digress; Of course, we've all known for a while that [Leopard was going to come with some nice Ruby libraries and frameworks baked in](http://weblog.rubyonrails.org/2006/8/7/ruby-on-rails-will-ship-with-os-x-10-5-leopard). FYI, Leopard comes with the following (amongst many other) Ruby libraries:
+
+* [Rails](http://www.rubyonrails.org)
+* [Rake](http://rake.rubyforge.org/)
+* [RubyGems](http://www.dracoware.com/blog/2007/10/28/updating-rubygems-in-leopard-mac-os-105/) (and a [bunch of gems](http://www.simplisticcomplexity.com/2007/6/23/ruby-gems-included-with-leopard-by-default))
+* [Mongrel](http://mandarinsoda.com/2007/10/28/mongrel-and-osx-leopard/)
+* [SQLite bindings](http://sqlite-ruby.rubyforge.org/)
+* [RubyCocoa](http://andymatuschak.org/articles/2007/10/30/rubycocoa-shininess-in-leopard/) (look in <tt>/Developer/Examples/Ruby/RubyCocoa</tt>, or at [this video if you're feeling brave](http://www.youtube.com/watch?v=7q_DD-W6-oI), for examples)
+
+Get [the full skinny](http://trac.macosforge.org/projects/ruby/wiki/WhatsNewInLeopard) on Macosforge. You can also read some more details [here](http://laurentbois.com/2007/10/29/whats-new-in-leopard-on-a-ruby-developer-perspective/), and naturally all over the rest of the interwebs as time goes on.
+
+While bundling all this neat Rubinicity up for us is is great, many (me included) still like to [maintain our own toolchain](http://www.macports.org/) - sometimes it's just nicer to be in full control of the dependencies and extra bells and whistles that we might like to install, and to know that we can match our development and deployment environments reasonably closely. However, that doesn't mean that we are forever kept apart from whatever tweaks Apple has made to our beloved language; they have made [their patches and build information](http://www.opensource.apple.com/darwinsource/10.5/) available for the entire set of open-source software they've bundled with 10.5. 
+
+For those who are curious (I doubt it's just me), here is [the list of patches](http://www.opensource.apple.com/darwinsource/10.5/ruby-67/patches/) they've applied to Ruby as provided in <tt>/usr/bin</tt>. The changes they've made (listed [here](http://www.opensource.apple.com/darwinsource/10.5/ruby-67/ruby.plist)) include
+
+* making the MD5 and SHA1 libraries use CommonCrypto instead of OpenSSL
+* compiling most libraries as 4-way fat (i386, ppc, x86_64 and ppc64)
+* having ruby emit DTrace static probes when entering/leaving a Ruby method
+
+As someone who's played around with building various Ruby extensions on a Mac for some time, it's going to be interesting looking at how they've changed the build process so that it best integrates with the other system libraries and frameworks. There's also the [XCode template project for a new Ruby Dynamic Library](http://www.opensource.apple.com/darwinsource/10.5/ruby-67/extras/xcode_template/Dynamic%20Library/Ruby%20Extension/). You can even look at the apple-default IRB configuration [here](http://www.opensource.apple.com/darwinsource/10.5/ruby-67/extras/irbrc). Nice.
+
+:kind: blog
+:render_as: Markdown
+:created_at: 2007-11-01 10:24:00 +00:00
+:updated_at: 2008-06-01 13:36:40 +01:00
+:name: ruby-and-leopard

@@ -1,0 +1,180 @@
+Plugin Migrations
+=================
+
+I've been looking at how we can get migrations from plugins solidly into Rails. Turns out is a complex beast, and lots of the solutions I *thought* would work have some drawbacks. I think I have a solution, but it's not the solution I expected when I first started looking into this.
+
+Example
+-------
+
+We have an application, with a migration
+
+    app/db/migrate/20080101_create_users.rb
+
+(I've used shorter versions of timestamps here because they are easier for my to type and you to read)
+
+After running `rake db:migrate` on *Day 1*:
+
+    # schema_migrations => ['20080101']
+
+On *Day 2* we come across a plugin written last month that does everything we need, and decide to use that. If we're using git, we'd probably do this in a branch. This plugin is built on an `accounts` table so we need to remove our users table:
+
+    app/db/migrate/20080102_drop_users.rb
+    # schema_migrations => ['20080101', '20080102']
+
+And then, using one of the mechanisms we'll explore below, run the migration provided by the plugin:
+
+    app/vendor/plugins/accounts/db/migrate/20071201_create_accounts.rb
+    # schema_migrations => ['20080101', '20080102', '20071201']
+
+OK. That's the example - nothing too weird there. Let's look at how we might implement this in a robust way.
+
+
+Solution 1: Copy the migrations into the main app migration directory
+----------------------------------------------------------------------
+
+The simplest solution is to simply copy migrations from plugins into the main `app/db/migrate` directory. This is what [I've implemented] in my Rails fork.
+
+So, using the above example, the application's migrations start at the end of Day 3 are, in the order they'll be run:
+
+    app/db/migrate/20071201_create_accounts.rb
+    app/db/migrate/20080101_create_users.rb
+    app/db/migrate/20080102_drop_users.rb
+
+Now we give the project over to Bob, our other developer. He creates his database, and has two options for populating the database. Firstly, `rake db:migrate`:
+
+ - Because of the timestamps, the plugin migration runs first, creating a `accounts` table
+ - Next to run is the application's migration, creating a `users` table, which should not exist. **Failure**.
+
+OK, that didn't work. How about `rake db:schema:load`?
+
+ - The proper database state is created, which is great.
+ - When `assume_migrated_upto_version` is called, it will look through all the migrations in `app/db/migrate`, and create entries in `schema_migrations` for everything there: `['20071201', '20080101', '20080102']`
+
+That all seems fine. 
+
+But then I discover that the plugin is actually junk, and I want to roll back to our own table. However, as far as Rails can tell, the most recent migration was `20080102_drop_users.rb` -  the one that actually *drops* the user table. In order to remove the `accounts` table, we'd have to migrate all the way back. **Failure**.
+
+This hints at one of the basic problems: copying migrations cannot preserve the *order* in which the migrations were applied, and we *need* to have this timeline in order to roll back with confidence.
+
+[I've implemented]: http://github.com/lazyatom/rails/tree/migrations_from_plugins
+
+
+Solution 2: Run the migrations directly from the plugin
+-------------------------------------------------------
+
+This is the scheme implemented by Luca's [first patch][]. The `db:migrate` task is modified such that it runs all the migrations in `app/db/migrate`, and then goes through each plugin in turn, running all the migrations in their `db/migrate` folders.
+
+To demonstrate the problem here, we need to take development a bit further. In this parallel universe, we've persevered with the accounts plugin, and on *Day 3* we decide to add OpenID support to our app, modifying the `accounts` table accordingly:
+
+    app/db/migrate/20080103_add_openid_to_accounts.rb
+    # schema_migrations => ['20080101', '20080102', '20071201', '20080103']
+
+Lets see what happens when we give the application to Christine, and she runs `rake db:migrate`
+
+  - The first migration to run is `20080101_create_users.rb`
+  - Next, `20080102_drop_users.rb`; all fine so far
+  - Then, because we're still dealing with application migrations, we run `20080103_add_openid_to_accounts.rb`.
+
+But the `accounts` table doesn't exist yet - we haven't run the migrations in the plugin. **Failure**.
+
+OK, lets try the `db:schema:load` task:
+
+  - The database state is restored perfectly. You've really got to love `db:schema:load` in this respect.
+  - However, when `assume_migrated_upto_version` tries to populate `schema_migrations`, it only deals with the files in `app/db/migrate`, and so `schema_migrations` only contains `['20080101', '20080102', '20080103']`. The next time Christine runs `db:migrate`, it's going to try to run the `20071201_create_accounts.rb` migration from the plugin again! **Failure**.
+
+One solution might be to try to get `assume_migrated_upto_version` to inspect plugins as well as the application migrations. However, there's no strong connection between the timeline in the application migrations and the timeline(s) in plugin migrations; we cannot tell which plugin migrations have been run and which have not. See 'Interlude 1' below for another issue which relates to this.
+
+While I've clearly contrived this example to suit the points I'm trying to make, this is not an edge case or particularly rare. 
+
+Worse still, we still haven't escaped the 'roll-back problem' (see above), because we don't know at what point in the application's history the plugin migrations were run - or in what order.
+
+[first patch]: http://rails.lighthouseapp.com/projects/8994/tickets/2058
+
+
+Solution 3: Copy the migrations and fix the timestamps
+------------------------------------------------------
+
+Seems like it's really important that we preserve the order in which migrations were actually run, regardless of where they came from. So how about we copy the migrations across, but adjust the timestamps to the current time so that the ordering is correct?
+
+Lets imagine we define a new rake task (`db:migrate:copy_from_plugins`) to do this for us. After copying (and renaming) the migrations, our `app/db/migrate` directory looks like
+
+    app/db/migrate/20080101123145_create_users.rb
+    app/db/migrate/20080102154601_drop_users.rb
+    app/db/migrate/20080102161256_create_accounts.rb # renamed
+
+Now we can run `db:migrate`, `db:schema:load` *and* roll back reliably.
+
+So what's the problem? Well, what happens the next time we run `db:migrate:copy_from_plugins`? Well, the plugin still contains
+
+    app/vendor/plugins/accounts/db/migrate/20081201_create_accounts.rb
+
+and there's no migration with that filename in `app/db/migrate` so how does our application know not to copy it again?
+
+Sure, we could split off the timestamps and check for *any* migrations with the same name, but does that seem robust enough to trust your database with?
+
+My feeling is that it still isn't good enough.
+
+
+
+Interlude 1: Migration clash - the problem with numeric migrations
+-----------------------------------------------
+
+Lets look at what happens if we're using sequential, numeric migrations (as opposed to timestamped ones). Here's the same example; in our application:
+
+    app/db/migrate/001_create_users.rb
+
+and then on *Day 2*
+
+    app/db/migrate/002_drop_users.rb
+
+    app/vendor/plugins/accounts/db/migrate/001_create_accounts.rb
+
+... you should see the problem already. We now have two migrations numbered `001`, and so Rails will think that we've already run the migration in the plugin. This is [the basic problem that Samuel Williams points out][samuelsbug]. It's worth mentioning that this problem still *technically* exists with timestamped migrations, but the likelyhood of a clashing timestamp is very, very small.
+
+I'm not a huge fan of Samuel's solution, and prefer adding a column to `schema_migrations` to indicate the source of a migration - effectively scoping migrations to either the application or a specific plugin.
+
+[samuelsbug]: http://engines.lighthouseapp.com/projects/10178/tickets/17-migrations-do-not-work-beyond-the-initial-migration#ticket-17-83
+
+
+
+Solution 4: Track which plugin migrations have already run by using an extra column on `schema_migrations`
+------------------------------------------------------
+
+_snip because I don't have time to write the other two potential solutions with pitfalls_
+
+
+
+Solution 6: Copying and re-timestamping the migrations whilst tracking their original source
+--------------------------
+
+So we need a single timeline, but we can't just copy migrations from plugins directly, because the timestamps (or sequential versions) won't reflect the order they are run in.
+
+If we just change the timestamp, then it becomes impossible to know which migrations have already been copied from plugins.
+
+In this solution, on day to we copy, re-timestamp and also add the plugin source to the migration
+
+    app/db/migrate/20080101123145_create_users.rb
+    app/db/migrate/20080102154601_drop_users.rb
+    app/db/migrate/20080102161256_accounts_create_accounts.rb # renamed
+
+Now, the next time we come to copy any new migrations from the 'accounts' plugin, we ignore the timestamps. Lets say the accounts plugin, later on, has the following migrations:
+
+    app/vendor/plugins/accounts/db/migrate/20081201_create_accounts.rb
+    app/vendor/plugins/accounts/db/migrate/20090212_add_remember_me_feature.rb
+
+When checking which migration, we ignore the timestamps, and instead look for *any* migrations that match `/[\d+]_accounts_create_accounts\.rb/`. We'll find `20080102161256_accounts_create_accounts.rb`, so we know not to copy that. Then we'll look for `/[\d+]_accounts_add_remember_me_feature\.rb/`, which doesn't match anything in `app/db/migrate`, and so we know that migration is new and needs to be copied.
+
+
+
+
+Other pages
+---------
+
+Samuel Williams has written [some related stuff](http://wiki.oriontransfer.org/blog:ruby_on_rails_migrations).
+
+
+:render_as: Markdown
+:created_at: 2009-03-02 23:26:53 +00:00
+:updated_at: 2009-04-20 10:42:13 +01:00
+:author: james
+:name: plugin-migrations

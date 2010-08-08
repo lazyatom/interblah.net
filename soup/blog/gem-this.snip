@@ -1,0 +1,32 @@
+Gem This
+======
+
+Most of the time, I don’t set out to write a gem.
+
+But, sometimes, after a bit of time (which could be days, weeks or months) spent working on some code, I might decide that I have something worth making a gem.
+
+It seems like many (if not all) of the existing gem-tools do some things that don't really thrill me. Either:
+
+ * They add themselves as a dependency, meaning that when someone installs my gem, they must install the gem-tool
+ * They expect to be used at the very start of development, creating a directory structure and imposing opinions left, right and centre
+ * Despite the "bonus functionality" of automatically uploading a website and blogging for me, the obscure what's actually going on
+
+This doesn't suit the way I work, at all. I don't want to force anyone to download anything other than the code that is useful to them, and I already have my project set up the way I like. I just want to turn this library into a gem!
+
+What I Want
+---------
+
+My code is already there; it's in an appropriate set of folders, and probably has existing Rake tasks. All that I'm missing is the ability to build the gem, maybe push it to RubyForge, and build the RDoc. Perhaps I'm storing the code on github, so producing a `.gemspec` file is good too. And, most importantly, I want to be able to hack it to suit each project, without any further interference or opinionation.
+
+It's simple enough to achieve this; all you really need is a few standard tasks in your `Rakefile`. So, I wrote a little tool to spit some fairly standard and easy-to-understand code into an existing `Rakefile` on my behalf. If I already have tests (or specs), it will produce a simple task to run those, and if there's a `bin` directory it will hook that up too, but that's pretty much it.
+
+It's called [gem-this](http://github.com/lazyatom/gem-this); fork at will.
+
+It's definitely not for everybody - I'm sure plenty of people get lots of mileage out of the existing tools and having a generated, standard structure for their gem code. I just don't find it very useful, personally.
+
+:kind: blog
+:render_as: Markdown
+:created_at: 2009-04-06 12:14:18 +01:00
+:updated_at: 2009-04-06 12:26:20 +01:00
+:author: james
+:name: gem-this

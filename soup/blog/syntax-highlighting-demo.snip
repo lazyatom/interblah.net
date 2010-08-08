@@ -1,0 +1,103 @@
+Syntax Highlighting
+===================
+
+Working through some of the outstanding issues for {l vanilla-rb}, I've implemented some simple syntax highlighting ({lighthouse_ticket lazyatom,vanilla,16}):
+
+{code ruby,code\_sample\_one}
+
+It's pretty simple behind the scenes, although there are a few conceptual choices which I may revisit. Here's the scoop.
+
+
+Blocks of content
+-----------------
+
+I recently fixed code syntax highlighting on the {l rails-engines} site, which is built using the reasonably-excellent {l radiant-cms} system. In Radiant, you markup blocks of content, typically like this:
+
+{code html,radiant_syntax}
+
+Radiant lets you define *tags* that wrap around content within the page, making this pretty simple.
+
+However, {l vanilla} doesn't work like that, or at least it doesn't at the moment. The building block of a page is the {l snip}, not a chunk of text wrapped in a tag. There's no tag processing going on here at all, beyond the single, magically snip inclusion that makes it all work. This presents a problem when we want to treat a certain piece of text differently to the rest of the body of a snip.
+
+
+The Vanilla Way
+---------------
+
+Since the building block is the snip, the natural thing to do is to move the code snippet into its own snip, and include that via a {l code} dynasnip (see below for the self-syntax-highlighted source!). And so this call 
+
+&#123;code ruby&#125;
+
+works nicely for us. After the call to the {l code} dynasnip, the first parameter is the language, and the second is the snip name to include:
+
+{code ruby}
+
+... but it's a pain to have to move every code sample out into its own snip (although that's certainly useful for larger chunks of code.
+
+The solution to this, is to allow rendering of individual *parts* of snips via syntax highlighting. By adding the snip part to the parameter list
+
+&#123;code ruby,rubycodesample&#125;
+
+we get
+
+{code ruby,rubycodesample}
+
+The code dynasnip is rendering the <a href="/syntax-highlighting-demo/rubycodesample.raw">rubycodesample</a> part of this very blog post!
+
+
+Next steps
+----------
+
+While this certainly works, it's a pain to have to reference the current snip in order to get to the snip part. I have to do this with the [comments][1] dynasnip too, in order to find all the snips that are related to it. We could solve this if:
+
+ 1. Each renderer knew which snip it was rendering - currently true :)
+ 2. Each renderer knew which renderer called it - not currently possible :(
+
+Ideally, the *code* dynasnip would be able to ask it's renderer (the *Ruby* renderer) to ask the renderer that is invoking it (in the case of this post, the *Markdown* renderer) which snip is doing the including. With me? 
+
+<pre>Code dyna 
+    --> rendered by Ruby Renderer 
+        --> invoked by Markdown Render while rendering this blog post</pre>
+
+Yeah, it's a bit complicated, but it's probably worth it; it could help avoid circular rendering problems at the same time.
+
+Anyway - syntax highlighting. Woot!
+
+
+Super Bonus Appendix
+--------------------
+
+Here's the code from the {l code} dynasnip, highlighting itself, like an eternal self-consuming snake. Don't say I didn't warn you!
+
+{code ruby}
+
+{comments syntax-highlighting-demo}
+
+[1]: http://interblah.net/comments-are-alive
+
+:kind: blog
+:rubycodesample: |-
+  class Test
+    def initialize(name=nil)
+      puts "Hello, World"
+    end
+  end
+:render_as: Markdown
+:created_at: 2008-07-17 15:47:35 +01:00
+:updated_at: 2008-07-17 17:33:23 +01:00
+:author: james
+:code_sample_one: |-
+  class Ruby
+    def coloured(with='syntax')
+      if with =~ /joy/
+        puts "Hello, You Coloured World You"
+      end
+    end
+  end
+:name: syntax-highlighting-demo
+:radiant_syntax: |-
+  <r:code lang="ruby">
+  class Blah
+    def something
+    end
+  end
+  </r:code>
