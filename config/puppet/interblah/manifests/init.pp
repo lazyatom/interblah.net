@@ -10,7 +10,7 @@ class interblah {
 
   define app($deploy_to) {
     include interblah::users
-    # include xml
+    include xml
     include rack
 
     rack::host { "interblah.net":
