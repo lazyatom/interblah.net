@@ -1,0 +1,27 @@
+<VirtualHost *:80>
+  ServerName interblah.net
+  ServerAlias www.interblah.net
+
+  CustomLog /var/log/apache2/interblah.net.access.log combined
+
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www.interblah.net$ [NC]
+  RewriteRule ^/(.*)$ http://interblah.net/$1 [R=301,L]
+
+  DocumentRoot <%= deploy_to %>/current/public
+
+  # Check for maintenance file and redirect all requests
+  RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
+  RewriteCond %{SCRIPT_FILENAME} !maintenance.html
+  RewriteRule ^.*$ /system/maintenance.html [L]
+
+  <Directory "<%= deploy_to %>/current/public">
+    allow from all
+    Options +Indexes
+  </Directory>
+
+  Alias /assets "<%= deploy_to %>/shared/assets"
+  RedirectMatch 301 ^/2006/\d+/\d+/(.+) "/$1"
+  RedirectMatch 301 ^/2007/\d+/\d+/(.+) "/$1"
+  RedirectMatch 301 ^/2008/\d+/\d+/(.+) "/$1"
+</VirtualHost>
