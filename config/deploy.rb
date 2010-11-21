@@ -16,16 +16,3 @@ set :puppet_os, 'ubuntu'
 namespace :deploy do
   task :migrate do ; end
 end
-
-namespace :host do
-  task :setup do ; end
-  task :create do ; end
-end
-
-namespace :redis do
-  task :setup do ; end
-end
-
-namespace :monit do
-  task :setup do ; end
-end
