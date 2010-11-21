@@ -13,15 +13,15 @@ GIT
 
 GIT
   remote: git://github.com/freerange/freerange-puppet.git
-  revision: 79fb450c3b56ba58d826d4a05ab7086878b513ce
+  revision: f57556b742e0998254ace2898131d62fe6570974
   specs:
-    freerange-puppet (1.1.5)
+    freerange-puppet (1.1.6)
       capistrano
       capistrano-ext
 
 GIT
   remote: git://github.com/lazyatom/lazyatom-deploy.git
-  revision: ee3a3f9479264cce1b68e78ae0214e991722ad31
+  revision: 40c055c3365e138272e3485486f8dbf3e412868f
   specs:
     lazyatom-deploy (0.1.0)
       freerange-deploy
