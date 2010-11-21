@@ -6,4 +6,4 @@ gem "syntax"
 
 gem 'freerange-deploy', :git => "git://github.com/freerange/deploy.git"
 gem 'freerange-puppet', :git => "git://github.com/freerange/freerange-puppet.git"
-gem 'lazyatom-deploy', :path => "/Users/james/Code/lazyatom/lazyatom-deploy"
+gem 'lazyatom-deploy', :git => "git://github.com/lazyatom/lazyatom-deploy.git"

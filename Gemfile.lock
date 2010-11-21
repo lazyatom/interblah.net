@@ -19,8 +19,9 @@ GIT
       capistrano
       capistrano-ext
 
-PATH
-  remote: /Users/james/Code/lazyatom/lazyatom-deploy
+GIT
+  remote: git://github.com/lazyatom/lazyatom-deploy.git
+  revision: ee3a3f9479264cce1b68e78ae0214e991722ad31
   specs:
     lazyatom-deploy (0.1.0)
       freerange-deploy
