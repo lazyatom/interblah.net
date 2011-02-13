@@ -13,9 +13,9 @@ GIT
 
 GIT
   remote: git://github.com/freerange/freerange-puppet.git
-  revision: f57556b742e0998254ace2898131d62fe6570974
+  revision: 249f6afc86dc15c6ddf735b02014fb45d095cb6d
   specs:
-    freerange-puppet (1.1.6)
+    freerange-puppet (1.1.18)
       capistrano
       capistrano-ext
 
@@ -54,7 +54,7 @@ GEM
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
       net-ssh (>= 2.0.9)
-    net-ssh (2.0.23)
+    net-ssh (2.1.0)
     net-ssh-gateway (1.0.1)
       net-ssh (>= 1.99.1)
     polyglot (0.3.1)
