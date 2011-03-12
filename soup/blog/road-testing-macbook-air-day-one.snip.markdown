@@ -38,5 +38,4 @@ After the first few hours of setup, I remain utterly charmed by how capable the 
 [homebrew]: https://github.com/mxcl/homebrew
 [XCode]: http://developer.apple.com/tools/xcode/
 
-:render_as: Markdown
 :kind: macbookair-review

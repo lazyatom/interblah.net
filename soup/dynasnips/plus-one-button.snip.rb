@@ -14,9 +14,3 @@ class PlusOneButton < Dynasnip
   end
   self
 end
-
-:render_as: Ruby
-:created_at: 2009-07-16 15:34:45 +01:00
-:updated_at: 2009-07-16 15:40:57 +01:00
-:author: james
-:name: plus-one-button

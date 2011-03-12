@@ -6,7 +6,7 @@ class Search < Dynasnip
     <button>Search</button>
     </form>
   }
-  
+
   def get(*args)
     if app.request.params[:q]
       search
@@ -14,13 +14,13 @@ class Search < Dynasnip
       "<h2>Search</h2>" + search_form
     end
   end
-  
+
   def post(*args)
     search
   end
-  
+
   private
-  
+
   def search
     term = app.request.params[:q]
     if term =~ /[^\w\s\-_\.]/
@@ -52,10 +52,6 @@ class Search < Dynasnip
       end
     end
   end
-  
+
   self
 end
-
-
-:render_as: Ruby
-:name: search

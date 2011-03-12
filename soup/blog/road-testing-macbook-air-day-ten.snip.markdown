@@ -17,5 +17,4 @@ So there we have it. I really love the 11" Air, and when it comes to replacing m
 
 [Boris Bike]: http://www.tfl.gov.uk/roadusers/cycling/14808.aspx
 
-:render_as: Markdown
 :kind: macbookair-review

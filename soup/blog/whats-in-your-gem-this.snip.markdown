@@ -13,7 +13,7 @@ One of my pain points with other tools like [Jeweler][], [hoe][] and so on is th
 [hoe]: http://rubygems.org/gems/hoe
 [ruby-manor-talk]: http://rubymanor.org/harder/videos/gem_that/
 
-:render_as: Markdown
+
 :kind: blog
 :mygemthis: |
   desc 'Tag the repository in git with gem version number'

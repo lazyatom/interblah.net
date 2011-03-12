@@ -1,4 +1,4 @@
-Road Testing The 11" MacBook Air (in progress)
+Road Testing The 11" MacBook Air
 ================================
 
 __TL;DR__ - some indulgent waffle about whether or not the 11" MacBook Air is a usable development machine. The conclusion will almost certainly be: it depends, but probably.
@@ -25,4 +25,3 @@ I've spent a few months umming and ahhing, but having bored everyone I know with
 
 :kind: blog
 :author: james
-:render_as: Markdown

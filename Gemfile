@@ -1,6 +1,6 @@
 source :rubygems
 
-gem "vanilla", ">=1.13.1"
+gem "vanilla", ">=1.13.2"
 gem "syntax"
 
 gem 'freerange-deploy', :git => "git://github.com/freerange/deploy.git"

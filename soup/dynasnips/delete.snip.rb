@@ -13,9 +13,3 @@ class Delete < Dynasnip
   end
   self
 end
-
-:render_as: Ruby
-:created_at: 2008-07-02 21:41:57 +01:00
-:updated_at: 2008-07-02 21:44:49 +01:00
-:author: james
-:name: delete

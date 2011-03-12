@@ -20,5 +20,4 @@ Perhaps just knowing that this disparity exists has planted the seed of doubt, b
 [Tom]: http://tomafro.com
 [#blue]: http://hashblue.com
 
-:render_as: Markdown
 :kind: macbookair-review
