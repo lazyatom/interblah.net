@@ -37,7 +37,7 @@ Federation isn't a feature users care about
 
 It's very hard to replace an entrenched, centralised platform with a federated one. Facebook has over [600 million users][facebook users], most of whom don't care about the fact that Facebook ultimately controls how they use the platform. Twitter handles 140 million tweets every day, and most of the people tweeting don't care what client they use, as long as it doesn't severely impede their ability to tweet. 
 
-In a nutshell, most people don't (yet?) care about the nature of the platforms they use, as long as their user experience is preserved. The tightrope Twitter must walk, now they are entrenched, is to advertise without making the user experience so bad that people consider alternatives. Given how much advertising we tolerate on more established platforms like television, as long as they turn the heat up sufficiently slowly enough most people will hardly notice a thing.
+In a nutshell, most people don't (yet?) care about the nature of the platforms they use, as long as their user experience is preserved. The tightrope Twitter must walk, now they are entrenched, is to advertise without making the user experience so bad that people consider alternatives. Given how much advertising we tolerate on more established platforms like television, as long as they turn the heat up sufficiently slowly most people will hardly notice a thing.
 
 
 [twitter announcement]: http://groups.google.com/group/twitter-development-talk/browse_thread/thread/c82cd59c7a87216a/71e1c2e1acc80f05
@@ -53,3 +53,4 @@ In a nutshell, most people don't (yet?) care about the nature of the platforms t
 [facebook users]: http://www.businessinsider.com/facebook-has-more-than-600-million-users-goldman-tells-clients-2011-1
 
 :kind: blog
+:created_at: 2011-03-12 17:16:20 +00:00
