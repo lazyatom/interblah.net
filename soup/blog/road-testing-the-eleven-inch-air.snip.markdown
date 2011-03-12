@@ -23,5 +23,6 @@ I've spent a few months umming and ahhing, but having bored everyone I know with
 [13" MacBook Pro]: http://www.apple.com/macbookpro/
 
 
+:created_at: 2011-02-22 21:11:47 +00:00
 :kind: blog
 :author: james
