@@ -7,6 +7,5 @@ In case you didn't see already, we've been having a little fun with the [#blue A
 
 See Timmy [working live](http://gofreerange.com/timmy), and read more on the [Free Range blog](http://gofreerange.com/say-hello-to-timmy-printface)...
 
-:created_at: 2008-11-09 15:44:46 +01:00
-:author: james
+:created_at: 2011-04-12 15:44:46 +01:00
 :kind: blog
