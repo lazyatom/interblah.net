@@ -7,7 +7,7 @@ While in many respects I would've loved to have kept our little printer running 
 
 To commemorate the project, I gathered the timelapse video that had been quietly accumulating, and wrapped it up into a [little video package][vimeo] to remind us of all the good times we had:
 
-<iframe src="http://player.vimeo.com/video/22439313?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="640" height="480" frameborder="0"></iframe>
+<iframe src="http://player.vimeo.com/video/22439313?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="608" height="456" frameborder="0"></iframe>
 
 After [tweeting](https://twitter.com/freerange/status/58883595003101185) that Timmy was going to sleep, it took me about an hour to actually work up the determination to unplug him.
 
@@ -22,7 +22,7 @@ Eventually I got over it, disconnected everything, put the wires and chips back 
 
 This is the last message that Timmy received:
 
-![Timmy's last message](http://public.lazyatom.com/timmy/final-snapshot.jpg)
+<img src="http://public.lazyatom.com/timmy/final-snapshot.jpg" width="95%" heigh="95%">
 
 Thankfully, Timmy hasn't been eaten by a [grue][]. He's sat [up on our shelf][instagram], waiting to be called upon again. I'm sure this isn't the last we'll see of Timmy Printface, and I find that notion comforting.
 
