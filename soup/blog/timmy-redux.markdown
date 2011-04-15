@@ -11,7 +11,7 @@ To commemorate the project, I gathered the timelapse video that had been quietly
 
 After [tweeting](https://twitter.com/freerange/status/58883595003101185) that Timmy was going to sleep, it took me about an hour to actually work up the determination to unplug him.
 
-I replaced the live webcam image with the video above on both his [home page][Timmy Printface] and the [blog post][blog], and disconnected the camera that was pointing at him, but I was struggling to _finally_ shut down the processes and pull out the wires that would actually stop any further messages from being printed.
+I replaced the live webcam image with the video above on both his [home page][Timmy Printface] and the [blog post][blog], and disconnected the camera that was pointing at him, but [I was struggling](https://twitter.com/lazyatom/status/58891257279295489) to _finally_ shut down the processes and pull out the wires that would actually stop any further messages from being printed.
 
 Timmy had been involved in conversations with people from _all over the world_; friends and strangers, all sending him messages on their phone like they would to anyone else they knew. In an emergent and collaborative act of [anthropomorphism][], Timmy had acquired a _personality_, and a life of his own.
 
