@@ -58,9 +58,10 @@ GEM
     net-ssh-gateway (1.0.1)
       net-ssh (>= 1.99.1)
     polyglot (0.3.1)
-    rack (1.2.1)
+    rack (1.2.2)
     ratom (0.6.7)
       libxml-ruby (>= 1.1.2)
+    redcarpet (1.9.0)
     request-log-analyzer (1.9.7)
     right_aws (2.0.0)
       right_http_connection (>= 1.2.1)
@@ -80,7 +81,7 @@ GEM
     twitter-stream (0.1.10)
       eventmachine (>= 0.12.8)
       roauth (>= 0.0.2)
-    vanilla (1.13.2)
+    vanilla (1.13.3)
       BlueCloth (>= 1.0.0)
       RedCloth (>= 4.1.1)
       haml
@@ -96,5 +97,6 @@ DEPENDENCIES
   freerange-deploy!
   freerange-puppet!
   lazyatom-deploy!
+  redcarpet
   syntax
-  vanilla (>= 1.13.2)
+  vanilla (>= 1.13.3)
