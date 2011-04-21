@@ -10,29 +10,33 @@
   <script type="text/javascript" src="/javascripts/vanilla.js"></script>
   <script type="text/javascript" src="http://use.typekit.com/bio7rkl.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  <link rel="stylesheet" type="text/css" media="screen"  href="/system/css.css" />
-  <link rel="stylesheet" type="text/css" media="screen"  href="/system/syntax_styles.css" />
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if lt IE 8]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
   <link href="/feed.xml" rel="alternate" title="interblah.net - blog" type="application/atom+xml" />
 </head>
-<body>
+<body class="bp">
   <div id="container">
     <div id="header">
-      {header}
+      <h2><a href="/">interblah.net</a></h2>
     </div>
     <div id="content">
       {current_snip}
     </div>
+    <div id="footer">
+      {footer}
+    </div>
   </div>
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-573082-1");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
-
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  var pageTracker = _gat._getTracker("UA-573082-1");
+  pageTracker._initData();
+  pageTracker._trackPageview();
+  </script>
 </body>
 </html>

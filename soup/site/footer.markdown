@@ -20,11 +20,7 @@ More info
 ---
 This site is powered by {l vanilla-rb}, a software experiment of mine. I think it's pretty neat.
 
-This is the sidebar. It's actually loaded from the {link_to sidebar} snip, incredibly. Try viewing <a href="/sidebar.raw">the source</a> of it to get an idea of how vanilla works.
-
+This is the footer. It's actually loaded from the {link_to footer} snip, incredibly. Try viewing <a href="/footer.raw">the source</a> of it to get an idea of how vanilla works.
 
 
 :render_as: Markdown
-:created_at: 2008-06-01 16:29:56 +01:00
-:updated_at: 2009-07-24 09:46:31 +01:00
-:name: sidebar

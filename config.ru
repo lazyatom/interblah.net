@@ -22,5 +22,13 @@ app = Vanilla::App.new({
     "markdown" => "Redcarpet"
   }
 })
-use Vanilla::Static, File.join(File.dirname(__FILE__), 'public')
+
+require 'compass'
+require 'sass/plugin/rack'
+
+Compass.add_project_configuration(File.expand_path("../config/compass.rb", __FILE__))
+Compass.configure_sass_plugin!
+use Sass::Plugin::Rack
+
+use Vanilla::Static, File.expand_path("../public", __FILE__)
 run app

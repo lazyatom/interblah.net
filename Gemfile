@@ -3,6 +3,8 @@ source :rubygems
 gem "vanilla", ">=1.13.3"
 gem "syntax"
 gem "redcarpet"
+gem "haml", "~>3.0"
+gem "compass"
 
 gem 'freerange-deploy', :git => "git://github.com/freerange/deploy.git"
 gem 'freerange-puppet', :git => "git://github.com/freerange/freerange-puppet.git"

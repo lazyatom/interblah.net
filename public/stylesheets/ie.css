@@ -1,0 +1,60 @@
+/*
+Syntax error: Undefined mixin 'blueprint-ie'.
+        on line 8 of ./public/stylesheets/sass/ie.scss, in `blueprint-ie'
+        from line 8 of ./public/stylesheets/sass/ie.scss
+
+3: // To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
+4: // +blueprint-ie
+5: 
+6: //Recommended Blueprint configuration with scoping and semantic layout:
+7: body.bp {
+8:   @include blueprint-ie(true);
+9:   // Note: Blueprint centers text to fix IE6 container centering.
+10:   // This means all your texts will be centered under all version of IE by default.
+11:   // If your container does not have the .container class, don't forget to restore
+12:   // the correct behavior to your main container (but not the body tag!)
+13:   // Example:
+
+Backtrace:
+./public/stylesheets/sass/ie.scss:8:in `blueprint-ie'
+./public/stylesheets/sass/ie.scss:8
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/mixin_node.rb:62:in `perform!'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `map'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:317:in `perform!'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/rule_node.rb:191:in `perform!'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `map'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:317:in `perform!'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/root_node.rb:59:in `perform!'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/root_node.rb:37:in `perform'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/root_node.rb:29:in `render'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin.rb:223:in `update_stylesheet'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin.rb:88:in `update_stylesheets'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin.rb:81:in `each'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin.rb:81:in `update_stylesheets'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin.rb:79:in `each'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin.rb:79:in `update_stylesheets'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin.rb:50:in `check_for_updates'
+/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin/rack.rb:40:in `call'
+/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:146:in `handle'
+/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:99:in `start'
+/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:86:in `each'
+/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:86:in `start'
+/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:66:in `loop'
+/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:66:in `start'
+/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:13:in `run'
+/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/bin/nack_worker:4
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'blueprint-ie'.\A         on line 8 of ./public/stylesheets/sass/ie.scss, in `blueprint-ie'\A         from line 8 of ./public/stylesheets/sass/ie.scss\A \A 3: // To generate css equivalent to the blueprint css but with your configuration applied, uncomment:\A 4: // +blueprint-ie\A 5: \A 6: //Recommended Blueprint configuration with scoping and semantic layout:\A 7: body.bp {\A 8:   @include blueprint-ie(true);\A 9:   // Note: Blueprint centers text to fix IE6 container centering.\A 10:   // This means all your texts will be centered under all version of IE by default.\A 11:   // If your container does not have the .container class, don't forget to restore\A 12:   // the correct behavior to your main container (but not the body tag!)\A 13:   // Example:"; }
