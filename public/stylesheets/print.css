@@ -1,54 +1,73 @@
-/*
-Syntax error: Undefined mixin 'blueprint-print'.
-        on line 5 of ./public/stylesheets/sass/print.scss, in `blueprint-print'
-        from line 5 of ./public/stylesheets/sass/print.scss
-
-1: @import "blueprint";
-2: 
-3: //Recommended Blueprint configuration with scoping and semantic layout:
-4: body.bp {
-5:   @include blueprint-print(true); }
-
-Backtrace:
-./public/stylesheets/sass/print.scss:5:in `blueprint-print'
-./public/stylesheets/sass/print.scss:5
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/mixin_node.rb:62:in `perform!'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `map'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:317:in `perform!'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/rule_node.rb:191:in `perform!'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `map'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:317:in `perform!'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/root_node.rb:59:in `perform!'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/root_node.rb:37:in `perform'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/tree/root_node.rb:29:in `render'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin.rb:223:in `update_stylesheet'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin.rb:88:in `update_stylesheets'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin.rb:81:in `each'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin.rb:81:in `update_stylesheets'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin.rb:79:in `each'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin.rb:79:in `update_stylesheets'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin.rb:50:in `check_for_updates'
-/Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.25/lib/sass/plugin/rack.rb:40:in `call'
-/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:146:in `handle'
-/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:99:in `start'
-/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:86:in `each'
-/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:86:in `start'
-/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:66:in `loop'
-/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:66:in `start'
-/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:13:in `run'
-/Users/james/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/bin/nack_worker:4
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined mixin 'blueprint-print'.\A         on line 5 of ./public/stylesheets/sass/print.scss, in `blueprint-print'\A         from line 5 of ./public/stylesheets/sass/print.scss\A \A 1: @import \"blueprint\";\A 2: \A 3: //Recommended Blueprint configuration with scoping and semantic layout:\A 4: body.bp {\A 5:   @include blueprint-print(true); }"; }
+/* line 4, sass/print.scss */
+body.bp {
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: black;
+  background: none;
+  font-size: 10pt;
+}
+/* line 52, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss */
+body.bp .container {
+  background: none;
+}
+/* line 54, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss */
+body.bp hr {
+  background: #cccccc;
+  color: #cccccc;
+  width: 100%;
+  height: 2px;
+  margin: 2em 0;
+  padding: 0;
+  border: none;
+}
+/* line 62, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss */
+body.bp hr.space {
+  background: white;
+  color: white;
+}
+/* line 65, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss */
+body.bp h1, body.bp h2, body.bp h3, body.bp h4, body.bp h5, body.bp h6 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+/* line 67, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss */
+body.bp code {
+  font-size: 0.9em;
+  font-family: "andale mono", "lucida console", monospace;
+}
+/* line 72, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss */
+body.bp a img {
+  border: none;
+}
+/* line 75, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss */
+body.bp a:link, body.bp a:visited {
+  background: transparent;
+  font-weight: 700;
+  text-decoration: underline;
+}
+/* line 79, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss */
+body.bp p img.top {
+  margin-top: 0;
+}
+/* line 81, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss */
+body.bp blockquote {
+  margin: 1.5em;
+  padding: 1em;
+  font-style: italic;
+  font-size: 0.9em;
+}
+/* line 86, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss */
+body.bp .small {
+  font-size: 0.9em;
+}
+/* line 88, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss */
+body.bp .large {
+  font-size: 1.1em;
+}
+/* line 90, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss */
+body.bp .quiet {
+  color: #999999;
+}
+/* line 92, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_print.scss */
+body.bp .hide {
+  display: none;
+}

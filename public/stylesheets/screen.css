@@ -84,9 +84,9 @@ a img {
 /* line 9, sass/partials/_page.scss */
 body.bp {
   line-height: 1.5;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Droid Sans";
   color: #333333;
-  font-size: 75%;
+  font-size: 100%;
 }
 /* line 65, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/./_typography.scss */
 body.bp h1, body.bp h2, body.bp h3, body.bp h4, body.bp h5, body.bp h6 {
@@ -389,123 +389,71 @@ body.bp .removed {
   color: white;
 }
 
-/* line 41, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp .box {
-  padding: 1.5em;
-  margin-bottom: 1.5em;
-  background: #e5ecf9;
-}
-/* line 44, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp div.border {
-  padding-right: 4px;
-  margin-right: 5px;
-  border-right: 1px solid #eeeeee;
-}
-/* line 47, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp div.colborder {
-  padding-right: 23px;
-  margin-right: 24px;
-  border-right: 1px solid #eeeeee;
-}
-/* line 49, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp hr {
-  background: #dddddd;
-  color: #dddddd;
-  clear: both;
-  float: none;
-  width: 100%;
-  height: 0.1em;
-  margin: 0 0 1.45em;
-  border: none;
-}
-/* line 51, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp hr.space {
-  background: #dddddd;
-  color: #dddddd;
-  clear: both;
-  float: none;
-  width: 100%;
-  height: 0.1em;
-  margin: 0 0 1.45em;
-  border: none;
-  background: white;
-  color: white;
-  visibility: hidden;
-}
-/* line 53, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp form.inline {
-  line-height: 3;
-}
-/* line 6, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_form.scss */
-body.bp form.inline p {
-  margin-bottom: 0;
-}
-
-/* line 18, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_form.scss */
+/* line 18, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_form.scss */
 form.bp label {
   font-weight: bold;
 }
-/* line 19, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_form.scss */
+/* line 19, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_form.scss */
 form.bp fieldset {
   padding: 1.4em;
   margin: 0 0 1.5em 0;
 }
-/* line 20, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_form.scss */
+/* line 20, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_form.scss */
 form.bp legend {
   font-weight: bold;
   font-size: 1.2em;
 }
-/* line 26, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_form.scss */
+/* line 26, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_form.scss */
 form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp input[type=text], form.bp input[type=password] {
   margin: 0.5em 0;
   background-color: white;
   padding: 5px;
 }
-/* line 27, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_form.scss */
+/* line 27, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_form.scss */
 form.bp input.title {
   font-size: 1.5em;
 }
-/* line 31, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_form.scss */
+/* line 31, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_form.scss */
 form.bp input[type=checkbox], form.bp input.checkbox, form.bp input[type=radio], form.bp input.radio {
   position: relative;
   top: 0.25em;
 }
-/* line 33, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_form.scss */
+/* line 33, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_form.scss */
 form.bp textarea {
   margin: 0.5em 0;
   padding: 5px;
 }
-/* line 34, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_form.scss */
+/* line 34, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_form.scss */
 form.bp select {
   margin: 0.5em 0;
 }
-/* line 59, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_form.scss */
+/* line 59, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_form.scss */
 form.bp fieldset {
   border: 1px solid #cccccc;
 }
-/* line 62, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_form.scss */
+/* line 62, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_form.scss */
 form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp input[type=text], form.bp input[type=password],
 form.bp textarea, form.bp select {
   border: 1px solid #bbbbbb;
 }
-/* line 64, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_form.scss */
+/* line 64, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_form.scss */
 form.bp input.text:focus, form.bp input.title:focus, form.bp input[type=email]:focus, form.bp input[type=text]:focus, form.bp input[type=password]:focus,
 form.bp textarea:focus, form.bp select:focus {
   border: 1px solid #666666;
 }
-/* line 48, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_form.scss */
+/* line 48, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_form.scss */
 form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp input[type=text], form.bp input[type=password] {
   width: 300px;
 }
-/* line 50, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_form.scss */
+/* line 50, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_form.scss */
 form.bp textarea {
   width: 390px;
   height: 250px;
 }
 
-/* line 17, sass/screen.scss */
+/* line 15, sass/screen.scss */
 body #container {
-  width: 600px;
+  width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
@@ -515,20 +463,125 @@ body #header, body #footer {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 600px;
+  width: 950px;
 }
-/* line 138, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_grid.scss */
+/* line 138, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_grid.scss */
 * html body #header, * html body #footer {
   overflow-x: hidden;
 }
 /* line 21, sass/screen.scss */
+body #header .inner_content, body #footer .inner_content {
+  padding-left: 40px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 870px;
+  padding-right: 40px;
+}
+/* line 138, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_grid.scss */
+* html body #header .inner_content, * html body #footer .inner_content {
+  overflow-x: hidden;
+}
+/* line 28, sass/screen.scss */
 body #content {
+  padding-left: 40px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 630px;
+  padding-right: 40px;
+}
+/* line 138, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_grid.scss */
+* html body #content {
+  overflow-x: hidden;
+}
+/* line 35, sass/screen.scss */
+body #sidebar {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 600px;
+  width: 190px;
+  padding-right: 40px;
+  font-size: 80%;
 }
-/* line 138, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/./_grid.scss */
-* html body #content {
+/* line 138, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_grid.scss */
+* html body #sidebar {
   overflow-x: hidden;
+}
+/* line 41, sass/screen.scss */
+body #sidebar #details {
+  margin-bottom: 1em;
+  color: #ccc;
+  font-style: italic;
+}
+
+/* line 50, sass/screen.scss */
+body.bp h1, body.bp h2, body.bp h3, body.bp h4, body.bp h5, body.bp h6 {
+  font-family: 'Merriweather';
+}
+
+/* line 56, sass/screen.scss */
+body iframe {
+  margin-bottom: 1em;
+}
+/* line 60, sass/screen.scss */
+body #header {
+  background-color: #eee;
+  font-size: 50%;
+  padding-top: 1em;
+  margin-bottom: 5em;
+}
+/* line 65, sass/screen.scss */
+body #header a {
+  background-color: #ddd;
+}
+/* line 70, sass/screen.scss */
+body #footer {
+  background-color: #ddd;
+  overflow: auto;
+  margin-top: 2em;
+}
+/* line 74, sass/screen.scss */
+body #footer .inner_content {
+  margin-top: 1em;
+}
+/* line 77, sass/screen.scss */
+body #footer a {
+  background-color: #ccc;
+}
+/* line 82, sass/screen.scss */
+body a {
+  background-color: #eee;
+  color: #000 !important;
+  text-decoration: none !important;
+  padding: 1px 3px;
+}
+/* line 89, sass/screen.scss */
+body a:hover {
+  color: #888 !important;
+}
+/* line 94, sass/screen.scss */
+body #content .details {
+  padding-left: 640px;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 230px;
+  font-size: 12px;
+  text-align: right;
+}
+/* line 138, /Users/james/.rvm/gems/ree-1.8.7-2010.02/gems/compass-0.10.6/frameworks/blueprint/stylesheets/./blueprint/_grid.scss */
+* html body #content .details {
+  overflow-x: hidden;
+}
+/* line 102, sass/screen.scss */
+body #content .details .created_at {
+  font-variant: italics;
+}
+/* line 105, sass/screen.scss */
+body #content .details a {
+  background-color: none !important;
+  color: #888 !important;
+  text-decoration: none;
+  border-bottom: 1px dotted #aaa;
 }

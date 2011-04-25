@@ -3,7 +3,7 @@ Day Two
 
 I didn't get into any development until the afternoon, when I plugged the Air into [Jason][]'s Cinema Display and started working on Vestible with [Tom Stuart][].
 
-The first thing I noticed when plugging in the external display is the difference in pixel size makes windows appear to bloat when they are dragged from the Air's display to the external screen. It's disconcerting, but regardless the laptop seems quite heavy driving the gigantic display.
+The first thing I noticed when plugging in the external display is the difference in pixel size makes windows appear to bloat when they are dragged from the Air's display to the external screen. It's disconcerting, but regardless the laptop seems quite happy driving the gigantic display.
 
 Some of my TextMate bundles and customisations are missing; that's annoying, but it's not the Air's fault. I try to forgive it.
 

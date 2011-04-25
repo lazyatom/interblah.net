@@ -10,17 +10,104 @@
 // Combine the partials into a single screen stylesheet.
 @import "partials/page";
 @import "partials/form";
-//@import "partials/two_col";
-
 
 body {
   #container {
-    @include container; }
+    @include container;
+    //background: url('/images/grid.png');
+  }
   #header, #footer {
-    @include column($blueprint-grid-columns); }
+    @include column($blueprint-grid-columns);
+    .inner_content {
+      $inner_content_columns: $blueprint-grid-columns - 2;
+      @include prepend(1);
+      @include column($inner_content_columns);
+      @include append(1);
+    }
+  }
   #content {
-    // Two thirds of the grid columns, rounding up.
-    // With 24 cols, this is 16.
-    $content-columns: $blueprint-grid-columns;
+    @include prepend(1);
+    $content-columns: ceil(2 * $blueprint-grid-columns / 3);
     // true means it's the last column in the row
-    @include column($content-columns, true); } }
+    @include column($content-columns);
+    @include append(1);
+  }
+  #sidebar {
+    // One third of the grid columns, rounding down. With 24 cols, this is 8.
+    $sidebar-columns: floor($blueprint-grid-columns / 3) - 3;
+    @include column($sidebar-columns, true);
+    @include append(1);
+    font-size: 80%;
+    #details {
+      margin-bottom: 1em;
+      color: #ccc;
+      font-style: italic;
+    }
+  }
+}
+
+body.bp {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather';
+  }
+}
+
+body {
+  iframe {
+    margin-bottom: 1em;
+  }
+
+  #header {
+    background-color: #eee;
+    font-size: 50%;
+    padding-top: 1em;
+    margin-bottom: 5em;
+    a {
+      background-color: #ddd;
+    }
+  }
+
+  #footer {
+    background-color: #ddd;
+    overflow: auto;
+    margin-top: 2em;
+    .inner_content {
+      margin-top: 1em;
+    }
+    a {
+      background-color: #ccc;
+    }
+  }
+
+  a {
+    background-color: #eee;
+    color: #000 !important;
+    text-decoration: none !important;
+    padding: 1px 3px;
+  }
+
+  a:hover {
+    color: #888 !important;
+  }
+
+  #content {
+    .details {
+      $blog-details-columns: $blueprint-grid-columns - 8;
+      @include prepend($blog-details-columns);
+      @include column(6, true);
+
+      font-size: 12px;
+      text-align: right;
+
+      .created_at {
+        font-variant: italics;
+      }
+      a {
+        background-color: none !important;
+        color: #888 !important;
+        text-decoration: none;
+        border-bottom: 1px dotted #aaa;
+      }
+    }
+  }
+}

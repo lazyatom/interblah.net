@@ -31,4 +31,5 @@ Compass.configure_sass_plugin!
 use Sass::Plugin::Rack
 
 use Vanilla::Static, File.expand_path("../public", __FILE__)
+use Rack::ShowExceptions
 run app

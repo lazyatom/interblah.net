@@ -1,6 +1,6 @@
 source :rubygems
 
-gem "vanilla", ">=1.13.3"
+gem "vanilla", :path => "/Users/james/Code/lazyatom/vanilla-rb" #}">=1.13.3"
 gem "syntax"
 gem "redcarpet"
 gem "haml", "~>3.0"

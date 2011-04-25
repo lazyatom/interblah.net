@@ -1,0 +1,35 @@
+On Testing
+==========
+
+I've spent quite a bit of time in the second half of 2010 thinking about testing code. I suspect there's a lot more thinking yet to be done before I have anything particularly substantive to say.
+
+
+
+Unit Testing - Test::Unit vs. Rspec vs. ... well, all the others
+- ultimately it doesn't matter, the key is to be able to express yourself fluently and easily, without intertia
+- some may argue that the language ('bdd') is important, I don't believe it makes that much different to a reasonably experienced developer
+- nested contexts are interesting, and I find them useful, but I'm not convinced they lead to better tests
+- matchers are interesting too
+- both matcher-based testing and nested contexts are now available independently, this is probably a good thing.
+
+
+Cucumber
+- encourages you to 'just write', removes some of the inertia
+- the split into 'features', 'steps' and 'support' exacerbates a placement/repetition problem that I think already exists.
+
+
+
+The real testing questions
+---------------------------
+
+- what's the functionality that i'm trying to test
+
+- how do I exercise that functionality (the "action")
+- how do I get the system ready (the "setup")
+- and in both of those cases, what already exists to do that, and are those existing abstractions/encapsulations appropriate in this case
+   - existing methods
+   - existing contexts with identical/similar setups
+   - is the test a new side-effect of something that's already tested, or is it new functionality?
+
+- what other tests does this test belong with?
+  (- what's the right level to write this test?)

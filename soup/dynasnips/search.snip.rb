@@ -26,7 +26,7 @@ class Search < Dynasnip
     if term =~ /[^\w\s\-_\.]/
       "<p>Please only use characters, spaces, hyphens, underscores and periods in your search term</p>"
     else
-      matches = `fgrep -r "#{term}" #{app.config[:soups].first}/*.yml`.split("\n")
+      matches = `fgrep -r "#{term}" {#{app.config[:soups].join(",")}}`.split("\n")
       "<h2>Search results</h2>" + search_form + if matches.any?
         grouped_matches = {}
         matches.each do |match|
