@@ -1,27 +1,10 @@
 Deploying Vanilla.rb
 ====================
 
-Here be dragons...
-
-At the moment, this is how I run vanilla:
-
- * vanilla, pulled from github directly
- * sqlite database for snips, created originally by rake bootstrap
- * thin server, running against the vanilla.ru file provided
-
-Serving
--------
-
-It *should* work as a CGI/FCGI script, without issue. I'm not sure if having thin run the rackup file directly is best, either, but it works for now.
-
-
-Upgrading 
----------
-
-This is the big unknown. Users may change the contents of 'system' snips (like 'system', or dynasnips). Ideally, we'd want to flag when some upgrades might interfere with custom changes. How does smalltalk do it? In many ways, the snip store is like a persistent object store...
+You probably want to refer to {l "how interblah works"}
 
 :render_as: Markdown
 :created_at: 2008-07-17 17:30:39 +01:00
-:updated_at: 2008-07-17 17:30:39 +01:00
+:updated_at: 2011-04-26 23:15:00 +01:00
 :author: james
 :name: deploying-vanilla-rb
