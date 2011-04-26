@@ -3,3 +3,5 @@ Hello, I'm James Adam, and you've found my blog-type-thing. I am a software deve
 More info
 ---
 This site is powered by {l vanilla-rb}, a software experiment of mine. I think it's pretty neat.
+
+:title: About this site
