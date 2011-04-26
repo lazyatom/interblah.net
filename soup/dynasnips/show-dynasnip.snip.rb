@@ -9,9 +9,3 @@ class ShowDynasnip < Dynasnip
   end
   self
 end
-
-:render_as: Ruby
-:created_at: 2008-07-17 17:14:52 +01:00
-:updated_at: 2008-07-17 17:21:33 +01:00
-:author: james
-:name: show-dynasnip
