@@ -4,6 +4,8 @@ Basically it's an attempt to make a site in a {l homoiconicity,homoiconic} way, 
 
 It might not work, but it's an interesting experiment. I wrote a {l introducing-vanilla-rb,blog post} about it, which might be of interest.
 
+You can learn about how the site actually runs {l "how interblah works",here}
+
 About me
 -------
 
