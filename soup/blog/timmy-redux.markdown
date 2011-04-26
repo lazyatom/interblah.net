@@ -1,6 +1,3 @@
-Timmy, Redux
-============
-
 I took [Timmy Printface][] offline today, after a week of valiant service.
 
 While in many respects I would've loved to have kept our little printer running indefinitely, I think it's important not to become too attached to these things. It was a hack, after all (read more on the [free range blog][blog] you haven't already).
@@ -33,6 +30,7 @@ Thankfully, Timmy hasn't been eaten by a [grue][]. He's sat [up on our shelf][in
 [vimeo]: http://vimeo.com/22439313
 [blog]: http://gofreerange.com/say-hello-to-timmy-printface
 
+:title: Timmy, Redux
 :kind: blog
 :author: james
 :created_at: 2011-04-15 17:51:00 +01:00
