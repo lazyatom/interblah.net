@@ -50,7 +50,7 @@ GEM
     httparty (0.6.1)
       crack (= 0.1.8)
     json (1.4.6)
-    libxml-ruby (1.1.4)
+    libxml-ruby (2.0.2)
     mime-types (1.16)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
@@ -83,7 +83,7 @@ GEM
     twitter-stream (0.1.10)
       eventmachine (>= 0.12.8)
       roauth (>= 0.0.2)
-    vanilla (1.13.3)
+    vanilla (1.14.1)
       BlueCloth (>= 1.0.0)
       RedCloth (>= 4.1.1)
       haml
@@ -103,4 +103,4 @@ DEPENDENCIES
   lazyatom-deploy!
   redcarpet
   syntax
-  vanilla (>= 1.13.3)
+  vanilla (>= 1.14.1)
