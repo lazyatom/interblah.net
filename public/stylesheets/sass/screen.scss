@@ -26,23 +26,46 @@ body {
     }
   }
   #content {
+    $content-columns: $blueprint-grid-columns - 2;
     @include prepend(1);
-    $content-columns: ceil(2 * $blueprint-grid-columns / 3);
-    // true means it's the last column in the row
     @include column($content-columns);
     @include append(1);
-  }
-  #sidebar {
-    // One third of the grid columns, rounding down. With 24 cols, this is 8.
-    $sidebar-columns: floor($blueprint-grid-columns / 3) - 3;
-    @include column($sidebar-columns, true);
-    @include append(1);
-    font-size: 80%;
-    #details {
-      margin-bottom: 1em;
-      color: #ccc;
-      font-style: italic;
+
+    .blog {
+      @include column($blueprint-grid-columns);
+      margin-top: 2em;
+
+      .snip {
+        // true means it's the last column in the row
+        $snip: ceil(2 * $content-columns / 3) + 1;
+        @include column($snip);
+        @include append(1);
+      }
+
+      #sidebar {
+        // One third of the grid columns, rounding down. With 24 cols, this is 8.
+        $sidebar-columns: floor($content-columns / 3) - 2;
+        @include column($sidebar-columns, true);
+        font-size: 80%;
+        #details {
+          margin-bottom: 1em;
+          color: #ccc;
+          font-style: italic;
+        }
+      }
     }
+    .separator {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      @include column($content-columns);
+      border: none;
+      height: 2px;
+      background-color: #f6f6f6;
+    }
+  }
+
+  #content > .blog:first-of-type {
+    margin-top: 0;
   }
 }
 

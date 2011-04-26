@@ -3,5 +3,3 @@ Hello, I'm James Adam, and you've found my blog-type-thing. I am a software deve
 More info
 ---
 This site is powered by {l vanilla-rb}, a software experiment of mine. I think it's pretty neat.
-
-This is the footer. It's actually loaded from the {link_to footer} snip, incredibly. Try viewing <a href="/footer.raw">the source</a> of it to get an idea of how vanilla works.
