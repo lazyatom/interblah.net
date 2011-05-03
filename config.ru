@@ -8,15 +8,14 @@ require 'redcarpet_renderer'
 
 app = Vanilla::App.new({
   :soups => %w(
-    soup
-    soup/blog
-    soup/dynasnips
-    soup/site
-    soup/wiki
-    soup/tutorial
-    soup/essays
-    soup/system
-    soup/system/dynasnips
+    soups
+    soups/blog
+    soups/dynasnips
+    soups/site
+    soups/wiki
+    soups/tutorial
+    soups/essays
+    soups/system
   ),
   :extensions => {
     "markdown" => "Redcarpet"
