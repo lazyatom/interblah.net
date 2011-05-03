@@ -83,7 +83,7 @@ GEM
     twitter-stream (0.1.10)
       eventmachine (>= 0.12.8)
       roauth (>= 0.0.2)
-    vanilla (1.16)
+    vanilla (1.16.1)
       BlueCloth (>= 1.0.0)
       RedCloth (>= 4.1.1)
       haml
@@ -103,4 +103,4 @@ DEPENDENCIES
   lazyatom-deploy!
   redcarpet
   syntax
-  vanilla (>= 1.16)
+  vanilla (>= 1.16.1)
