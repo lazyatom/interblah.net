@@ -103,4 +103,4 @@ DEPENDENCIES
   lazyatom-deploy!
   redcarpet
   syntax
-  vanilla (>= 1.14.1)
+  vanilla (>= 1.2)
