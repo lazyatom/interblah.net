@@ -1,52 +1,82 @@
-As you might be aware, I've been involved in the running of a couple of {link_to ruby-manor, "Ruby conferences"} over the past few years.
+As you might be aware, I've been involved in the running of a couple of {link_to ruby-manor, Ruby conferences} over the past few years. I wanted to try and codify some of my feelings about the conference's goals, and how it might progress.
 
-While {link_to ruby-manor, "Ruby Manor"} is by no means *my* thing - it's very much owned by the community - as one of the original instigators I had a few rough goals that I wanted to achieve. In a nutshell, I wanted to demonstrate that it is possible to run a conference which is equal to any of the "big" confs in terms of technical quality, usefulness and general atmosphere, but without the bloat which has become a typical part of the conference experience.
+While {link_to ruby-manor, Ruby Manor} is by no means *my* thing[^1] as one of the original instigators I had a few rough goals that I wanted to achieve. In a nutshell, I wanted to demonstrate that it is possible to run a conference which is equal to any of the "big" confs in terms of technical quality, usefulness and general atmosphere, but without the bloat which has become a typical part of the conference experience.
 
 I'm talking about fluffy inspiration from "big name" (i.e. same every year) keynote speakers without any real insight. I'm talking about low quality food and swag that we've all inadvertently paid for in our ticket prices. I'm talking about cheaper tickets to boot - can it really cost hundreds of pounds per person to run these events?
 
-So that's what we did in 2008, and again in 2009.
+So that's what we did in [2008][classic], and again in [2009][harder].
 
 Some time later...
 ----------------
 
-Hereafter I can only speak for myself. I know that a lot of people enjoyed the conferences we ran, and the praise is something I personally treasure. However, after the euphoria of the first event, and then the hard work of the repeat, I was left thinking about my original goals again. 
+Hereafter I can only speak for myself. Everything that follows is my own rambling opinion, and I don't speak for "Ruby Manor" as a *thing* when I say any of the following[^my-opinion].
 
-We had imagined that, with a little bit of structure, the community would come together to suggest, plan an refine the presentations and structure of the day, but it was becoming clear that it still required a significant injection of energy from the "organisers" to keep the process going. While a not-insubstantial portion of the attendees did participate in shaping the proposals, the majority of people engaged in a minimal way ("yes, that sounds interesting") or not at all. This left me wondering about some of these goals.
+I know that a lot of people enjoyed the conferences we ran, and the praise is something I personally treasure. However, after the euphoria of the first event, and then the hard work of the repeat, I was left thinking about my original goals again. 
 
-I can only make a handful of hypotheses about why participation felt so weak.
+We had imagined that, with a minimal amount of structure, the community could be inspired to come together and suggest, plan an refine the presentations and structure of the day. However, after the second event it was becoming clear that it still required a significant injection of energy from the "organisers" to keep the process going. While a not-insubstantial portion of the attendees did participate in shaping the proposals, the majority of people engaged in a minimal way ("{link_to regarding-plus-ones, yes that sounds interesting}") or not at all. 
+
+This left me wondering about some of these goals. I have a handful of hypotheses about why participation didn't feel as strong as I hoped.
 
 ### Hypothesis A: Confusion
 
-My optimistic hypothesis is that people we not sure or confident about how they could engage with the process. Admittedly, it was rather free-form (a mailing-list), and so there was no apparent structure unless you read the introductory posts and some of the content to get your bearings.
+My optimistic hypothesis is that people we not sure or confident about how they could engage with the process. Admittedly, it was very free-form (a mailing-list), and so there was no apparent structure unless you read the introductory posts and some of the content to get your bearings.
 
-We chose email because - well, everyone uses it. We hoped it would be the simplest way both for us to get something rolling, and for people to start engaging with it.
+We chose email because, well, everyone uses it. We hoped it would be the simplest way both for us to get something rolling quickly, and the simplest way for people to start engaging. However, perhaps the "blank page" of an email was more of a hurdle to jump than we imagined.
 
 ### Hypothesis B: Laziness
 
-My pessimistic hypothesis is that people are generally lazy, and so it was easier to allow or assume that other people would propose something, or give feedback, than it was to do so personally. I suspect now that a lot of people enjoy going to conferences partially *because* they can just rock up having bought a ticket and have everything choice made for them, and get the same conference "buzz".
+My pessimistic hypothesis is that people are generally lazy, and so it was easier to allow or assume that other people would propose something, or give feedback, than it was to do so personally.
 
-These people are happy to buy a ticket, but for whatever reason don't really bother directly contributing to the event.
+Having seen the twitter hyperbole surrounding most conferences (ours included), I suspect now that a lot of people enjoy going to conferences partially *because* they can just buy a ticket and turn up having every choice made for them, and get the same conference "buzz" without expending much effort.
 
-### Hypothesis C: The Quo is fine
+Of course, people are busy too -- we've all got jobs and deliverables, and volunteering becomes a good intention that is rapidly superseded by more tangible priorities.
 
-Perhaps people don't really care about the presentation content, or the food, and are only going to be a part of the mild hysteria that sets in when you're on a tech jolly away from home? They clearly they don't mind spending the money, as most established Ruby conferences continue to sell out, often before they've even outlined the presentations. I think that's pretty strong evidence that people either:
+### Hypothesis C: The Quo is Good Enough
+
+Perhaps people don't really care about the presentation content, or the food, and are only going to be a part of the mild hysteria that sets in when you're on a tech jolly[^jolly] away from home? They clearly they don't mind spending the money, as most established Ruby conferences continue to sell out[^sell-out], often before they've even outlined the presentations. I think that's pretty strong evidence that people either:
 
 * don't care about the talk content
 * are happy to delegate the nature and quality of the content entirely
 * some mixture of the two.
 
-So if people don't care about the price of the ticket, and they don't really mind about the exact nature of the content, what is the point of running Ruby Manor in the way we do? Does it serve *any* purpose beyond being another event that people can snatch up tickets for?
+So if people don't care about the price of the ticket, and they don't really mind about the exact nature of the content, what is the point of running Ruby Manor in the way we do? Does it serve *any* purpose beyond being just another conference with a slightly quirky aspect?
+
+A + B + C == ?
+---------------
+
+In reality I think there's a bit of truth in all three hypotheses. But either way, the question I am asking myself now is this: _what is the motivation for running Ruby Manor?_
+
+I had originally hoped it would act as a strong, definite statement both to potential attendees and existing conference organisers that we didn't need their [t-shirts or their lunch boxes](http://groups.google.com/group/ruby-manor/browse_thread/thread/d11ee1aee7f0d904?pli=1), or the same speakers peddling the same presentations from conference to conference, pontificating from an altar.
+
+I had hoped it catalyse active questioning by attendees about why other conferences charged hundreds of pounds, and at the very least conferences should declare clearly whether or not they are for-profit, and if not then make the finances transparent. I hope hoped that conference attendees would demand a stronger influence on the content of the conferences themselves. I believed that the conference world needed to be **disrupted**.
+
+But now I'm not sure if that's what people really care about.
+
+Ruby Manor was almost [instantly sidelined][railsunderground-conversation] as a "unconference", a label which can too easily deployed by "real" conferences to protect the status quo. Personally I think that unconferences are *better* at achieving the fundamental goals of a conference than these other ones are - meeting people, getting new ideas. Unconferences strongly encourage participation, whereas "real" conferences cater to consumers.
 
 
 What next?
 ----------
 
-In reality I think there's a bit of truth in both hypotheses. But either way, the question I am personally asking myself now is this: what is the purpose of Ruby Manor?
+For the best part of two years I've been [mulling this over](http://groups.google.com/group/ruby-manor/browse_thread/thread/9d9d21947953086e/c42e45881733d10b).
 
-I had originally hoped it would be as a concrete statement to potential attendees and existing conference organised that we didn't need their t-shirts, their lunch boxes, or the same speakers peddling the same presentations from conference to conference. I had hoped it would be a catalyst encouraging people to actively question why other conferences charged hundreds of pounds, and at the very least that they should declare whether or not a conference was for-profit, and if not then make the finances transparent. I hope hoped that conference attendees would demand a stronger influence on the conferences themselves.
+If I am involved in another Ruby conference, I want it to be different. Perhaps not everyone is ready to leave the safe world of traditional conferences, but some people are, and those are the people that I think can help explore what might be *better* than the status quo. These are the people who -- I'm guessing -- were using Ruby *before* you could actually get paid to do so; people who aren't afraid to explore outside of their comfort zone.
 
-But now I'm not sure if that's what people really care about. Ruby Manor was nearly instantly sidelined as a "unconference", a label which can too easily deployed by "real" conferences to protect the status quo. Personally I think that unconferences are *better* at achieving the fundamental goals of a conference than these other ones are - meeting people, getting new ideas. Unconferences strongly encourage participation.
 
+
+
+[^1]: Ruby Manor is organised by a group, and it's very much owned by the community. I would be delighted if people in the community wanted to take it forward.
+
+[^jolly]: Apparently plenty of people are happy to pay *thousands* of pounds to go to conferences on tropical islands, full of leisure activities like photo walks and so on. I don't begrudge anyone a holiday, but it's fairly indulgent as a conference.
+
+[^my-opinion]: I cannot make this clear enough - these are only my own, sightly-raw feelings about how the events went, and how the community is at the moment.
+
+[^sell-out]: The Scottish Ruby Conference has sold out [incredibly quickly][src-sellout] for two years running now; even Ruby Manor 2 sold it incredibly quickly, before we really had a chance to get momentum behind the community organisation of it.
+
+[classic]: http://rubymanor.org/classic
+[harder]: http://rubymanor.org/harder
+[src-sellout]: http://www.rubyinside.com/get-to-the-scottish-ruby-conference-26-27-march-2010-2944.html
+[railsunderground-conversation]: http://www.exquisitetweets.com/collection/lazyatom/422
 
 :title: Some thoughts about Ruby Manor
 :created_at: 2011-05-03 17:46:00 +01:00

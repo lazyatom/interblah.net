@@ -5,6 +5,7 @@ require 'vanilla'
 require 'vanilla/static'
 
 require 'redcarpet_renderer'
+require 'kramdown_renderer'
 
 app = Vanilla::App.new({
   :soups => %w(
@@ -17,8 +18,8 @@ app = Vanilla::App.new({
     soups/essays
     soups/system
   ),
-  :extensions => {
-    "markdown" => "Redcarpet"
+  :renderers => {
+    "markdown" => "Vanilla::Renderers::Kramdown"
   }
 })
 

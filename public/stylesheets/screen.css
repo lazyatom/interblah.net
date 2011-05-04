@@ -628,3 +628,7 @@ body #content .details a {
   text-decoration: none;
   border-bottom: 1px dotted #aaa;
 }
+/* line 136, sass/screen.scss */
+body #content .footnotes {
+  font-size: 90%;
+}
