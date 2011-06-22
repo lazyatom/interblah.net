@@ -630,5 +630,7 @@ body #content .details a {
 }
 /* line 136, sass/screen.scss */
 body #content .footnotes {
+  border-top: 1px solid #eee;
+  padding-top: 1em;
   font-size: 90%;
 }
