@@ -56,8 +56,8 @@ class Kind < Dynasnip
     end
   end
 
-  attribute :feed_title, "Your Blog"
-  attribute :domain, "yourdomain.com"
+  attribute :feed_title, "interblah.net - blog"
+  attribute :domain, "interblah.net"
   attribute :snip_template, %{
     <div class="snip SNIP_KIND">
       <div class="details">
@@ -72,9 +72,3 @@ class Kind < Dynasnip
 
   self
 end
-
-:domain: interblah.net
-:feed_title: interblah.net - blog
-:snip_template: |
-  SNIP_CONTENT
-:hide_template: true
