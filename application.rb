@@ -34,5 +34,5 @@ Application.configure do |config|
   # If you don't want the tutorial on your site, remove this and delete the directory
   config.soups << "soups/tutorial"
 
-  config.renderers[:markdown] = Vanilla::Renderers::Kramdown
+  config.renderers["markdown"] = Vanilla::Renderers::Kramdown
 end
