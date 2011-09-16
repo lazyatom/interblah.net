@@ -68,3 +68,5 @@ In other words: **focus a little less on cementing your genius for posterity, an
 
 :kind: blog
 :title: '"Sponsor me to talk"?'
+:created_at: 2011-08-09 18:24:00 +01:00
+:updated_at: 2011-08-10 14:46:44 +01:00
