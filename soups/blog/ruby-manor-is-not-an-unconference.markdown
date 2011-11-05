@@ -21,7 +21,7 @@ Ruby Manor is a conference that is trying to explore what being a conference **r
 
 ... or is this just what we've come to *expect* from a conference?
 
-Ruby Manor is an effort to strip away anything that doesn't actually improve the conference, and try to improve the other aspects. That's why we don't provide food, or swag. That's why we plan out conference program completely transparently, and encourage all the attendees to [engage directly with the proposals and presenters][vestibule].
+Ruby Manor is an effort to strip away anything that doesn't actually improve the conference, and try to improve the other aspects. That's why we don't provide food, or swag. That's why we plan our conference program completely transparently, and encourage all the attendees to [engage directly with the proposals and presenters][vestibule].
 
 And it turns out that when you don't need to hire a huge conference venue and deal with their catering, or fly in big-name speakers, or print a bunch of schedules and badges, then you don't actually need to charge a huge amount of money.
 
