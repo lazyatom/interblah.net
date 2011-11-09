@@ -16,7 +16,7 @@ class Kind < Dynasnip
     rendered_contents = externalise_links(prepare_snip_contents(snip))
     case as
     when :html
-      snip_template.
+      Kind.attribute(:snip_template).
         gsub('SNIP_KIND', kind).
         gsub('SNIP_NAME', snip.name).
         gsub('CREATED_AT', snip.created_at.to_s || '').
