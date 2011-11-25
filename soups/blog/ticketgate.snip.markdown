@@ -206,3 +206,6 @@ Obviously he's kidding, but I enjoyed the joke.
 Because I'm not a dick.
 
 :title: "Ticketgate"
+:kind: blog
+:created_at: 2011-11-25 11:48:00 +00:00
+:updated_at: 2011-11-25 11:48:00 +00:00
