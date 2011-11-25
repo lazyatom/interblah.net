@@ -1,0 +1,21 @@
+/* line 1, sass/embedtweets.scss */
+div.tweet.small_tweet {
+  padding: 10px;
+  color: #333 !important;
+  width: 60%;
+  margin-left: 1em;
+}
+/* line 9, sass/embedtweets.scss */
+div.tweet.small_tweet div.message_wrap div.message div.content {
+  font-size: 1.6em;
+}
+/* line 14, sass/embedtweets.scss */
+div.tweet.small_tweet div.message_wrap div.message div.meta,
+div.tweet.small_tweet div.message_wrap div.message div.meta a {
+  color: #999 !important;
+  font-size: 1.1em;
+}
+/* line 21, sass/embedtweets.scss */
+div.tweet.small_tweet div.user div.names span.screen_name a:link {
+  font-size: 1.2em !important;
+}
