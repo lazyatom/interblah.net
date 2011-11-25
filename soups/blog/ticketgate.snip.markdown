@@ -9,12 +9,12 @@ I think this one from me irked Alan a bit:
 
 What I was expressing with the "#slowclap" was more disappointment than anything else, since I'd raised my hopes after the previous conversation, but I can see how it would've come across. Andrew Nesbit called me on it, but it didn't click until too late:
 
-[Andrew Nesbit: "@lazyatom passive aggressive much?"](https://twitter.com/teabass/status/138901418571599873)
+[Andrew Nesbitt: "@lazyatom passive aggressive much?"](https://twitter.com/teabass/status/138901418571599873)
 
 
 [Alan C Francis: "@lazyatom Are you always this upset when people make choices that are different from yours?"](https://twitter.com/#!/alancfrancis/status/139340410924433408)
 
-While I really wasn't annoyed earlier, I think this is one of those self-fulfilling prophesies, like when someone comes up to you and apropos of nothing says "Cheer up!", like an annoyingly smug bastard, and where they would've seen you as glum really you were just deep in thought and quite content, but now that you've been disturbed, yes, yes actually now I *am* upset. You know how it goes. Anyway, it's something like that, innocent stuff really.
+While I really wasn't annoyed earlier, I think this is one of those self-fulfilling prophesies, like when someone comes up to you and apropos of nothing says "Cheer up!", and where they would've seen you as glum really you were just deep in thought and quite content, but now that you've been disturbed, yes, yes actually now I *am* upset. You know how it goes. Anyway, it's something like that, innocent stuff really.
 
 [James Adam: "(the curious paradox of annoyance caused solely from the suggestion that one is annoyed.)"](https://twitter.com/lazyatom/status/139341360804278273)
 
@@ -157,7 +157,7 @@ I've got to apologise to Alan, because it's clear now that one of my earlier twe
 
 I'm not attacking anyone. I've re-read the {l early-bird-tickets, original conversation} and it's verging on the _convivial_. I don't think at any point Alan was anything worse than bemused, and he was genuinely happy to introspect about the questions I was asking. I really, genuinely appreciated that, because a lot of the thinking that's tied up with Ruby Manor is hard to communicate in a way that isn't confrontational, both in expression and reception. It's hard to suggest that things *might* be better if we all did a thing differently without upsetting those people who are responsible for delivering that thing.
 
-But what you don't see in that conversation is the other then Ben wrote at 2am from his hotel room:
+But what you don't see in that conversation is the other thing Ben wrote at 2am from his hotel room:
 
 [Ben Bleything: "And I'll say this now: if you don't like how @veganstraightedge and I run @cascadiaruby, door's to your left."](https://twitter.com/#!/bleything/status/139596983928242176)
 
