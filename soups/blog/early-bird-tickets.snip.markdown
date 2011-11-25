@@ -1,5 +1,7 @@
 Have you ever missed an "early bird" ticket price? Ever wondered if they were really necessary?
 
+**(2011-11-25 Update: {l ticketgate, more information here})**
+
 **(2011-11-22 Update! Scroll down!)**
 
 I had an interesting conversation via twitter with Alan Francis. We've had a few awkward exchanges in the past (almost certainly a result of my too-often brash demeanour), but I think this one was hopefully constructive and interesting.
