@@ -13,5 +13,5 @@ I don't think I was very successful in communicating my point (which I won't re-
 
 :title: "Ticketgate Redux"
 :kind: blog
-:created_at: 2012-04-22 11:48:00 +00:00
-:updated_at: 2012-04-22 11:48:00 +00:00
+:created_at: 2012-04-22 11:48:00 +01:00
+:updated_at: 2012-04-22 11:48:00 +01:00
