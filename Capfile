@@ -1,3 +1,8 @@
 require 'bundler/setup'
+require 'recap/deploy'
 
-load 'config/deploy' # remove this line to skip loading any of the default tasks
+server "interblah.net", :app
+
+set :application_user, "interblah"
+set :repository, 'git@github.com:lazyatom/interblah.net.git'
+set :application, 'interblah.net'
