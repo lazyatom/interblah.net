@@ -8,4 +8,4 @@ gem "compass"
 gem "kramdown"
 gem "rake"
 
-gem 'recap', :git => "git://github.com/freerange/recap.git"
+gem 'recap'
