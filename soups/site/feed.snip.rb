@@ -6,6 +6,7 @@ class Feed < Dynasnip
       :domain => "interblah.net",
       :title => "interblah.net",
       :matching => {:kind => "blog"},
+      :count => 10
     })
   end
   self
