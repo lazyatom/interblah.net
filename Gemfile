@@ -9,3 +9,5 @@ gem "kramdown"
 gem "rake"
 
 gem 'recap'
+gem 'foreman'
+gem 'thin'
