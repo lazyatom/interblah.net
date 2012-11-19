@@ -7,3 +7,5 @@ There's a short story by Ted Chiang wherein persons can opt out
 I wish advertising didn't work.
 
 But where do you draw the line between information and brand-based advertising? Branding is, after all, simply a pseudo-conceptual shorthand for a collection of statements about a particular set of products; why should Apple have to explain every time that their wares are simple, easy to use, designed with a particular aesthetic and so on? Build the brand instead, and then you can focus on the particular _features_ of the specific product you're trying to sell today.
+
+:updated_at: 2011-05-03 16:02:22 +0100

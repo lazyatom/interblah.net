@@ -8,3 +8,4 @@ Walking around with the Air is great - as you might expect - because I can hardl
 Performance-wise I'm still generally happy working on the Air, and while I switch between it and my older-but-faster laptop, I don't find the slow-down enough to really cramp my style at the moment.
 
 :kind: macbookair-review
+:updated_at: 2011-05-03 16:02:22 +0100

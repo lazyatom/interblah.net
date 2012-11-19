@@ -39,3 +39,4 @@ After the first few hours of setup, I remain utterly charmed by how capable the 
 [XCode]: http://developer.apple.com/tools/xcode/
 
 :kind: macbookair-review
+:updated_at: 2011-05-03 16:02:22 +0100

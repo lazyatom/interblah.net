@@ -95,3 +95,6 @@ It's not about test coverage or any kind of "ceremony". It's all about communica
 [hashrocket budget]: http://hashrocket.com/contact/rfp
 [spiking]: http://jamesshore.com/Agile-Book/spike_solutions.html
 [Chris Parsons]: http://pa.rsons.org/
+
+
+:updated_at: 2011-07-25 16:44:00 +0100

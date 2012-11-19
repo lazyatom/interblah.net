@@ -15,3 +15,4 @@ Regardless, this discovered aesthetic explains why I find myself drawn to [Small
 [vanillasite]: http://vanillasite.at
 
 :title: Homoiconicity
+:updated_at: 2011-05-03 16:02:22 +0100
