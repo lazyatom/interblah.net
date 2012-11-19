@@ -14,9 +14,9 @@ Hereafter I can only speak for myself. Everything that follows is my own ramblin
 
 So.
 
-I know that a lot of people enjoyed the conferences we ran, and the praise is something I personally treasure. However, after the euphoria of the first event, and then the hard work of the repeat, I was left thinking about my original goals again. 
+I know that a lot of people enjoyed the conferences we ran, and the praise is something I personally treasure. However, after the euphoria of the first event, and then the hard work of the repeat, I was left thinking about my original goals again.
 
-We had imagined that, with a minimal amount of structure, the community could be inspired to come together and suggest, plan and refine the presentations and structure of the day. However, after the second event it was clear that it still required a significant injection of energy from the "organisers" to keep the process going. While a not-insubstantial portion of the attendees did participate in shaping the proposals, the majority of people engaged either in a minimal way ("{link_to regarding-plus-ones, yes that sounds interesting}"), or not at all. 
+We had imagined that, with a minimal amount of structure, the community could be inspired to come together and suggest, plan and refine the presentations and structure of the day. However, after the second event it was clear that it still required a significant injection of energy from the "organisers" to keep the process going. While a not-insubstantial portion of the attendees did participate in shaping the proposals, the majority of people engaged either in a minimal way ("{link_to regarding-plus-ones, yes that sounds interesting}"), or not at all.
 
 This left me wondering about some of these goals. I have a handful of hypotheses about why participation didn't feel as strong as I hoped.
 
@@ -53,7 +53,7 @@ So if people don't care about the price of the ticket, and they don't really min
 A + B + C == ?
 ---------------
 
-In reality I think there's a bit of truth in all three hypotheses. 
+In reality I think there's a bit of truth in all three hypotheses.
 
 And it would be remiss not to suggest that __perhaps the fault is my own__ - perhaps I didn't do a good enough job of communicating these goals; you're not psychic, after all.
 
@@ -105,4 +105,5 @@ Given {l on-commenting, the absence of commenting on interblah }, but more parti
 
 :title: Some thoughts about Ruby Manor
 :created_at: 2011-06-22 17:46:00 +01:00
+:updated_at: 2011-06-22 17:46:00 +01:00
 :kind: blog

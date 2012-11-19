@@ -25,7 +25,7 @@ As a developer, I love the idea of distributed systems, both technically and phi
 Follow the money
 -------
 
-Businesses require profit, and users are so accustomed to the infrastructure of the internet being free, the only way for these "platform" services believe they can makea profit without charging for access is to lock down and advertise. Hence restricting access to the ["core twitter experience"][twitter announcement] and the introduction of the ["dick bar"][dick bar]. 
+Businesses require profit, and users are so accustomed to the infrastructure of the internet being free, the only way for these "platform" services believe they can makea profit without charging for access is to lock down and advertise. Hence restricting access to the ["core twitter experience"][twitter announcement] and the introduction of the ["dick bar"][dick bar].
 
 When Twitter says that it wants to control the "core experience", it means it doesn't want other clients to be able to circumvent this advertising (or worse, provide advertising of their own). Why should they offer a free service, wide open for other people to profit on?
 
@@ -35,7 +35,7 @@ So, rather than suffer the controlling grasp of a company looking for any way to
 Federation isn't a feature users care about
 -----------
 
-It's very hard to replace an entrenched, centralised platform with a federated one. Facebook has over [600 million users][facebook users], most of whom don't care about the fact that Facebook ultimately controls how they use the platform. Twitter handles 140 million tweets every day, and most of the people tweeting don't care what client they use, as long as it doesn't severely impede their ability to tweet. 
+It's very hard to replace an entrenched, centralised platform with a federated one. Facebook has over [600 million users][facebook users], most of whom don't care about the fact that Facebook ultimately controls how they use the platform. Twitter handles 140 million tweets every day, and most of the people tweeting don't care what client they use, as long as it doesn't severely impede their ability to tweet.
 
 In a nutshell, most people don't (yet?) care about the nature of the platforms they use, as long as their user experience is preserved. The tightrope Twitter must walk, now they are entrenched, is to advertise without making the user experience so bad that people consider alternatives. Given how much advertising we tolerate on more established platforms like television, as long as they turn the heat up sufficiently slowly most people will hardly notice a thing.
 
@@ -54,3 +54,4 @@ In a nutshell, most people don't (yet?) care about the nature of the platforms t
 
 :kind: blog
 :created_at: 2011-03-12 17:16:20 +00:00
+:updated_at: 2011-03-12 17:16:20 +00:00

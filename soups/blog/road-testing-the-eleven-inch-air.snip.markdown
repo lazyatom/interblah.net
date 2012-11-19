@@ -3,7 +3,7 @@ Road Testing The 11" MacBook Air
 
 __TL;DR__ - some indulgent waffle about whether or not the 11" MacBook Air is a usable development machine. The conclusion will almost certainly be: it depends, but probably.
 
-I've started trying to cycle home from work recently, and I've found that my trusty 15" MacBook Pro can often make this a bit awkward. While there's certainly a valid argument that I should just suck it up and get fitter, I am lucky enough to be in a position where I can at least _consider_ resolving this by replacing my current laptop with a lighter breed. 
+I've started trying to cycle home from work recently, and I've found that my trusty 15" MacBook Pro can often make this a bit awkward. While there's certainly a valid argument that I should just suck it up and get fitter, I am lucky enough to be in a position where I can at least _consider_ resolving this by replacing my current laptop with a lighter breed.
 
 This is actually one of several options that I've identified:
 
@@ -24,5 +24,6 @@ I've spent a few months umming and ahhing, but having bored everyone I know with
 
 
 :created_at: 2011-02-22 21:11:47 +00:00
+:updated_at: 2011-02-22 21:11:47 +00:00
 :kind: blog
 :author: james

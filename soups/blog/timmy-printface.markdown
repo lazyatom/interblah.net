@@ -6,4 +6,5 @@ See Timmy [working live](http://gofreerange.com/timmy), and read more on the [Fr
 
 :title: Hello, Timmy
 :created_at: 2011-04-12 15:44:46 +01:00
+:updated_at: 2011-04-12 15:44:46 +01:00
 :kind: blog

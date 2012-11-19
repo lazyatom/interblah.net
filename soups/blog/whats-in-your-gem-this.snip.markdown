@@ -14,6 +14,7 @@ One of my pain points with other tools like [Jeweler][], [hoe][] and so on is th
 [ruby-manor-talk]: http://rubymanor.org/harder/videos/gem_that/
 
 :created_at: 2011-02-18 21:11:47 +00:00
+:updated_at: 2011-02-18 21:11:47 +00:00
 :kind: blog
 :mygemthis: |
   desc 'Tag the repository in git with gem version number'
