@@ -488,7 +488,7 @@ body #content {
 }
 /* line 34, sass/screen.scss */
 body #content .separator {
-  margin-top: 2em;
+  margin-top: 3em;
   margin-bottom: 2em;
   display: inline;
   float: left;
@@ -496,8 +496,8 @@ body #content .separator {
   width: 870px;
   padding: 0;
   border: none;
-  border-top: medium double #333;
-  color: #333;
+  border-top: medium double #ccc;
+  color: #ccc;
   text-align: center;
 }
 /* line 147, /Users/james/Code/lazyatom/interblah.net/.bundle/gems/ruby/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
@@ -573,14 +573,13 @@ body.blog {
 }
 /* line 111, sass/screen.scss */
 body.blog .site-information {
-  font-size: 140%;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
-/* line 118, sass/screen.scss */
+/* line 117, sass/screen.scss */
 body #content h1 {
   margin-bottom: 10px;
 }
-/* line 122, sass/screen.scss */
+/* line 121, sass/screen.scss */
 body #content .details {
   font-weight: bold;
   color: #999;
@@ -589,7 +588,7 @@ body #content .details {
   text-transform: uppercase;
   padding-bottom: 2.6em;
 }
-/* line 131, sass/screen.scss */
+/* line 130, sass/screen.scss */
 body #content .footnotes {
   border-top: 1px solid #eee;
   padding-top: 1em;

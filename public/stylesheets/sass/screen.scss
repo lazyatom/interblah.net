@@ -32,13 +32,13 @@ body {
     @include append(1);
 
     .separator {
-      margin-top: 2em;
+      margin-top: 3em;
       margin-bottom: 2em;
       @include column($content-columns);
       padding: 0;
       border: none;
-      border-top: medium double #333;
-      color: #333;
+      border-top: medium double #ccc;
+      color: #ccc;
       text-align: center;
     }
     .separator:after {
@@ -109,8 +109,7 @@ body {
     padding-top: 4em;
 
     .site-information {
-      font-size: 140%;
-      margin-bottom: 2em;
+      margin-bottom: 1em;
     }
   }
 
