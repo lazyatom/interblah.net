@@ -9,5 +9,5 @@ $blueprint-grid-margin: 10px;
 // Or you can set $blueprint-grid-width to a fixed value and unset $blueprint-container-size -- it will be calculated for you.
 $blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin;
 
-$blueprint-font-family: 'Droid Sans';
-$blueprint-font-size: 16px;
+$blueprint-font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2";
+$blueprint-font-size: 18px;

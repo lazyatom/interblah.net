@@ -1,6 +1,6 @@
 source :rubygems
 
-gem "vanilla", ">=1.17.5"
+gem "vanilla", git: "https://github.com/lazyatom/vanilla-rb.git"
 gem "syntax"
 gem "redcarpet"
 gem "haml", "~>3.1"

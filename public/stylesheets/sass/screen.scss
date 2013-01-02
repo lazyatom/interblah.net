@@ -31,36 +31,24 @@ body {
     @include column($content-columns);
     @include append(1);
 
-    .blog {
-      @include column($blueprint-grid-columns);
-      margin-top: 2em;
-
-      .snip {
-        // true means it's the last column in the row
-        $snip: ceil(2 * $content-columns / 3) + 1;
-        @include column($snip);
-        @include append(1);
-      }
-
-      #sidebar {
-        // One third of the grid columns, rounding down. With 24 cols, this is 8.
-        $sidebar-columns: floor($content-columns / 3) - 2;
-        @include column($sidebar-columns, true);
-        font-size: 80%;
-        #details {
-          margin-bottom: 1em;
-          color: #ccc;
-          font-style: italic;
-        }
-      }
-    }
     .separator {
       margin-top: 2em;
       margin-bottom: 2em;
       @include column($content-columns);
+      padding: 0;
       border: none;
-      height: 2px;
-      background-color: #f6f6f6;
+      border-top: medium double #333;
+      color: #333;
+      text-align: center;
+    }
+    .separator:after {
+      content: "§";
+      display: inline-block;
+      position: relative;
+      top: -0.925em;
+      font-size: 1.5em;
+      padding: 0 0.25em;
+      background: url(/images/creampaper.png);
     }
   }
 
@@ -71,68 +59,75 @@ body {
 
 body.bp {
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather';
+    font-family: "adelle-1","adelle-2";
   }
 }
 
 body {
+  background: url(/images/creampaper.png);
+
   iframe {
     margin-bottom: 1em;
   }
 
   #header {
-    background-color: #eee;
-    font-size: 50%;
-    padding-top: 1em;
-    margin-bottom: 5em;
-    a {
-      background-color: #ddd;
+    padding: 4em 0 2em 0;
+    h1 {
+      margin-bottom: 10px;
+    }
+    p.details {
+      font-weight: bold;
+      color: #999;
+      margin-bottom: 0;
+      font-size: 14px;
+      text-transform: uppercase;
     }
   }
 
   #footer {
-    background-color: #ddd;
+    background-color: #f4f4f4;
+    font-size: 18px;
     overflow: auto;
     margin-top: 2em;
-    .inner_content {
-      margin-top: 1em;
-    }
-    a {
-      background-color: #ccc;
+    padding: 1em 0;
+    overflow: auto;
+    p, h4 {
+      margin-bottom: 0;
     }
   }
 
   a {
-    background-color: #eee;
-    color: #000 !important;
     text-decoration: none !important;
-    padding: 1px 3px;
+    xfont-style: italic;
+    font-weight: 600;
   }
 
   a:hover {
-    color: #888 !important;
+  }
+
+  &.blog {
+    padding-top: 4em;
+
+    .site-information {
+      font-size: 140%;
+      margin-bottom: 2em;
+    }
   }
 
   #content {
-    .details {
-      $blog-details-columns: $blueprint-grid-columns - 8;
-      @include prepend($blog-details-columns);
-      @include column(6, true);
-
-      font-size: 12px;
-      text-align: right;
-
-      .created_at {
-        font-variant: italics;
-      }
-      a {
-        background-color: none !important;
-        color: #888 !important;
-        text-decoration: none;
-        border-bottom: 1px dotted #aaa;
-      }
+    h1 {
+      margin-bottom: 10px;
     }
-    
+
+    .details {
+      font-weight: bold;
+      color: #999;
+      margin-bottom: 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding-bottom: 2em;
+    }
+
     .footnotes {
       border-top: 1px solid #eee;
       padding-top: 1em;

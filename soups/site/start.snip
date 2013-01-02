@@ -1,4 +1,11 @@
-{most-recent kind:blog, limit:3, template:blog-template}
+{most-recent kind:blog, count:1, template:blog-template}
+
+<div class="site-information">{site-information}</div>
+<hr class="separator" />
+
+{most-recent kind:blog, count:2, offset:1, template:blog-template}
+
 Read more recent blogish post-things {l blog,here}&hellip;
 
 :updated_at: 2011-05-03 16:02:22 +0100
+:layout: blog-layout
