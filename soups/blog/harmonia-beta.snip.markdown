@@ -6,7 +6,7 @@ We've taken [a script I hacked up](https://github.com/freerange/harmonia/commit/
 
 [![Harmonia, as of 2012-11-06](/images/harmonia-beta.png "Harmonia Beta")][Harmonia]
 
-We're starting to invite beta-testers now. If you're interested and willing to give us some feedback, [we'd love for you to sign up!][Harmonia]. You can also follow <a href="https://twitter.com/harmonia">@harmonia</a> and <a href="https://twitter.com/freerange">@freerange</a> for news and updates and all that jazz.
+We're starting to invite beta-testers now. If you're interested and willing to give us some feedback, [we'd love for you to sign up!][Harmonia] You can also follow <a href="https://twitter.com/harmonia">@harmonia</a> and <a href="https://twitter.com/freerange">@freerange</a> for news and updates and all that jazz.
 
 Hopefully I'll start blogging about other, non-conference things from now, eh? Splendid.
 
