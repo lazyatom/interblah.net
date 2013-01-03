@@ -1,4 +1,4 @@
-In case you didn't see already, we've been having a little fun with the [#blue API](https://api.hashblue.com) at {fr}:
+In case you didn't see already, we've been having a little fun with the [#blue API](https://api.hashblue.com) at {gfr}:
 
 <a href="http://gofreerange.com/timmy"><img src="http://public.lazyatom.com/timmy/snapshot.jpg" width="95%" heigh="95%"></a>
 
