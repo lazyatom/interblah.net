@@ -9,3 +9,21 @@ task :convert do
 
   old_backend.names.each { |s| new_soup << old_soup[s].attributes }
 end
+
+task :blog do
+  print "Title: "
+  title = $stdin.gets.chomp
+  path = "soups/blog/#{title.downcase.gsub(" ", "-")}.snip.markdown"
+  time = Time.now.strftime("%Y-%m-%d %H:%M:%S %z")
+  File.open(path, "w") do |f|
+    f.puts title
+    f.puts "=" * title.length
+    f.puts
+    f.puts
+    f.puts
+    f.puts ":kind: blog"
+    f.puts ":created_at: #{time}"
+    f.puts ":updated_at: #{time}"
+  end
+  `subl #{path}:4`
+end
