@@ -2,7 +2,7 @@ Eleanor,
 
 I read [your blog post about conference speaking][eleanor-blog], and had a few thoughts. I hope you don't mind if I jot them down.
 
-Firstly, I'm sure everyone can sympathise with the desire to go to lots of conferences, and how financial constraints often limit our ability to indulge ourselves in this way. 
+Firstly, I'm sure everyone can sympathise with the desire to go to lots of conferences, and how financial constraints often limit our ability to indulge ourselves in this way.
 
 It's probably true that a good chunk of conference attendees have their conference travel subsidised to whatever extent by their employers. They're pretty lucky to have employers who are willing to do that, since we all know (having blagged it as employees ourselves) that there's very little value flowing back to the employer[^newjob].
 
@@ -67,6 +67,6 @@ In other words: **focus a little less on cementing your genius for posterity, an
 [DHH]: http://loudthinking.com
 
 :kind: blog
-:title: '"Sponsor me to talk"?'
+:title: '&ldquo;Sponsor me to talk&rdquo;?'
 :created_at: 2011-08-09 18:24:00 +01:00
 :updated_at: 2011-08-10 14:46:44 +01:00

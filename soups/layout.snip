@@ -1,24 +1,24 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html lang="en">
 <head>
 {head}
 </head>
-<body class="bp">
+<body>
   <div id="container">
-    <div id="header">
-      <div class="inner_content">
+    <nav>
+      {navigation}
+    </nav>
+    <article id="content">
+      <header>
         {title-for}
-        <p class="details">{snip-details}</p>
-      </div>
-    </div>
-    <div id="content">
+        <div class="details">{snip-details}</div>
+      </header>
       {current_snip}
-    </div>
-    <div id="footer">
-      <div class="inner_content">
-        {footer}
-      </div>
-    </div>
+    </article>
+    <footer>
+      <hr class="separator" />
+      {footer}
+    </footer>
   </div>
   {analytics}
 </body>

@@ -4,7 +4,7 @@ gem "vanilla", git: "https://github.com/lazyatom/vanilla-rb.git"
 gem "syntax"
 gem "redcarpet"
 gem "haml", "~>3.1"
-gem "compass"
+gem "susy"
 gem "kramdown"
 gem "rake"
 

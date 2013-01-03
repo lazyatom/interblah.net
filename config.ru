@@ -7,7 +7,7 @@ require 'vanilla/static'
 
 require "application"
 
-require 'compass'
+require 'susy'
 require 'sass/plugin/rack'
 
 Compass.add_project_configuration(File.expand_path("../config/compass.rb", __FILE__))
