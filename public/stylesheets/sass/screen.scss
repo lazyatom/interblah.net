@@ -19,10 +19,11 @@ body {
   }
 }
 
-// body, .separator:after {
-//   background: url(/images/creampaper.png);
-//   background-color: #E3E3E1;
-// }
+body, .separator:after {
+  // background: url(/images/creampaper.png);
+  // background-color: #E3E3E1;
+  background-color: white;
+}
 
 
 body {
@@ -122,6 +123,9 @@ body {
 
     blockquote {
       font-style: italic;
+      margin-left: 0;
+      padding-left: 2em;
+      border-left: 0.3em solid #ddd;
     }
   }
 
