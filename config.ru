@@ -10,7 +10,6 @@ require "application"
 require 'susy'
 require 'sass/plugin/rack'
 
-Compass.add_project_configuration(File.expand_path("../config/compass.rb", __FILE__))
 Compass.configure_sass_plugin!
 use Sass::Plugin::Rack
 
