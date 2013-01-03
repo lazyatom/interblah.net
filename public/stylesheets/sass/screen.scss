@@ -24,6 +24,7 @@ body {
 //   background-color: #E3E3E1;
 // }
 
+
 body {
   font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2";
   font-size: $base-font-size;
@@ -104,12 +105,23 @@ body {
       }
     }
 
-    pre.code {
+    pre > code {
+      margin: 1em 0;
+      display: block;
       padding: 1em;
       color: white;
       background-color: #222;
       border: 0.3em solid #999;
       overflow: scroll;
+    }
+
+    tt, p > code, li > code {
+      background-color: #ddd;
+      padding: 0 0.3em;
+    }
+
+    blockquote {
+      font-style: italic;
     }
   }
 

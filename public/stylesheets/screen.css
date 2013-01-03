@@ -25,40 +25,40 @@ body #container > nav, body #container > #content, body #container > footer {
   overflow: auto;
 }
 
-/* line 27, sass/screen.scss */
+/* line 28, sass/screen.scss */
 body {
   font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2";
   font-size: 18px;
 }
-/* line 31, sass/screen.scss */
+/* line 32, sass/screen.scss */
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "adelle-1","adelle-2";
 }
-/* line 35, sass/screen.scss */
+/* line 36, sass/screen.scss */
 body iframe {
   margin-bottom: 1em;
 }
-/* line 40, sass/screen.scss */
+/* line 41, sass/screen.scss */
 body nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 44, sass/screen.scss */
+/* line 45, sass/screen.scss */
 body nav ul li {
   display: inline;
   margin-right: 2em;
 }
-/* line 52, sass/screen.scss */
+/* line 53, sass/screen.scss */
 body header {
   margin-bottom: 2em;
 }
-/* line 54, sass/screen.scss */
+/* line 55, sass/screen.scss */
 body header h1 {
   font-size: 3em;
   margin-bottom: 0.1em;
 }
-/* line 59, sass/screen.scss */
+/* line 60, sass/screen.scss */
 body header .details {
   font-weight: bold;
   color: #999;
@@ -66,7 +66,7 @@ body header .details {
   font-size: 14px;
   text-transform: uppercase;
 }
-/* line 68, sass/screen.scss */
+/* line 69, sass/screen.scss */
 body .separator {
   margin: 4em 0 2em 0;
   padding: 0;
@@ -75,7 +75,7 @@ body .separator {
   color: #ccc;
   text-align: center;
 }
-/* line 76, sass/screen.scss */
+/* line 77, sass/screen.scss */
 body .separator:after {
   content: "§";
   display: inline-block;
@@ -84,50 +84,61 @@ body .separator:after {
   font-size: 1.5em;
   padding: 0 0.25em;
 }
-/* line 86, sass/screen.scss */
+/* line 87, sass/screen.scss */
 body #content img {
   max-width: 100%;
 }
-/* line 90, sass/screen.scss */
+/* line 91, sass/screen.scss */
 body #content .footnotes {
   margin-top: 4em;
   padding: 1em;
   background-color: #f4f4f3;
   font-size: 90%;
 }
-/* line 96, sass/screen.scss */
+/* line 97, sass/screen.scss */
 body #content .footnotes ol, body #content .footnotes p {
   margin: 0;
 }
-/* line 99, sass/screen.scss */
+/* line 100, sass/screen.scss */
 body #content .footnotes li {
   margin-bottom: 1em;
 }
-/* line 101, sass/screen.scss */
+/* line 102, sass/screen.scss */
 body #content .footnotes li:last-child {
   margin-bottom: 0;
 }
-/* line 107, sass/screen.scss */
-body #content pre.code {
+/* line 108, sass/screen.scss */
+body #content pre > code {
+  margin: 1em 0;
+  display: block;
   padding: 1em;
   color: white;
   background-color: #222;
   border: 0.3em solid #999999;
   overflow: scroll;
 }
-/* line 116, sass/screen.scss */
+/* line 118, sass/screen.scss */
+body #content blockquote {
+  font-style: italic;
+}
+/* line 122, sass/screen.scss */
+body #content tt, body #content p > code, body #content li > code {
+  background-color: #ddd;
+  padding: 0 0.3em;
+}
+/* line 128, sass/screen.scss */
 body #content > .blog:first-of-type {
   margin-top: 0;
 }
-/* line 120, sass/screen.scss */
+/* line 132, sass/screen.scss */
 body footer {
   padding-bottom: 2em;
 }
-/* line 122, sass/screen.scss */
+/* line 134, sass/screen.scss */
 body footer p {
   margin: 0;
 }
-/* line 127, sass/screen.scss */
+/* line 139, sass/screen.scss */
 body a {
   text-decoration: none !important;
   font-weight: 600;
