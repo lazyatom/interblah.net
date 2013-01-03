@@ -19,10 +19,12 @@ body {
   }
 }
 
-body {
-  background: url(/images/creampaper.png);
-  background-color: #E3E3E1;
+// body, .separator:after {
+//   background: url(/images/creampaper.png);
+//   background-color: #E3E3E1;
+// }
 
+body {
   font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2";
   font-size: $base-font-size;
 
@@ -78,8 +80,6 @@ body {
     top: -0.925em;
     font-size: 1.5em;
     padding: 0 0.25em;
-    background: url(/images/creampaper.png);
-    background-color: #E3E3E1;
   }
 
   #content {

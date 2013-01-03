@@ -25,42 +25,40 @@ body #container > nav, body #container > #content, body #container > footer {
   overflow: auto;
 }
 
-/* line 22, sass/screen.scss */
+/* line 27, sass/screen.scss */
 body {
-  background: url(/images/creampaper.png);
-  background-color: #E3E3E1;
   font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2";
   font-size: 18px;
 }
-/* line 29, sass/screen.scss */
+/* line 31, sass/screen.scss */
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "adelle-1","adelle-2";
 }
-/* line 33, sass/screen.scss */
+/* line 35, sass/screen.scss */
 body iframe {
   margin-bottom: 1em;
 }
-/* line 38, sass/screen.scss */
+/* line 40, sass/screen.scss */
 body nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 42, sass/screen.scss */
+/* line 44, sass/screen.scss */
 body nav ul li {
   display: inline;
   margin-right: 2em;
 }
-/* line 50, sass/screen.scss */
+/* line 52, sass/screen.scss */
 body header {
   margin-bottom: 2em;
 }
-/* line 52, sass/screen.scss */
+/* line 54, sass/screen.scss */
 body header h1 {
   font-size: 3em;
   margin-bottom: 0.1em;
 }
-/* line 57, sass/screen.scss */
+/* line 59, sass/screen.scss */
 body header .details {
   font-weight: bold;
   color: #999;
@@ -68,7 +66,7 @@ body header .details {
   font-size: 14px;
   text-transform: uppercase;
 }
-/* line 66, sass/screen.scss */
+/* line 68, sass/screen.scss */
 body .separator {
   margin: 4em 0 2em 0;
   padding: 0;
@@ -77,7 +75,7 @@ body .separator {
   color: #ccc;
   text-align: center;
 }
-/* line 74, sass/screen.scss */
+/* line 76, sass/screen.scss */
 body .separator:after {
   content: "§";
   display: inline-block;
@@ -85,8 +83,6 @@ body .separator:after {
   top: -0.925em;
   font-size: 1.5em;
   padding: 0 0.25em;
-  background: url(/images/creampaper.png);
-  background-color: #E3E3E1;
 }
 /* line 86, sass/screen.scss */
 body #content img {
