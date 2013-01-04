@@ -1,11 +1,8 @@
-Inventing on principle
-=======
+vi
+===
 
-I've just watched [Bret Victor's talk "Inventing on Principle"][inventing-on-principle], and it gave me quite a bit to think about. Here's the talk, if you want to watch it now:
+The `vi` editor is a mode-based editor present on must UNIX-like systems, including Linux and Mac OS X.
 
-<iframe src="http://player.vimeo.com/video/36579366?byline=0" width="640" height="360" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true"></iframe>
-
-There are lots of great demonstrations and though-provoking ideas in the talk, but it inspired two personal insights that I want to get down here before their luminosity dims. Here goes.
 
 Me and `vi` editor
 ----
@@ -31,7 +28,7 @@ In case you didn't watch the talk (or at least didn't get to the relevant part a
 
 In programmer land, [waiting for feedback][compiling] is the norm. Even with [dynamic languages][ruby], it's not until the code is "run" that we get any confirmation that it does what we hope (or even just what we expect) it will do.
 
-From the talk
+In {l inventing-on-principle}, {l bret-victor} talks about how programmers go about understanding code -- for example, a simple binary search:
 
 {code ruby, binarysearch}
 
@@ -61,19 +58,9 @@ So there it is: being efficient with `vi` is predicated on being able to *play c
 
 The personal insight is that deep down, I don't really want to be simulating a computer all the time. That's the computer's job.
 
-I'm trying to create a system. That's my goal. The mental model of my system is one level removed from my goal. The contents of the text files which codify that system is another level removed; they represent an abstraction that I can translate to and from my mental model since, y'know, I've been progging for a long time. What `vi` is asking me to do is think about the raw contents of those files as yet another
+I'm trying to create a system. That's my goal. The mental model of my system is one level removed from my goal. The contents of the text files which codify that system is another level removed; they represent an abstraction that I can translate to and from my mental model since, y'know, I've been progg'ing for a long time.
 
-
-
-
-Programming generally
-------
-
-interested in smalltalk
-continuously running "image"
-homoiconicity
-future, software 'husbandry' rather than
-
+What `vi` is asking me to do is think about the raw contents of those files as yet another thing to be modelled (*twelve words forward, insert marker, extend selection 5 lines, yank*) in my mind.
 
 
 [^notreal]: This is not a real command, and the fact that I cannot summon a real `vi` power-user command off the top of my head should demonstrate that my attempts to really _learn_ `vi` haven't paid off at all.
@@ -81,17 +68,14 @@ future, software 'husbandry' rather than
 [^crystal]: On occasion I have gone so far as to say that we are building the "[crystal cities of the future][crystal cities]", in a quite uncharacteristic fit of hyperbole.
 [^tesler]: Later in the talk Bret mentions [Larry Tesler][], who in the 1970s, amongst other things, went on a quest against "modeless software" because he feared that the confusion which software modes can produce would threaten the adoption (and therefore the potential) of the personal computer.
 
-[inventing-on-principle]: http://player.vimeo.com/video/36579366
-[Larry Tesler]: http://www.nomodes.com
 [compiling]: http://xkcd.com
 [ruby]: http://www.ruby-lang.org
 [TextMate]: http://www.macromates.com
 [crystal cities]: https://github.com/freerange/site/blob/master/soups/dynasnips/tagline.rb#L12
+[Larry Tesler]: http://www.nomodes.com
 
-:kind: blog
 :created_at: 2012-03-01 21:06:45 +00:00
-:updated_at: 2012-03-01 21:06:45 +00:00
-:author: james
+:updated_at: 2013-01-04 09:53:06 -0600
 :binarysearch: |
   def binarySearch(key, array)
     low = 0
