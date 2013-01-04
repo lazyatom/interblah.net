@@ -1,6 +1,8 @@
 Setup vs. Action for Ruby tests
 =========
 
+## A WORK IN STAGNANT PROGRESS
+
 I've been thinking about how to express behaviour in tests in a natural and fluid way. One problem I've noticed is that with the classes xUnit *setup -> test -> teardown* structure is that the `setup` often ends up doing more work than it perhaps should.
 
 This forms some of the background behind my work on {l kintama}.

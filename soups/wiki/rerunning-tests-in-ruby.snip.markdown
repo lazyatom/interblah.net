@@ -1,6 +1,8 @@
 Rerunning tests in Ruby
 =========
 
+## A WORK IN STAGNANT PROGRESS
+
 A bit more context regarding my motivation for {l kintama}: I'd always felt it was more difficult than it should be to run individually tests with [test-unit][]. The syntax is something like
 
     $ ruby my_test.rb -n "test_name_of_my_test"

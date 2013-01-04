@@ -1,6 +1,8 @@
 Capturing behaviour in Ruby DSLs
 ================
 
+## A WORK IN STAGNANT PROGRESS
+
 As part of the work I did implementing {l kintama}, I found myself flip-flopping between two different ways of capturing test implementations and running them. I think there's something interesting and perhaps useful in making these approaches more explicit.
 
 I'm trying to elucidate them here, but this is very much a work in progress, and it's nowhere near finished.
@@ -11,7 +13,7 @@ Anyway.
 The two means of behaviour slinging
 -------
 
-It's a likely encounter any Ruby programmer, but a certainty for any programmer writing a test framework: at some point you'll realise there are two fundamental ways of capture and calling "behaviour" in Ruby: Methods, and blocks. The same thing applies to any DSL you might implement, and test frameworks like [shoulda][] and [rspec][] are indeed DSLs for testing.
+It's a likely encounter any Ruby programmer, but a certainty for any programmer writing a test framework: at some point you'll realise there are two fundamental ways of capture and calling "behaviour" in Ruby: Methods, and blocks. The same thing applies to any DSL you might implement, and test frameworks like [shoulda][] and [RSpec][] are indeed DSLs for testing.
 
 Allow me to illustrate.
 
@@ -113,8 +115,11 @@ This is interesting for a test-framework implementer because once your tests inc
 Next steps
 -------
 
-... clarify this more. It's pretty hard to show differences in blog form; it might be better to have a simple DSL which I implement using either form and step through the commits.
+... actually explain what the consequences are. Basically it relates to whether or not your tests end up being actual classes/objects or not. It's pretty hard to show differences in blog form; it might be better to have a simple DSL which I implement using either form and step through the commits.
 
+
+[shoulda]: https://github.com/thoughtbot/shoulda
+[rspec]: http://rspec.info
 
 :created_at: 2013-01-04 09:53:06 -0600
 :updated_at: 2013-01-04 09:53:06 -0600
