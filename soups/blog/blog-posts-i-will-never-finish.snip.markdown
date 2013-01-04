@@ -13,7 +13,7 @@ Woe! Woe be upon us all!
 
 [^lies]: Actually, I lied -- you can read about {l kintama} and also {l setup-vs-action-for-ruby-tests}, {l rerunning-tests-in-ruby} and {l capturing-behaviour-in-ruby-dsls}.
 [^more-lies]: I lied again -- you can read about {l inventing-on-principle} and {l vi} if you like.
-[^agenda]: AKA my attempt to ham-fistedly force my philosophical agenda once more down the throats of the conference-going nerd. Alas, this is indeed a blog post that I have abandoned, rather than decomposed like all the others.
+[^agenda]: AKA my attempt to ham-fistedly force my philosophical agenda once more down the throats of the conference-going nerd. Alas, this is a blog post that I have *actually* abandoned, rather than decomposed like all the others.
 
 :kind: blog
 :created_at: 2013-01-04 09:53:06 -0600
