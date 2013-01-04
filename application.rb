@@ -21,6 +21,7 @@ Application.configure do |config|
     soups/wiki
     soups/essays
     soups/tutorial
+    soups/drafts
   )
   site_backends = config.site_soups.map do |path|
     BlogSoupBackend.new(::Soup::Backends::FileBackend.new(File.expand_path(path, config.root)))
