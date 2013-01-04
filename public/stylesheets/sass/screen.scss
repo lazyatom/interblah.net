@@ -19,7 +19,7 @@ body {
   }
 }
 
-body, .separator:after {
+body, .separator:after, hr:after {
   // background: url(/images/creampaper.png);
   // background-color: #E3E3E1;
   background-color: white;
@@ -122,10 +122,31 @@ body {
     }
 
     blockquote {
-      font-style: italic;
       margin-left: 0;
       padding-left: 2em;
       border-left: 0.3em solid #ddd;
+
+      p {
+        font-style: italic;
+      }
+    }
+
+    hr {
+      margin: 3em auto 1em auto;
+      padding: 0;
+      border: none;
+      border-top: medium double #ccc;
+      color: #ccc;
+      text-align: center;
+      width: 60%;
+    }
+    hr:after {
+      content: "§";
+      display: inline-block;
+      position: relative;
+      top: -0.925em;
+      font-size: 1.5em;
+      padding: 0 0.25em;
     }
   }
 

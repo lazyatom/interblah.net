@@ -26,7 +26,7 @@ body #container > nav, body #container > #content, body #container > footer {
 }
 
 /* line 22, sass/screen.scss */
-body, .separator:after {
+body, .separator:after, hr:after {
   background-color: white;
 }
 
@@ -129,24 +129,46 @@ body #content tt, body #content p > code, body #content li > code {
 }
 /* line 124, sass/screen.scss */
 body #content blockquote {
-  font-style: italic;
   margin-left: 0;
   padding-left: 2em;
   border-left: 0.3em solid #dddddd;
 }
-/* line 132, sass/screen.scss */
+/* line 129, sass/screen.scss */
+body #content blockquote p {
+  font-style: italic;
+}
+/* line 134, sass/screen.scss */
+body #content hr {
+  margin: 3em auto 1em auto;
+  padding: 0;
+  border: none;
+  border-top: medium double #cccccc;
+  color: #ccc;
+  text-align: center;
+  width: 60%;
+}
+/* line 143, sass/screen.scss */
+body #content hr:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.925em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+}
+/* line 153, sass/screen.scss */
 body #content > .blog:first-of-type {
   margin-top: 0;
 }
-/* line 136, sass/screen.scss */
+/* line 157, sass/screen.scss */
 body footer {
   padding-bottom: 2em;
 }
-/* line 138, sass/screen.scss */
+/* line 159, sass/screen.scss */
 body footer p {
   margin: 0;
 }
-/* line 143, sass/screen.scss */
+/* line 164, sass/screen.scss */
 body a {
   text-decoration: none !important;
   font-weight: 600;
