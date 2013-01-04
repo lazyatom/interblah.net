@@ -18,7 +18,7 @@ class DisqusCommenting < Dynasnip
 EOS
 
   def handle(*args)
-    if app.request.snip.kind == "blog"
+    if app.request.snip && app.request.snip.kind == "blog"
       CONTENT
     end
   end
