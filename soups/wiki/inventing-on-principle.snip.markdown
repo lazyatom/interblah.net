@@ -1,13 +1,13 @@
 Inventing on Principle
 =======
 
-I've just watched {l bret-victor}'s talk {l inventing-on-principle}, and it gave me quite a bit to think about. Here's the talk, if you want to watch it now:
+{l bret-victor}'s talk {l inventing-on-principle} gave me quite a bit to think about. Here's the talk, if you want to watch it now:
 
 <iframe src="http://player.vimeo.com/video/36579366?byline=0" width="640" height="360" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true"></iframe>
 
 There are lots of great demonstrations and though-provoking ideas in the talk, but it inspired two personal insights that I want to get down here before their luminosity dims.
 
-The first is about why I am not a big fan of the {l vi} editor, despite all of its apparent efficiency gains. I've written {l vi,a bit more about that here}.
+The first is that it helped me understand why I am not a big fan of the {l vi} editor, despite all of its apparent efficiency gains. I've written {l vi,a bit more about that here}.
 
 The second is about another intuition I have about the future of programming. Most programming at the moment involves producing a static description of software (in text files), which is then "run" (possibly after "compilation").
 
