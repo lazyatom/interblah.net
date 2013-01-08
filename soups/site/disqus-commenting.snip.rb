@@ -1,5 +1,7 @@
 class DisqusCommenting < Dynasnip
-  CONTENT = <<-EOS
+  def handle(*args)
+    if app.request.snip && app.request.snip.kind == "blog"
+      <<-EOS
 <hr class="separator" />
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -16,10 +18,6 @@ class DisqusCommenting < Dynasnip
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 EOS
-
-  def handle(*args)
-    if app.request.snip && app.request.snip.kind == "blog"
-      CONTENT
     end
   end
 
