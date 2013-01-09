@@ -10,7 +10,7 @@ Last week I spent a lot of time getting various things in order, including this 
 
 ## Manor Fo[u]rth
 
-We are achingly close to being able to announce the date and venue for {l ruby-manor, Ruby Manor 4}, at which point we can also start selling tickets and being the {l vestibule}-powered CFP process. We also need to write some stuff about how the CFP is going to work, particularly in the light of all the recent minority involvement discussion.
+We are achingly close to being able to announce the date and venue for {l ruby-manor, Ruby Manor 4}, at which point we can also start selling tickets and begin the {l vestibule}-powered CFP process. We also need to write some stuff about how the CFP is going to work, particularly in the light of all the recent minority involvement discussion.
 
 
 ## Yee-haw
