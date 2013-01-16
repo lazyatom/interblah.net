@@ -81,7 +81,7 @@ I am very pleased with how this is turning out.
   def test_should_only_run_necessary_setups_where_tests_at_different_nestings_exist
     context "Given a setup in the outer context" do
       setup do
-        @name = "james"
+        @name = "jazz"
       end
 
       context "and another setup in the inner context" do
