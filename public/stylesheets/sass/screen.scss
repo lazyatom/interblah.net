@@ -39,6 +39,24 @@ body {
     margin-bottom: 1em;
   }
 
+  $linkColour: #dc6f11;
+  $linkColour: #6cafe4;
+
+  a {
+    color: $linkColour;
+    &:hover {
+      color: lighten($linkColour, 15%);
+    }
+    &:visited {
+      color: darken($linkColour, 25%);
+
+      &:hover {
+        color: lighten($linkColour, 5%);
+      }
+    }
+  }
+
+
   nav {
     ul {
       list-style: none;

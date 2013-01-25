@@ -77,27 +77,43 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 body iframe {
   margin-bottom: 1em;
 }
-/* line 43, sass/screen.scss */
+/* line 45, sass/screen.scss */
+body a {
+  color: #6cafe4;
+}
+/* line 47, sass/screen.scss */
+body a:hover {
+  color: #add2f0;
+}
+/* line 50, sass/screen.scss */
+body a:visited {
+  color: #2071b0;
+}
+/* line 53, sass/screen.scss */
+body a:visited:hover {
+  color: #82bbe8;
+}
+/* line 61, sass/screen.scss */
 body nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 47, sass/screen.scss */
+/* line 65, sass/screen.scss */
 body nav ul li {
   display: inline;
   margin-right: 2em;
 }
-/* line 55, sass/screen.scss */
+/* line 73, sass/screen.scss */
 body header {
   margin-bottom: 2em;
 }
-/* line 57, sass/screen.scss */
+/* line 75, sass/screen.scss */
 body header h1 {
   font-size: 3em;
   margin-bottom: 0.1em;
 }
-/* line 62, sass/screen.scss */
+/* line 80, sass/screen.scss */
 body header .details {
   font-weight: bold;
   color: #999;
@@ -105,7 +121,7 @@ body header .details {
   font-size: 14px;
   text-transform: uppercase;
 }
-/* line 71, sass/screen.scss */
+/* line 89, sass/screen.scss */
 body .separator {
   margin: 4em 0 2em 0;
   padding: 0;
@@ -114,7 +130,7 @@ body .separator {
   color: #ccc;
   text-align: center;
 }
-/* line 79, sass/screen.scss */
+/* line 97, sass/screen.scss */
 body .separator:after {
   content: "§";
   display: inline-block;
@@ -123,30 +139,30 @@ body .separator:after {
   font-size: 1.5em;
   padding: 0 0.25em;
 }
-/* line 89, sass/screen.scss */
+/* line 107, sass/screen.scss */
 body #content img {
   max-width: 100%;
 }
-/* line 93, sass/screen.scss */
+/* line 111, sass/screen.scss */
 body #content .footnotes {
   margin-top: 4em;
   padding: 1em;
   background-color: #f4f4f3;
   font-size: 90%;
 }
-/* line 99, sass/screen.scss */
+/* line 117, sass/screen.scss */
 body #content .footnotes ol, body #content .footnotes p {
   margin: 0;
 }
-/* line 102, sass/screen.scss */
+/* line 120, sass/screen.scss */
 body #content .footnotes li {
   margin-bottom: 1em;
 }
-/* line 104, sass/screen.scss */
+/* line 122, sass/screen.scss */
 body #content .footnotes li:last-child {
   margin-bottom: 0;
 }
-/* line 110, sass/screen.scss */
+/* line 128, sass/screen.scss */
 body #content .code {
   margin: 1em 0;
   display: block;
@@ -156,22 +172,22 @@ body #content .code {
   border: 0.3em solid #999999;
   overflow: scroll;
 }
-/* line 120, sass/screen.scss */
+/* line 138, sass/screen.scss */
 body #content tt, body #content p > code, body #content li > code {
   background-color: #ddd;
   padding: 0 0.3em;
 }
-/* line 125, sass/screen.scss */
+/* line 143, sass/screen.scss */
 body #content blockquote {
   margin-left: 0;
   padding-left: 2em;
   border-left: 0.3em solid #dddddd;
 }
-/* line 130, sass/screen.scss */
+/* line 148, sass/screen.scss */
 body #content blockquote p {
   font-style: italic;
 }
-/* line 135, sass/screen.scss */
+/* line 153, sass/screen.scss */
 body #content hr {
   margin: 3em auto 1em auto;
   padding: 0;
@@ -181,7 +197,7 @@ body #content hr {
   text-align: center;
   width: 60%;
 }
-/* line 144, sass/screen.scss */
+/* line 162, sass/screen.scss */
 body #content hr:after {
   content: "§";
   display: inline-block;
@@ -190,19 +206,19 @@ body #content hr:after {
   font-size: 1.5em;
   padding: 0 0.25em;
 }
-/* line 154, sass/screen.scss */
+/* line 172, sass/screen.scss */
 body #content > .blog:first-of-type {
   margin-top: 0;
 }
-/* line 158, sass/screen.scss */
+/* line 176, sass/screen.scss */
 body footer {
   padding-bottom: 2em;
 }
-/* line 160, sass/screen.scss */
+/* line 178, sass/screen.scss */
 body footer p {
   margin: 0;
 }
-/* line 165, sass/screen.scss */
+/* line 183, sass/screen.scss */
 body a {
   text-decoration: none !important;
   font-weight: 600;
