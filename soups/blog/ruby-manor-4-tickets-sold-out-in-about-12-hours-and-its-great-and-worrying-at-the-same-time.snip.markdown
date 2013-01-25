@@ -5,7 +5,7 @@ One one hand it's great that the {l ruby-manor} tickets this year sold out so qu
 
 On the other hand, I wonder what it else means. I worry when tickets for a conference are selling before there's any hint of what the content will be, which is almost always the case with Ruby Manor. I know a lot of people will buy tickets for an event based on what they heard about the previous incarnation, but how good a reason is that?
 
-## To cheap to pass up?
+## Too cheap to pass up?
 
 And when the tickets are only £15, maybe it's the rational thing to get a ticket without thinking too hard; even if the conference turns out to be rubbish, or you realise you can't attend, then you've only lost the price of quiet night out.
 
