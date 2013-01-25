@@ -1,0 +1,29 @@
+{code ruby,sample}
+
+:sample: |
+  class Blah
+    # here's a thing
+    @@monkey = 123
+    CONSTANT = /abc/
+    value = %r{XYZ}
+    @value = "abc" + %{xyz}
+
+    puts `monkey`
+
+    =begin
+      A longer comment
+    =end
+    def method
+      return something
+      [abc].each do |x|
+        yield x * 2.4
+      end
+      return <<EOS
+    Some long string
+  EOS
+    end
+  end
+
+  __END__
+
+  And some post stuff

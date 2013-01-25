@@ -1,0 +1,32 @@
+.ruby {
+  color: white;
+
+  .k {
+    color: #CC7833;
+  }
+
+  .o, .nf, .n, .p, .vi {
+    color: white;
+  }
+
+  .no, .sh, .s2, .sx, .se, .s1 {
+    color: #66CC33;
+  }
+
+  .ss, .kp, .mi {
+    color: #3387CC;
+  }
+
+  .c1, .cm, .cp {
+    color: #9933CC;
+  }
+
+  .sr {
+    color: #cccc33;
+  }
+
+  .sb {
+    background-color: #cccc33;
+    color: black;
+  }
+}

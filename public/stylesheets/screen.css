@@ -1,5 +1,39 @@
 @charset "UTF-8";
-/* line 10, sass/screen.scss */
+/* line 1, sass/code.scss */
+.ruby {
+  color: white;
+}
+/* line 4, sass/code.scss */
+.ruby .k {
+  color: #CC7833;
+}
+/* line 8, sass/code.scss */
+.ruby .o, .ruby .nf, .ruby .n, .ruby .p, .ruby .vi {
+  color: white;
+}
+/* line 12, sass/code.scss */
+.ruby .no, .ruby .sh, .ruby .s2, .ruby .sx, .ruby .se, .ruby .s1 {
+  color: #66CC33;
+}
+/* line 16, sass/code.scss */
+.ruby .ss, .ruby .kp, .ruby .mi {
+  color: #3387CC;
+}
+/* line 20, sass/code.scss */
+.ruby .c1, .ruby .cm, .ruby .cp {
+  color: #9933CC;
+}
+/* line 24, sass/code.scss */
+.ruby .sr {
+  color: #cccc33;
+}
+/* line 28, sass/code.scss */
+.ruby .sb {
+  background-color: #cccc33;
+  color: black;
+}
+
+/* line 11, sass/screen.scss */
 body #container {
   *zoom: 1;
   max-width: 39em;
@@ -15,7 +49,7 @@ body #container:after {
   display: table;
   clear: both;
 }
-/* line 14, sass/screen.scss */
+/* line 15, sass/screen.scss */
 body #container > nav, body #container > #content, body #container > footer {
   width: 100%;
   float: left;
@@ -25,45 +59,45 @@ body #container > nav, body #container > #content, body #container > footer {
   overflow: auto;
 }
 
-/* line 22, sass/screen.scss */
+/* line 23, sass/screen.scss */
 body, .separator:after, hr:after {
   background-color: white;
 }
 
-/* line 29, sass/screen.scss */
+/* line 30, sass/screen.scss */
 body {
   font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2";
   font-size: 18px;
 }
-/* line 33, sass/screen.scss */
+/* line 34, sass/screen.scss */
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "adelle-1","adelle-2";
 }
-/* line 37, sass/screen.scss */
+/* line 38, sass/screen.scss */
 body iframe {
   margin-bottom: 1em;
 }
-/* line 42, sass/screen.scss */
+/* line 43, sass/screen.scss */
 body nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 46, sass/screen.scss */
+/* line 47, sass/screen.scss */
 body nav ul li {
   display: inline;
   margin-right: 2em;
 }
-/* line 54, sass/screen.scss */
+/* line 55, sass/screen.scss */
 body header {
   margin-bottom: 2em;
 }
-/* line 56, sass/screen.scss */
+/* line 57, sass/screen.scss */
 body header h1 {
   font-size: 3em;
   margin-bottom: 0.1em;
 }
-/* line 61, sass/screen.scss */
+/* line 62, sass/screen.scss */
 body header .details {
   font-weight: bold;
   color: #999;
@@ -71,7 +105,7 @@ body header .details {
   font-size: 14px;
   text-transform: uppercase;
 }
-/* line 70, sass/screen.scss */
+/* line 71, sass/screen.scss */
 body .separator {
   margin: 4em 0 2em 0;
   padding: 0;
@@ -80,7 +114,7 @@ body .separator {
   color: #ccc;
   text-align: center;
 }
-/* line 78, sass/screen.scss */
+/* line 79, sass/screen.scss */
 body .separator:after {
   content: "§";
   display: inline-block;
@@ -89,55 +123,55 @@ body .separator:after {
   font-size: 1.5em;
   padding: 0 0.25em;
 }
-/* line 88, sass/screen.scss */
+/* line 89, sass/screen.scss */
 body #content img {
   max-width: 100%;
 }
-/* line 92, sass/screen.scss */
+/* line 93, sass/screen.scss */
 body #content .footnotes {
   margin-top: 4em;
   padding: 1em;
   background-color: #f4f4f3;
   font-size: 90%;
 }
-/* line 98, sass/screen.scss */
+/* line 99, sass/screen.scss */
 body #content .footnotes ol, body #content .footnotes p {
   margin: 0;
 }
-/* line 101, sass/screen.scss */
+/* line 102, sass/screen.scss */
 body #content .footnotes li {
   margin-bottom: 1em;
 }
-/* line 103, sass/screen.scss */
+/* line 104, sass/screen.scss */
 body #content .footnotes li:last-child {
   margin-bottom: 0;
 }
-/* line 109, sass/screen.scss */
-body #content pre > code {
+/* line 110, sass/screen.scss */
+body #content .code {
   margin: 1em 0;
   display: block;
-  padding: 1em;
+  padding: 0 1em;
   color: white;
   background-color: #222;
   border: 0.3em solid #999999;
   overflow: scroll;
 }
-/* line 119, sass/screen.scss */
+/* line 120, sass/screen.scss */
 body #content tt, body #content p > code, body #content li > code {
   background-color: #ddd;
   padding: 0 0.3em;
 }
-/* line 124, sass/screen.scss */
+/* line 125, sass/screen.scss */
 body #content blockquote {
   margin-left: 0;
   padding-left: 2em;
   border-left: 0.3em solid #dddddd;
 }
-/* line 129, sass/screen.scss */
+/* line 130, sass/screen.scss */
 body #content blockquote p {
   font-style: italic;
 }
-/* line 134, sass/screen.scss */
+/* line 135, sass/screen.scss */
 body #content hr {
   margin: 3em auto 1em auto;
   padding: 0;
@@ -147,7 +181,7 @@ body #content hr {
   text-align: center;
   width: 60%;
 }
-/* line 143, sass/screen.scss */
+/* line 144, sass/screen.scss */
 body #content hr:after {
   content: "§";
   display: inline-block;
@@ -156,19 +190,19 @@ body #content hr:after {
   font-size: 1.5em;
   padding: 0 0.25em;
 }
-/* line 153, sass/screen.scss */
+/* line 154, sass/screen.scss */
 body #content > .blog:first-of-type {
   margin-top: 0;
 }
-/* line 157, sass/screen.scss */
+/* line 158, sass/screen.scss */
 body footer {
   padding-bottom: 2em;
 }
-/* line 159, sass/screen.scss */
+/* line 160, sass/screen.scss */
 body footer p {
   margin: 0;
 }
-/* line 164, sass/screen.scss */
+/* line 165, sass/screen.scss */
 body a {
   text-decoration: none !important;
   font-weight: 600;
