@@ -12,7 +12,7 @@ And when the tickets are only £15, maybe it's the rational thing to get a ticke
 With Ruby Manor, though, it's not enough to buy a ticket on a whim and then turn up on the day hoping for some fun presentations. We need *everyone* to get involved to build the schedule. Given that people tend to value things based on how much they paid for them, does that say anything about how people are going to invest in helping build our conference?
 
 
-How many of you have read [the Ruby Manor manifesto](http://rubymanor.org/#manifesto)? I know some people really to *get it*, but I haven't met most of the 250 people who will hopefully be joining us this year, so I really don't know what most people think. I know that some of the people who helped us sell all our tickets won't know *anything* about Ruby Manor except that it's about Ruby, and it's in London, and other people liked it. And that might be all they know at the end of the day on the 6th of April, too.
+How many of you have read [the Ruby Manor manifesto](http://rubymanor.org/#manifesto)? I know some people really do *get it*, but I haven't met most of the 250 people who will hopefully be joining us this year, so I really don't know what most people think. I know that some of the people who helped us sell all our tickets won't know *anything* about Ruby Manor except that it's about Ruby, and it's in London, and other people liked it. And that might be all they know at the end of the day on the 6th of April, too.
 
 ## You can lead a horse to water...
 
