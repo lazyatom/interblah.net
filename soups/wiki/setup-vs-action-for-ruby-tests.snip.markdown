@@ -53,21 +53,28 @@ Perhaps, I wondered, there was a better way of structuring the tests that would 
 
 The problem was that the tests above were conflating the "setup" with the "action" that was being tested. Perhaps they are different? The first idea that popped into my head was sketched like this:
 
-    context "updating a post" do
-      setup do
-        @post = Post.create(:title => "old")
-      end
-
-      action do
-        put :update, :post => {:title => "new"}, :id => @post.to_param
-      end
-
-      should_change("the post title", :from => "old", :to => "new") { @post.title }
-    end
+{code ruby,should_change}
 
 That seems to avoid the "ugly" nested context, and is simultaneously clearer about what we're actually interested in testing here.
 
 So, combine this idea with a general frustration at the way that [test-unit][] works[^test-unit-logging] and a continued unwillingness to drink the [rspec][] koolaid[^rspec-koolaid], I did what it turns out a million other people have done, and started exploring my own test framework, {l kintama}.
+
+
+Using `action` in controller tests
+-----
+
+But... some objections to `should_change` have nothing to do with the clunkiness of defining nested contexts. They, quite fairly, point out that it encourage (or is symptomatic of) state-based testing; poking into the database to see whether some value has changed. And often that is a code smell.
+
+Perhaps the `should_change` aspect is a *red herring*.
+
+What was really driving the exploration of `action` was avoiding repetitive tests where some parameters of some action were changing:
+
+{code ruby,controller_test}
+
+The `action` is called after all the (nested) setups for a test have run, but just before the test itself. We can log a user in, and set the attributes used in the action, or we can not log anyone in, and in each case write regular tests to describe how the object should behave.
+
+I think this probably requires a bit of internalisation, but I like the clarity of declaring "*right, this is the specific thing that is under test right now, and here is how it should behave in various different situations*".
+
 
 Next steps
 ----------
@@ -89,3 +96,60 @@ I want to explore using `action` in tests more; this almost certainly means usin
 
 :created_at: 2013-01-04 09:53:06 -0600
 :updated_at: 2013-01-04 09:53:06 -0600
+:should_change: |
+  context "updating a post" do
+    setup do
+      @post = Post.create(:title => "old")
+    end
+
+    action do
+      put :update, :post => {:title => "new"}, :id => @post.to_param
+    end
+
+    should_change("the post title", :from => "old", :to => "new") { @post.title }
+  end
+:controller_test: |
+  describe ThingController do
+    describe "creating a thing" do
+
+      action { post :create, attributes }
+
+      describe "when not logged in" do
+        it "should redirect to login" do
+          assert_redirected_to login_path
+        end
+      end
+
+      describe "when logged in" do
+        setup do
+          @user = stub(:user)
+          login_as(@user)
+        end
+
+        describe "with valid attributes" do
+          let(:attributes) { {name: "thing-name"} }
+
+          it "should return a 200" do
+            assert_response 200
+          end
+
+          it "should create the thing" do
+            assert_equal 1, Thing.count
+            assert_equal 'thing-name', Thing.first.name
+          end
+        end
+
+        describe "with invalid attributes" do
+          let(:attributes) { {name: ''} }
+
+          it "should return a 406" do
+            assert_response 406
+          end
+
+          it "should not create a thing" do
+            assert_equal 0, Thing.count
+          end
+        end
+      end
+    end
+  end
