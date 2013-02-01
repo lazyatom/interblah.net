@@ -4,15 +4,15 @@
   color: white;
 }
 /* line 4, sass/code.scss */
-.ruby .k {
+.ruby .nb, .ruby .k {
   color: #CC7833;
 }
 /* line 8, sass/code.scss */
-.ruby .o, .ruby .nf, .ruby .n, .ruby .p, .ruby .vi {
+.ruby .no, .ruby .o, .ruby .nf, .ruby .n, .ruby .p, .ruby .vi {
   color: white;
 }
 /* line 12, sass/code.scss */
-.ruby .no, .ruby .sh, .ruby .s2, .ruby .sx, .ruby .se, .ruby .s1 {
+.ruby .sh, .ruby .s2, .ruby .sx, .ruby .se, .ruby .s1 {
   color: #66CC33;
 }
 /* line 16, sass/code.scss */
@@ -163,7 +163,7 @@ body #content .footnotes li:last-child {
   margin-bottom: 0;
 }
 /* line 128, sass/screen.scss */
-body #content .code {
+body #content .code, body #content pre > code {
   margin: 1em 0;
   display: block;
   padding: 0 1em;
@@ -173,21 +173,25 @@ body #content .code {
   overflow: scroll;
 }
 /* line 138, sass/screen.scss */
+body #content pre > code {
+  padding: 1em;
+}
+/* line 142, sass/screen.scss */
 body #content tt, body #content p > code, body #content li > code {
   background-color: #ddd;
   padding: 0 0.3em;
 }
-/* line 143, sass/screen.scss */
+/* line 147, sass/screen.scss */
 body #content blockquote {
   margin-left: 0;
   padding-left: 2em;
   border-left: 0.3em solid #dddddd;
 }
-/* line 148, sass/screen.scss */
+/* line 152, sass/screen.scss */
 body #content blockquote p {
   font-style: italic;
 }
-/* line 153, sass/screen.scss */
+/* line 157, sass/screen.scss */
 body #content hr {
   margin: 3em auto 1em auto;
   padding: 0;
@@ -197,7 +201,7 @@ body #content hr {
   text-align: center;
   width: 60%;
 }
-/* line 162, sass/screen.scss */
+/* line 166, sass/screen.scss */
 body #content hr:after {
   content: "§";
   display: inline-block;
@@ -206,19 +210,19 @@ body #content hr:after {
   font-size: 1.5em;
   padding: 0 0.25em;
 }
-/* line 172, sass/screen.scss */
+/* line 176, sass/screen.scss */
 body #content > .blog:first-of-type {
   margin-top: 0;
 }
-/* line 176, sass/screen.scss */
+/* line 180, sass/screen.scss */
 body footer {
   padding-bottom: 2em;
 }
-/* line 178, sass/screen.scss */
+/* line 182, sass/screen.scss */
 body footer p {
   margin: 0;
 }
-/* line 183, sass/screen.scss */
+/* line 187, sass/screen.scss */
 body a {
   text-decoration: none !important;
   font-weight: 600;

@@ -3,15 +3,15 @@
   color: white;
 }
 /* line 4, sass/code.scss */
-.ruby .k {
+.ruby .nb, .ruby .k {
   color: #CC7833;
 }
 /* line 8, sass/code.scss */
-.ruby .o, .ruby .nf, .ruby .n, .ruby .p, .ruby .vi {
+.ruby .no, .ruby .o, .ruby .nf, .ruby .n, .ruby .p, .ruby .vi {
   color: white;
 }
 /* line 12, sass/code.scss */
-.ruby .no, .ruby .sh, .ruby .s2, .ruby .sx, .ruby .se, .ruby .s1 {
+.ruby .sh, .ruby .s2, .ruby .sx, .ruby .se, .ruby .s1 {
   color: #66CC33;
 }
 /* line 16, sass/code.scss */

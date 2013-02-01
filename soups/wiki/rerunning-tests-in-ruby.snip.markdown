@@ -30,6 +30,10 @@ But I wondered if it was possible to go even further, and actually have a 'live'
 Wouldn't it be great to be able to just dive back in to the environment of any failed test and start poking around? See what the instance variables were? Call some methods?
 
 
+Inspecting the environment in MiniTest
+-----
+
+I've done a small amount of exploratory work towards doing this in MiniTest, which you can read about in {l how-minitest-works}.
 
 Next steps
 ----------

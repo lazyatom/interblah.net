@@ -125,7 +125,7 @@ body {
       }
     }
 
-    .code {
+    .code, pre > code {
       margin: 1em 0;
       display: block;
       padding: 0 1em;
@@ -133,6 +133,10 @@ body {
       background-color: #222;
       border: 0.3em solid #999;
       overflow: scroll;
+    }
+
+    pre > code {
+      padding: 1em;
     }
 
     tt, p > code, li > code {
