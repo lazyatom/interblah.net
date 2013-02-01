@@ -222,7 +222,7 @@ I believe that this intuition is what lies behind my interest in other test fram
 
 [^hmm]: In theory you could set `MiniTest::Unit.runner` to be something which does nothing at all, as long as it responds to a `_run` method. Anyway.
 [^why-a-hash]: For some reason this collection of classes is stored in a Hash, but it seems like the keys of the hash are the only aspect used, so I don't understand why it isn't an Array...
-[^plugin-hooks]: There are actually quite a few more methods called, but I'm ignoring hooks principally used be plugin authors.
+[^plugin-hooks]: There are actually quite a few more methods called, but I'm ignoring hooks principally used by plugin authors.
 [^suite]: ...a.k.a. `TestCase` subclass, a.k.a. your actual tests. I'm not sure why the MiniTest code is riddled with references to 'suites', when the classes that it's actually running are called `TestCases`. Perhaps it's a compromise involving historic names of classes in [test-unit][]?
 
 [shoulda]: https://github.com/thoughtbot/shoulda
