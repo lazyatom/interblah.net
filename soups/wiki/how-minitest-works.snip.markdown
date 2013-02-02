@@ -3,7 +3,7 @@ What happens when MiniTest runs, or, What I think about testing using classes
 
 I think I can see the end of my {l kintama,Ruby Testing Quest} in sight.
 
-As one part of the final leg of this journey, I want to take a not-too-deep dive into how the two principle testing frameworks -- MiniTest and RSpec -- actually work, so that I can better clarify in my own mind what distinguishes them, and perhaps, if we are lucky, draw out some attributes that may help me. Somehow.
+As one part of the final leg of this journey, I want to take a not-too-deep dive into how the some principle testing frameworks actually work, so that I can better clarify in my own mind what distinguishes them, and perhaps, if we are lucky, draw out some attributes that may help me. Somehow.
 
 We're going to start with [MiniTest][]. We'll also look at [RSpec][] and {l kintama}, but not right now. This is already crazy-long.
 
