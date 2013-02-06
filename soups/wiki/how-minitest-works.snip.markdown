@@ -3,7 +3,7 @@ What happens when MiniTest runs, or, what I think about testing using classes
 
 I think I can see the end of my {l kintama,Ruby Testing Quest} in sight.
 
-As one part of the final leg of this journey, I want to take a not-too-deep dive into how the some principle testing frameworks actually work, so that I can better clarify in my own mind what distinguishes them, and perhaps, if we are lucky, draw out some attributes that may help me. Somehow.
+As one part of the final leg of this journey, I want to take a not-too-deep dive into how some principal testing frameworks actually work, so that I can better clarify in my own mind what distinguishes them, and perhaps, if we are lucky, draw out some attributes that may help me. Somehow.
 
 We're going to start with [MiniTest][]. We'll also look at [RSpec][] and {l kintama}, but not right now. This is already crazy-long.
 
@@ -128,7 +128,7 @@ Actually, the `puke` method is called for anything other than a pass, which writ
 Back up into MiniTest
 -----
 
-Once `run` method finishes, the result is printed out, and the number of assertions stored on the instance is collected. The test method names that we were iterating over -- the result of `SomethingTest.test_methods` above -- are sequentially *mapped* into this number of assertions, and the final returned value of the `_run_suite` method is a two element array, the first being the number of tests and the second being the total number of assertions, for each test that ran. In our example, this would be `[1,1]` -- one test and one assertion in total:
+Once the `run` method finishes, the result is printed out, and the number of assertions stored on the instance is collected. The test method names that we were iterating over -- the result of `SomethingTest.test_methods` above -- are sequentially *mapped* into this number of assertions, and the final returned value of the `_run_suite` method is a two element array, the first being the number of tests and the second being the total number of assertions, for each test that ran. In our example, this would be `[1,1]` -- one test and one assertion in total:
 
 {code ruby,_run_suite}
 
@@ -168,7 +168,7 @@ One of the aspects of test frameworks that interests me most is what provides th
 
 When a `TestCase` subclass is instantiated, that instance provides the *environment* for the test to execute. MiniTest, like [test-unit][] before it, is using the familiar conceptual relationship between classes, objects and methods in Ruby to implicitly communicate that instance variables created or modified in one method, like `setup`, will be available within our tests, just like normal Ruby code.
 
-This is, I believe, the main reason behind *some* of the preference towards MiniTest or test-unit style frameworks -- they use "*less magic*", they are "*closer to the metal*" -- because they use the same conceptual relationships between methods, variables and self as we use when doing all other programming.
+This is, I believe, the main reason behind *some* of the preference towards MiniTest or test-unit style frameworks -- they use "*less magic*", they are "*closer to the metal*" -- because they use the same conceptual relationships between methods, variables and `self` as we use when doing all other programming.
 
 This may be so familiar as to seem obvious; methods can *of course* call methods within the same class, and instance variables set in one method (e.g. `setup`) can *of course* be accessed by other methods (e.g. `test_something`) within the same class. Therefore implementing test suites like this is surely only natural!
 
@@ -182,7 +182,7 @@ If your test framework has those hallmark attributes I mentioned above -- a clas
 
 Before I climb the ivory tower at the end of this post, let's have one final code interlude, using these test *objects* we are creating in the console.
 
-I've often imaginged that it would be very useful if, when a test fails, you got a dump of all of the values of every instance value in that test. I don't know about you, but I am very bored of peppering tests with `puts` statements, or trying to use logs to decipher what happened, when I know that if I could just see the instance variables then I could tell what was failing, and why.
+I've often imagined that it would be very useful if, when a test fails, you got a dump of all of the values of every instance value in that test. I don't know about you, but I am very bored of peppering tests with `puts` statements, or trying to use logs to decipher what happened, when I know that if I could just see the instance variables then I could tell what was failing, and why.
 
 How about this:
 
@@ -206,7 +206,7 @@ Using classes for test cases?
 
 So, here we are at the foot of my ivory tower.
 
-There's nothing *wrong* with implementing test suites like MiniTest does, but it's interesting to understand the consequences, both in terms of the impact to the test implementer and the design choices that it forces on the framework implementer. This is obviously particularly try if you're {l kintama,trying to understand the different ways that one could compose test suites}.
+There's nothing *wrong* with implementing test suites like MiniTest does, but it's interesting to understand the consequences, both in terms of the impact to the test implementer and the design choices that it forces on the framework implementer. This is particularly obvious if you're {l kintama,trying to understand the different ways that one could compose test suites}.
 
 Using classes and methods is one way, but it's *not the only way* to produce blocks of code (indeed, *blocks* are another) to be run in some specific way.
 
