@@ -1,4 +1,4 @@
-What happens when MiniTest runs, or, What I think about testing using classes
+What happens when MiniTest runs, or, what I think about testing using classes
 ========
 
 I think I can see the end of my {l kintama,Ruby Testing Quest} in sight.
@@ -15,12 +15,12 @@ Let's say you have the following test case:
 
 {code ruby,minitest_example}
 
-This test is obviously extremely dull and pointless, but it contains just enough to exercise the major parts of the framework that I care about.
+This test is obviously *extremely* dull and pointless, but it contains just enough to exercise the major parts of MiniTest that I care about.
 
 The two hallmark attributes here are:
 
-* creating an explicit subclass of a framework class
-* defining test behaviour within explicit methods.
+* creating an explicit subclass of a framework class (`SomethingTest < MiniTest::Unit::TestCase`)
+* defining test behaviour within explicit methods (`def setup`, `def test_something` and `def teardown`).
 
 
 Running the test
@@ -46,7 +46,7 @@ Autorun
 
 The first line in the file (`require "minitest/autorun"`), when loaded, calls MiniTest::Unit.autorun, which installs an `at_exit` hook -- a block of code that will be run when this Ruby interpreter process starts to exit. Our command (`ruby something_test.rb`) tells Ruby to load the contents of `something_test.rb`, which after loading minitest simply defines a class with some methods, and nothing else, so after the definition of `SomethingTest` is finished, Ruby starts to exit, and the `at_exit` code is invoked.
 
-Within this block, a few things happen, but only a small part is particularly relevant to us at the moment.: the method `MiniTest::Unit.new.run` is run, with the contents of `ARGV` from the command line (in this case empty, so we'll ignore them as we continue).
+Within this block, a few things happen, but only a small part is particularly relevant to us at the moment: the method `MiniTest::Unit.new.run` is run, with the contents of `ARGV` from the command line (in this case empty, so we'll ignore them as we continue).
 
 
 MiniTest::Unit, a.a. the "runner"
@@ -54,7 +54,7 @@ MiniTest::Unit, a.a. the "runner"
 
 The call to `MiniTest::Unit.new.run` simply calls `MiniTest::Unit.runner._run`, passing the command-line arguments through. `runner` is a class method on `MiniTest::Unit`, which returns an instance that *can* be set, but is an instance of `MiniTest::Unit` by default. So, an instance of `MiniTest::Unit` was created in the unit test, which then calls run on another newly-created instance of it[^hmm].
 
-The `_run` method here finally parses the `ARGV` into arguments, while we'll ignore right now, and then loops through the `plugins` (another modifiable property of `MiniTest::Unit` class), which is really just an array of strings which correspond to methods on the `MiniTest::Unit` "runner" instance. By default, this is any methods which match `run_*`, and is typically just `run_tests`:
+The `_run` method finally parses the `ARGV` into arguments (which we'll ignore right now) and then loops through the `plugins` (another modifiable property of `MiniTest::Unit` class), which is really just an array of strings which correspond to methods on the `MiniTest::Unit` "runner" instance. By default, this is all methods which match `run_*`, and is typically just `run_tests`:
 
 {code ruby,plugins}
 
@@ -71,7 +71,7 @@ Take another look at the content of our test file:
 {code ruby,minitest_example,2}
 
 
-When we subclassed `MiniTest::Unit::TestCase` as `SomethingTest`, the `inherited` hook is called by Ruby with `SomethingTest` as an argument.
+When we subclassed `MiniTest::Unit::TestCase` as `SomethingTest`, the `inherited` hook on the superclass is called by Ruby with `SomethingTest` as an argument.
 
 This stashes a reference to the class `SomethingTest` in an class variable[^why-a-hash]. The `TestCase.test_suites` method that we were looking at above returns all those subclasses, sorted by name.
 
@@ -107,7 +107,7 @@ However, if an exception was raised -- either by the test, or by a failing asser
 
 * `teardown` -- This method is run via an `ensure` block, so that it will be invoked whether or not an exception occured. In our example, the `@something` instance variable is set to nil: {code ruby,minitest_example,11,13}
 
-Various other things happen, but that's the key. An instance of your `TestCase` subclass is created, and then the setup, test and teardown methods are invoked on it.
+Various other things happen, but that's this has revealed the core of how MiniTest works: an instance of your `TestCase` subclass is created, and then the setup, test and teardown methods are invoked on it.
 
 
 After the test has run
