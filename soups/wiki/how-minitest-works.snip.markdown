@@ -44,17 +44,21 @@ So -- what's actually happening here?
 Autorun
 -------
 
-The first line in the file (`require "minitest/autorun"`), when loaded, calls MiniTest::Unit.autorun, which installs an `at_exit` hook -- a block of code that will be run when this Ruby interpreter process starts to exit. Our command (`ruby something_test.rb`) tells Ruby to load the contents of `something_test.rb`, which after loading minitest simply defines a class with some methods, and nothing else, so after the definition of `SomethingTest` is finished, Ruby starts to exit, and the `at_exit` code is invoked.
+The first line in the file (`require "minitest/autorun"`), when evaluated, loads the MiniTest library and then calls `MiniTest::Unit.autorun`, which installs an `at_exit` hook -- a block of code that will be run when this Ruby interpreter process starts to exit.
 
-Within this block, a few things happen, but only a small part is particularly relevant to us at the moment: the method `MiniTest::Unit.new.run` is run, with the contents of `ARGV` from the command line (in this case empty, so we'll ignore them as we continue).
+Our command in the shell (`ruby something_test.rb`) tells Ruby to load the contents of `something_test.rb`, which after loading MiniTest simply defines a class with some methods, and nothing else, so after the definition of `SomethingTest` is finished Ruby starts to exit, and the `at_exit` code is invoked.
+
+Within this block, a few things happen, but only a small part is particularly relevant to us at the moment: the method `MiniTest::Unit.new.run` is run, with the contents of `ARGV` from the command line (in this case an empty Array, so we'll ignore them as we continue).
 
 
 MiniTest::Unit, a.a. the "runner"
 --------
 
-The call to `MiniTest::Unit.new.run` simply calls `MiniTest::Unit.runner._run`, passing the command-line arguments through. `runner` is a class method on `MiniTest::Unit`, which returns an instance that *can* be set, but is an instance of `MiniTest::Unit` by default. So, an instance of `MiniTest::Unit` was created in the unit test, which then calls run on another newly-created instance of it[^hmm].
+The call to `MiniTest::Unit.new.run` simply calls `MiniTest::Unit.runner._run`, passing the command-line arguments through. `runner` is a class method on `MiniTest::Unit`, which returns an instance of `MiniTest::Unit` by default, although it can be configured to return anything else by setting `MiniTest::Unit.runner =  <something else>`.
 
-The `_run` method finally parses the `ARGV` into arguments (which we'll ignore right now) and then loops through the `plugins` (another modifiable property of `MiniTest::Unit` class), which is really just an array of strings which correspond to methods on the `MiniTest::Unit` "runner" instance. By default, this is all methods which match `run_*`, and is typically just `run_tests`:
+So, an instance of `MiniTest::Unit` was created in the unit test, which then calls run on another newly-created instance of it. It's mildly confusing, but I believe the purpose is to allow *you* to completely customise how the tests run by being able to use any object with a `_run` method. From here on, we'll assume that the default runner (an instance of `MiniTest::Unit`) was used.
+
+The default `_run` method parses the `ARGV` into arguments (which we'll ignore right now since in our example they are empty) and then loops through the `plugins` (another modifiable property of `MiniTest::Unit` class), which is really just an array of strings which correspond to methods on the `MiniTest::Unit` "runner" instance. By default, this is all methods which match `run_*`, and unless you've loaded extensions to MiniTest, it is just `run_tests`:
 
 {code ruby,plugins}
 
@@ -73,7 +77,9 @@ Take another look at the content of our test file:
 
 When we subclassed `MiniTest::Unit::TestCase` as `SomethingTest`, the `inherited` hook on the superclass is called by Ruby with `SomethingTest` as an argument.
 
-This stashes a reference to the class `SomethingTest` in an class variable[^why-a-hash]. The `TestCase.test_suites` method that we were looking at above returns all those subclasses, sorted by name.
+This stashes a reference to the class `SomethingTest` in an class variable[^why-a-hash]. The `TestCase.test_suites` method that we were looking at above returns all those subclasses, sorted by name:
+
+{code ruby,test_suites}
 
 
 Running a "suite"[^suite]
@@ -107,7 +113,7 @@ However, if an exception was raised -- either by the test, or by a failing asser
 
 * `teardown` -- This method is run via an `ensure` block, so that it will be invoked whether or not an exception occured. In our example, the `@something` instance variable is set to nil: {code ruby,minitest_example,11,13}
 
-Various other things happen, but that's this has revealed the core of how MiniTest works: an instance of your `TestCase` subclass is created, and then the setup, test and teardown methods are invoked on it.
+Various other things happen, but this is the essential core of how MiniTest works: an instance of your `TestCase` subclass is created, and then the setup, test and teardown methods are invoked on it.
 
 
 After the test has run
@@ -116,13 +122,13 @@ After the test has run
 
 The `run` method returns a "result", which is normally a character like `.` or `F` or `E`. This ultimately gets spat out to whatever is going to be doing the output (normally `STDOUT`). We saw this output above when we manually instantiated `SomethingTest` and then called `run` on it.
 
-Actually, the `puke` method is called for anything other than a pass, which write a more detailed string into a `@report` instance variable, and then returns the first character of that string (`Skipped ...` &rarr; `S`, `Failed ...` &rarr; `F` and so on).
+Actually, the `puke` method is called for anything other than a pass, which writes a more detailed string into a `@report` instance variable, and then returns the first character of that string (`Skipped ...` &rarr; `S`, `Failed ...` &rarr; `F` and so on).
 
 
 Back up into MiniTest
 -----
 
-Once `run` method finishes, the result is printed out, and the number of assertions stored on the instance is collected. The test method names that we were iterating over -- the result of `SomethingTest.test_methods` above -- is sequentially *mapped* into this number of assertions, and the final returned value of the `_run_suite` method is a two element array, the first being the number of tests and the second being the total number of assertions, for each test that ran. In our example, this would be `[1,1]` -- one test and one assertion in total:
+Once `run` method finishes, the result is printed out, and the number of assertions stored on the instance is collected. The test method names that we were iterating over -- the result of `SomethingTest.test_methods` above -- are sequentially *mapped* into this number of assertions, and the final returned value of the `_run_suite` method is a two element array, the first being the number of tests and the second being the total number of assertions, for each test that ran. In our example, this would be `[1,1]` -- one test and one assertion in total:
 
 {code ruby,_run_suite}
 
@@ -132,7 +138,7 @@ Back up in the `_run_suites` method, each `TestCase` is being mapped via into th
 
 Back up one level further in the `_run_anything` method, those numbers are summed to return the total number of tests and the total number of assertions, across the whole run of test suites. Finally, these numbers are printed out, and then any failures that were gathered by the calls to `runner.record` when each test was running.
 
-When the `_run` method itself finally finishes, taking us back into the `at_exit` block we started in, it returns the number of errors + failures that were counted. This value doesn't seem to be used, and disappears into the quantum foam of energy and information to which we all, ultimately return.
+When the `_run` method itself finally finishes, taking us back into the `at_exit` block we started in, it returns the number of errors plus failures that were counted. This value doesn't seem to be used, and disappears into the quantum foam of energy and information to which we all, ultimately, return.
 
 
 -----
@@ -160,21 +166,23 @@ One of the aspects of test frameworks that interests me most is what provides th
 * how instance variables declared outside of the test relate to the code within the test
 * how methods defined outside the test relate to the code within the test
 
-When a `TestCase` subclass is instantiated, that instance provides the *environment* for the test to execute. MiniTest, like [test-unit][] before it, is using the familiar conceptual relationship between classes and objects to implicitly communicate that instance variables created or modified in one method, like `setup`, will be available within our tests, just like normal Ruby code.
+When a `TestCase` subclass is instantiated, that instance provides the *environment* for the test to execute. MiniTest, like [test-unit][] before it, is using the familiar conceptual relationship between classes, objects and methods in Ruby to implicitly communicate that instance variables created or modified in one method, like `setup`, will be available within our tests, just like normal Ruby code.
 
-This is, I believe, the main reason behind a much of the preference towards MiniTest or test-unit style frameworks -- "*less magic*", because they use the same conceptual relationships between methods, variables and self as we use when doing all other programming.
+This is, I believe, the main reason behind *some* of the preference towards MiniTest or test-unit style frameworks -- they use "*less magic*", they are "*closer to the metal*" -- because they use the same conceptual relationships between methods, variables and self as we use when doing all other programming.
 
-This may be so familiar as to seem obvious -- methods can *of course* call methods within the same class, so implementing test suites like this is surely only natural! -- but it's not without consequence.
+This may be so familiar as to seem obvious; methods can *of course* call methods within the same class, and instance variables set in one method (e.g. `setup`) can *of course* be accessed by other methods (e.g. `test_something`) within the same class. Therefore implementing test suites like this is surely only natural!
 
-For example, it's *not* particularly natural to have to create a new instance of a class just to invoke a single method on it, but that happens for every `test_` method. I hope you'll agree that that seems far less natural. But this *has* to happen so that each test runs within a *clean environment*, without any of the changes the previous test might have made to the instance variables they both use, and without any trace of the instance variables older test may have created.
+Yes, indeed. But doing so is not without consequence.
 
-If your test framework has those hallmark attributes I mentioned above -- a class definition to contain tests, and tests defined as methods -- then running in this way is almost certainly how the rest of your test framework needs to work.
+For example, it's *not* typical behaviour to create a new instance of a class just to invoke a single method on it, but that happens for every `test_` method. I hope you'll agree that that seems far less natural. But this *has* to happen so that each test runs within a *clean environment*, without any of the changes the previous test might have made to the instance variables they both use, and without any trace of the instance variables previous tests may have created.
+
+If your test framework has those hallmark attributes I mentioned above -- a class definition to contain tests, and tests defined as methods -- then creating a new instance of that class to run each individual test is an inevitable consequence, unless you want to do some incredible gymnastics behind the scenes.
 
 ### Examining test environments
 
 Before I climb the ivory tower at the end of this post, let's have one final code interlude, using these test *objects* we are creating in the console.
 
-I've often imaginged that it would be very useful if, when a test fails, you got a dump of all of the values of every instance value in that test. I don't know about you, but I am very bored of peppering tests with `puts` statements, or trying to use logs to decipher what happened, when I know that if I could just see the instance variables I could tell what was failing and why.
+I've often imaginged that it would be very useful if, when a test fails, you got a dump of all of the values of every instance value in that test. I don't know about you, but I am very bored of peppering tests with `puts` statements, or trying to use logs to decipher what happened, when I know that if I could just see the instance variables then I could tell what was failing, and why.
 
 How about this:
 
@@ -184,7 +192,7 @@ We can see that the test failed, but now we can also look at the instance variab
 
 {code ruby,test_environment,27,29}
 
-In this test it's pretty trivial, but maybe you can imagine that being useful when you have a ton of ActiveRecord objects flying around? Particularly if you also patch whatever is doing the output for your test running to print the contents of `environment` for all failing tests.
+In this test it's pretty trivial, but maybe you can imagine that being useful when you have a ton of ActiveRecord objects flying around? Particularly if you also patch whatever is outputting your test results to print the contents of `environment` for all failing tests.
 
 If you're curious, you can also take a look at the other instance variables that MiniTest has created behind the scenes, mostly prefixed with `_` to indicate an informal 'privacy':
 
@@ -215,12 +223,13 @@ But that doesn't mean that there aren't occasions where you hit a problem using 
 Hmm
 ---
 
-It's my intuition that these test suites that we're writing... well, they shouldn't be classes. They don't describe things that you can instantiate sensibly and that then have behaviour. They certainly don't [send messages to one another, like "proper objects" do](http://www.inf.ufsc.br/poo/smalltalk/ibm/tutorial/oop.html). Classes are just convenient containers for these loosely-related essentially-procedural tests.
+It's my intuition that these test suites that we're writing... well, they shouldn't be classes. They don't describe things that you can instantiate sensibly and that then have behaviour. They certainly don't [send messages to one another, like "proper objects" do](http://www.inf.ufsc.br/poo/smalltalk/ibm/tutorial/oop.html). Classes are just convenient containers for these loosely-related essentially-procedural test bodies.
 
 I believe that this intuition is what lies behind my interest in other test frameworks. From it springs all the ideas about composing or describing the systems under test in more dynamic or more natural ways.
 
+In the next article, we'll look at how [RSpec][] works under the hood, and finally how {l kintama} does. Without having done the comparison yet, my guess is that they are very similar, but even within the alternate approach of *block*-defined tests there are many different paths you can take...
 
-[^hmm]: In theory you could set `MiniTest::Unit.runner` to be something which does nothing at all, as long as it responds to a `_run` method. Anyway.
+
 [^why-a-hash]: For some reason this collection of classes is stored in a Hash, but it seems like the keys of the hash are the only aspect used, so I don't understand why it isn't an Array...
 [^plugin-hooks]: There are actually quite a few more methods called, but I'm ignoring hooks principally used by plugin authors.
 [^suite]: ...a.k.a. `TestCase` subclass, a.k.a. your actual tests. I'm not sure why the MiniTest code is riddled with references to 'suites', when the classes that it's actually running are called `TestCases`. Perhaps it's a compromise involving historic names of classes in [test-unit][]?
@@ -233,8 +242,9 @@ I believe that this intuition is what lies behind my interest in other test fram
 [RSpec]: http://rspec.info
 
 
+:kind: blog
 :created_at: 2013-02-01 18:44:07 0000
-:updated_at: 2013-02-01 18:44:07 0000
+:updated_at: 2013-02-06 09:12:07 0000
 :minitest_example: |
   require "minitest/autorun"
 
@@ -257,6 +267,9 @@ I believe that this intuition is what lies behind my interest in other test fram
 :test_methods: |
   SomethingTest.test_methods
   # => ["test_something"]
+:test_suites: |
+  MiniTest::Unit::TestCase.test_suites
+  # => [SomethingTest]
 :running_single_test: |
   runner = MiniTest::Unit.new
   suite = SomethingTest.new("test_something")
