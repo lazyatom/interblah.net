@@ -39,6 +39,17 @@ Tom was challenged for login details, and here was his response.
 
 Alas, I cannot remember what was at [http://experthuman.com/proof](http://experthuman.com/proof), and whatever was there is gone now. Perhaps that's for the best.
 
+
+<a href="http://www.flickr.com/photos/lazyatom/8301268679/" title="PostalInter.net by James Adam, on Flickr"><img src="http://farm9.staticflickr.com/8218/8301268679_43c0b10494_z.jpg" width="612" height="612" alt="PostalInter.net"></a>
+
+<a href="http://www.flickr.com/photos/lazyatom/8302321524/" title="Packet corruption by James Adam, on Flickr"><img src="http://farm9.staticflickr.com/8353/8302321524_6df4dcdbe2_z.jpg" width="612" height="612" alt="Packet corruption"></a>
+
+<a href="http://www.flickr.com/photos/lazyatom/8301269223/" title="Packets on the wire by James Adam, on Flickr"><img src="http://farm9.staticflickr.com/8355/8301269223_96ccc41594_z.jpg" width="612" height="612" alt="Packets on the wire"></a>
+
+<a href="http://www.flickr.com/photos/lazyatom/8301269403/" title="Next request by James Adam, on Flickr"><img src="http://farm9.staticflickr.com/8497/8301269403_0637b3d834_z.jpg" width="612" height="612" alt="Next request"></a>
+
+<a href="http://www.flickr.com/photos/lazyatom/8302322486/" title="Bad request by James Adam, on Flickr"><img src="http://farm9.staticflickr.com/8496/8302322486_e901afcfdb_z.jpg" width="612" height="612" alt="Bad request"></a>
+
 [making things fast]: http://vimeo.com/17555310
 
 
