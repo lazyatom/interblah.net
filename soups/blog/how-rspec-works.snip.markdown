@@ -108,21 +108,19 @@ These methods are then effectively defined as part of the `Nested_1` class that 
 
 {code ruby,method_in_example_group_called_in_spec}
 
-We'll see how this works a bit later.
-
-What may be less obvious is that we can also deduce that later in our spec, when the `before` method is called:
+We'll see how this actually works a bit later. Knowing that the contents of the `describe` block are effectively evaluated within a class definition also explains what's happening when the `before` methods are called:
 
 {code ruby,rspec_example,3,9}
 
-... then `before` must be a method available on the `ExampleGroup` class. And indeed it is -- `RSpec::Code::ExampleGroup.before`.
+Because this is evaluated as if it was written in a class definition, then `before` must be a method available on the `ExampleGroup` class. And indeed it is -- `RSpec::Code::ExampleGroup.before`.
 
 Well, almost.
 
 ### Hooks
 
-The `before` method actually comes from the module `RSpec::Core::Hooks`, which is extended into `ExampleGroup`. RSpec has a very complicated behind-the-scenes hook registry, which I haven't decided whether or not I need to delve into for the purposes of this walk-through.
+The `before` method actually comes from the module `RSpec::Core::Hooks`, which is extended into `ExampleGroup`. RSpec has a very complicated behind-the-scenes hook registry, which for the purposes of brevity I'm not going to inspect here..
 
-The `before` method registers its block within that registry, to be retrieved later, as I expect we will see.
+The `before` method registers its block within that registry, to be retrieved later when the specs actually run.
 
 Because I'm not going to really look too deeply at hooks, the call to the `after` method works in pretty much the same way. Here it is though, just because:
 
@@ -301,7 +299,7 @@ If any test framework chose to not support this, there's almost certainly no rea
 
 It's clear that RSpec has more "features" (e.g. nesting, `before :all` and so on) than MiniTest (ignoring the many extensions available for MiniTest, the most sophisticated of which end up significantly modifying or replacing the `MiniTest::Unit.run` behaviour). I'm deliberately ignoring features like *matchers*, or a built-in mocking framework, because what I'm most interested in here are the features that affect the *structure* of the tests.
 
-It's certainly possible to implement features like nesting using subclasses and explicit calls to `super`, this is the kind of *plumbing* work that Ruby programmers are not accustomed to accepting. By separating creation of tests from Ruby's class implementation, the implicit relationships between groups of tests can take this burden instead, and behaviours like `before :all`, which have no natural analogue in class-based testing, are possible.
+It's certainly possible to implement features like nesting using subclasses and explicit calls to `super`, but this is the kind of *plumbing* work that Ruby programmers are not accustomed to accepting. By separating creation of tests from Ruby's class implementation, the implicit relationships between groups of tests can take this burden instead, and behaviours like `before :all`, which have no natural analogue in class-based testing, are possible.
 
 Now, you may believe that nesting is fundamentally undesirable, and it is not my present intention to disabuse you of that opinion. It's useful (I think) to understand the constraints we accept by our choice of framework, and I've certainly found my explorations of MiniTest and RSpec have helped clarify my own opinions about which approach is ultimately more aligned with my own preferences. While I wouldn't say that I'm ready to jump wholesale into the RSpec ecosystem, I think it's fair to say that my advocacy of class-style testing frameworks is at an end.
 
