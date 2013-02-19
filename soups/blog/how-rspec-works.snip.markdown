@@ -104,7 +104,7 @@ In terms of how RSpec is implemented, it's because of `module_eval` that you can
 
 {code ruby,method_in_example_group}
 
-These methods are then effectively defined as part of the `Nested_1` class that we are implicitly creating. This means that methods defined in this way call be called from within your specs:
+These methods are then effectively defined as part of the `Nested_1` class that we are implicitly creating. This means that methods defined in this way can be called from within your specs:
 
 {code ruby,method_in_example_group_called_in_spec}
 
