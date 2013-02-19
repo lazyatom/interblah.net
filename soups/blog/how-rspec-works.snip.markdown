@@ -146,7 +146,9 @@ Within our outer example group, we've nested another group:
 
 {code ruby,rspec_example,14,23}
 
-Just as the top-level call to `describe` invokes a class method on `RSpec::Core::ExampleGroup`, this call will be invoked against the *subclass* of `ExampleGroup` (i.e. `Nested_1`) that our outer group defined. Accordingly, each call to `describe` defines a new subclass, stored as a constant within the top-level class: `Nested_1::Nested_1`. This subclass is stored within an array of `children` in the outer `Nested_1` class.
+Just as the top-level call to `describe` invokes a class method on `RSpec::Core::ExampleGroup`, this call will be invoked against the *subclass* of `ExampleGroup` (i.e. `Nested_1`) that our outer group defined. Accordingly, each call to `describe` defines a new subclass[^nesting-subclass], stored as a constant within the top-level class: `Nested_1::Nested_1`. This subclass is stored within an array of `children` in the outer `Nested_1` class.
+
+[^nesting-subclass]: The nested class is a subclass of the outer subclass of `ExampleGroup` (sorry, I realise that's confusing), precisely such that any methods defined in the outer class are also available in nested subclasses via the regular mechanisms of inheritance.
 
 Within the definition, our `before` and `it` calls evaluate as before.
 
@@ -288,11 +290,20 @@ In contrast to {l how-minitest-works,the class-based implementation with MiniTes
 
 I would say these two aspects are the hallmark attributes of an *RSpec-style* test framework. The other notable aspect is the ability to nest example groups, and the subsequent necessity to be able to gather the implicit chain of *setup* blocks and evaluate them against the test environment instance, but this could be considered another example of using `instance_eval`.
 
+### Supporting method definition in example groups
+
+One thing I've found particularly interesting is that RSpec ends up generating classes and subclasses behind the scenes. I believe this is almost entirely a consequence of wanting to support the kind of "natural" method definition within group bodies (see the [`module_eval`](#moduleeval) section again).
+
+If any test framework chose to not support this, there's almost certainly no reason to create classes that map to example groups at all, and the setup and test blocks could be evaluated against a bare instance of `Object`.
+
+
+### Supporting nesting and dynamic composition
+
 It's clear that RSpec has more "features" (e.g. nesting, `before :all` and so on) than MiniTest (ignoring the many extensions available for MiniTest, the most sophisticated of which end up significantly modifying or replacing the `MiniTest::Unit.run` behaviour). I'm deliberately ignoring features like *matchers*, or a built-in mocking framework, because what I'm most interested in here are the features that affect the *structure* of the tests.
 
 It's certainly possible to implement features like nesting using subclasses and explicit calls to `super`, this is the kind of *plumbing* work that Ruby programmers are not accustomed to accepting. By separating creation of tests from Ruby's class implementation, the implicit relationships between groups of tests can take this burden instead, and behaviours like `before :all`, which have no natural analogue in class-based testing, are possible.
 
-Now, you may believe that nesting is fundamentally undesirable, and it is not my present intention to disabuse you of that opinion. It's useful (I think) to understand the constraints we accept by our choice of framework, and I've certainly found my explorations of MiniTest and RSpec have helped clarify my own opinions about which approach is ultimately more aligned with my own preferences. While I wouldn't say that I'm ready to jump wholesale into the RSpec ecosystem, I think it's fair to say that my advocacy of class-based testing frameworks is at an end.
+Now, you may believe that nesting is fundamentally undesirable, and it is not my present intention to disabuse you of that opinion. It's useful (I think) to understand the constraints we accept by our choice of framework, and I've certainly found my explorations of MiniTest and RSpec have helped clarify my own opinions about which approach is ultimately more aligned with my own preferences. While I wouldn't say that I'm ready to jump wholesale into the RSpec ecosystem, I think it's fair to say that my advocacy of class-style testing frameworks is at an end.
 
 
 RSpec and Kintama
