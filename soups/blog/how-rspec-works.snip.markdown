@@ -288,7 +288,7 @@ In contrast to {l how-minitest-works,the class-based implementation with MiniTes
 
 I would say these two aspects are the hallmark attributes of an *RSpec-style* test framework. The other notable aspect is the ability to nest example groups, and the subsequent necessity to be able to gather the implicit chain of *setup* blocks and evaluate them against the test environment instance, but this could be considered another example of using `instance_eval`.
 
-It's clear that RSpec has more "features" (e.g. nesting, `before :all` and so on) than MiniTest (ignoring the many extensions available for MiniTest, the most sophisticated of which end up significantly modifying or replacing the `MiniTest::Unit.run` behaviour). I'm deliberately ignoring features like *matches*, or a built-in mocking framework, because what I'm most interested in here are the features that affect the *structure* of the tests.
+It's clear that RSpec has more "features" (e.g. nesting, `before :all` and so on) than MiniTest (ignoring the many extensions available for MiniTest, the most sophisticated of which end up significantly modifying or replacing the `MiniTest::Unit.run` behaviour). I'm deliberately ignoring features like *matchers*, or a built-in mocking framework, because what I'm most interested in here are the features that affect the *structure* of the tests.
 
 It's certainly possible to implement features like nesting using subclasses and explicit calls to `super`, this is the kind of *plumbing* work that Ruby programmers are not accustomed to accepting. By separating creation of tests from Ruby's class implementation, the implicit relationships between groups of tests can take this burden instead, and behaviours like `before :all`, which have no natural analogue in class-based testing, are possible.
 
@@ -298,9 +298,9 @@ Now, you may believe that nesting is fundamentally undesirable, and it is not my
 RSpec and Kintama
 ------
 
-I started this exploration because I wanted to understand the relationship between {l kintama,the software I have accidentally produced} and what's already available. I already had strong suspicions that any block-based testing implementation would converge on a few common implementation decisions, and while I have now identified a few interesting (to me) ways in which Rspec and Kintama diverge, the essential approach is the same.
+I started this exploration because I wanted to understand the relationship between {l kintama,the software I have accidentally produced} and what's already available. I already had strong suspicions that any block-based testing implementation would converge on a few common implementation decisions, and while I have now identified a few interesting (to me) ways in which RSpec and Kintama diverge, the essential approach is the same.
 
-In the final article in this tryptich (coming soon, I hope), I'll walk through Kintama and point those out.
+In the final article in this triptych (coming soon, I hope), I'll walk through Kintama and point those out.
 
 
 [MiniTest]: http://github.com/seattlerb/minitest
