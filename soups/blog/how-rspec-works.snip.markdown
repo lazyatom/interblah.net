@@ -271,7 +271,9 @@ As we leave the call to `ExampleGroup#run`, we run any corresponding `after :all
 
 ### Finishing up
 
-You can once again pop your brain-stack back until we're in `RSpec::Core::Commandline#run`; having run all of the example groups, RSpec will do a little bit of tidy up, and finally return back up through the stack until printing the results of the run to the console before interpreter properly quits.
+You can once again pop your brain-stack back until we're in `RSpec::Core::Commandline#run`.
+
+Having run all of the example groups, RSpec will do a little bit of tidy up, and finally return back up through the stack. Along the way printing the results of the run to the console is performed, before interpreter finally, properly quits.
 
 *Phew*. You deserve another rest.
 
