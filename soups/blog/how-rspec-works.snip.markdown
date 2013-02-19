@@ -3,7 +3,7 @@ What happens when RSpec runs, or, what I think about testing with blocks
 
 Welcome to part two of the the post series which will hopefully cauterize the bleeding stump that is my {l kintama,Ruby Testing Quest}.
 
-This time, we will take a not-too-deep dive into how [RSpec][] works. Last time {l how-minitest-works,we looked at MiniTest}; if you haven't already read that, it might be a better place to start than this.
+This time, we will take a not-too-deep dive into how [RSpec][] works. Last time {l how-minitest-works,we looked at MiniTest}; if you haven't already read that, it might be {l how-minitest-works,a better place to start} than this.
 
 Let's get going.
 

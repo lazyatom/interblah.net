@@ -7,6 +7,7 @@ As one part of the final leg of this journey, I want to take a not-too-deep dive
 
 We're going to start with [MiniTest][]. We'll also look at [RSpec][] and {l kintama}, but not right now. This is already crazy-long.
 
+(*Update*: you can now read about {l how-rspec-works, how RSpec works} if you wish...)
 
 A simple MiniTest example
 --------
