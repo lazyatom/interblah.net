@@ -82,7 +82,7 @@ The `describe` method in `RSpec::Core::DSL` passes its arguments straight throug
 
 {code ruby,example_group_constants}
 
-The class that was created is there -- `Nested_1`. For each `describe` at the top level, you'll have a new generated class:
+The class that was created is there: `Nested_1`. For each `describe` at the top level, you'll have a new generated class:
 
 {code ruby,example_group_constants_2}
 
@@ -100,7 +100,7 @@ You can see above that the behaviour is effectively the same as if we'd defined 
 
 [^magic]: It's not really magic, and it's not really "metaprogramming", because it's all just programming. It just so happens that it's quite sophisticated programming.
 
-In terms of how RSpec is implemented, it's because of `module_eval` that you can define methods within example groups:
+It's because of `module_eval` that you can define methods within example groups:
 
 {code ruby,method_in_example_group}
 
@@ -246,7 +246,7 @@ Here's the full definition of `RSpec::Core::Example#run`:
 
 {code ruby,rspec_example_run_definition}
 
-For our purposes, we only need to consider a small part. Once all the reporter and "around" block housekeeping has taken place, the essential core of the example is run:
+For our purposes, we again only need to consider a small part. Once all the reporter and "around" block housekeeping has taken place, the essential core of the example is run:
 
 {code ruby,rspec_example_run_definition,10,17}
 
@@ -365,6 +365,8 @@ In the final article in this triptych (coming soon, I hope), I'll walk through K
     ancestors
     # => [RSpec::Core::SharedExampleGroup, RSpec::Core::DSL, Object, Kernel, BasicObject]
   end
+
+  # also, self.singleton_class.ancestors in Ruby 1.9
 :example_group_constants: |
   describe "a thing" do
     # your tests, um, I mean specs
