@@ -254,9 +254,9 @@ The call to `run_before_each` introspects the hook registry and evaluates every 
 
 Then, the spec block (stored in `@example_block`) is evaluated against the `ExampleGroup` instance. This is where your assertions, or matchers, are finally -- *finally!* -- evaluated.
 
-If there was a problem, such as a matcher failing[^matcher-exception] or an exception being raised, then the exception is stored against this `Example` for later reporting.
+If there was a problem, such as a matcher failing[^matcher-exception] or an exception being raised, then the exception is stored against this `Example` for later reporting. Just as MiniTest assertions raise an exception when they fail, RSpec matchers raise an `RSpec::Expectations::ExpectationNotMetError` exception. It seems this is the universal way of halting execution when a test fails[^test-halting]. Another hidden similarity between RSpec and MiniTest!
 
-[^matcher-exception]: Just as MiniTest assertions raise an exception when they fail, RSpec matchers raise an `RSpec::Expectations::ExpectationNotMetError` exception. It seems this is the universal way of halting execution when a test fails...
+[^test-halting]: Raising an exception might not be the only way to stop a test executing at the point it fails; it could be possible to use fibers/continuations to "pause" failing tests...
 
 As in MiniTest, whether or not the spec failed or an exception occured, an `ensure` section is used to guarantee that `run_after_hooks` is called, and any teardown is performed.
 
