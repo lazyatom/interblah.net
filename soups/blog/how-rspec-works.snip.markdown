@@ -322,21 +322,21 @@ In the final article in this tryptich (coming soon, I hope), I'll walk through K
       @shared_thing = Object.new
     end
 
-    before do
+    before :each do
       @something = Object.new
     end
 
     it "should be an Object" do
-      @something.should be_kind_of(Object)
+      @something.should be_an(Object)
     end
 
     describe "compared to another object" do
-      before do
+      before :each do
         @other = Object.new
       end
 
       it "should not be equal" do
-        @something.should_not eq(@other)
+        @something.should_not == @other
       end
     end
 
