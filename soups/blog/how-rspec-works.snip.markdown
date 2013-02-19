@@ -283,8 +283,8 @@ Testing with blocks
 
 In contrast to {l how-minitest-works,the class-based implementation with MiniTest}, we've now seen how a *block*-based test framework can work. In a nutshell, it can be characterised in a couple of key ways:
 
-* the stashing of behaviour blocks, later evaluated using `instance_eval` against clean *test-environment* instances (see [this section of the MiniTest article](/how-minitest-works#a-tests-environment) for what I mean by "test environment").
-* using `module_eval` and subclassing to ensure method definition matches programmer expectation
+* the stashing of behaviour blocks, later evaluated using `instance_eval` against clean *test-environment* instances (see [this section of the MiniTest article](/how-minitest-works#a-tests-environment) for what I mean by "test environment");
+* using `module_eval` and subclassing to ensure method definition matches programmer expectation.
 
 I would say these two aspects are the hallmark attributes of an *RSpec-style* test framework. The other notable aspect is the ability to nest example groups, and the subsequent necessity to be able to gather the implicit chain of *setup* blocks and evaluate them against the test environment instance, but this could be considered another example of using `instance_eval`.
 
