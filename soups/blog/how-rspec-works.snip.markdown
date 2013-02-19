@@ -324,7 +324,7 @@ In the final article in this triptych (coming soon, I hope), I'll walk through K
 [`instance_variable_get`]: http://ruby-doc.org/core-1.9.3/Object.html#method-i-instance_variable_get
 [`instance_variable_set`]: http://ruby-doc.org/core-1.9.3/Object.html#method-i-instance_variable_set
 
-:kind: draft
+:kind: blog
 :created_at: 2013-02-18 21:41:24 +0000
 :updated_at: 2013-02-18 21:41:24 +0000
 :rspec_example: |
