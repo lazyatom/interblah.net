@@ -58,7 +58,7 @@ In contrast with [MiniTest][], RSpec parses the options at this point, and will 
 
 Within the `run` method, some setup happens (mostly preamble to be output by the `reporter`, which is set via the configuration). Then we iterate through all of the "example groups", returned by `RSpec::world.example_groups`[^hmm].
 
-[^hmm]: I'm not sure why some people prefer the syntax `Module::method` rather than `Module.method`; as I understand it they are exactly the same, but the latter seems more confusing to me, since if you don't notice the lower-case *w* in `world` then you'd assume it was refering to a constant.
+[^hmm]: I'm not sure why some people prefer the syntax `Module::method` rather than `Module.method`; as I understand it they are exactly the same, but the former seems more confusing to me, since if you don't notice the lower-case *w* in `world` then you'd assume it was refering to a constant.
 
 Let's take a diversion to see how things actually get *into* `RSpec::world.example_groups`.
 
@@ -122,7 +122,7 @@ Well, almost.
 
 The `before` method actually comes from the module `RSpec::Core::Hooks`, which is extended into `ExampleGroup`. RSpec has a very complicated behind-the-scenes hook registry, which I haven't decided whether or not I need to delve into for the purposes of this walk-through.
 
-The `before` method registers it's block within that registry, to be retrieved later, as I expect we will see.
+The `before` method registers its block within that registry, to be retrieved later, as I expect we will see.
 
 Because I'm not going to really look too deeply at hooks, the call to the `after` method works in pretty much the same way. Here it is though, just because:
 
@@ -176,7 +176,7 @@ Our diversion is complete! You deserve a break. Go fetch a cup of your preferred
 Back in RSpec
 -------
 
-OK, pop your brain-stack back until we're in `RSpec::Core::Commandline#run` again. Our reporter did it's preamble stuff, and we were iterating through `@world.example_groups`, whose origin we now understand.
+OK, pop your brain-stack back until we're in `RSpec::Core::Commandline#run` again. Our reporter did its preamble stuff, and we were iterating through `@world.example_groups`, whose origin we now understand.
 
 For each example group, the `run` method is called on that class, with the reporter instance passed as an argument.
 
@@ -188,7 +188,7 @@ RSpec has a "fail fast" mode, where any single example failure will cause the ex
 
 {code ruby,rspec_example_group_run_definition,5,6}
 
-Next, the `reporter` is notified that an example group is about to start. The reporter can use this information to print out the name of the group for example
+Next, the `reporter` is notified that an example group is about to start. The reporter can use this information to print out the name of the group, for example.
 
 {code ruby,rspec_example_group_run_definition,7,8}
 
@@ -197,7 +197,7 @@ The run of the examples is wrapped in a block so it can catch any exceptions and
 
 ### The `before :all` hooks
 
-The call to `run_before_all_hooks` is very interesting though, and worth exploring. A new *instance* of the example group is created. It is then passed into this method, where the any "before all" blocks are evaluated against that instance, and then the values of any instance variables are stashed.
+The call to `run_before_all_hooks` is very interesting though, and worth exploring. A new *instance* of the example group is created. It is then passed into this method, where any "before all" blocks are evaluated against that instance, and then the values of any instance variables are stashed.
 
 Consider our original example:
 
@@ -224,13 +224,13 @@ To understand this, we need to look at the definition of `run_examples`:
 
 {code ruby,rspec_example_group_run_examples_definition}
 
-This method iterates over each `Example` that was stored in the `examples` array earlier, filtering them according to any command-line parameters though we are ignoring that here. The most relevant part for us lies in the middle:
+This method iterates over each `Example` that was stored in the `examples` array earlier, filtering them according to any command-line parameters (though we are ignoring that here). The most relevant part for us lies in the middle:
 
 {code ruby,rspec_example_group_run_examples_definition,3,5}
 
 ### A striking parallel with MiniTest
 
-Another *new* instance of the `ExampleGroup` subclass is created. Remember, RSpec created on instance of the class for the `before :all` blocks, but now it's creating a fresh instance for this specific spec to be evaluated against.
+Another *new* instance of the `ExampleGroup` subclass is created. Remember, RSpec created one instance of the class for the `before :all` blocks, but now it's creating a fresh instance for this specific spec to be evaluated against.
 
 Thinking back to {l how-minitest-works,how MiniTest works}, there's a striking parallel: **where MiniTest would instantiate a new instance of the `MiniTest::Unit::TestCase` for each test method, RSpec is creating a new instance of the `ExampleGroup` subclass to evaluate each `Example` block against.**
 
