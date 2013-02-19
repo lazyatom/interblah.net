@@ -434,7 +434,7 @@ In the final article in this triptych (coming soon, I hope), I'll walk through K
     end
 
     it "can be called from within a spec" do
-      the_method_in_question.should eq(:result)
+      the_method_in_question.should == :result
     end
   end
 :rspec_example_group_run_definition: |
