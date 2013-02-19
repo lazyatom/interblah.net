@@ -421,6 +421,7 @@ In the final article in this triptych (coming soon, I hope), I'll walk through K
 :method_in_example_group: |
   describe "a thing" do
     def invert_phase_polarity
+      # waggle the flux capacitor or something
     end
   end
 
