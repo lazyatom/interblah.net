@@ -17,7 +17,7 @@ the quantum foam.
 Gallery
 ------
 
-Here are a few of the requests that we go. Obviously you are only seeing one
+Here are a few of the requests that we got. Obviously you are only seeing one
 side of the communication; the responses are now lost in the ether (or in
 the post boxes of the UK).
 
