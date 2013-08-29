@@ -2,3 +2,5 @@
 tmp
 assets
 .sass-cache
+.powrc
+.ruby-version

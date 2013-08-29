@@ -11,3 +11,4 @@ gem "rake"
 gem 'recap'
 gem 'foreman'
 gem 'thin'
+gem 'raygun4ruby', git: "https://github.com/lazyatom/raygun4ruby", branch: "active-support-isnt-needed"

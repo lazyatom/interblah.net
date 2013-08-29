@@ -41,4 +41,6 @@ Application.configure do |config|
   config.soup = ::Soup.new(::Soup::Backends::MultiSoup.new(*([config.indexable_soup] + system_backends)))
 
   config.renderers["markdown"] = Vanilla::Renderers::Kramdown
+
+  config.raise_errors = true
 end

@@ -1,6 +1,16 @@
 GIT
+  remote: https://github.com/lazyatom/raygun4ruby
+  revision: 9747ffb4921028b9446dcdca485c1e3a5dded5b7
+  branch: active-support-isnt-needed
+  specs:
+    raygun4ruby (0.0.5)
+      httparty (~> 0.11)
+      json
+      rack
+
+GIT
   remote: https://github.com/lazyatom/vanilla-rb.git
-  revision: 3ea62ef9e5ed4928b83842b03ff5490b882f4175
+  revision: 06d4a5dd07c13ce939e7853904ebb528bdcc433e
   specs:
     vanilla (1.17.9)
       BlueCloth (>= 1.0.0)
@@ -36,8 +46,14 @@ GEM
     fssm (0.2.9)
     haml (3.1.7)
     highline (1.6.15)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
+    json (1.8.0)
     kramdown (0.14.0)
-    libxml-ruby (2.3.3)
+    libxml-ruby (2.6.0)
+    multi_json (1.7.9)
+    multi_xml (0.5.5)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -56,8 +72,8 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.0.1)
-    ratom (0.7.2)
-      libxml-ruby (~> 2.3.2)
+    ratom (0.8.2)
+      libxml-ruby (~> 2.6.0)
     recap (1.0.5)
       capistrano (~> 2.9)
       open4
@@ -84,6 +100,7 @@ DEPENDENCIES
   kramdown
   pygments.rb
   rake
+  raygun4ruby!
   recap
   redcarpet
   susy
