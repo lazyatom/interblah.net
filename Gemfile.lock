@@ -1,14 +1,4 @@
 GIT
-  remote: https://github.com/lazyatom/raygun4ruby
-  revision: 9747ffb4921028b9446dcdca485c1e3a5dded5b7
-  branch: active-support-isnt-needed
-  specs:
-    raygun4ruby (0.0.5)
-      httparty (~> 0.11)
-      json
-      rack
-
-GIT
   remote: https://github.com/lazyatom/vanilla-rb.git
   revision: 06d4a5dd07c13ce939e7853904ebb528bdcc433e
   specs:
@@ -23,10 +13,17 @@ GIT
       soup (>= 1.0.11)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     BlueCloth (1.0.1)
     RedCloth (4.2.9)
+    activesupport (4.0.0)
+      i18n (~> 0.6, >= 0.6.4)
+      minitest (~> 4.2)
+      multi_json (~> 1.3)
+      thread_safe (~> 0.1)
+      tzinfo (~> 0.3.37)
+    atomic (1.1.13)
     blankslate (2.1.2.4)
     capistrano (2.13.5)
       highline
@@ -49,9 +46,11 @@ GEM
     httparty (0.11.0)
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)
+    i18n (0.6.5)
     json (1.8.0)
     kramdown (0.14.0)
     libxml-ruby (2.6.0)
+    minitest (4.7.5)
     multi_json (1.7.9)
     multi_xml (0.5.5)
     net-scp (1.0.4)
@@ -74,6 +73,11 @@ GEM
     rake (10.0.1)
     ratom (0.8.2)
       libxml-ruby (~> 2.6.0)
+    raygun4ruby (0.0.5)
+      activesupport
+      httparty (~> 0.11)
+      json
+      rack
     recap (1.0.5)
       capistrano (~> 2.9)
       open4
@@ -89,6 +93,9 @@ GEM
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
     thor (0.16.0)
+    thread_safe (0.1.2)
+      atomic
+    tzinfo (0.3.37)
     yajl-ruby (1.1.0)
 
 PLATFORMS
@@ -100,7 +107,7 @@ DEPENDENCIES
   kramdown
   pygments.rb
   rake
-  raygun4ruby!
+  raygun4ruby
   recap
   redcarpet
   susy
