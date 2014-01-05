@@ -9,7 +9,7 @@ You can learn about how the site actually runs {l "how interblah works",here}
 About me
 -------
 
-Hello, I'm James Adam, and you've found my blog-type-thing. I am a software developer working as part of {gfr} here in the UK. If you're looking for a group of top-notch creative people, [get in touch](http://gofreerange.com). You can also find information about me at [lazyatom.com](http://lazyatom.com).
+Hello, I'm James Adam, and you've found my blog-type-thing. I run [Exciting](http://exciting.io), a product development and prototyping studio based in Austin and London. You can also find information about me at [lazyatom.com](http://lazyatom.com).
 
 :title: About this site
 
