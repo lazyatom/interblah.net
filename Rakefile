@@ -13,7 +13,7 @@ end
 task :blog do
   print "Title: "
   title = $stdin.gets.chomp
-  path = "soups/blog/#{title.downcase.gsub(" ", "-")}.snip.markdown"
+  path = "soups/blog/#{title.downcase.gsub(/[^\w]+/, "-")}.snip.markdown"
   time = Time.now.strftime("%Y-%m-%d %H:%M:%S %z")
   File.open(path, "w") do |f|
     f.puts title
