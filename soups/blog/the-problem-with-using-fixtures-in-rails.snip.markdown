@@ -1,7 +1,7 @@
 The problem with using fixtures in Rails
 ========================================
 
-I've been trying to largely ignore the recent [TDD discussion][dhh-tdd] prompted by DHH's [RailsConf 2014 keynote][keynote]. I think I can understand where he's coming from, and my only real concern with not sharing his point of view is that it makes it less likely that Rails will be steered in a direction which makes TDD easier. But that's OK, and my concern grows then I have [opportunities to propose improvements][rails-contributing].
+I've been trying to largely ignore the recent [TDD discussion][dhh-tdd] prompted by DHH's [RailsConf 2014 keynote][keynote]. I think I can understand where he's coming from, and my only real concern with not sharing his point of view is that it makes it less likely that Rails will be steered in a direction which makes TDD easier. But that's OK, and if my concern grows then I have [opportunities to propose improvements][rails-contributing].
 
 I don't even really mind what he's said in his latest post about [unit testing the Basecamp codebase][dhh-fixtures]. There are a lot of Rails applications -- including ones I've written -- where a four-minute test suite would've been a huge triumph.
 
