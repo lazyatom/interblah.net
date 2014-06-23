@@ -143,6 +143,11 @@ body .separator:after {
 body #content img {
   max-width: 100%;
 }
+
+body #content sup {
+  line-height: 0;
+}
+
 /* line 111, sass/screen.scss */
 body #content .footnotes {
   margin-top: 4em;
