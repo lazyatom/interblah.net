@@ -39,9 +39,10 @@ Confronted with the boundless crowd of what-seems-typical Type A entrepreneurs t
 
 But&hellip; there's still a chance that I might be able to carve out a niche of my own, and maybe build another little company of friends working on small things that we care about, and investing in our future collectively. I still believe that's a possibility.
 
-Anyway, so that's what I'm doing, mostly: _[crushing it](http://crushitbook.com)_.
+Anyway, so that's what I'm doing, mostly: _crushing it_[^2].
 
 [^1]: Couldn't resist this turn of phrase; see [here](http://www.bbc.co.uk/comedy/fastshow/characters/jesse.shtml) if you don't immediately get it.
+[^2]: Sarcasm, (e.g. [this](http://crushitbook.com))
 
 :kind: blog
 :created_at: 2014-06-23 16:03:00 -0600
