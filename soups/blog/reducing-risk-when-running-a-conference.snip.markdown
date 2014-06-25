@@ -42,7 +42,9 @@ Every hour you spend as a conference organiser worrying about sponsorships or ti
 
 Let's not forget: __the only really important part of a conference is getting a diverse group of people with shared interests into the same space for a day or two.__ Everything else is just decoration.
 
+I realise that many people expect, consciously or otherwise, some or all of the peripheral bells and whistles that surround the core conference experience. For some attendees, going to a conference might even be akin to a 'vacation' of sorts. Perhaps a conference with no $15,000 parties feels like less of an event... less of an _extravaganza_.
 
+But consider this: given the choice between a glitzy, dazzling extravaganza, and a solid conference that an organiser can run _without_ paralysing fear of financial ruin, I know which I would choose, and I know which ultimately benefits the community more.
 
 [^1]: To be clear, they require that you cannot make a profit on events they host, but from what I can tell, most conference organisers don't wish to run their events for profit anyway.
 
