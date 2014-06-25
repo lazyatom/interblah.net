@@ -48,6 +48,6 @@ But consider this: given the choice between a glitzy, dazzling extravaganza, and
 
 [^1]: To be clear, they require that you cannot make a profit on events they host, but from what I can tell, most conference organisers don't wish to run their events for profit anyway.
 
-:kind: draft
+:kind: blog
 :created_at: 2014-06-25 09:37:33 -0500
 :updated_at: 2014-06-25 09:37:33 -0500
