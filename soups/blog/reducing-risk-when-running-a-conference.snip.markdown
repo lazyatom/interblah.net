@@ -32,7 +32,7 @@ Another problem could be the availability of university and community venues as 
 
 I would be genuinely fascinated for other conferences to start publishing their costing breakdown. [LessConf have already done this](http://lessconf.lesseverything.com/budget.html), and even though I might not have chosen to spend quite so much money on breakfasts and surprises, I genuinely do applaud their transparency for the benefit of the community.
 
-In the end it seems there's hope for Wicked Good:
+In the end [it seems there's hope](https://groups.google.com/forum/#!topic/boston-rubygroup/PAgosU5WIxE) for Wicked Good:
 
 > I think I've come up with a plan: reduce the conference from 2 nights to 1 night. Cut out many of the thrills that I was planning. This effectively would reduce our operational costs from ~$100k to around ~$50k. This would also allow us to reduce the ticket prices (I would reimburse current tickets for the difference).
 
@@ -42,7 +42,7 @@ Every hour you spend as a conference organiser worrying about sponsorships or ti
 
 Let's not forget: __the only really important part of a conference is getting a diverse group of people with shared interests into the same space for a day or two.__ Everything else is just decoration.
 
-I realise that many people expect, consciously or otherwise, some or all of the peripheral bells and whistles that surround the core conference experience. For some attendees, going to a conference might even be akin to a 'vacation' of sorts. Perhaps a conference with no $15,000 parties feels like less of an event... less of an _extravaganza_.
+I realise that many people expect, consciously or otherwise, some or all of the peripheral bells and whistles that surround the core conference experience. For some attendees, going to a conference might even be akin to a 'vacation' of sorts. Perhaps a conference without $15,000 parties feels like less of an event... less of an _extravaganza_.
 
 But consider this: given the choice between a glitzy, dazzling extravaganza, and a solid conference that an organiser can run _without_ paralysing fear of financial ruin, I know which I would choose, and I know which ultimately benefits the community more.
 
