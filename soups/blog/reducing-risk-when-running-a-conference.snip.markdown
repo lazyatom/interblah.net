@@ -40,7 +40,7 @@ I genuinely wish the organisers the best of luck. It's a tough gig, running a co
 
 Every hour you spend as a conference organiser worrying about sponsorships or ticket sales or other financial issues, is an hour that *could* be spent working on making [the content and the community](http://rubymanor.org/#manifesto) aspects as good as they can be.
 
-Let's not forget: __the only really important part of a conference is getting a diverse group of people with shared interests into the same space for a day or two.__ Everything else is just decoration.
+Let's not forget: __the only really important part of a conference is getting a diverse group of people with shared interests into the same space for a day or two.__ Everything else is just decoration. A lot of the time, _even the presentations_ are just decoration. It's getting the community together that's important.
 
 I realise that many people expect, consciously or otherwise, some or all of the peripheral bells and whistles that surround the core conference experience. For some attendees, going to a conference might even be akin to a 'vacation' of sorts. Perhaps a conference without $15,000 parties feels like less of an event... less of an _extravaganza_.
 
