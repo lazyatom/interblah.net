@@ -25,7 +25,7 @@ However, while Docker is simple in principle, it's not trivial to **actually dep
 
 What I mean is getting to a point where deploying a new application to your server is as simple (or close enough to it) as platforms like Heroku make it.
 
-Now, to be clear, I don't specifically mean using `git push` to deploy; what I mean is all the *orchestration* that needs to happen in order to more the right software image into the right place, stop existing containers, start updated containers and make sure that nothing explodes as you do that.
+Now, to be clear, I don't specifically mean using `git push` to deploy; what I mean is all the *orchestration* that needs to happen in order to move the right software image into the right place, stop existing containers, start updated containers and make sure that nothing explodes as you do that.
 
 But, you might say, there are packages that already help with this! And you're right. Here are a few:
 
