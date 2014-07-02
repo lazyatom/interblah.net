@@ -16,7 +16,7 @@ If you're anything like me, servers tend to be supremely magical things; I know 
 
 ## Docker isolation
 
-Docker provides an elegant solution for these kinds of worries, because it allows you to *isolate* applications from each other, including as many of their dependencies as you like. Creating images with different versions of LibXML, or Ruby, or even PostreSQL is almost trivially easy, and you can be confident that running any combination will not cause unexpected crashes and hard-to-trace software version issues.
+Docker provides an elegant solution for these kinds of worries, because it allows you to *isolate* applications from each other, including as many of their dependencies as you like. Creating images with different versions of LibXML, or Ruby, or even PostgreSQL is almost trivially easy, and you can be confident that running any combination will not cause unexpected crashes and hard-to-trace software version issues.
 
 However, which Docker is simple in principle, it's not trivial to **actually deploy with it**, in the pragmatic sense.
 
