@@ -29,7 +29,7 @@ Now, to be clear, I don't specifically mean using `git push` to deploy; what I m
 
 But, you might say, there are packages that already help with this! And you're right. Here are a few:
 
-* [Dokku](https://github.com/progrium/dokku), the originally minimal Heroku clone for Docker
+* [Dokku](https://github.com/progrium/dokku), the original minimal Heroku clone for Docker
 * [Flynn](http://flynn.io), the successor to Dokku
 * [Orchard](http://orchardup.com), a managed host for your Docker containers
 * ...and many more. I don't know if you've heard, but Docker is, like, _everywhere_ right now.
