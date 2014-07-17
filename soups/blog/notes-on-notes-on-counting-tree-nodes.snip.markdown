@@ -155,7 +155,7 @@ That's the relevance of computer science to the work we do every day, and it wou
 [^1]: In the last 15 minutes or so of the video, the approach Tom uses to add a "child node" to a tree is interesting but there's not a huge amount of time to explore some of the subtle benefits of that approach
 [^2]: Which is, and let's be honest, a lot of "Get a record out of a database with an ORM, turn it into some strings, save it back into the database".
 
-:kind: draft
+:kind: blog
 :created_at: 2014-07-17 11:11:27 -0500
 :updated_at: 2014-07-17 11:11:27 -0500
 
