@@ -15,7 +15,7 @@ What I found really interesting here was the idea of building new enumerators by
 
 Let's imagine you have an `Enumerator` which enumerates the numbers from 1 up to 10:
 
-    > numbers = 1.upto(10).to_enum
+    > numbers = 1.upto(10)
     => #<Enumerator: 1:upto(10)>
     > numbers.next
     => 1
@@ -57,7 +57,7 @@ Let's see it in action:
     > odd_numbers.next
     StopIteration: iteration reached an end
 
-So, that's quite neat (albeit somewhat convoluted compared to `1.upto(10).select(&:odd)`, with or without `to_enum` on the end). To extend this further, let's imagine that I _hate_ the lucky number 7, so I also don't want that be included. In fact, somewhat perversely, I want to stick it right in the face of superstition by replacing 7 with the unluckiest number, 13.
+So, that's quite neat (albeit somewhat convoluted compared to `1.upto(10).select(&:odd)`). To extend this further, let's imagine that I _hate_ the lucky number 7, so I also don't want that be included. In fact, somewhat perversely, I want to stick it right in the face of superstition by replacing 7 with the unluckiest number, 13.
 
 Yes, I know this is weird, but bear with me. If you have read Tom's post (go read it), you'll already know that this can also be achieved with a new enumerator:
 
