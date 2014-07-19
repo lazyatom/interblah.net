@@ -11,5 +11,6 @@ RUN bundle install
 ADD . /interblah.net
 #RUN bundle install
 
+EXPOSE 3000
 ENTRYPOINT ["bundle", "exec"]
 CMD ["rackup", "-p", "3000"]
