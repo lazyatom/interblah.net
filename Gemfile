@@ -8,7 +8,6 @@ gem "susy"
 gem "kramdown"
 gem "rake"
 
-gem 'recap'
-gem 'foreman'
+gem 'capistrano'
 gem 'thin'
 gem 'raygun4ruby'
