@@ -155,9 +155,9 @@ namespace :docker do
 
     task :stop do
       on roles(:app) do
-        container_id = running_app_container_id
-        if container_id
-          stop_container(container_id)
+        container_ids = running_app_container_ids
+        if container_ids.any?
+          container_ids.each { |id| stop_container(id) }
         else
           "No running container found"
         end
@@ -175,17 +175,18 @@ namespace :docker do
 
     task :restart do
       on roles(:app) do
-        if test("sudo docker ps | grep '#{fetch(:application_image_tag)}'")
-          original_container_id = running_app_container_id
-          log "Found running container #{Color.yellow original_container_id}"
+        original_container_ids = running_app_container_ids
+        if original_container_ids.any?
+          log "Found running containers #{original_container_ids.map { |id| Color.yellow id }.join(', ')}"
         else
           log "No running containers exist"
         end
-        invoke "docker:remote:start"
-        if original_container_id
-          log "Stopping old container #{Color.yellow original_container_id}"
-          stop_container(original_container_id)
+        start_container
+        if original_container_ids.any?
+          log "Stopping old containers #{original_container_ids.map { |id| Color.yellow id }.join(', ')}"
+          original_container_ids.each { |id| stop_container(id) }
         end
+        invoke "docker:remote:update_web_server"
       end
     end
   end
