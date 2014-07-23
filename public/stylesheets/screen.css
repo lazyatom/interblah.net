@@ -143,31 +143,30 @@ body .separator:after {
 body #content img {
   max-width: 100%;
 }
-
+/* line 111, sass/screen.scss */
 body #content sup {
   line-height: 0;
 }
-
-/* line 111, sass/screen.scss */
+/* line 115, sass/screen.scss */
 body #content .footnotes {
   margin-top: 4em;
   padding: 1em;
   background-color: #f4f4f3;
   font-size: 90%;
 }
-/* line 117, sass/screen.scss */
+/* line 121, sass/screen.scss */
 body #content .footnotes ol, body #content .footnotes p {
   margin: 0;
 }
-/* line 120, sass/screen.scss */
+/* line 124, sass/screen.scss */
 body #content .footnotes li {
   margin-bottom: 1em;
 }
-/* line 122, sass/screen.scss */
+/* line 126, sass/screen.scss */
 body #content .footnotes li:last-child {
   margin-bottom: 0;
 }
-/* line 128, sass/screen.scss */
+/* line 132, sass/screen.scss */
 body #content .code, body #content pre > code {
   margin: 1em 0;
   display: block;
@@ -177,26 +176,26 @@ body #content .code, body #content pre > code {
   border: 0.3em solid #999999;
   overflow: scroll;
 }
-/* line 138, sass/screen.scss */
+/* line 142, sass/screen.scss */
 body #content pre > code {
   padding: 1em;
 }
-/* line 142, sass/screen.scss */
+/* line 146, sass/screen.scss */
 body #content tt, body #content p > code, body #content li > code {
   background-color: #ddd;
   padding: 0 0.3em;
 }
-/* line 147, sass/screen.scss */
+/* line 151, sass/screen.scss */
 body #content blockquote {
   margin-left: 0;
   padding-left: 2em;
   border-left: 0.3em solid #dddddd;
 }
-/* line 152, sass/screen.scss */
+/* line 156, sass/screen.scss */
 body #content blockquote p {
   font-style: italic;
 }
-/* line 157, sass/screen.scss */
+/* line 161, sass/screen.scss */
 body #content hr {
   margin: 3em auto 1em auto;
   padding: 0;
@@ -206,7 +205,7 @@ body #content hr {
   text-align: center;
   width: 60%;
 }
-/* line 166, sass/screen.scss */
+/* line 170, sass/screen.scss */
 body #content hr:after {
   content: "§";
   display: inline-block;
@@ -215,20 +214,24 @@ body #content hr:after {
   font-size: 1.5em;
   padding: 0 0.25em;
 }
-/* line 176, sass/screen.scss */
+/* line 180, sass/screen.scss */
 body #content > .blog:first-of-type {
   margin-top: 0;
 }
-/* line 180, sass/screen.scss */
+/* line 184, sass/screen.scss */
 body footer {
   padding-bottom: 2em;
 }
-/* line 182, sass/screen.scss */
+/* line 186, sass/screen.scss */
 body footer p {
   margin: 0;
 }
-/* line 187, sass/screen.scss */
+/* line 191, sass/screen.scss */
 body a {
   text-decoration: none !important;
   font-weight: 600;
+}
+/* line 196, sass/screen.scss */
+body .search_result .match {
+  background-color: #c2def4;
 }

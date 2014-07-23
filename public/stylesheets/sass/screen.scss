@@ -192,4 +192,8 @@ body {
     text-decoration: none !important;
     font-weight: 600;
   }
+
+  .search_result .match {
+    background-color: lighten(#6cafe4, 20%);
+  }
 }
