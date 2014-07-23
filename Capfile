@@ -4,6 +4,7 @@ set :stage, "production"
 
 set :application, 'interblah.net'
 server "interblah.net", roles: [:app], user: local_user
+# server "localdocker", roles: [:app], user: local_user
 
 set :local_docker, "localdocker:2375"
 set :index, "docker.lazyatom.com"
@@ -20,7 +21,8 @@ def ldocker(command)
   execute "docker -H #{fetch(:local_docker)} #{command}"
 end
 
-def apache_vhost_template(port)
+def apache_vhost_template(ports)
+  balancers = ports.map { |port| "BalancerMember http://127.0.0.1:#{port}" }.join("\n")
   <<-EOS
 <VirtualHost *:80>
   ServerName interblah.net
@@ -28,16 +30,41 @@ def apache_vhost_template(port)
 
   CustomLog /var/log/apache2/interblah.net.access.log combined
 
+  <Proxy balancer://interblah.net>
+    #{balancers}
+    ProxySet lbmethod=byrequests
+  </Proxy>
+
   <Location />
     Order deny,allow
     Allow from all
     Require all granted
 
     PassengerEnabled off
-    ProxyPass http://127.0.0.1:#{port}/
-    ProxyPassReverse http://127.0.0.1:#{port}/
+    ProxyPass balancer://interblah.net/
+    ProxyPassReverse balancer://interblah.net/
   </Location>
 </VirtualHost>
+  EOS
+end
+
+def nginx_vhost_template(ports)
+  balancers = ports.map { |port| "server 127.0.0.1:#{port};" }.join("\n")
+  <<-EOS
+upstream interblah.net {
+  #{balancers}
+}
+
+server {
+  gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+
+  server_name interblah.net;
+
+  location / {
+    proxy_pass http://interblah.net;
+    include /etc/nginx/proxy_params;
+  }
+}
   EOS
 end
 
@@ -84,8 +111,8 @@ namespace :docker do
       end
     end
 
-    def running_app_container_id
-      capture "sudo docker ps | grep '#{fetch(:application_image_tag)}' | cut -d ' ' -f1"
+    def running_app_container_ids
+      capture("sudo docker ps | grep '#{fetch(:application_image_tag)}' | cut -d ' ' -f1").split("\n").map(&:strip)
     end
 
     def get_host_port_for(container_id, container_port)
@@ -104,7 +131,7 @@ namespace :docker do
     end
 
     def start_container
-      capture "sudo docker run -d -P #{fetch(:application_image_tag)}"
+      sudo "docker run -d -P #{fetch(:application_image_tag)}"
     end
 
     def stop_container(container_id)
@@ -113,11 +140,13 @@ namespace :docker do
 
     task :update_web_server do
       on roles(:app) do
-        container_id = running_app_container_id
-        new_port = get_host_port_for(container_id, application_exposed_port)
-        log "Container running as #{Color.yellow new_container_id[0..12]}, on port #{Color.blue new_port}"
+        container_ids = running_app_container_ids
+        containers_to_ports = container_ids.inject({}) { |h, id| h[id] = get_host_port_for(id, application_exposed_port); h }
+        container_ports = containers_to_ports.values
+        info_string = containers_to_ports.map { |k,v| "#{Color.yellow(k[0..12])} (port #{Color.blue(v)})" }.join(", ")
+        log "Containers running: #{info_string}"
         log "Updating web server..."
-        update_web_server_config(new_port)
+        update_web_server_config(container_ports)
         reload_web_server
         log "Web server refreshed"
       end
@@ -138,12 +167,8 @@ namespace :docker do
     task :start do
       on roles(:app) do
         log "Starting new container..."
-        new_container_id = start_container
-        new_port = get_host_port_for(new_container_id, application_exposed_port)
-        log "New container #{Color.yellow new_container_id[0..12]}, on port #{Color.blue new_port}"
-        log "Updating web server..."
-        update_web_server_config(new_port)
-        reload_web_server
+        start_container
+        invoke "docker:remote:update_web_server"
         log "New container started and live"
       end
     end
