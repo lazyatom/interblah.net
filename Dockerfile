@@ -1,4 +1,4 @@
-FROM lazyatom/ruby-2.0
+FROM ruby:2.2.3
 
 RUN apt-get install -y python
 
