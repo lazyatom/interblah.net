@@ -53,7 +53,7 @@ However, any strings outside that scope are left unaffected:
 
 Refinements can also change methods that already exist
 
-{code ruby, ex2, 0, 11}
+{code ruby, ex2, 0, 10}
 
 When the refinement is active, it is used instead of the existing method (although the original is still available via the `super` keyword, which is very useful).
 
