@@ -13,7 +13,9 @@ In most cases the experiment has been largely successful. I'm pretty sure most p
 
 However -- and here I speak mainly for myself, although I know that [Murray](http://hlame.com) and [Tom](http://codon.com) feel largely similarly -- I'm not desperately interested in putting *bums-on-seats* once per solar revolution, just for the sake of it.
 
-I don't know what the next experiment is.
+And, more importantly: **I don't know what the next experiment is.**
+
+Do you?
 
 
 
