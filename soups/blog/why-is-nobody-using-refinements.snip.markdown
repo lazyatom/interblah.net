@@ -316,7 +316,7 @@ Monkey-patching is the act of modifying a class or object that we don't own -- t
 
 The danger that monkey-patching brings is that those changes are global -- they affect every part of the system as it runs. As a result, it can be very hard to tell which parts of our software will be affected.
 
-If we change the behaviour of an existing method to suit one use, there's a good chance that some distant part of the codebase -- perhaps hidden within Rails or another gem -- is going to call that method expecting the original behaviour (or it's own monkey-patched behaviour!), and things are going to get messy.
+If we change the behaviour of an existing method to suit one use, there's a good chance that some distant part of the codebase -- perhaps hidden within Rails or another gem -- is going to call that method expecting the original behaviour (or its own monkey-patched behaviour!), and things are going to get messy.
 
 Say I'm writing some code in a gem, and as part of that I want to be able to turn an underscored String into a camelized version. I might re-open the String class and add this simple, innocent-looking method to make it easy to do this transformation.
 
@@ -367,7 +367,7 @@ Onto my second example.
 
 ### Managing API changes
 
-Sometimes software we depend on changes it's behaviour. APIs change in newer versions of libraries, and in some cases even the language can change.
+Sometimes software we depend on changes its behaviour. APIs change in newer versions of libraries, and in some cases even the language can change.
 
 For example, in Ruby 2, the behaviour of the `chars` method on `String`s changed from returning an enumerator to returning an `Array` of single-character strings.
 
@@ -387,7 +387,7 @@ My third example is probably familiar to most people.
 
 ### DSLs
 
-One of the major strengths of Ruby is that it's flexibility can be used to help us write very expressive code, and in particular supporting the creation of DSLs, or “domain specific languages”. These are collections of objects and methods which have been designed to express concepts as closely as possible to the terminology used by non-programmers, and often designed to read more like human language than code.
+One of the major strengths of Ruby is that its flexibility can be used to help us write very expressive code, and in particular supporting the creation of DSLs, or “domain specific languages”. These are collections of objects and methods which have been designed to express concepts as closely as possible to the terminology used by non-programmers, and often designed to read more like human language than code.
 
 Adding methods to core classes can often help make DSLs more readable and expressive, and so refinements are a natural candidate for doing this in a way that doesn't leak those methods into other parts of an application.
 
