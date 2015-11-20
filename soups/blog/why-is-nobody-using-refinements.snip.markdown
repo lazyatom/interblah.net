@@ -31,7 +31,7 @@ By *limited and controlled*, I mean that adding or changing those methods does n
 
 Let’s look at a very simple example:
 
-{code ruby, ex1, 0, 7}
+{code ruby, ex1, 0, 6}
 
 Refinements are defined inside a module, using the `refine` method.
 
