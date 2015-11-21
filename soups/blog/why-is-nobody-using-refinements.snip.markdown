@@ -653,6 +653,7 @@ Please -- make a little time to explore Ruby. Maybe you’ll discover something 
 :kind: blog
 :created_at: 2015-11-15 12:11:09 -0600
 :updated_at: 2015-11-15 12:11:09 -0600
+:page_title: Why is nobody using Refinements?
 :ex1: |
   module Shouting
     refine String do
