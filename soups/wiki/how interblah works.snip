@@ -5,7 +5,7 @@ How Interblah Works
 
 From the server perspective, this site runs on a VPS, under Apache and Passenger. [interblah.net][] is an Apache virtual server; here's the config:
 
-{code apache,virtual-server-conf}
+{code virtual-server-conf, apache}
 
 The Alias directive is something I'll probably lose, now that `public` is a proper directory in a {l vanilla} application, but exists to support URLs from older incarnations of the site; likewise for the Redirects, which handle old Mephisto URLs.
 

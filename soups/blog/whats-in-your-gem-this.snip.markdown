@@ -3,7 +3,7 @@ What's in your `~/.gem-this`?
 
 As of the version I just deployed (0.3.5), [gem-this][] now lets you include any common rake tasks you might reuse in any `Rakefile`s it generates. Just drop your code in `~/.gem-this`. Here's mine, based on some code we use in [Free Range][]:
 
-{code ruby,mygemthis}
+{codemygemthis}
 
 One of my pain points with other tools like [Jeweler][], [hoe][] and so on is that they worked so very hard at defining a workflow for development. They are ["too opinionated" for my taste][ruby-manor-talk]. The [gem-this][] ethos is that you should craft your own, and now it's that little bit easier.
 

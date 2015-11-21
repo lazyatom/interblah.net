@@ -53,7 +53,7 @@ Perhaps, I wondered, there was a better way of structuring the tests that would 
 
 The problem was that the tests above were conflating the "setup" with the "action" that was being tested. Perhaps they are different? The first idea that popped into my head was sketched like this:
 
-{code ruby,should_change}
+{codeshould_change}
 
 That seems to avoid the "ugly" nested context, and is simultaneously clearer about what we're actually interested in testing here.
 
@@ -69,7 +69,7 @@ Perhaps the `should_change` aspect is a *red herring*.
 
 What was really driving the exploration of `action` was avoiding repetitive tests where some parameters of some action were changing:
 
-{code ruby,controller_test}
+{codecontroller_test}
 
 The `action` is called after all the (nested) setups for a test have run, but just before the test itself. We can log a user in, and set the attributes used in the action, or we can not log anyone in, and in each case write regular tests to describe how the object should behave.
 

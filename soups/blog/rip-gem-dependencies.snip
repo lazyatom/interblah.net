@@ -5,16 +5,16 @@ __Update:__ my changes have been merged into rip by [Chris][Chris Wanstrath]. Ni
 
 _The good stuff is [here][my-fork], my ADD-addled friends_
 
-I've just spent a bit of time kicking the tyres of [Rip][], an alternative package manager by [Chris Wanstrath][]. 
+I've just spent a bit of time kicking the tyres of [Rip][], an alternative package manager by [Chris Wanstrath][].
 
-If you've done any Rails development recently, and tried to keep a vendor directory of gems in order, you'll know the pain that almost certainly inspired the [Rip][] project. 
+If you've done any Rails development recently, and tried to keep a vendor directory of gems in order, you'll know the pain that almost certainly inspired the [Rip][] project.
 
 While there are already some alternatives ([bundler][], [dependencies][]), I like the elegant and lo-fi approach that [Rip][] takes.
 
 
 ### Environments
 
-Rip lets you partition the dependencies you install into seperate 'environments'. When an environment is active, the installed versions are the *only* ones that running code will be able to load. So, if you have one project that needs a specific version of {l soup}, for example, you can install that version in an environment for that project. 
+Rip lets you partition the dependencies you install into seperate 'environments'. When an environment is active, the installed versions are the *only* ones that running code will be able to load. So, if you have one project that needs a specific version of {l soup}, for example, you can install that version in an environment for that project.
 
 In your default environment, you can continue to upgrade/downgrade/play about with the gems and libraries that are installed, but as long as you activate the other, known-good environment when you are working with {l soup}, you can be sure that none of the new versions will interfere. Each environment is like a sandbox.
 
@@ -23,7 +23,7 @@ Unsurprisingly, it's a lot like the [cheap branching that git brings][cheap-bran
 
 ### The elegance of Rip
 
-I said above that I thought Rip was elegant, and that's because these environments are just subdirectories which are added to the `$RUBYLIB` environment variable. This becomes part of the `$LOAD_PATH` for your Ruby process. Regular `require` statements will work as expected, and you don't even need to `require "rubygems"` (which, it seems, [we shouldn't be doing anyway][dont-require-rubygems]). 
+I said above that I thought Rip was elegant, and that's because these environments are just subdirectories which are added to the `$RUBYLIB` environment variable. This becomes part of the `$LOAD_PATH` for your Ruby process. Regular `require` statements will work as expected, and you don't even need to `require "rubygems"` (which, it seems, [we shouldn't be doing anyway][dont-require-rubygems]).
 
 All Rip really does is try to ensure that the 'active' environment is injected into the `$RUBYLIB`; switching environments is really just moving a symlink; and the rest of the code deals with nuts and bolts of actually downloading libraries of code from various sources. Very simple, as most good things are.
 
@@ -34,7 +34,7 @@ All in all, when it works it's a very pleasant development tool to use, and you 
 Gem dependencies
 ---------------
 
-[Rip][] works with git repositories, directories on the local filesystem, or over HTTP, and has rudimentary support for install rubygems too. 
+[Rip][] works with git repositories, directories on the local filesystem, or over HTTP, and has rudimentary support for install rubygems too.
 
 However, the current version (0.0.3) doesn't install any gem dependencies. So, if I want to play about with [monk][], which I did want to do today, Rip is only going to download the `monk` gem itself, and not any of its dependencies. It's actually going to be a bit of a pain to even find out what the dependencies are.
 
@@ -43,13 +43,13 @@ If I'm going really start putting Rip through its paces, I need to be able to qu
 
 ### Time to stop whining
 
-So, today I rolled up my sleeves and taught Rip [how to download gem dependencies too][my-fork]. 
+So, today I rolled up my sleeves and taught Rip [how to download gem dependencies too][my-fork].
 
 It wasn't quite as easy as I hoped - it took me a bit of head-scratching to really figure out the relationship between Packages, the PackageManager, the Installer and the two GemPackages, but thanks to a bit of help from [Gabriel Horner's previous work][cldwalker], I have it working in a reasonably stable way.
 
 Here's [my fork of rip][my-fork] installing Rails:
 
-{code shell,installing-rails}
+{code installing-rails, shell}
 
 
 Next steps
@@ -63,7 +63,7 @@ Now, to finally start playing with [monk][]...
 
 (oh, btw, here's rip installing monk; I don't know why the dependencies gem needs wycats-thor...)
 
-{code shell,installing-monk}
+{code installing-monk, shell}
 
 
 Another update, a few days later
@@ -97,31 +97,31 @@ No dice. The simple solution we've adopted is to download the gem at the specifi
 
     $ gem fetch rails --version="2.2.2"
     Downloaded rails-2.2.2
-    $ gem specification rails-2.2.2.gem 
-    --- !ruby/object:Gem::Specification 
+    $ gem specification rails-2.2.2.gem
+    --- !ruby/object:Gem::Specification
     name: rails
-    version: !ruby/object:Gem::Version 
+    version: !ruby/object:Gem::Version
       version: 2.2.2
     platform: ruby
-    authors: 
+    authors:
     - David Heinemeier Hansson
-    autorequire: 
+    autorequire:
     bindir: bin
     cert_chain: []
 
     date: 2008-11-20 23:00:00 +00:00
     default_executable: rails
-    dependencies: 
-    - !ruby/object:Gem::Dependency 
+    dependencies:
+    - !ruby/object:Gem::Dependency
       name: rake
       type: :runtime
-      version_requirement: 
-      version_requirements: !ruby/object:Gem::Requirement 
-        requirements: 
+      version_requirement:
+      version_requirements: !ruby/object:Gem::Requirement
+        requirements:
         - - ">="
-          - !ruby/object:Gem::Version 
+          - !ruby/object:Gem::Version
             version: 0.8.3
-        version: 
+        version:
     (etc)
 
 
@@ -131,7 +131,7 @@ One of the selling points of [rip][] is that dependency issues are resolved when
 
 However, this means that my `monkrb` example doesn't work anymore, because of the `wycats-thor` dependency:
 
-{code shell,installing-monk-2}
+{code installing-monk-2, shell}
 
 The solution here isn't really clear. I think that the `dependencies` gem shouldn't really depend on a user-specific version of `thor`, and there's some kind of irony there. One way to proceed might be to add a new flag to `rip install`, something like `rip install --no-dependencies` which only installs the package in question and ignores its dependencies.
 

@@ -7,7 +7,7 @@ I've come to the conclusion that integrating with something like this is basical
 
 It seems pretty trivial to integrate with a Rails application -- just run a generator to create the initializer complete with API key. However, I had to do a bit more work to hook it into a Rack application (which is what {l vanilla} is). In my `config.ru`:
 
-{code ruby, raygun-rack}
+{code raygun-rack}
 
 The documentation for this is available on the [Raygun.io site](http://raygun.io), but at the moment the actual documentation link on their site points to [a gem](https://github.com/j-mcnally/RaygunRuby), which more-confusingly isn't actually [the gem](https://github.com/MindscapeHQ/raygun4ruby) that you will have installed. Reading the documentation in the gem README also reveals how to integrate with Resque, to catch exceptions in background jobs.
 

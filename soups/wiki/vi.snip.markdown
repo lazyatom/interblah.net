@@ -30,7 +30,7 @@ In programmer land, [waiting for feedback][compiling] is the norm. Even with [dy
 
 In {l inventing-on-principle}, {l bret-victor} talks about how programmers go about understanding code -- for example, a simple binary search:
 
-{code ruby, binarysearch}
+{code binarysearch}
 
 > Binary search looks like this&hellip; and from my perspective you can't see anything here. I see the word 'array', but I don't **actually see** an array. And so, in order to write code like this, you have to **imagine** an array in your head.
 >
@@ -95,4 +95,4 @@ What `vi` is asking me to do is think about the raw contents of those files as y
     end
 
     return nil
-  end"
+  end

@@ -14,7 +14,7 @@ A simple MiniTest example
 
 Let's say you have the following test case:
 
-{code ruby,minitest_example}
+{codeminitest_example}
 
 This test is obviously *extremely* dull and pointless, but it contains just enough to exercise the major parts of MiniTest that I care about.
 
@@ -61,7 +61,7 @@ So, an instance of `MiniTest::Unit` was created in the unit test, which then cal
 
 The default `_run` method parses the `ARGV` into arguments (which we'll ignore right now since in our example they are empty) and then loops through the `plugins` (another modifiable property of `MiniTest::Unit` class), which is really just an array of strings which correspond to methods on the `MiniTest::Unit` "runner" instance. By default, this is all methods which match `run_*`, and unless you've loaded extensions to MiniTest, it is just `run_tests`:
 
-{code ruby,plugins}
+{codeplugins}
 
 The `run_tests` method calls the `_run_anything` method with the argument `:tests`. Within `_run_anything`, the argument is used to select the set of "suites" by kind ("test" suites or "bench" suites, but basically the classes that contain your actual tests).
 
@@ -73,14 +73,14 @@ The test suites, a.k.a `TestCase` subclasses, a.k.a. your actual tests
 
 Take another look at the content of our test file:
 
-{code ruby,minitest_example,2}
+{codeminitest_example,2}
 
 
 When we subclassed `MiniTest::Unit::TestCase` as `SomethingTest`, the `inherited` hook on the superclass is called by Ruby with `SomethingTest` as an argument.
 
 This stashes a reference to the class `SomethingTest` in an class variable[^why-a-hash]. The `TestCase.test_suites` method that we were looking at above returns all those subclasses, sorted by name:
 
-{code ruby,test_suites}
+{codetest_suites}
 
 
 Running a "suite"[^suite]
@@ -90,13 +90,13 @@ Back in the `_run_anything` method, those suites are passed to the `_run_suites`
 
 The `_run_suite` method is responsible for selecting those tests within a suite (returned by the `test_methods` method on your `TestCase` subclass) which match any filters (i.e. `-n /test_something/`).
 
-{code ruby,test_methods}
+{codetest_methods}
 
 The default filter is `/./`, which will match everything that `test_methods` returns. For each matching method name, it instantiates a new instance of your suite class, with the method name as an argument to the intialiser, i.e. `SomethingTest.new("test_something")`.
 
 The `run` method is then called on that instance, with the runner (the instance of `MiniTest::Unit` that was returned by `MiniTest::Unit.runner`) as an argument. If you wanted to do the same in the console, it basically amounts to this:
 
-{code ruby,running_single_test}
+{coderunning_single_test}
 
 
 An actual test running
@@ -104,15 +104,15 @@ An actual test running
 
 We're now at the point where the code from your test is significantly involved. Within the `run` method, the following methods are called[^plugin-hooks]:
 
-* `setup` -- this is the method defined in *your* `TestCase` subclass. In our example, this results in the instance variable `@something` being set: {code ruby,minitest_example,3,6}
-* `run_test`, with the test name that passed to the initializer as an argument. This method is simply an alias for `__send__`, so the effect is that the method corresponding to your test name is invoked. In our case, the body of `test_something` runs: {code ruby,minitest_example,7,10}
+* `setup` -- this is the method defined in *your* `TestCase` subclass. In our example, this results in the instance variable `@something` being set: {codeminitest_example,3,6}
+* `run_test`, with the test name that passed to the initializer as an argument. This method is simply an alias for `__send__`, so the effect is that the method corresponding to your test name is invoked. In our case, the body of `test_something` runs: {codeminitest_example,7,10}
 * `runner.record` -- this passes information about the name of the test, how long it took and how many assertions were called back to the runner instance
 
 If we reach this point in the method, it means that the test method returned without raising any exceptions, and so the test is recorded as a pass.
 
 However, if an exception was raised -- either by the test, or by a failing assertion -- then the test is marked as a failure, and the exception is passed as an argument in a corresponding call to `runner.record`.
 
-* `teardown` -- This method is run via an `ensure` block, so that it will be invoked whether or not an exception occured. In our example, the `@something` instance variable is set to nil: {code ruby,minitest_example,11,13}
+* `teardown` -- This method is run via an `ensure` block, so that it will be invoked whether or not an exception occured. In our example, the `@something` instance variable is set to nil: {codeminitest_example,11,13}
 
 Various other things happen, but this is the essential core of how MiniTest works: an instance of your `TestCase` subclass is created, and then the setup, test and teardown methods are invoked on it.
 
@@ -131,11 +131,11 @@ Back up into MiniTest
 
 Once the `run` method finishes, the result is printed out, and the number of assertions stored on the instance is collected. The test method names that we were iterating over -- the result of `SomethingTest.test_methods` above -- are sequentially *mapped* into this number of assertions, and the final returned value of the `_run_suite` method is a two element array, the first being the number of tests and the second being the total number of assertions, for each test that ran. In our example, this would be `[1,1]` -- one test and one assertion in total:
 
-{code ruby,_run_suite}
+{code_run_suite}
 
 Back up in the `_run_suites` method, each `TestCase` is being mapped via into this pair of numbers:
 
-{code ruby,_run_suites}
+{code_run_suites}
 
 Back up one level further in the `_run_anything` method, those numbers are summed to return the total number of tests and the total number of assertions, across the whole run of test suites. Finally, these numbers are printed out, and then any failures that were gathered by the calls to `runner.record` when each test was running.
 
@@ -151,7 +151,7 @@ Running tests within the console
 
 We've actually seen already how we could start to poke around with tests without running them all. We can run a single test relatively easily, and determine whether or not it passed:
 
-{code ruby,running_single_test}
+{coderunning_single_test}
 
 Unfortunately, there's no simple way to run a group of tests (a "suite" or a "testcase" or what have you) aside from using the runner to specify a filter based on names. In other words, there's no behaviour inherent within the `TestCase` class that lets you examine the result of the tests it contains. The information about which test failed, and why, leaves the instance when `runner.report` is called, and it's only the `runner` that "knows" (in a very, very weak sense) about the state of more than just the test that is running now.
 
@@ -187,17 +187,17 @@ I've often imagined that it would be very useful if, when a test fails, you got 
 
 How about this:
 
-{code ruby,test_environment,0,26}
+{codetest_environment,0,26}
 
 We can see that the test failed, but now we can also look at the instance variables within that test:
 
-{code ruby,test_environment,27,29}
+{codetest_environment,27,29}
 
 In this test it's pretty trivial, but maybe you can imagine that being useful when you have a ton of ActiveRecord objects flying around? Particularly if you also patch whatever is outputting your test results to print the contents of `environment` for all failing tests.
 
 If you're curious, you can also take a look at the other instance variables that MiniTest has created behind the scenes, mostly prefixed with `_` to indicate an informal 'privacy':
 
-{code ruby,test_environment,30,32}
+{codetest_environment,30,32}
 
 Perhaps this might be worth developing into something useful? Maybe. It's very much related to the other ideas that I've had about {l rerunning-tests-in-ruby}.
 

@@ -1,4 +1,4 @@
-{code ruby,idea-1}
+{codeidea-1}
 
 :render_as: ""
 :created_at: 2008-08-19 11:39:27 +01:00
@@ -6,11 +6,11 @@
   # If we build our ActiveRecord objects from attributes that had *real* classes, we could
   # define the validation, and any other behaviour, in that attribute class. Would this
   # make things like "blog url", "name", and "address" reusable?
-  
+
     composed_of EditorialSummary, :called => :editorial_summary
     composed_of Url, :called => :image_url
     composed_of Address, :something => [:address_line_1, :address_line_2, :postcode, :country]
-  
+
     class EditorialSummary < Attribute
       def initialize(string)
         @string = string
@@ -22,7 +22,7 @@
         # whatever
       end
     end
-  
+
     def editorial_summary
       EditorialSummary.new(super)
     end

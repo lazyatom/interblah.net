@@ -69,7 +69,7 @@ Secondly and far more usefully, the Twine pings the URL of a very, very simple s
 
 [Here's the code](https://github.com/lazyatom/pinky-status), but it's probably clearest to view [an earlier Sinatra version](https://github.com/lazyatom/pinky-status/blob/4840df8130c487701288cead7519f0de6e3b64d8/app.rb) than the current Rails implementation:
 
-{code ruby, sinatra-server}
+{code sinatra-server}
 
 The key part is at the very bottom -- as Twine makes a `POST` request, the server simply creates another `Event` record with an alternating `status` ('in' or 'out'), and then some logic in the view (not shown) can tell us whether or not the cat is in or out of the house.
 

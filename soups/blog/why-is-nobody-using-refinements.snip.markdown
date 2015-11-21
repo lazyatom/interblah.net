@@ -31,7 +31,7 @@ By *limited and controlled*, I mean that adding or changing those methods does n
 
 Let’s look at a very simple example:
 
-{code ruby, ex1, 0, 6}
+{code ex1, ruby, 0, 6}
 
 Refinements are defined inside a module, using the `refine` method.
 
@@ -39,7 +39,7 @@ This method accepts a class -- `String`, in this case -- and a block, which cont
 
 To use a refinement, we call the `using` method with the name of the enclosing module.
 
-{code ruby, ex1, 7, 11}
+{code ex1, ruby, 7, 11}
 
 When we do this, all instances of that class, within the same scope as our `using` call, will have the refined methods available.
 
@@ -47,21 +47,21 @@ Another way of saying that is that the refinement has been "activated" within th
 
 However, any strings outside that scope are left unaffected:
 
-{code ruby, ex1, 12, 12}
+{code ex1, ruby, 12, 12}
 
 #### Changing existing methods
 
 Refinements can also change methods that already exist
 
-{code ruby, ex2, 0, 10}
+{code ex2, ruby, 0, 10}
 
 When the refinement is active, it is used instead of the existing method (although the original is still available via the `super` keyword, which is very useful).
 
-{code ruby, ex2, 11, 16}
+{code ex2, ruby, 11, 16}
 
 Anywhere the refinement isn't active, the original method gets called, exactly as before.
 
-{code ruby, ex2, 17, 17}
+{code ex2, ruby, 17, 17}
 
 And that’s really all there is to refinements -- two new methods, `refine`, and `using`.
 
@@ -73,51 +73,51 @@ Now we know that we can call the `refine` method within a module to create refin
 
 We’ve seen that invoking `using` inside a class definition works. We activate the refinement, and we can call refined methods on a String instance:
 
-{code ruby, ex3a}
+{code ex3a}
 
 But we can also move the call to `using` somewhere outside the class, and still use the refined method as before.
 
-{code ruby, ex3b}
+{code ex3b}
 
 In the examples so far we’ve just been calling the refined method directly, but we can also use them within methods defined in the class.
 
-{code ruby, ex4a}
+{code ex4a}
 
 Again, even if the call to `using` is outside of the class, our refined behaviour still works.
 
-{code ruby, ex4b}
+{code ex4b}
 
 But this doesn’t work:
 
-{code ruby, ex5}
+{code ex5}
 
 We can’t call `shout` on the String returned by our method, even though that String object was created within a class where the refinement was activated.
 
 And here’s another broken example:
 
-{code ruby, ex6}
+{code ex6}
 
 We’ve activated the refinement inside our class, but when we reopen the class and try to use the refinement, we get `NoMethodError` again.
 
 If we nest a class within another where the refinement is active, it seems to work:
 
-{code ruby, ex7}
+{code ex7}
 
 But it doesn’t work in subclasses:
 
-{code ruby, ex8}
+{code ex8}
 
 Unless they are also nested classes:
 
-{code ruby, ex9}
+{code ex9}
 
 And even though nested classes work, if you try to define a nested class using the “double-colon” or “compact form”, our refinements have disappeared again:
 
-{code ruby, ex10}
+{code ex10}
 
 Even blocks might seem to act strangely:
 
-{code ruby, ex11}
+{code ex11}
 
 Our class uses the refinement, but when we pass a block to a method in that class, suddenly it breaks.
 
@@ -320,7 +320,7 @@ If we change the behaviour of an existing method to suit one use, there's a good
 
 Say I'm writing some code in a gem, and as part of that I want to be able to turn an underscored String into a camelized version. I might re-open the String class and add this simple, innocent-looking method to make it easy to do this transformation.
 
-{code ruby, ex12}
+{code ex12}
 
 Unfortunately, as soon as anyone tries to use my gem in a Rails application, their test suite is going to go from passing, not to failing but to ENTIRELY CRASHING with a very obscure error:
 
@@ -371,7 +371,7 @@ Sometimes software we depend on changes its behaviour. APIs change in newer vers
 
 For example, in Ruby 2, the behaviour of the `chars` method on `String`s changed from returning an enumerator to returning an `Array` of single-character strings.
 
-{code ruby, ex13}
+{code ex13}
 
 Imagine we’re migrating an application from Ruby 1.9 to Ruby 2 (or later), and we discover that some part of our application which depends on calling `chars` on a String and expecting an enumerator to be returned.
 
@@ -379,7 +379,7 @@ If some parts of our software rely on the old behaviour, we can use refinements 
 
 Here’s a simple refinement which we could activate for only the code which depends on the Ruby 1.9 behaviour:
 
-{code ruby, ex14}
+{code ex14}
 
 The rest of the system remains unaffected, and any dependencies that expect the Ruby 2 behaviour will continue to work into the future.
 
@@ -395,7 +395,7 @@ Adding methods to core classes can often help make DSLs more readable and expres
 
 RSpec is a great example of a DSL for testing. Until recently, this would've been a typical example of RSpec usage:
 
-{code ruby, ex15a}
+{code ex15a}
 
 One hallmark is the emphasis on writing code that reads fluidly, and we can see that demonstrated in the line `developer.should be_happy`, which while valid Ruby, reads more like English than code. To enable this, RSpec used monkey-patching to add a `should` method to all objects.
 
@@ -403,7 +403,7 @@ Recently, RSpec moved away from this DSL, and while I cannot speak for the devel
 
 However, refinements offer a compromise that balances the readability of the original API with the integrity of our objects.
 
-{code ruby, ex15b}
+{code ex15b}
 
 It’s easy to add a `should` method to all objects in your spec files using a refinement, but this method doesn’t leak out into the rest of the codebase.
 
@@ -423,7 +423,7 @@ We might also be able to harness refinements as a design pattern of sorts, and u
 
 For example, consider a Rails application with a model that has some "dangerous" or "expensive" method.
 
-{code ruby, ex16}
+{code ex16}
 
 By using a refinement, the only places we can call this method are where we've explicitly activated that refinement.
 
@@ -552,7 +552,7 @@ There are a number of quirks or unexpected gotchas that you will encounter if yo
 
 For example, even when a refinement is activated, you cannot use methods like `send` or `respond_to?` to check for refined methods. You also can’t use them in convenient forms like `Symbol#to_proc`.
 
-{code ruby, ex17}
+{code ex17}
 
 You can also get into some really weird situations if you try to include a module into a refinement, where methods from that module cannot find other methods define in the same module.
 
@@ -578,7 +578,7 @@ And, from our perspective here, there’s nothing you can do with refinements th
 
 For example, rather than adding a “shout” method to all Strings, we could introduce a new class that only knows about shouting, and wrap any strings we want shouted in instances of this new class.
 
-{code ruby, ex18}
+{code ex18}
 
 I don’t want to discuss whether or not this is actually better than the refinement version, partly because this is a trivial example, so it wouldn’t be realistic to use, but mostly because I think there’s a more interesting point.
 

@@ -7,7 +7,7 @@ Michael moved on from Stikkit a while ago, and it seems that [Rael Dornfest][rae
 
 While I'll miss the service, I'll miss my data more, so I hacked up this little script to export my data. Rael promised export utilities, but it doesn't seem like any bulk export for Stikkit is forthcoming, so I've written something to handle it myself.
 
-{code ruby,export-rb}
+{codeexport-rb}
 
 I'm hoping to import it into {l vanilla-rb} (the application that powers this here blog) at some point, and alter my {l stikkit-dashboard-widget} to post against this instead. Anyway - save your data while you still can!
 
@@ -29,10 +29,10 @@ I'm hoping to import it into {l vanilla-rb} (the application that powers this he
   require 'net/http'
   require 'rubygems'
   require 'json'
-  
+
   EMAIL = "your@email.com"
   PASSWORD = "yourpassword"
-  
+
   def get_stikkits(page = 1)
     response = Net::HTTP.start('api.stikkit.com') { |http|
       req = Net::HTTP::Get.new("/stikkits.json?page=" + page)
@@ -41,14 +41,14 @@ I'm hoping to import it into {l vanilla-rb} (the application that powers this he
     }
     JSON.parse(response.body)
   end
-  
+
   stikkits = []
   page = 1
   until (page_of_stikkits = get_stikkits(page)).empty?
     stikkits += page_of_stikkits
     page += 1
   end
-  
+
   File.open('stikkits.yml', 'w') { |f| f.write stikkits.to_yaml }
   puts "Saved stikkits: " + stikkits.map { |s| s['name'] }.join(', ') }
 :name: exporting-from-stikkit
