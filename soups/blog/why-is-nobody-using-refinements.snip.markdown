@@ -457,7 +457,7 @@ I actually asked another of the speakers at RubyConf2015 --- who will remain nam
 
 As if it was a fact.
 
-Now, my initial reaction to this kind of answer is [somewhat emotionally charged](/images/refinements/refinements.096.jpeg), but my actual answer was more like:
+Now, my initial reaction to this kind of answer is [somewhat emotionally charged](/images/refinements/refinements.097.jpeg), but my actual answer was more like:
 
 > “Are they? Why do you think that?”
 
@@ -603,6 +603,8 @@ _Because other people told us they are “bad”._
 ## Conclusion-ish
 
 Let me make a confession.
+
+![](/images/refinements/refinements.124.jpeg)
 
 When I said “this is not a sales pitch for refinements”, I really meant it. I’m fully open to the possibility that it might never be a good idea to use them. I think it’s unlikely, but it’s certainly possible.
 
