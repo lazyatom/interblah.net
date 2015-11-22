@@ -19,7 +19,7 @@ But don’t get me wrong - this is not a sales pitch for refinements! I am not g
 
 The title of this presentation is “_Why_ is nobody using refinements?” and that’s a genuine question. I don’t have all the answers!
 
-My only goal is that, by the end of this, both you and I will have a better understand of what they actually are, what they can actually do, when they might be useful and why it might be that they’ve lingered in the background for so long.
+My only goal is that, by the end of this, both you and I will have a better understanding of what they actually are, what they can actually do, when they might be useful and why it might be that they’ve lingered in the background for so long.
 
 ## What are refinements?
 
@@ -494,9 +494,9 @@ As I told you right at the start, I don’t have a neatly packaged answer, and m
 
 ### 1. Lack of understanding?
 
-While refinements have been around for almost five years, the refinements you see now are not the same as those that were introduced half a decade ago. Originally, they weren’t strictly lexically scoped, and while this provides some opportunity for more elegant code that what we’ve seen today -- think not having to writing `using` at the top of every RSpec file, for example -- it also breaks the guarantee that refinements cannot affect distant parts of a codebase.
+While refinements have been around for almost five years, the refinements you see now are not the same as those that were introduced half a decade ago. Originally, they weren’t strictly lexically scoped, and while this provides some opportunity for more elegant code than what we’ve seen today -- think not having to writing `using` at the top of every RSpec file, for example -- it also breaks the guarantee that refinements cannot affect distant parts of a codebase.
 
-It’s also probably true that lexical scope is not a familiar concept for many Ruby developers. I’m not ashamed to say that even though I’ve been using Ruby for over 13 years, it’s only recently that I really understood what lexical scope is actually about. I think you can probably make a lot of money writing Rails applications without every really caring about lexical scope, and yet, without understanding it, refinements will always seem like confusing and uncontrollable magic.
+It’s also probably true that lexical scope is not a familiar concept for many Ruby developers. I’m not ashamed to say that even though I’ve been using Ruby for over 13 years, it’s only recently that I really understood what lexical scope is actually about. I think you can probably make a lot of money writing Rails applications without ever really caring about lexical scope, and yet, without understanding it, refinements will always seem like confusing and uncontrollable magic.
 
 The evolution of refinements hasn’t been smooth, and I think that’s why some people might feel like “nobody knows how they work or what problem they solve”. It doesn’t help, for example, that a lot of the blog posts you’ll find when you search for “refinements” are no longer accurate.
 
@@ -562,7 +562,7 @@ Even so, they are unintuitive and it could be that aspects like these are a fact
 
 ### 5. Refinements solve a problem that nobody has?
 
-As easy as it is for me to stand up here and make a logical and rational argument about why monkey-patching is bad, and wrong, and breaks things, it’s impossible to deny that fact that even since the start you started reading this page, software written using libraries that rely heavily on monkey-patching has made literally millions of dollars.
+As easy as it is for me to stand up here and make a logical and rational argument about why monkey-patching is bad, and wrong, and breaks things, it’s impossible to deny that fact that even since you started reading this page, software written using libraries that rely heavily on monkey-patching has made literally millions of dollars.
 
 So maybe refinements solve a problem that nobody actually has. Maybe, for all the potential problems that monkey patching might bring, the solutions we already have for managing those problems -- test suites, for example -- are already doing a good enough job at protecting us.
 
@@ -586,7 +586,7 @@ While good O-O design brings a lot of tangible benefits to software development,
 
 And the right balance of explicitness and expressiveness will be different for different teams, or for different projects. Not everyone who interacts with software is a developer, let alone someone trained in software design, and so not everybody can be expected to easily adopt sophisticated principles with ease.
 
-Software is for its users and sometimes the cost making them deal with extra objects or methods might not be worth the benefit in terms of design purity. It is -- like so many things -- often subjective.
+Software is for its users and sometimes the cost of making them deal with extra objects or methods might not be worth the benefit in terms of design purity. It is -- like so many things -- often subjective.
 
 To be clear -- I’m not in any way arguing that O-O design is not good; I’m simply wondering, whether or not it being good necessarily means that other approaches should not be considered in some situations.
 
