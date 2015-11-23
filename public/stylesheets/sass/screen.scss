@@ -196,4 +196,9 @@ body {
   .search_result .match {
     background-color: lighten(#6cafe4, 20%);
   }
+
+  iframe.video {
+    width: 39em;
+    height: 22em;
+  }
 }

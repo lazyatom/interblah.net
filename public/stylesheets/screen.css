@@ -235,3 +235,8 @@ body a {
 body .search_result .match {
   background-color: #c2def4;
 }
+
+body iframe.video {
+  width: 39em;
+  height: 22em;
+}

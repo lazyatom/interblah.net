@@ -1,7 +1,9 @@
 Why is nobody using Refinements?
 ================================
 
-_This is a transcript of a presentation I gave at [RubyConf 2015](http://rubyconf.org); the actual slides are [here](https://speakerdeck.com/lazyatom/why-is-nobody-using-refinements); the video should be available shortly._
+<iframe class="video" src="http://www.youtube.com/embed/qXC9Gk4dCEw?fs=1&amp;enablejsapi=1&amp;origin=http:%2F%interblah.net" id="widget2"></iframe>
+
+_This is a transcript of a presentation I gave at [RubyConf 2015](http://rubyconf.org); the actual slides are [here](https://speakerdeck.com/lazyatom/why-is-nobody-using-refinements); the [video is from confreaks](http://confreaks.tv/videos/rubyconf2015-why-is-nobody-using-refinements)._
 
 ![](/images/refinements/refinements.001.jpeg)
 
