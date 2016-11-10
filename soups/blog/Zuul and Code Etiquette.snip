@@ -5,13 +5,13 @@ Zuul and Code Etiquette
 
 When you requre `zuul.rb`, the following code is run:
 
-{codezuul}
+{code zuul}
 
 Why is it adding this behaviour to `Class`, instead of `ActiveRecord::Base`? The code to do the latter is even [commented out above][comment]!
 
 By doing this, now every object now gains a `valid_roles` method, but this method calls `ActiveRecord` methods internally, so it's not actually possible to call it on a 'normal' Ruby object without matching `ActiveRecord`'s API:
 
-{codevalid_roles}
+{code valid_roles}
 
 In my opinion, this is pretty rude. If you were to ask any instance if it responds to `valid_roles` now, they will always say 'yes!' enthusiastically, leaving your code completely obliviously to the fact that calling that method will blow up completely.
 

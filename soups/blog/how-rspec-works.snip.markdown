@@ -13,7 +13,7 @@ A simple RSpec example
 
 Here's a simple RSpec example.
 
-{coderspec_example}
+{code rspec_example}
 
 This is obviously *extremely* dull and pointless -- just like the {l how-minitest-works,minitest one} -- but it contains just enough to exercise the major parts of RSpec that I care about. It's actually slightly more sophisticated than the example that I used for MiniTest, because RSpec provides a couple of notable features that MiniTest doesn't provide. Specifically, these are `before :all` setup blocks, and nested groups of tests[^minitest-nesting][^other-rspec-features].
 
@@ -68,11 +68,11 @@ Your example groups
 
 Consider our example spec again. At the top we have a call to `describe`:
 
-{coderspec_example,2,2}
+{code rspec_example,2,2}
 
 The `describe` method is actually defined within the module `RSpec::Code::DSL`, but this module is extended into `self` at the top level of the running Ruby interpreter (which is `main`, a singleton instance of `Object`), making the methods in that module available to call in your spec files. You can actually see all of the modules that have been extended into this instance:
 
-{codemain}
+{code main}
 
 From this we can tell that the ancestors of `Object` are still just `Kernel` and `BasicObject`, but the ancestors of the specific *instance* `main` includes a few extra modules from RSpec. Anyway, moving on...
 
@@ -80,11 +80,11 @@ From this we can tell that the ancestors of `Object` are still just `Kernel` and
 
 The `describe` method in `RSpec::Core::DSL` passes its arguments straight through to `RSpec::Core::ExampleGroup.describe`. This is where things get a little *interesting*. Within this inner `describe` method, a *subclass* of `RSpec::Code::ExampleGroup` is created, and given a generated name.
 
-{codeexample_group_constants}
+{code example_group_constants}
 
 The class that was created is there: `Nested_1`. For each `describe` at the top level, you'll have a new generated class:
 
-{codeexample_group_constants_2}
+{code example_group_constants_2}
 
 After each subclass is created, it is "set up" via the `set_it_up` method, which roughly speaking adds a set of *metadata* about the group (such as which file and line it was defined upon, and perhaps some information about the class if it was called in the form `describe SomeClass do ...`), and stashes that within the created subclass.
 
@@ -94,7 +94,7 @@ More importantly, however, the block which was passed to `describe` is evaluated
 
 The effect of using `module_eval` against a class is that the contents of the passed block are evaluated essentially *as if they were within the definition of that class itself*:
 
-{codemodule_eval}
+{code module_eval}
 
 You can see above that the behaviour is effectively the same as if we'd defined the `hello?` method within the `Lionel` class without any "metaprogramming magic"[^magic].
 
@@ -102,15 +102,15 @@ You can see above that the behaviour is effectively the same as if we'd defined 
 
 It's because of `module_eval` that you can define methods within example groups:
 
-{codemethod_in_example_group}
+{code method_in_example_group}
 
 These methods are then effectively defined as part of the `Nested_1` class that we are implicitly creating. This means that methods defined in this way can be called from within your specs:
 
-{codemethod_in_example_group_called_in_spec}
+{code method_in_example_group_called_in_spec}
 
 We'll see how this actually works a bit later. Knowing that the contents of the `describe` block are effectively evaluated within a class definition also explains what's happening when the `before` methods are called:
 
-{coderspec_example,3,9}
+{code rspec_example,3,9}
 
 Because this is evaluated as if it was written in a class definition, then `before` must be a method available on the `ExampleGroup` class. And indeed it is -- `RSpec::Code::ExampleGroup.before`.
 
@@ -124,14 +124,14 @@ The `before` method registers its block within that registry, to be retrieved la
 
 Because I'm not going to really look too deeply at hooks, the call to the `after` method works in pretty much the same way. Here it is though, just because:
 
-{coderspec_example,25,27}
+{code rspec_example,25,27}
 
 
 ### The spec itself
 
 The next method that's `module_eval`'d within our `ExampleGroup` subclass is the `it`:
 
-{coderspec_example,11,14}
+{code rspec_example,11,14}
 
 Users of RSpec will know that you can call a number of methods to define a single spec: `it`, `specify` `example`, and others with additional meaning like `pending` or `focus`. These methods are actually all generated while RSpec is being loaded, by calls to `define_example_method` within the class definition of `ExampleGroup`. For simplicity's sake (pending and focussed specs are somewhat outwith the remit of this exploration), we'll only look at the simplest case.
 
@@ -142,7 +142,7 @@ When `it` is called, more metadata is assembled about the spec (again, including
 
 Within our outer example group, we've nested another group:
 
-{coderspec_example,14,23}
+{code rspec_example,14,23}
 
 Just as the top-level call to `describe` invokes a class method on `RSpec::Core::ExampleGroup`, this call will be invoked against the *subclass* of `ExampleGroup` (i.e. `Nested_1`) that our outer group defined. Accordingly, each call to `describe` defines a new subclass[^nesting-subclass], stored as a constant within the top-level class: `Nested_1::Nested_1`. This subclass is stored within an array of `children` in the outer `Nested_1` class.
 
@@ -157,7 +157,7 @@ So, for every `describe`, a new subclass of `ExampleGroup` is created, with call
 
 We can even take a look at these now, for a simplified example:
 
-{codeexample_group_object}
+{code example_group_object}
 
 Where example groups are nested, further subclasses are created, and stored in an array of `children` within their respective parent groups.
 
@@ -182,15 +182,15 @@ For each example group, the `run` method is called on that class, with the repor
 
 This gets a bit intricate, so I'm going to step through the method definition itself (for version `2.12.2`) to help anchor things.
 
-{coderspec_example_group_run_definition,0,4}
+{code rspec_example_group_run_definition,0,4}
 
 RSpec has a "fail fast" mode, where any single example failure will cause the execution of specs to finish as quickly as possible. Here, RSpec is checking whether anything has triggered this.
 
-{coderspec_example_group_run_definition,5,6}
+{code rspec_example_group_run_definition,5,6}
 
 Next, the `reporter` is notified that an example group is about to start. The reporter can use this information to print out the name of the group, for example.
 
-{coderspec_example_group_run_definition,7,8}
+{code rspec_example_group_run_definition,7,8}
 
 The run of the examples is wrapped in a block so it can catch any exceptions and handle them gracefully as you might expect.
 
@@ -201,13 +201,13 @@ The call to `run_before_all_hooks` is very interesting though, and worth explori
 
 Consider our original example:
 
-{coderspec_example,3,6}
+{code rspec_example,3,6}
 
 Given this, we'll stash the value of `@shared_thing` (and the fact that it was called `@shared_thing`) for later use.
 
 It's actually quite easy to inspect the instance variables of an object in Ruby; try calling [`instance_variables`][], [`instance_variable_get`][] and [`instance_variable_set`][] on some objects in an IRB session:
 
-{codeinstance_variable_set_example}
+{code instance_variable_set_example}
 
 As you can see above, we can poke around with the innards of objects to our heart's content. Who needs [encapsulation][], eh?
 
@@ -218,15 +218,15 @@ Why did RSpec have to create an instance of the example group class, only to thr
 
 Now we're finally ready to run the examples:
 
-{coderspec_example_group_run_definition,9,9}
+{code rspec_example_group_run_definition,9,9}
 
 To understand this, we need to look at the definition of `run_examples`:
 
-{coderspec_example_group_run_examples_definition}
+{code rspec_example_group_run_examples_definition}
 
 This method iterates over each `Example` that was stored in the `examples` array earlier, filtering them according to any command-line parameters (though we are ignoring that here). The most relevant part for us lies in the middle:
 
-{coderspec_example_group_run_examples_definition,3,5}
+{code rspec_example_group_run_examples_definition,3,5}
 
 ### A striking parallel with MiniTest
 
@@ -244,11 +244,11 @@ Finally, the `#run` method on the `Example` subclass is called, passing the `Exa
 
 Here's the full definition of `RSpec::Core::Example#run`:
 
-{coderspec_example_run_definition}
+{code rspec_example_run_definition}
 
 For our purposes, we again only need to consider a small part. Once all the reporter and "around" block housekeeping has taken place, the essential core of the example is run:
 
-{coderspec_example_run_definition,10,17}
+{code rspec_example_run_definition,10,17}
 
 The call to `run_before_each` introspects the hook registry and evaluates every relevant `before` hook against the `ExampleGroup` instance. In effect, this will find any `before` blocks registered in this example group, and then any blocks registered in any parent groups, and evaluate them all in order, so that each nested `before` block runs.
 
@@ -264,11 +264,11 @@ As in MiniTest, whether or not the spec failed or an exception occured, an `ensu
 
 Once all the specs in this example group have run, all the examples in any subclasses are run (recall that the inner `describe` stashed the nested `ExampleGroup` subclass in an array called `children`). We map each `ExampleGroup` subclass to the result of calling `run` on it, which starts this whole process again, for every nested example group. Whether or not this group passed or failed overall is then determined using simple boolean logic:
 
-{coderspec_example_group_run_definition,10,11}
+{code rspec_example_group_run_definition,10,11}
 
 As we leave the call to `ExampleGroup#run`, we run any corresponding `after :all` blocks, and also clear out our stash of `before :all` instance variables, because they are no longer necessary.
 
-{coderspec_example_group_run_definition,15}
+{code rspec_example_group_run_definition,15}
 
 
 ### Finishing up
