@@ -244,8 +244,8 @@ In the next article, we'll look at how [RSpec][] works under the hood, and final
 
 
 :kind: blog
-:created_at: 2013-02-01 18:44:07 0000
-:updated_at: 2013-02-06 09:12:07 0000
+:created_at: 2013-02-01 18:44:07 +0000
+:updated_at: 2013-02-06 09:12:07 +0000
 :minitest_example: |
   require "minitest/autorun"
 
