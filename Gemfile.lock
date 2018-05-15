@@ -1,92 +1,63 @@
 GIT
   remote: https://github.com/lazyatom/vanilla-rb.git
-  revision: 06d4a5dd07c13ce939e7853904ebb528bdcc433e
+  revision: 3811457189cd1707328dab3b6e429591aa36dfd0
   specs:
-    vanilla (1.17.9)
+    vanilla (2.0.0.beta)
       BlueCloth (>= 1.0.0)
       RedCloth (>= 4.1.1)
       haml (>= 3.1)
-      parslet (>= 1.2.0)
+      parslet (>= 1.5.0)
       rack (>= 0.9.1)
       rack-test (>= 0.5.7)
       ratom (>= 0.3.5)
-      soup (>= 1.0.11)
+      soup (>= 1.0.13)
 
 GEM
   remote: https://rubygems.org/
   specs:
     BlueCloth (1.0.1)
-    RedCloth (4.2.9)
-    activesupport (4.0.0)
-      i18n (~> 0.6, >= 0.6.4)
-      minitest (~> 4.2)
-      multi_json (~> 1.3)
-      thread_safe (~> 0.1)
-      tzinfo (~> 0.3.37)
-    atomic (1.1.13)
-    blankslate (2.1.2.4)
-    capistrano (3.2.1)
+    RedCloth (4.3.2)
+    airbrussh (1.3.0)
+      sshkit (>= 1.6.1, != 1.7.0)
+    capistrano (3.10.2)
+      airbrussh (>= 1.0.0)
       i18n
       rake (>= 10.0.0)
-      sshkit (~> 1.3)
-    chunky_png (1.2.6)
-    colorize (0.7.3)
-    compass (0.12.2)
-      chunky_png (~> 1.2)
-      fssm (>= 0.2.7)
-      sass (~> 3.1)
-    daemons (1.1.9)
-    eventmachine (1.0.0)
-    fssm (0.2.9)
-    haml (3.1.7)
-    httparty (0.11.0)
-      multi_json (~> 1.0)
+      sshkit (>= 1.9.0)
+    concurrent-ruby (1.0.5)
+    haml (3.1.8)
+    httparty (0.16.2)
       multi_xml (>= 0.5.2)
-    i18n (0.6.5)
-    json (1.8.0)
-    kramdown (0.14.0)
-    libxml-ruby (2.6.0)
-    minitest (4.7.5)
-    multi_json (1.7.9)
-    multi_xml (0.5.5)
+    i18n (1.0.1)
+      concurrent-ruby (~> 1.0)
+    json (2.1.0)
+    kramdown (1.16.2)
+    libxml-ruby (2.9.0)
+    multi_json (1.13.1)
+    multi_xml (0.6.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-ssh (2.9.1)
-    parslet (1.5.0)
-      blankslate (~> 2.0)
-    posix-spawn (0.3.6)
-    pygments.rb (0.3.7)
-      posix-spawn (~> 0.3.6)
-      yajl-ruby (~> 1.1.0)
-    rack (1.4.1)
-    rack-test (0.6.2)
-      rack (>= 1.0)
-    rake (10.0.1)
-    ratom (0.8.2)
-      libxml-ruby (~> 2.6.0)
-    raygun4ruby (0.0.5)
-      activesupport
-      httparty (~> 0.11)
+    net-ssh (4.2.0)
+    parslet (1.8.2)
+    puma (3.11.4)
+    pygments.rb (1.2.1)
+      multi_json (>= 1.0.0)
+    rack (2.0.5)
+    rack-test (1.0.0)
+      rack (>= 1.0, < 3)
+    rake (12.3.1)
+    ratom (0.9.0)
+      libxml-ruby (~> 2.6)
+    raygun4ruby (2.7.0)
+      concurrent-ruby
+      httparty (> 0.13.7)
       json
       rack
-    redcarpet (2.2.2)
-    sass (3.2.4)
-    soup (1.0.11)
-    sshkit (1.5.1)
-      colorize
+    redcarpet (3.4.0)
+    soup (1.0.14)
+    sshkit (1.16.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    susy (1.0.5)
-      compass (>= 0.12.2)
-      sass (>= 3.2.0)
-    thin (1.5.0)
-      daemons (>= 1.0.9)
-      eventmachine (>= 0.12.6)
-      rack (>= 1.0.0)
-    thread_safe (0.1.2)
-      atomic
-    tzinfo (0.3.37)
-    yajl-ruby (1.1.0)
 
 PLATFORMS
   ruby
@@ -95,10 +66,15 @@ DEPENDENCIES
   capistrano
   haml (~> 3.1)
   kramdown
+  puma
   pygments.rb
   rake
   raygun4ruby
   redcarpet
-  susy
-  thin
   vanilla!
+
+RUBY VERSION
+   ruby 2.5.0p0
+
+BUNDLED WITH
+   1.16.1
