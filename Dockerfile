@@ -10,7 +10,6 @@ ADD Gemfile /interblah.net/Gemfile
 ADD Gemfile.lock /interblah.net/Gemfile.lock
 RUN bundle install
 
-EXPOSE 3000
 ENTRYPOINT ["bundle", "exec"]
 CMD ["rackup", "-p", "3000"]
 
