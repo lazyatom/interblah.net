@@ -414,7 +414,7 @@ Instead, all you can offer them is the pearl you’ve made, and if that’s not 
 Thank you.
 
 
-:kind: draft
+:kind: blog
 :created_at: 2018-04-15 22:00:00 +0000
 :updated_at: 2018-04-15 22:00:00 +0000
 :page_title: Here's to the crazy ones (RailsConf 2018)
