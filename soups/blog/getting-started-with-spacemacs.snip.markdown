@@ -8,6 +8,7 @@ I wanted to capture what I like about my editor of choice at the moment. If you'
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
+- [My history with text editors](#my-history-with-text-editors)
 - [Why Spacemacs?](#why-spacemacs)
     - [Modal editing](#modal-editing)
         - [... but only if you want it](#-but-only-if-you-want-it)
@@ -39,6 +40,8 @@ I wanted to capture what I like about my editor of choice at the moment. If you'
 - [Other Notes](#other-notes)
 
 <!-- markdown-toc end -->
+
+# My history with text editors
 
 Probably every 18 months or so, I seem to get an itch about my current editor, and look around for something different. Often it's because something is behaving slowly, or I can't get a feature to work. My editors-of-choice over the last 15 years have been, roughly:
 
