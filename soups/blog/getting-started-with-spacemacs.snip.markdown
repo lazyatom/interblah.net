@@ -269,6 +269,9 @@ All of these are Vi/Vim commands, but Spacemacs implements them using a package 
 
 `SPC q R` - restart Emacs
 
+`q` - if you're in a non-file window, chances are if you hit `q`, it'll close that window. Give it a try.
+
+
 ## Files, projects and buffers ##
 
 `SPC f f` - browse for files and open them
