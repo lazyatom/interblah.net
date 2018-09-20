@@ -1,3 +1,6 @@
+Getting Started with Spacemacs
+==========
+
 I wanted to capture what I like about my editor of choice at the moment. If you're at all interested in modal editing, or are an experienced Vim user looking for a change, I think there's a chance you might enjoy Spacemacs. I've written this to try and capture what I like about it, and some of the things I wish I'd known when I got started. Hopefully it's useful to some of you!
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
@@ -96,7 +99,7 @@ This is not to say that you can't change things -- you totally can! -- but you d
 
 ## Magit ##
 
-From what I can tell, a lot of the love for Emacs comes from people talking about how `org-mode` is amazing and can do anything and it's the greatest thing in the world, and that it's worth switching to Emacs just to be able to harness the awesome power of `org[^borg]`. That might be true. I have not used it. I might discover how to use it tomorrow and achieve a similar text-based nirvana.
+From what I can tell, a lot of the love for Emacs comes from people talking about how `org-mode` is amazing and can do anything and it's the greatest thing in the world, and that it's worth switching to Emacs just to be able to harness the awesome power of `org`[^borg]. That might be true. I have not used it. I might discover how to use it tomorrow and achieve a similar text-based nirvana.
 
 As a programmer though, there's a different tool which has me _totally_ sold on Emacs, and that's [Magit][], a package for working with the Git version control system.
 
@@ -144,7 +147,7 @@ Spacemacs will then use this tool to do fast searching. Next, install Spacemacs 
 
 ### Getting Spacemacs ###
 
-I would encourage you to just follow [the instructions on the Spacemac site][spacemacs], but the gist is this:
+I would encourage you to just follow [the instructions on the Spacemacs site][spacemacs], but the gist is this:
 
 ```
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
@@ -397,7 +400,7 @@ I hope this has been useful, either if you're curious about Spacemacs, or are pl
 [^borg]: Perhaps, you might say... joining the b`org`? *Groan*.
 
 :kind: blog
-:title: Getting Started with Spacemacs
+:page_title: Here's to the crazy ones (RailsConf 2018)
 :created_at: 2018-09-20 15:17:14 +0000
 :updated_at: 2018-09-20 15:17:14 +0000
 :layers: |-
