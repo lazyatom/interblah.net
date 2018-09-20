@@ -40,7 +40,7 @@ I wanted to capture what I like about my editor of choice at the moment. If you'
 
 ![Spacemacs](/images/spacemacs/spacemacs.png)
 
-Probably every 18 months or so, I seem to get an itch about my current editor, and look around for something different. Often it's because something is behaving slowly, or I can't get a feature to work. My over the last 15 years has been, roughly:
+Probably every 18 months or so, I seem to get an itch about my current editor, and look around for something different. Often it's because something is behaving slowly, or I can't get a feature to work. My editors-of-choice over the last 15 years have been, roughly:
 
 * [TextMate][textmate], because I saw it in the original Rails demo and loved how simple yet powerful it was, particularly the plugins. I have license #12 for TextMate. I used TextMate for a long time.
 * [Sublime Text][sublime text], because I saw multiple cursors support. I wasn't thrilled to switch to Python-based plugins, but knew enough to figure most stuff out.
@@ -223,6 +223,7 @@ Depending on the type of the file, you _might_ be prompted to add a new layer to
 
 Once the file is open, if you hit `SPC p p` again, assuming you've opened a file that was somewhere under version control, you should now see the project in the list, and you can get back to this project easily now.
 
+When you _do_ select a project using `SPC p p`, you'll next be prompted to pick a file from that project. For a long time, this confused me, particularly as I moved from one project to the other, and back, in a single editing session. However, this is normal -- Spacemacs is just asking which buffer or file from that project that you want to start on.
 
 # Cheat Sheet #
 
