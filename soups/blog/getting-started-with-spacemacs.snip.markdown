@@ -80,6 +80,8 @@ As a programmer though, there's a different tool which has me _totally_ sold on 
 
 I used to be a command-line Git jockey. I'd use `git add .` and `git commit -m "Blah blah"`, and even run interactive rebasing and patch-based adding from the command line. But if you care about creating a great git history, [using git from the command line is an anti-pattern](https://vimeo.com/280579162#t=1017s "The relevant section from a great talk by Tekin Suleyman").
 
+Make a great point here.
+
 [atom]: https://atom.io
 [textmate]: https://macromates.com
 [sublime text]: https://www.sublimetext.com
