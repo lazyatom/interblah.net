@@ -20,16 +20,18 @@ I wanted to capture what I like about my editor of choice at the moment. If you'
     - [You're a vimmer now, 'arry](#youre-a-vimmer-now-arry)
     - [Editing files and projects](#editing-files-and-projects)
 - [Cheat Sheet](#cheat-sheet)
+    - [Modal editing](#modal-editing-1)
     - [General](#general)
     - [Files, projects and buffers](#files-projects-and-buffers)
     - [Windows](#windows)
     - [Searching](#searching)
     - [Editing](#editing)
-    - [Ruby specific stuff](#ruby-specific-stuff)
+    - [Development specific stuff](#development-specific-stuff)
     - [Git](#git)
     - [Spacemacs itself](#spacemacs-itself)
     - [Documentation and help](#documentation-and-help)
 - [Help, I'm Stuck!](#help-im-stuck)
+- [Other Notes](#other-notes)
 
 <!-- markdown-toc end -->
 
@@ -54,26 +56,6 @@ Here's what I really like about Spacemacs:
 ## Modal editing ##
 
 Much as I was initially resistant to it, putting all that work into using Vim for half a year did finally sink in, and I can pretty happily jump around within a line, or up and down blocks of code, without having to think too hard about it. I don't know if I would entirely recant my rant, but the simple fact is that I've made the sacrifice and my brain has already been trained, so I might as well accept it. I don't think I'll ever be zealatous about the benefits of keeping your hands on the keyboard or anything like that, but I can say that once you _do_ get a handle on movement and text manipulation commands, it doesn't feel too bad. 
-
-What I use all the time:
-
-* `hjkl` for movement, although I will pretty happily use arrow keys to move around a little when I'm in insert mode
-* `w` and `b` (and `<num>w` and so on) to skip around words at a time
-* `f<char>` to skip to a specific character (and to a far lesser extent, `<num>f<char>`, but the time I spend visually counting occurrences almost always outweighs just doing `f<char>` a few times)
-* `{` and `}` to jump up and down blocks of code. Basically, it moves to the next blank line, but if you've formatted your code nicely, more often than not this is the next function
-* `cw` and `ct<char>` to change the current work, or change to the given character (e.g. given `some_variable_name`, with my cursor at the start I might type `ct_` to edit just the `some` part)
-* `dw` and `dd` to delete words and lines
-* `o` to add a new blank line below this one and enter insert mode
-* `p` to paste whatever I've recently deleted somewhere else
-* `A` to go to the end of the line and enter insert mode ("Append")
-* `^` and `$` to skip around between the start and end of lines
-* `gg` and `G` to move to the top and bottom of the file respectively
-* `ve` and `v$` to select the word or line, ready to do something with it (maybe `y` to copy it...)
-* Getting used to hitting escape as often as possible to leave insert mode[^spacemacs-cmd-s].
-
-There's a bunch more that I do know and use, and I am _certain_ that I could be using different commands to do a lot of stuff more efficiently, but I think it was really internalising the commands above that got me through the transition from feeling massively slowed down to reasonably efficient at editing and moving text around.
-
-All of these are Vi/Vim commands, but Spacemacs implements them using a package called "evil", which according to all the reckons on the internet that I've read, is hands down the most complete Vim emulation layer available. What this means is that any advice or tricks my Vim-using friends might have, I can also use too, and that's pretty neat.
 
 ### ... but only if you want it ###
 
@@ -114,7 +96,7 @@ This is not to say that you can't change things -- you totally can! -- but you d
 
 ## Magit ##
 
-From what I can tell, a lot of the love for Emacs comes from people talking about how `org-mode` is amazing and can do anything and it's the greatest thing in the world, and that it's worth switching to Emacs just to be able to harness the awesome power of `org`[^borg]. That might be true. I have not used it. I might discover how to use it tomorrow and achieve a similar text-based nirvana.
+From what I can tell, a lot of the love for Emacs comes from people talking about how `org-mode` is amazing and can do anything and it's the greatest thing in the world, and that it's worth switching to Emacs just to be able to harness the awesome power of `org[^borg]`. That might be true. I have not used it. I might discover how to use it tomorrow and achieve a similar text-based nirvana.
 
 As a programmer though, there's a different tool which has me _totally_ sold on Emacs, and that's [Magit][], a package for working with the Git version control system.
 
@@ -245,6 +227,31 @@ These are all the commands that I wish I'd known when I got started. It's also v
 
 Spacemacs includes _many_ other commands, and likely some of them will be better in certain situations than the ones I've listed. These are just the basic ones that kept me moving.
 
+## Modal editing ##
+
+These are the basic commands that I use all the time:
+
+* `hjkl` for movement, although I will pretty happily use arrow keys to move around a little when I'm in insert mode
+* `w` and `b` (and `<num>w` and so on) to skip around words at a time
+* `x` to delete the character under the cursor
+* `r<char>` to replace the character under the cursor with a new one
+* `f<char>` to skip to a specific character (and to a far lesser extent, `<num>f<char>`, but the time I spend visually counting occurrences almost always outweighs just doing `f<char>` a few times)
+* `{` and `}` to jump up and down blocks of code. Basically, it moves to the next blank line, but if you've formatted your code nicely, more often than not this is the next function
+* `cw` and `ct<char>` to change the current work, or change to the given character (e.g. given `some_variable_name`, with my cursor at the start I might type `ct_` to edit just the `some` part)
+* `dw` and `dd` to delete words and lines
+* `o` to add a new blank line below this one and enter insert mode
+* `p` to paste whatever I've recently deleted somewhere else
+* `A` to go to the end of the line and enter insert mode ("Append")
+* `^` and `$` to skip around between the start and end of lines
+* `gg` and `G` to move to the top and bottom of the file respectively
+* `ve` and `v$` to select the word or line, ready to do something with it (maybe `y` to copy it...)
+* Getting used to hitting escape as often as possible to leave insert mode[^savingfiles].
+
+There's a bunch more that I do know and use, and I am _certain_ that I could be using different commands to do a lot of stuff more efficiently, but I think it was really internalising the commands above that got me through the transition from feeling massively slowed down to reasonably efficient at editing and moving text around.
+
+All of these are Vi/Vim commands, but Spacemacs implements them using a package called "evil", which according to all the reckons on the internet that I've read, is hands down the most complete Vim emulation layer available. What this means is that any advice or tricks my Vim-using friends might have, I can also use too, and that's pretty neat.
+
+
 ## General ##
 
 `f d` - in rapid succession, will quit out of most menus/commands/minibuffers back into normal mode
@@ -313,7 +320,7 @@ Spacemacs includes _many_ other commands, and likely some of them will be better
 `SPC ; ;` - comment out a line of code (although now I know about `g c c` and all the other Vim-ish `g c` commands)
 
 
-## Ruby specific stuff ##
+## Development specific stuff ##
 
 `, t b` - run all the tests/specs in this file
 
@@ -363,14 +370,15 @@ As with any complicated bit of software, it's possible to get stuck in a menu or
 
 The best way I've found to re-orient myself is to hit `SPC f r` or `SPC b r` to open the recent file or buffer list, and then get back to a file that I was working on. From there, I can normally get back to moving around my project like I expected. Worst case, just quit (`SPC q q`) and open Emacs again.
 
-I hope this has been useful, either if you're curious about Spacemacs, or are playing around with it. Thanks for your time!
 
-
-#### Other Notes ####
+# Other Notes #
 
 Spacemacs works just as well in the console version of Emacs as the GUI one, so you can happily sync your configuration to remote machines and use everything you've learned when editing files on remote servers. And take a look at "Tramp" if you're interested in another Emacs superpower involving remote files!
 
 Even though I've been using Spacemacs for the best part of a year now, I only recently actually read through the documentation (`SPC h SPC RET` inside Spacemacs, or [here][spacemacs-documentation]). There's a lot of good stuff in there, particularly about the `evil` keybindings, and things like managing layouts and workspaces. Once you've gotten to grips with some of the basics, I highly recommend just browsing it, and then coming back to it every now and again, to see what jumps out in an "ah! I can use _that_" kind of way.
+
+
+I hope this has been useful, either if you're curious about Spacemacs, or are playing around with it. Thanks for your time!
 
 
 [atom]: https://atom.io
@@ -385,8 +393,7 @@ Even though I've been using Spacemacs for the best part of a year now, I only re
 [spacemacs-quickstart]: http://spacemacs.org/doc/QUICK_START.html 
 [lemon-drink]: https://www.youtube.com/watch?v=QMZhD_ksmDY
 [projectile]: https://projectile.readthedocs.io
-
-[^spacemacs-cmd-s]: With Spacemacs I actually have it set up so I can hit `cmd-s` to both save the file _and_ enter normal mode, though I recently also learned about `fd` and am trying to practice that.
+[^savingfiles]: With Spacemacs I actually have it set up so I can hit `cmd-s` to both save the file _and_ enter normal mode, though I recently also learned about `fd` and am trying to practice that.
 [^borg]: Perhaps, you might say... joining the b`org`? *Groan*.
 
 :kind: blog
