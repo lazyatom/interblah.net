@@ -58,7 +58,7 @@ Here's what I really like about Spacemacs:
 
 ## Modal editing ##
 
-Much as I was initially resistant to it, putting all that work into using Vim for half a year did finally sink in, and I can pretty happily jump around within a line, or up and down blocks of code, without having to think too hard about it. I don't know if I would entirely recant my rant, but the simple fact is that I've made the sacrifice and my brain has already been trained, so I might as well accept it. I don't think I'll ever be zealatous about the benefits of keeping your hands on the keyboard or anything like that, but I can say that once you _do_ get a handle on movement and text manipulation commands, it doesn't feel too bad. 
+Much as I was [initially resistant][vi-rant] to it, putting all that work into using Vim for half a year did finally sink in, and I can pretty happily jump around within a line, or up and down blocks of code, without having to think too hard about it. I don't know if I would entirely recant my rant, but the simple fact is that I've made the sacrifice and my brain has already been trained, so I might as well accept it. I don't think I'll ever be zealatous about the benefits of keeping your hands on the keyboard or anything like that, but I can say that once you _do_ get a handle on movement and text manipulation commands, it doesn't feel too bad. 
 
 ### ... but only if you want it ###
 
@@ -397,6 +397,7 @@ I hope this has been useful, either if you're curious about Spacemacs, or are pl
 [spacemacs-quickstart]: http://spacemacs.org/doc/QUICK_START.html 
 [lemon-drink]: https://www.youtube.com/watch?v=QMZhD_ksmDY
 [projectile]: https://projectile.readthedocs.io
+[vi-rant]: /vi
 [^savingfiles]: With Spacemacs I actually have it set up so I can hit `cmd-s` to both save the file _and_ enter normal mode, though I recently also learned about `fd` and am trying to practice that.
 [^borg]: Perhaps, you might say... joining the b`org`? *Groan*.
 
