@@ -3,6 +3,8 @@ Getting Started with Spacemacs
 
 I wanted to capture what I like about my editor of choice at the moment. If you're at all interested in modal editing, or are an experienced Vim user looking for a change, I think there's a chance you might enjoy Spacemacs. I've written this to try and capture what I like about it, and some of the things I wish I'd known when I got started. Hopefully it's useful to some of you!
 
+![Spacemacs](/images/spacemacs/spacemacs.png)
+
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
@@ -37,8 +39,6 @@ I wanted to capture what I like about my editor of choice at the moment. If you'
 - [Other Notes](#other-notes)
 
 <!-- markdown-toc end -->
-
-![Spacemacs](/images/spacemacs/spacemacs.png)
 
 Probably every 18 months or so, I seem to get an itch about my current editor, and look around for something different. Often it's because something is behaving slowly, or I can't get a feature to work. My editors-of-choice over the last 15 years have been, roughly:
 
