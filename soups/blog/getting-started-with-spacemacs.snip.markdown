@@ -408,7 +408,7 @@ I hope this has been useful, either if you're curious about Spacemacs, or are pl
 [^borg]: Perhaps, you might say... joining the b`org`? *Groan*.
 
 :kind: blog
-:page_title: Here's to the crazy ones (RailsConf 2018)
+:page_title: Getting Started with Spacemacs
 :created_at: 2018-09-20 15:17:14 +0000
 :updated_at: 2018-09-20 15:17:14 +0000
 :layers: |-
