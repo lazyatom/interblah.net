@@ -3,7 +3,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'vanilla'
 
-require 'redcarpet_renderer'
+# require 'redcarpet_renderer'
 require 'kramdown_renderer'
 require 'blog_soup_backend'
 
