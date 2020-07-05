@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-{head}
-</head>
-<body>
-  <div id="container">
+  <head>
+    {head}
+  </head>
+  <body>
     <nav>
       {navigation}
     </nav>
-    <article id="content">
+    <article>
       <header>
         {title-for}
-        <div class="details">{snip-details}</div>
+        <small>{snip-details}</small>
       </header>
-      {current_snip}
-      {disqus-commenting}
+      <section>
+        {current_snip}
+      </section>
     </article>
     <footer>
-      <hr class="separator" />
       {footer}
     </footer>
-  </div>
-  {analytics}
-</body>
+    {analytics}
+  </body>
 </html>
 
 :updated_at: 2011-05-03 16:03:49 +0100

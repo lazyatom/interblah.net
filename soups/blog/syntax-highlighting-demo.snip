@@ -3,7 +3,7 @@ Syntax Highlighting
 
 Working through some of the outstanding issues for {l vanilla-rb}, I've implemented some simple syntax highlighting ({lighthouse_ticket lazyatom,vanilla,16}):
 
-{code code\_sample\_one}
+{code code\_sample\_one, ruby}
 
 It's pretty simple behind the scenes, although there are a few conceptual choices which I may revisit. Here's the scoop.
 
@@ -13,7 +13,7 @@ Blocks of content
 
 I recently fixed code syntax highlighting on the {l rails-engines} site, which is built using the reasonably-excellent {l radiant-cms} system. In Radiant, you markup blocks of content, typically like this:
 
-{code radiant_syntax, html}
+{code radiant_syntax, "ruby?parent=html"}
 
 Radiant lets you define *tags* that wrap around content within the page, making this pretty simple.
 
@@ -35,11 +35,11 @@ works nicely for us. After the call to the {l code} dynasnip, the first paramete
 
 The solution to this, is to allow rendering of individual *parts* of snips via syntax highlighting. By adding the snip part to the parameter list
 
-&#123;code ruby,rubycodesample&#125;
+&#123;code rubycodesample, ruby&#125;
 
 we get
 
-{code rubycodesample}
+{code rubycodesample, ruby}
 
 The code dynasnip is rendering the <a href="/syntax-highlighting-demo/rubycodesample.raw">rubycodesample</a> part of this very blog post!
 
@@ -62,15 +62,6 @@ Yeah, it's a bit complicated, but it's probably worth it; it could help avoid ci
 
 Anyway - syntax highlighting. Woot!
 
-
-Super Bonus Appendix
---------------------
-
-Here's the code from the {l code} dynasnip, highlighting itself, like an eternal self-consuming snake. Don't say I didn't warn you!
-
-{code ruby}
-
-{comments syntax-highlighting-demo}
 
 [1]: http://interblah.net/comments-are-alive
 

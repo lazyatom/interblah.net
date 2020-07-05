@@ -21,7 +21,7 @@ One of the main reasons why I've been able to get away with such a reliance on a
 
 Thankfully, we can make some big improvements without having to lose any of the speed or editor-friendliness of the tests. Here's an example of one of the new Kintama "usage" tests, which are a suite of acceptance tests written to demonstrate the behaviour of various features:
 
-{code basic_usage}
+{code basic_usage, ruby}
 
 This test covers the basic behaviour of a Kintama test (which you can see follows squarely in the footsteps of shoulda or RSpec style tests). It shows
 how to define a context, how to write tests in one, what the output you'll
@@ -39,7 +39,7 @@ This is possible in no small part because Kintama is designed to produce indepen
 
 Anyway, more examples. Here's a test describing the behaviour of nested contexts with setups and tests at different levels:
 
-{code nested_contexts}
+{code nested_contexts, ruby}
 
 The test verifies that two tests ran (`should_run_tests(2)`), and that the context passed (`and pass`).
 
@@ -47,7 +47,7 @@ Because I already have some unit tests, and other basic usage tests, I can be co
 
 Here's another test that checks exceptions raised in the teardown (which always runs) don't mask any exceptions within the test itself:
 
-{code teardown_failures}
+{code teardown_failures, ruby}
 
 Here we can actually make assertions about which test failed, and what the
 failure message was.

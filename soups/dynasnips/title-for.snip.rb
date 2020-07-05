@@ -1,3 +1,5 @@
+require 'link_to'
+
 class TitleFor < Dynasnip
   def handle(snip_name=nil, tag="h1")
     snip = snip_name ? app.soup[snip_name] : app.request.snip
@@ -6,7 +8,7 @@ class TitleFor < Dynasnip
     else
       text = "Missing snip '#{snip_name || app.request.snip_name}'"
     end
-    %{<#{tag}>#{text}</#{tag}>}
+    "<#{tag}>" + LinkTo.new(app).handle(snip.name, text) + "</#{tag}>"
   end
   self
 end

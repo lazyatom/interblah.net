@@ -38,6 +38,8 @@ Application.configure do |config|
     ::Soup::Backends::FileBackend.new(File.expand_path(path, config.root))
   end
 
+  $LOAD_PATH.unshift(File.expand_path('soups/system', config.root))
+
   config.soup = ::Soup.new(::Soup::Backends::MultiSoup.new(*([config.indexable_soup] + system_backends)))
 
   config.renderers["markdown"] = Vanilla::Renderers::Kramdown

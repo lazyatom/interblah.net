@@ -15,7 +15,7 @@ class BlogSoupBackend < SimpleDelegator
     if snip
       if empty_title?(snip)
         if snip.content
-          lines = snip.content.split("\n")
+          lines = snip.content.encode('utf-8').split("\n")
           if lines[1] =~ /^=+$/
             snip.title = lines[0]
             snip.content = lines[2..-1].join("\n")
@@ -27,6 +27,9 @@ class BlogSoupBackend < SimpleDelegator
         end
       end
     end
+    snip
+  rescue => e
+    snip.title = "Error parsing content for #{snip.name}"
     snip
   end
 

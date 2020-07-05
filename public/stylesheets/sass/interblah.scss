@@ -1,0 +1,150 @@
+@import 'tachyons/tachyons';
+@import 'code';
+
+body {
+  @extend .sans-serif;
+  @extend .debug-grid;
+  @extend .debug;
+  // color: #0A0908;
+}
+
+a {
+  @extend .link, .dim;
+  color: #214159;
+}
+
+nav {
+  // @extend .pl3, .pr3, .pt3, .pb3-ns, .pl5-ns;
+  @extend .pa3;
+  background-color: black;
+  color: #646481;
+
+  @extend .pl5-ns;
+
+  ul {
+    @extend .pa0;
+   
+    li {
+      @extend .di, .pr3, .pl0;
+
+      &:first-child {
+        @extend .b;
+      }
+
+      &:nth-child(2) {
+        @extend .dn;
+      }
+    }
+  }
+
+  a {
+    @extend .link;
+    color: white;
+  }
+}
+
+body.start {
+  nav {
+    ul {
+      li:first-child {
+        @extend .b, .f2, .db, .black, .mb1;
+      }
+      li:nth-child(2) {
+        @extend .db, .f3, .mb3;
+      }
+    }
+  }
+
+  aside + article {
+    header h1 {
+      @extend .pt0;
+    }
+  }
+}
+
+body > aside {
+  @extend .cf, .mw9, .pl5-ns;
+  @extend .gray, .f6, .lh-copy;
+}
+
+article {
+  @extend .cf, .mw9;
+  @extend .pb3;
+
+  h1, h2, h3, h4, h5, h6 {
+    @extend .avenir;
+  }
+
+  header {
+    // @extend .pt3-ns;
+
+    h1 {
+      @extend .pt4;
+      @extend .lh-title;
+    }
+
+    small {
+      @extend .i, .f6, .lh-copy;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  section,
+  header {
+    @extend .fl, .w-100, .w-60-ns;
+  }
+
+  header {
+    @extend .pl3, .pr3, .pb3, .pl5-ns;
+  }
+
+  section {
+    @extend .pa3, .pl5-ns;
+  }
+
+  section.table-of-contents {
+    @extend .fr, .w-40-ns;
+    @extend .pa3;
+    @extend .mt4-ns;
+
+    h2 {
+      @extend .f4;
+    }
+  }
+
+  a {
+    @extend .underline;
+  }
+
+  blockquote {
+    @extend .bl, .bw2, .b--black-20, .pl3, .ml0;
+  }
+
+  p:not(.p-with-image),
+  li {
+    @extend .lh-copy, .measure-wide;
+  }
+
+  pre > .code,
+  pre > code {
+    color: white;
+    @extend .shadow-1, .pa3, .lh-copy, .bg-black;
+  }
+}
+
+footer {
+  @extend .cf, .w-100, .pa3, .pl5-ns;
+  @extend .moon-gray;
+  @extend .f6;
+
+  a {
+    @extend .gray;
+  }
+}
+
+body > aside {
+  @extend .cf, .mw9, .pa3;
+}

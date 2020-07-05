@@ -1,11 +1,22 @@
-{most-recent kind:blog, count:1, template:blog-template}
+<nav>
+  {navigation}
+</nav>
 
-<div class="site-information">{site-information}</div>
-<hr class="separator" />
+<aside>
+<p>Behold! Some <span title="... for some value of 'recent'...">recent</span> things I've written. I do mean to write more, especially now that I tweet <em>a lot</em> less. And yet...</p>
+</aside>
 
-{most-recent kind:blog, count:2, offset:1, template:blog-template}
+{most-recent kind:blog, count:1, template:snip-excerpt}
 
-Read more recent blogish post-things {l blog,here}&hellip;
+<aside>
+<p>... and here's some stuff I wrote before that. Honestly, I might've written this years ago. Hopefully it's not too terribly out of date and misleading.</p>
+</aside>
+
+{most-recent kind:blog, count:2, offset:1, template:snip-excerpt}
+
+<aside>
+<p>Read more recent blogish post-things {l blog,here}&hellip;</p>
+</aside>
 
 :updated_at: 2011-05-03 16:02:22 +0100
 :layout: blog-layout

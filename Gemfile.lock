@@ -17,31 +17,40 @@ GEM
   specs:
     BlueCloth (1.0.1)
     RedCloth (4.3.2)
-    concurrent-ruby (1.0.5)
-    haml (3.1.8)
-    httparty (0.16.2)
+    concurrent-ruby (1.1.5)
+    ffi (1.13.1)
+    haml (5.1.1)
+      temple (>= 0.8.0)
+      tilt
+    httparty (0.17.0)
+      mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
-    json (2.1.0)
-    kramdown (1.16.2)
+    json (2.2.0)
+    kramdown (2.1.0)
     libxml-ruby (2.9.0)
-    multi_json (1.13.1)
+    mime-types (3.2.2)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2019.0331)
     multi_xml (0.6.0)
     parslet (1.8.2)
-    puma (3.11.4)
-    pygments.rb (1.2.1)
-      multi_json (>= 1.0.0)
-    rack (2.0.5)
-    rack-test (1.0.0)
+    puma (3.12.1)
+    rack (2.0.7)
+    rack-test (1.1.0)
       rack (>= 1.0, < 3)
-    rake (12.3.1)
+    rake (12.3.2)
     ratom (0.9.0)
       libxml-ruby (~> 2.6)
-    raygun4ruby (2.7.0)
+    raygun4ruby (3.2.1)
       concurrent-ruby
       httparty (> 0.13.7)
       json
       rack
+    rouge (3.4.1)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     soup (1.0.14)
+    temple (0.8.1)
+    tilt (2.0.9)
 
 PLATFORMS
   ruby
@@ -49,13 +58,14 @@ PLATFORMS
 DEPENDENCIES
   kramdown
   puma
-  pygments.rb
   rake
   raygun4ruby
+  rouge
+  sassc
   vanilla!
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 2.6.5p114
 
 BUNDLED WITH
-   1.16.2
+   1.17.2

@@ -6,7 +6,8 @@ I wanted to capture what I like about my editor of choice at the moment. If you'
 ![Spacemacs](/images/spacemacs/spacemacs.png)
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-**Table of Contents**
+
+## Table of Contents
 
 - [My history with text editors](#my-history-with-text-editors)
 - [Why Spacemacs?](#why-spacemacs)
@@ -38,10 +39,10 @@ I wanted to capture what I like about my editor of choice at the moment. If you'
     - [Documentation and help](#documentation-and-help)
 - [Help, I'm Stuck!](#help-im-stuck)
 - [Other Notes](#other-notes)
-
 <!-- markdown-toc end -->
 
-# My history with text editors
+
+## My history with text editors
 
 Probably every 18 months or so, I seem to get an itch about my current editor, and look around for something different. Often it's because something is behaving slowly, or I can't get a feature to work. My editors-of-choice over the last 15 years have been, roughly:
 
@@ -55,22 +56,22 @@ Probably every 18 months or so, I seem to get an itch about my current editor, a
 
 I'm sure all of the issues I experienced were largely _my_ fault, rather than any problem with any of these editors, and I'm totally certain that any frustrations I experienced with any of them could be resolved with enough time and patience. However, when I'm sitting down to work on a project that already requires a lot of though, I don't want to have to give up a lot of that energy to my editor; I need to be able to get it to do what I would like, with a minimum of energy, headscratching, or waiting for a spinny icon to finish.
 
-# Why Spacemacs? #
+## Why Spacemacs? #
 
 Here's what I really like about Spacemacs:
 
-## Modal editing ##
+### Modal editing ##
 
 Much as I was [initially resistant][vi-rant] to it, putting all that work into using Vim for half a year did finally sink in, and I can pretty happily jump around within a line, or up and down blocks of code, without having to think too hard about it. I don't know if I would entirely recant my rant, but the simple fact is that I've made the sacrifice and my brain has already been trained, so I might as well accept it. I don't think I'll ever be zealatous about the benefits of keeping your hands on the keyboard or anything like that, but I can say that once you _do_ get a handle on movement and text manipulation commands, it doesn't feel too bad. 
 
-### ... but only if you want it ###
+#### ... but only if you want it ###
 
 Sometimes though, as a beginner, it's just faster to use the mouse, or the arrow keys. And Spacemacs totally supports that. If I'm in a bad mood and don't want to learn the modal way to do something, I can drag and select text, or jump the cursor around, and it just works. I can click on pretty much anything, from files and directories in the file tree, to links in a markdown document, and they do what you'd expect.
 
 It's this graceful support for non-modal mechanisms that makes it easy to stick with a modal editor through the rough times and the smooth.
 
 
-## Conventionality and discoverability via `which-key` ##
+### Conventionality and discoverability via `which-key` ##
 
 The biggest barrier to me sticking with Vim was feeling like "I know there's a way to do this better" but having to enter the depths of the Google mines to figure out how. Vim is super-extensible and customisable, but the flip-side of that is that everyone has their own setup and key-bindings and so until you are an expert, you end up with a cobbled together configuration of stuff you've found on the internet. As I said above, I'm _sure_ that eventually you would get a handle on this and be able to smooth any rough edges, but I think it's a significant barrier for people who are already trying to internalise a whole new way of editing.
 
@@ -82,7 +83,7 @@ The commands are organised into sections, all based roughly on mnemonic grouping
 
 Once you get more comfortable, you often don't need to look at the menu at all, because the combinations become internalised. I don't need to look at the menu when I want to rename a file, because seeing the menu again and again has helped me learn that it's `SPC f R`. Checking the git status of the project is `SPC g s`. What Spacemacs and `which-key` do really well is support the learning process, and get you to a point where you can invoke all these commands quickly.
 
-### Discovering new functions and key bindings ###
+#### Discovering new functions and key bindings ###
 
 But it gets even better than that, because you don't even need to dig around all the the menus until you find the command you were hoping for. If you have an inkling that there should be a more efficient way of, say, making some text uppercase without having to delete and re-type it, you can easily search _all of the commands_ in the editor by hitting `SPC SPC` and then making a few guesses about what the command name might be. I hit `SPC SPC` and type "upper", but none of those look right, so let's try "upcase", and bingo, a handful of functions that I might want to use.
 
@@ -94,13 +95,13 @@ Showing the keybindings also shows me where in the menu I would've found that ke
 
 It also shows me when there are even faster ways of invoking the function using the "evil" bindings, in this case `g U`. Perhaps I'll try that out, and if I try it enough times, it gets into my muscle memory, and I get faster.
 
-### Layers and conventionality ###
+#### Layers and conventionality ###
 
 Learning how the menus are organised also leads to what I mean by "convenionality". But before I explain this, I need to touch on how Spacemacs is organised. Rather than having you install lots of small Emacs packages (what you might consider plugins), Spacemacs gathers collections of related packages into what it calls "layers". Every Spacemacs layer comes with a set of key bindings, which the community as a whole has developed together, gathering all of the features and functions of the packages within that layer together. So when you install the ["ruby" layer][ruby-spacemacs-layer-docs], you get keybindings to run tests, to invoke bundler, to do simple refactorings, to use your preferred version manager, and so on, all ready for you to use and explorable via the menu and function search.
 
 This is not to say that you can't change things -- you totally can! -- but you don't need to. There are similar distributions for other editors that enable similar "sensible" configurations, so this is not to say that Spacemacs is any better than, say, [Janus][janus] for vim. but for any of these powerful editors, having _something_ that provides this kind of support is really great.
 
-## Magit ##
+### Magit ##
 
 From what I can tell, a lot of the love for Emacs comes from people talking about how `org-mode` is amazing and can do anything and it's the greatest thing in the world, and that it's worth switching to Emacs just to be able to harness the awesome power of `org`[^borg]. That might be true. I have not used it. I might discover how to use it tomorrow and achieve a similar text-based nirvana.
 
@@ -115,13 +116,13 @@ Magit makes it really easy for me to pick files to stage, or even just pick a fe
 I really love Magit. With it can I do pretty much anything I knew how to do at the command line, and more, and it encourages me to write the best commit messages I can, and to keep my history tidy too. As far as I'm concerned, Spacemacs is a pretty decent editor with nice ways of teaching and reinforcing how to efficiently edit text, but Magit is a superpower.
 
 
-# So: Getting started #
+## So: Getting started #
 
 The title of this post is "getting started", so I'm going to try to share what I did to get going with Spacemacs, in the hope it helps you get started quickly, and see some of the nice features that I've been enjoying.
 
 As a caveat, let me say that I use a Mac, and I'm a Ruby developer using Git, so these notes are from that background, rather than a comprehensive set of instructions that will work for everyone.
 
-## Installation ##
+### Installation ##
 
 Installing Spacemacs is pretty simple. Firstly, you'll need Emacs. There are a few packages available via Homebrew:
 
@@ -137,7 +138,7 @@ brew tap railwaycat/emacsmacport && brew install emacs-mac --with-no-title-bars 
 
 One significant caveat of installing without title bars is that you can't then drag the window around using your mouse. This can be a real pain, but if you _always_ run Emacs maximised, it doesn't matter. Unless you know you want this, I'd suggest installing without that option. You can use `brew info emacs-mac` to see all the installation options if you like.
 
-### Ripgrep ###
+#### Ripgrep ###
 
 While we are at it, also install `ripgrep`, the super fast search tool that understands version control systems like git:
 
@@ -148,7 +149,7 @@ brew install ripgrep
 Spacemacs will then use this tool to do fast searching. Next, install Spacemacs according to their instructions:
 
 
-### Getting Spacemacs ###
+#### Getting Spacemacs ###
 
 I would encourage you to just follow [the instructions on the Spacemacs site][spacemacs], but the gist is this:
 
@@ -166,11 +167,11 @@ Next, start up Emacs! You should see the Spacemacs home screen, and you'll be pr
 
 Now Spacemacs will set to downloading a whole bunch of packages and installing them, and this will take a few minutes. This is a perfect time [read the Quickstart documentation][spacemacs-quickstart] while you [drink your weak lemon drink][lemon-drink].
 
-## Configuring your installation ##
+### Configuring your installation ##
 
 Once all the packages have been installed, you'll be presented with a simple help screen. Read it -- it's going to cover the basics fairly well. If you like, you can dive straight into editing files (take a look at the Cheat Sheet below which might help), but personally, I always like to see what I can tweak when I work with a new editor so once you're done reading that, hit `SPC f e d` to open your personal configuration file. This is where all of the installed layers are declared and configured. I'm going to share the settings that I've used, but by all means tinker.
 
-### Layers ###
+#### Layers ###
 
 Here's roughly what my layer configuration looks like:
 
@@ -180,7 +181,7 @@ The lines which aren't wrapped in parentheses just use whatever defaults exist f
 
 I've also set the Ruby version manager to be "chruby", but you might need something else. If you want to stick with the defaults, just delete `:variables` and everything after it, and remove the parentheses.
 
-### Other settings ###
+#### Other settings ###
 
 ```dotspacemacs-maximised-at-startup t```
 
@@ -201,7 +202,7 @@ That's it for the Spacemacs options, but you can configure other stuff inside th
 OK, enough configuration. Let's actually start editing some stuff!
 
 
-## You're a vimmer now, 'arry ##
+### You're a vimmer now, 'arry ##
 
 First thing's first, you're going to need to get used to modal editing. Covering that is _way_ outside of the scope of this article, but here's some basics.
 
@@ -214,7 +215,7 @@ To move the cursor around in normal mode, the vimmish way is by using the `hjkl`
 There is a "lot" more to editing using Vim-like commands, and you'll spend most of your time doing that, so if you're not very experienced, I would suggest trying out one of the various vim tutorials. There's even one built in to Spacemacs (`SPC h T`)!
 
 
-## Editing files and projects ##
+### Editing files and projects ##
 
 Spacemacs uses a package called [projectile][] to manage projects, but it can be a little unclear how to actually get started with this. Here's a simple way to get into it.
 
@@ -228,13 +229,13 @@ Once the file is open, if you hit `SPC p p` again, assuming you've opened a file
 
 When you _do_ select a project using `SPC p p`, you'll next be prompted to pick a file from that project. For a long time, this confused me, particularly as I moved from one project to the other, and back, in a single editing session. However, this is normal -- Spacemacs is just asking which buffer or file from that project that you want to start on.
 
-# Cheat Sheet #
+## Cheat Sheet #
 
 These are all the commands that I wish I'd known when I got started. It's also very worth getting a grounding in Vim, including the keys I listed nearer the top of this article; here I'm just including the Spacemacs-specific commands that cover the basics.
 
 Spacemacs includes _many_ other commands, and likely some of them will be better in certain situations than the ones I've listed. These are just the basic ones that kept me moving.
 
-## Modal editing ##
+### Modal editing ##
 
 These are the basic commands that I use all the time:
 
@@ -259,7 +260,7 @@ There's a bunch more that I do know and use, and I am _certain_ that I could be 
 All of these are Vi/Vim commands, but Spacemacs implements them using a package called "evil", which according to all the reckons on the internet that I've read, is hands down the most complete Vim emulation layer available. What this means is that any advice or tricks my Vim-using friends might have, I can also use too, and that's pretty neat.
 
 
-## General ##
+### General ##
 
 `f d` - in rapid succession, will quit out of most menus/commands/minibuffers back into normal mode
 
@@ -272,7 +273,7 @@ All of these are Vi/Vim commands, but Spacemacs implements them using a package 
 `q` - if you're in a non-file window, chances are if you hit `q`, it'll close that window. Give it a try.
 
 
-## Files, projects and buffers ##
+### Files, projects and buffers ##
 
 `SPC f f` - browse for files and open them
 
@@ -297,7 +298,7 @@ All of these are Vi/Vim commands, but Spacemacs implements them using a package 
 `SPC f t` - toggle open a file tree (use `shift-k` to go up to parent directories in it)
 
 
-## Windows ##
+### Windows ##
 
 `SPC w /` - split a window vertically
 
@@ -312,7 +313,7 @@ All of these are Vi/Vim commands, but Spacemacs implements them using a package 
 `SPC w m` - make the current window the only window
 
 
-## Searching ##
+### Searching ##
 
 `SPC /` - search every file in the project
 
@@ -323,14 +324,14 @@ All of these are Vi/Vim commands, but Spacemacs implements them using a package 
 `*` - enter a powerful search "mode" for the symbol/word under the cursor
 
 
-## Editing ##
+### Editing ##
 
 `SPC i k/j` - insert a blank line above or below the cursor without entering insert mode
 
 `SPC ; ;` - comment out a line of code (although now I know about `g c c` and all the other Vim-ish `g c` commands)
 
 
-## Development specific stuff ##
+### Development specific stuff ##
 
 `, t b` - run all the tests/specs in this file
 
@@ -343,12 +344,12 @@ All of these are Vi/Vim commands, but Spacemacs implements them using a package 
 `SPC p a` - switch to the alternate file for this one (e.g. from controller to controller test, and back)
 
 
-## Git ##
+### Git ##
 
 `SPC g s` - open git status. Then hit `?` to see the keys that Magit understands. Note that case is important. Hit `q` to close the Magit buffer.
 
 
-## Spacemacs itself ##
+### Spacemacs itself ##
 
 `SPC f e d` - open your configuration file
 
@@ -359,7 +360,7 @@ All of these are Vi/Vim commands, but Spacemacs implements them using a package 
 `SPC SPC` - search for a function by name, and run it. This is a *great* way of getting a sense of what Emacs/Spacemacs can do
 
 
-## Documentation and help ##
+### Documentation and help ##
 
 Emacs and Spacemacs come with a huge amount of documentation built in, which is extremely useful when you're trying to figure out how to do something.
 
@@ -374,14 +375,14 @@ Emacs and Spacemacs come with a huge amount of documentation built in, which is 
 `SPC h d k` - then enter any combination of keys, and Spacemacs will tell you what function they are bound to and what it will do.
 
 
-# Help, I'm Stuck! #
+## Help, I'm Stuck! #
 
 As with any complicated bit of software, it's possible to get stuck in a menu or lost in some options, and want to back out. Sometimes key bindings you expect to work, will not, because you've ended up in one of the "system buffers" that Emacs uses to store command output or something else. Don't worry -- it happens to everyone.
 
 The best way I've found to re-orient myself is to hit `SPC f r` or `SPC b r` to open the recent file or buffer list, and then get back to a file that I was working on. From there, I can normally get back to moving around my project like I expected. Worst case, just quit (`SPC q q`) and open Emacs again.
 
 
-# Other Notes #
+## Other Notes #
 
 Spacemacs works just as well in the console version of Emacs as the GUI one, so you can happily sync your configuration to remote machines and use everything you've learned when editing files on remote servers. And take a look at "Tramp" if you're interested in another Emacs superpower involving remote files!
 

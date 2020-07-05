@@ -1,4 +1,6 @@
 require 'vanilla'
+require 'rake/clean'
+require 'sassc'
 
 # Add any other tasks here.
 
@@ -27,3 +29,22 @@ task :blog do
   end
   `subl #{path}:4`
 end
+
+SASS_ROOT = 'public/stylesheets/sass'
+SASS_LOAD_PATHS = [
+  SASS_ROOT
+]
+SASS_FILES = FileList["#{SASS_ROOT}/**/*.scss", "#{SASS_ROOT}/**/.sass"].exclude(/tachyons*/)
+CSS_FILES = SASS_FILES.pathmap("%{sass/,}X.css")
+
+rule '.css' => ->(f){source_for_css(f)} do |t|
+  File.write(t.name, SassC::Engine.new(File.read(t.source), style: :compressed, load_paths: SASS_LOAD_PATHS).render)
+end
+
+def source_for_css(css_file)
+  SASS_FILES.detect { |f| f.pathmap("%{sass/,}X") == css_file.ext('') }
+end
+
+task css: CSS_FILES
+
+CLEAN.include(CSS_FILES)
