@@ -1,15 +1,20 @@
-.ruby {
+.code.ruby,
+.code.common_lisp {
   color: white;
 
   .nb, .k {
     color: #CC7833;
   }
 
-  .no, .o, .nf, .n, .p, .vi {
+  .no {
+    color: yellow;
+  }
+
+  .o, .nf, .n, .p, .vi {
     color: white;
   }
 
-  .sh, .s2, .sx, .se, .s1 {
+  .sh, .s2, .sx, .se, .s1, .s {
     color: #66CC33;
   }
 

@@ -1,7 +1,7 @@
 Here's to the crazy ones (RailsConf 2018)
 ================================
 
-<iframe class="video" src="http://www.youtube.com/embed/h3xe-Rf4A6k?fs=1&amp;enablejsapi=1&amp;origin=http:%2F%interblah.net" id="widget2"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h3xe-Rf4A6k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 _This is a transcript of a presentation I gave at [RailsConf 2018](http://raailsconf.org); the actual slides are [here](https://speakerdeck.com/lazyatom/heres-to-the-crazy-ones); the [video is from confreaks](http://confreaks.tv/videos/railsconf2018-here-s-to-the-crazy-ones)._
 

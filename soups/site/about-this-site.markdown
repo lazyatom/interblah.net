@@ -4,12 +4,12 @@ Basically it's an attempt to make a site in a {l homoiconicity,homoiconic} way, 
 
 It might not work, but it's an interesting experiment. I wrote a {l introducing-vanilla-rb,blog post} about it, which might be of interest.
 
-You can learn about how the site actually runs {l "how interblah works",here}
+You can learn about how the site actually runs {l "how interblah works",here}.
 
 About me
 -------
 
-Hello, I'm James Adam, and you've found my blog-type-thing. I run [Exciting](http://exciting.io), a product development and prototyping studio based in Austin and London. You can also find information about me at [lazyatom.com](http://lazyatom.com).
+Hello, I'm James Adam, and you've found my blog-type-thing. I run [Exciting](http://exciting.io), a product development and prototyping studio based in London. You can also find information about me at [lazyatom.com](http://lazyatom.com).
 
 :title: About this site
 

@@ -3,23 +3,18 @@
 
 body {
   @extend .sans-serif;
-  @extend .debug-grid;
-  @extend .debug;
-  // color: #0A0908;
 }
 
 a {
   @extend .link, .dim;
-  color: #214159;
+}
+
+nav, header, section, footer {
+  @extend .pl3, .pr3, .pl5-ns, .pr5-ns;
 }
 
 nav {
-  // @extend .pl3, .pr3, .pt3, .pb3-ns, .pl5-ns;
-  @extend .pa3;
-  background-color: black;
-  color: #646481;
-
-  @extend .pl5-ns;
+  @extend .pa1;
 
   ul {
     @extend .pa0;
@@ -28,7 +23,7 @@ nav {
       @extend .di, .pr3, .pl0;
 
       &:first-child {
-        @extend .b;
+        @extend .b, .db, .f4, .mb1, .black;
       }
 
       &:nth-child(2) {
@@ -36,39 +31,10 @@ nav {
       }
     }
   }
-
-  a {
-    @extend .link;
-    color: white;
-  }
-}
-
-body.start {
-  nav {
-    ul {
-      li:first-child {
-        @extend .b, .f2, .db, .black, .mb1;
-      }
-      li:nth-child(2) {
-        @extend .db, .f3, .mb3;
-      }
-    }
-  }
-
-  aside + article {
-    header h1 {
-      @extend .pt0;
-    }
-  }
-}
-
-body > aside {
-  @extend .cf, .mw9, .pl5-ns;
-  @extend .gray, .f6, .lh-copy;
 }
 
 article {
-  @extend .cf, .mw9;
+  @extend .cf;
   @extend .pb3;
 
   h1, h2, h3, h4, h5, h6 {
@@ -76,51 +42,58 @@ article {
   }
 
   header {
-    // @extend .pt3-ns;
-
     h1 {
-      @extend .pt4;
-      @extend .lh-title;
-    }
-
-    small {
-      @extend .i, .f6, .lh-copy;
+      // @extend .f-headline-ns, .lh-solid;
+      @extend .f1-ns, .lh-title;
     }
 
     a {
       text-decoration: none;
     }
-  }
 
-  section,
-  header {
-    @extend .fl, .w-100, .w-60-ns;
-  }
-
-  header {
-    @extend .pl3, .pr3, .pb3, .pl5-ns;
-  }
-
-  section {
-    @extend .pa3, .pl5-ns;
-  }
-
-  section.table-of-contents {
-    @extend .fr, .w-40-ns;
-    @extend .pa3;
-    @extend .mt4-ns;
-
-    h2 {
-      @extend .f4;
+    p {
+      @extend .i, .f6;
+      @extend .gray;
     }
   }
 
-  a {
+  &.with-table-of-contents {
+    p.p-with-image.beside-float {
+      @extend .w-60-ns;
+    }
+
+    .table-of-contents {
+      @extend .fr, .w-30-ns, .ml3;
+      @extend .dn, .db-ns;
+      @extend .bg-light-gray;
+
+      @extend .f6;
+
+      ul {
+        @extend .list;
+        @extend .pl3, .pr3;
+
+        ul {
+          @extend .pr0;
+        }
+      }
+
+      h2 {
+        @extend .pl3;
+      }
+    }
+  }
+
+  section a {
     @extend .underline;
   }
 
+  iframe.video {
+    @extend .measure-wide;
+  }
+
   blockquote {
-    @extend .bl, .bw2, .b--black-20, .pl3, .ml0;
+    @extend .bl, .bw2, .b--black-20, .pl3, .ml0, .i;
   }
 
   p:not(.p-with-image),
@@ -128,15 +101,24 @@ article {
     @extend .lh-copy, .measure-wide;
   }
 
+  p.p-with-image {
+    @extend .w-100;
+  }
+
   pre > .code,
   pre > code {
     color: white;
-    @extend .shadow-1, .pa3, .lh-copy, .bg-black;
+    @extend .shadow-1, .pa3, .lh-copy, .bg-black, .db;
+  }
+
+  p code {
+    @extend .bg-light-gray;
+    @extend .pa1;
   }
 }
 
-footer {
-  @extend .cf, .w-100, .pa3, .pl5-ns;
+body > footer {
+  @extend .cf, .w-100;
   @extend .moon-gray;
   @extend .f6;
 
@@ -145,6 +127,50 @@ footer {
   }
 }
 
-body > aside {
-  @extend .cf, .mw9, .pa3;
+body.start {
+  nav {
+    ul {
+      li:nth-child(2) {
+        @extend .db, .f5, .lh-copy, .mb3, .o-50;
+      }
+    }
+  }
+
+  article header h2,
+  .previously h2 {
+    @extend .o-50;
+  }
+
+  article header h1 {
+    @extend .mt0;
+  }
+
+  article {
+    @extend .fl-ns, .w-60-ns;
+  }
+
+  .previously {
+    @extend .fl-ns, .w-40-ns;
+  }
+  .previously ul {
+    @extend .list;
+    @extend .pl0;
+
+    li {
+      @extend .mb3;
+    }
+
+    a {
+      @extend .mb0;
+
+      p {
+        @extend .di;
+      }
+    }
+
+    span {
+      @extend .db, .o-50;
+    }
+  }
 }
+
