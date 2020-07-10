@@ -3,3 +3,4 @@ tmp
 assets
 .sass-cache
 .powrc
+*.css.map
