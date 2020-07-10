@@ -157,7 +157,7 @@ body.start {
     @extend .pl0;
 
     li {
-      @extend .mb3;
+      @extend .mb3, .lh-copy;
     }
 
     a {
@@ -168,8 +168,9 @@ body.start {
       }
     }
 
+    aside,
     span {
-      @extend .db, .o-50;
+      @extend .db, .o-50, .f7;
     }
   }
 }

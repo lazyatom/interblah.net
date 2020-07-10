@@ -412,6 +412,7 @@ I hope this has been useful, either if you're curious about Spacemacs, or are pl
 :page_title: Getting Started with Spacemacs
 :created_at: 2018-09-20 15:17:14 +0000
 :updated_at: 2018-09-20 15:17:14 +0000
+:summary: A pretty long overview of using Spacemacs, an Emacs configuration blending vim-like editing with community-driven configuration 
 :layers: |-
   javascript
   coffeescript

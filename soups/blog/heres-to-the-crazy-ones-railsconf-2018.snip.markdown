@@ -418,3 +418,4 @@ Thank you.
 :created_at: 2018-04-15 22:00:00 +0000
 :updated_at: 2018-04-15 22:00:00 +0000
 :page_title: Here's to the crazy ones (RailsConf 2018)
+:summary: A talk about Rails history and not giving up
