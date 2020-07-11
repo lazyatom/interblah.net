@@ -1,6 +1,4 @@
-require 'vanilla/dynasnip'
-
-class CurrentSnip < Dynasnip
+class CurrentSnip < Vanilla::Dynasnip
   usage %|
     The current_snip dyna normally returns the result of rendering the snip named by the
     'snip' value in the parameters. This way, it can be used in templates to place the currently
@@ -15,15 +13,11 @@ class CurrentSnip < Dynasnip
 
   def handle(attribute=nil)
     return usage if app.request.snip_name == snip_name
-    if app.request.snip
-      if attribute ||= app.request.part
-        %|{"#{app.request.snip_name}"."#{attribute}"}|
-      else
-        %|{"#{app.request.snip_name}"}|
-      end
+
+    if attribute ||= app.request.part
+      %|{"#{app.request.snip_name}"."#{attribute}"}|
     else
-      app.response.status = 404
-      %{Couldn't find snip "#{app.request.snip_name}"}
+      %|{"#{app.request.snip_name}"}|
     end
   end
   self

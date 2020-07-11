@@ -1,6 +1,6 @@
 require 'rouge'
 
-class CodeHighlighter < Dynasnip
+class CodeHighlighter < Vanilla::Dynasnip
   def handle(part_to_render='content', language=nil, start_line=0, end_line=-1)
     text = enclosing_snip.__send__(part_to_render.to_sym)
     if text.nil?

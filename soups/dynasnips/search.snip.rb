@@ -1,4 +1,4 @@
-class Search < Dynasnip
+class Search < Vanilla::Dynasnip
   def search_form
     %{
       <form method="post" action="" class="search">

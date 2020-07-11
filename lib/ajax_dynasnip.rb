@@ -1,6 +1,6 @@
 require 'vanilla/dynasnip'
 
-class AjaxDynasnip < Dynasnip
+class AjaxDynasnip < Vanilla::Dynasnip
   def handle(*args)
     if app.request.instance_eval { @rack_request }.xhr?
       __normal_handle

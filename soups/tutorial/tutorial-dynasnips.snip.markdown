@@ -54,5 +54,3 @@ There's really no limit to what you can do with dynasnips - only what you can im
 
 
 {tutorial-links}
-
-:updated_at: 2011-05-03 16:02:22 +0100

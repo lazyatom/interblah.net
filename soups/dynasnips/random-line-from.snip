@@ -1,10 +1,7 @@
-class RandomLineFrom < Dynasnip
-  def handle(snip_name)
-    snip = app.soup[snip_name]
-    lines = snip.content.split("\n")
-    lines[rand(lines.length)]
-  end
-  self
+dynasnip do |snip_name|
+  snip = app.soup[snip_name]
+  lines = snip.content.split("\n")
+  lines[rand(lines.length)]
 end
 
 :render_as: Ruby

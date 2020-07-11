@@ -1,4 +1,4 @@
-class DisqusCommenting < Dynasnip
+class DisqusCommenting < Vanilla::Dynasnip
   def handle(*args)
     if app.request.snip && app.request.snip.kind == "blog"
       <<-EOS

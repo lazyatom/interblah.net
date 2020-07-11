@@ -1,4 +1,4 @@
-class Sitemap < Dynasnip
+class Sitemap < Vanilla::Dynasnip
   attribute :domain, "interblah.net"
   def handle
     urls = app.soup.all_snips_.map { |snip| 

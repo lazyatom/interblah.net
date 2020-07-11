@@ -1,4 +1,4 @@
-class SnipDetails < Dynasnip
+class SnipDetails < Vanilla::Dynasnip
   def handle(snip_name=nil)
     if snip = snip_name ? app.soup[snip_name] : app.request.snip
       created_at_string = display(snip.created_at)
