@@ -1,9 +1,6 @@
-class BlogSummary < Dynasnip
-  def handle(snip_name)
-    snip = app.soup[snip_name]
-    if snip.summary
-      "<aside>#{snip.summary}</aside>"
-    end
+dynasnip do |snip_name|
+  snip = app.soup[snip_name]
+  if snip.summary
+    "<aside>#{snip.summary}</aside>"
   end
-  self
 end
