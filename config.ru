@@ -18,5 +18,6 @@ use Raygun::Middleware::RackExceptionInterceptor
 
 # Raygun will re-raise the exception, so catch it with something else
 use Rack::ShowExceptions
+use Rack::CommonLogger
 
 run Application.new
