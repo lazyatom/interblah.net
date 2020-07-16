@@ -34,4 +34,14 @@ window.onload = function() {
             }
         });
     };
+    var footnotes = document.querySelector(".footnotes")
+    if (footnotes) {
+        var footnotesHeader = document.createElement("h2");
+        footnotesHeader.innerText = "Footnotes";
+        footnotes.insertBefore(footnotesHeader, footnotes.children[0]);
+        var hr = footnotes.previousElementSibling;
+        if (hr.tagName == "HR") {
+            hr.remove();
+        }
+    }
 };

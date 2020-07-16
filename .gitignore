@@ -4,3 +4,4 @@ assets
 .sass-cache
 .powrc
 *.css.map
+purgecss.html

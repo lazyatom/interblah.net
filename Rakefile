@@ -31,7 +31,20 @@ task :blog do
 end
 
 task :css do
-  `sassc --style compressed --sourcemap public/stylesheets/scss/interblah.scss public/stylesheets/interblah.css`
+  `sassc --style compact --sourcemap public/stylesheets/scss/interblah.scss public/stylesheets/interblah.css`
+end
+
+task :purgecss do
+  require 'tempfile'
+  file = Tempfile.new('foo')
+  file.path
+  commands = [
+    "curl --silent http://interblah.localhost/site-test > #{file.path}.html",
+    "purgecss --config ./purgecss.config.js --css public/stylesheets/interblah.css --content #{file.path}.html --output public/stylesheets/interblah.min.css"
+  ].join(" && ")
+  `#{commands}`
+ensure
+  file.unlink
 end
 
 CLEAN.include(FileList['public/stylesheets/*.css', 'public/stylesheets/*.map'])

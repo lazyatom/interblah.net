@@ -115,6 +115,16 @@ article {
     @extend .bg-light-gray;
     @extend .pa1;
   }
+
+  .footnotes {
+    @extend .f6;
+    @extend .pt3, .pb3, .mt4;
+    @extend .bg-light-gray;
+
+    h2 {
+      @extend .pl3, .pr3, .mt0;
+    }
+  }
 }
 
 body > footer {
