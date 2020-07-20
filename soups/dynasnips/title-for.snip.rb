@@ -8,7 +8,9 @@ class TitleFor < Vanilla::Dynasnip
     else
       text = "Missing snip '#{snip_name || app.request.snip_name}'"
     end
-    "<#{tag}>" + LinkTo.new(app).handle(snip.name, text) + "</#{tag}>"
+    "<#{tag}>" +
+      %{<a class="u-url" href="#{url_to(snip.name)}">#{text}</a>} +
+      "</#{tag}>"
   end
   self
 end

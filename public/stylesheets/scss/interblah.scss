@@ -55,6 +55,10 @@ article {
       @extend .i, .f6;
       @extend .gray;
     }
+
+    .p-author {
+      @extend .dn;
+    }
   }
 
   &.with-table-of-contents {

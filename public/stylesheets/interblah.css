@@ -847,7 +847,7 @@ img { max-width: 100%; }
      -l  = large
 
 */
-.dn, article.with-table-of-contents .table-of-contents, nav ul li:nth-child(2) { display: none; }
+.dn, article.with-table-of-contents .table-of-contents, article header .p-author, nav ul li:nth-child(2) { display: none; }
 
 .di, body.start .previously ul a p, nav ul li { display: inline; }
 
