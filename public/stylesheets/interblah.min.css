@@ -847,7 +847,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 
 /* Type Scale */
 
- nav ul li:first-child { font-size: 1.25rem; }
+ article .footnotes h2, nav ul li:first-child { font-size: 1.25rem; }
 
  body.start nav ul li:nth-child(2) { font-size: 1rem; }
 

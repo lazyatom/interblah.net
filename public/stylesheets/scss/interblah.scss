@@ -127,6 +127,7 @@ article {
 
     h2 {
       @extend .pl3, .pr3, .mt0;
+      @extend .f4;
     }
   }
 }

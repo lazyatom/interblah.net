@@ -2364,7 +2364,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 
 .f3 { font-size: 1.5rem; }
 
-.f4, nav ul li:first-child { font-size: 1.25rem; }
+.f4, article .footnotes h2, nav ul li:first-child { font-size: 1.25rem; }
 
 .f5, body.start nav ul li:nth-child(2) { font-size: 1rem; }
 
