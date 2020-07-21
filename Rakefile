@@ -48,3 +48,9 @@ ensure
 end
 
 CLEAN.include(FileList['public/stylesheets/*.css', 'public/stylesheets/*.map'])
+
+namespace :assets do
+  task :precompile do
+    puts "Running pre-compile"
+  end
+end
