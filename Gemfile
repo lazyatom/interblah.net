@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.7.5'
+ruby '3.1.3'
 
 gem "vanilla", git: "https://github.com/lazyatom/vanilla-rb.git"
 gem 'rouge'
