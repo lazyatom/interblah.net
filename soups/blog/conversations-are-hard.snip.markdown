@@ -25,3 +25,5 @@ My suggestion to all you *open sharers* out there, if you actually care about ho
 :kind: blog
 :created_at: 2023-12-13 16:42:41 +0000
 :updated_at: 2023-12-13 16:42:41 +0000
+:summary: Are you an open sharer or a question asker? Either way, read the fuckin' room
+
