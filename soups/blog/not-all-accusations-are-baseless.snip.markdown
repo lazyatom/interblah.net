@@ -43,8 +43,9 @@ I have introspected enough to know that it’s human nature to view events throu
 
 And I genuinely appreciate what he contributes, apolitically, to the community I love, even if I disagree with where some of his non-development trains of thought have led him.
 
+But, IMHO, this post seems to be, at best, a pointless and stretched-thin linking of DEI to "woke mob accusations" to the election of a singularly, objectively _not good_ person into a position of incredible power.
 
-But, IMHO, this post feels at best a pointless reach to support a largely unrelated opinion about DEI and politics at work, and at worst, deliberately suggesting that Trump's win is "good for everyone" because it demonstrates that calling anyone a _fascist_ or a _racist_ or a _sexist_ or a _bigot_ or a _misogynist_ has no impact on their success, **no matter how accurate those labels actually are**.
+And at worst: deliberately suggesting that Trump's win is "good for everyone" because it demonstrates that calling anyone a _fascist_ or a _racist_ or a _sexist_ or a _bigot_ or a _misogynist_ no longer has any impact on their ability to progress. **No matter how accurate those labels actually are**.
 
 You might be able to keep politics out of your workplace. But you can't keep politics out of politics. 
 
