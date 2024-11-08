@@ -19,7 +19,7 @@ Hopefully even he would agree that was a fair summary.
 
 **But what if the accusations aren't baseless?**
 
-[His ex Chief of Staff thinks he fits the general description of a fascist](https://www.theguardian.com/us-news/2024/nov/04/is-trump-a-fascist). His [disrespect for the democratic process](https://edition.cnn.com/2024/11/03/politics/trump-dark-closing-message/index.html) makes him as clearly authoritarian. He has stated plainly that [he wants to silence or remove his opposition](https://abcnews.go.com/Politics/trumps-enemy-threat-spurs-critics-alarm-authoritarian-shift/story?id=114816374).
+[His ex Chief of Staff thinks he fits the general description of a fascist](https://www.theguardian.com/us-news/2024/nov/04/is-trump-a-fascist). His [disrespect for the democratic process](https://edition.cnn.com/2024/11/03/politics/trump-dark-closing-message/index.html) is clearly authoritarian. He has stated plainly that [he wants to silence or remove his opposition](https://abcnews.go.com/Politics/trumps-enemy-threat-spurs-critics-alarm-authoritarian-shift/story?id=114816374).
 
 He fits the definition. Calling him a fascist is hardly baseless, unless you're going to argue "oh, he's just saying that, he doesn't actually believe it or won't actually do it." I don't buy that.
 
