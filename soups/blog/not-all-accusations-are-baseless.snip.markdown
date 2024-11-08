@@ -57,6 +57,6 @@ Because he very, very obviously is.
 
 [DHH wrote this]: https://archive.ph/2024.11.06-174442/https://world.hey.com/dhh/the-spells-are-spent-beaa675b
 
-:kind: draft
+:kind: blog
 :created_at: 2024-11-08 11:52:43 +0000
 :updated_at: 2024-11-08 11:52:43 +0000
