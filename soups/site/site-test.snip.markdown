@@ -74,6 +74,11 @@ There are six heading levels, naturally
 
 ###### Header 6
 
+Sometimes between sections...
+
+---
+
+... we put a divider.
 
 ## Code
 

@@ -1,7 +1,5 @@
 require 'vanilla'
 require 'rake/clean'
-require 'sassc'
-
 # Add any other tasks here.
 
 task :convert do
@@ -27,24 +25,33 @@ task :blog do
     f.puts ":created_at: #{time}"
     f.puts ":updated_at: #{time}"
   end
-  `subl #{path}:4`
+  `emacsclient -n +4 #{path}`
 end
 
 task :css do
-  `sassc --style compact --sourcemap public/stylesheets/scss/interblah.scss public/stylesheets/interblah.css`
+  `npx sass --silence-deprecation=import --silence-deprecation=slash-div --style=compressed --source-map public/stylesheets/scss/interblah.scss public/stylesheets/interblah.css`
 end
 
 task :purgecss do
   require 'tempfile'
-  file = Tempfile.new('foo')
-  file.path
-  commands = [
-    "curl --silent http://interblah.localhost/site-test > #{file.path}.html",
-    "purgecss --config ./purgecss.config.js --css public/stylesheets/interblah.css --content #{file.path}.html --output public/stylesheets/interblah.min.css"
-  ].join(" && ")
-  `#{commands}`
+  file = Tempfile.new('purgecss')
+
+  # Fetch multiple pages to get all used classes
+  pages = [
+    'http://interblah.test/site-test',
+    'http://interblah.test/',  # homepage with body.start
+    # Add more pages here if needed
+  ]
+
+  # Download all pages
+  pages.each_with_index do |url, i|
+    `curl --silent #{url} >> #{file.path}`
+  end
+
+  # Run purgecss on combined HTML
+  `purgecss --config ./purgecss.config.js --css public/stylesheets/interblah.css --content #{file.path} --output public/stylesheets/interblah.min.css`
 ensure
-  file.unlink
+  file.unlink if file
 end
 
 CLEAN.include(FileList['public/stylesheets/*.css', 'public/stylesheets/*.map'])

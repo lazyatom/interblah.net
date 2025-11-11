@@ -1,0 +1,30 @@
+{
+  "name": "interblah.net",
+  "version": "1.0.0",
+  "description": "It's my blog-type thing, and it runs using [Vanilla][], which is a blog-type thing engine.",
+  "main": "purgecss.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build:css": "sass --silence-deprecation=import --silence-deprecation=slash-div --style=compressed --source-map public/stylesheets/scss/interblah.scss public/stylesheets/interblah.css",
+    "watch:css": "sass --watch --silence-deprecation=import --silence-deprecation=slash-div --style=compressed --source-map public/stylesheets/scss/interblah.scss public/stylesheets/interblah.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazyatom/interblah.net.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lazyatom/interblah.net/issues"
+  },
+  "homepage": "https://github.com/lazyatom/interblah.net#readme",
+  "devDependencies": {
+    "sass": "^1.94.0",
+    "tachyons-sass": "^4.9.5"
+  }
+}
