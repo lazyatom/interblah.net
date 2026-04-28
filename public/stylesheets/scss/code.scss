@@ -41,3 +41,12 @@ pre.ruby code,
 .code.plaintext {
   color: white;
 }
+
+.code.json,
+.language-json pre.highlight {
+  color: white;
+
+  .nl, .s, .s2 {
+    color: #66CC33;
+  }
+}
