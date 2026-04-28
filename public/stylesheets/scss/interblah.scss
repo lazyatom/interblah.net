@@ -120,6 +120,7 @@ article {
   pre > code {
     color: white;
     @extend .shadow-1, .pa3, .lh-copy, .bg-black, .db;
+    overflow: scroll;
   }
 
   p code {
