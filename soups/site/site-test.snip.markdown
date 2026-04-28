@@ -127,6 +127,20 @@ And another type of code block:
 
 ... except it doesn't get any of the server-side HTML enhancements, so there's no syntax highlighting unless it's done via Javascript. 
 
+Here’s some JSON too:
+
+{code json_sample, json}
+
+... and it again:
+
+~~~ json
+{
+  "this is": "json data",
+  "and you": [ "love it" ],
+  "value": 123
+}
+~~~
+
 OK! That's the end of the content test.
 
 [^1]: This is a footnote
@@ -147,3 +161,9 @@ OK! That's the end of the content test.
       end
     end
   end
+:json_sample: |-
+  {
+    "this is": "json data",
+    "and you": [ "love it" ],
+    "value": 123
+  }
